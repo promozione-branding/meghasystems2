@@ -8,6 +8,7 @@ import CubicleDetails from "@/components/home/CubicleDetails";
 import FAQSection from "@/components/home/FAQSection";
 import HeroSection from "@/components/home/Hero";
 import HowWeWork from "@/components/home/HowWeWork";
+import IndustriesWeServe from "@/components/home/Industries";
 import Partners from "@/components/home/Partners";
 import ProductsSection from "@/components/home/ProductsSection";
 import Testimonials from "@/components/home/Testimonials";
@@ -26,9 +27,10 @@ export default function Home() {
       <ClientSlider />
       <CubicleDetails />
       <WhyChooseUs />
+      <IndustriesWeServe />
+      <CTASection />
       <Testimonials />
       <FAQSection />
-      <CTASection />
     </div>
   );
 }

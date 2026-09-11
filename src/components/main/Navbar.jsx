@@ -172,7 +172,7 @@ export default function Navbar() {
                             justify-between
                             overflow-hidden
                             border-b
-                            border-gray-100
+                            border-yellow-300
                             px-2
                         "
                 >
