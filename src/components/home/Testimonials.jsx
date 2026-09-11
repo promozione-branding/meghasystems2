@@ -10,6 +10,7 @@ import {
     FiArrowRight,
     // FiQuote,
 } from "react-icons/fi";
+import { Quote } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -316,7 +317,7 @@ export default function Testimonials() {
                                     text-[#c99618]
                                 "
                             >
-                                {/* <FiQuote size={21} /> */}
+                                <Quote size={21} />
                             </div>
 
                             {/* Quote */}
