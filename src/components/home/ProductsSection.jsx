@@ -35,6 +35,14 @@ const PRODUCTS = [
         description: "A premium ceiling-hung cubicle system creating a clean, floating aesthetic with effortless floor cleaning.",
     },
     {
+        name: "Rove",
+        slug: "rove",
+        category: "LUXE RANGE",
+        image: "/Rove.webp",
+        description:
+            "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment.",
+    },
+    {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
         image: "/Kiddiez Pro.webp",
