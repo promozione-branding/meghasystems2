@@ -16,8 +16,8 @@ export const allProducts = [
           "Black Maxi toilet cubicles combine premium PVD stainless steel hardware, modern design, durability, and corrosion resistance for high-traffic spaces.",
         shortDescription:
           "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
-        hardwareImg: "/hardware/Blackmaxi.webp",
-        rightImg: "/right/backmaxi.jpeg",
+        hardwareImg: "/Blackmaxi.webp",
+        rightImg: "/backmaxi.jpeg",
         dimensions: [
           {
             name: "Width of the cubicle",
@@ -411,7 +411,7 @@ export const allProducts = [
       {
         name: "Maxi",
         slug: "maxi",
-        image: "/product/Maxi.webp",
+        image: "/Maxi.webp",
         metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
         metaDescription:
           "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
@@ -486,7 +486,7 @@ export const allProducts = [
       {
         name: "Luron",
         slug: "luron",
-        image: "/product/Luron.webp",
+        image: "/Luron.webp",
         metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
         metaDescription:
           "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
@@ -567,7 +567,7 @@ export const allProducts = [
       {
         name: "Cielo",
         slug: "cielo",
-        image: "/product/Cielo.webp",
+        image: "/Cielo.webp",
         metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Megha Systems",
         metaDescription:
           "Cielo ceiling-hung toilet cubicles create a clean, floor-free washroom with easy cleaning, modern aesthetics, moisture resistance, and premium finishes.",
@@ -625,7 +625,7 @@ export const allProducts = [
       {
         name: "Premia",
         slug: "premia",
-        image: "/product/Premia.webp",
+        image: "/Premia.webp",
         metaTitle: "Premia Luxury Toilet Cubicles | Premium Washroom Solutions",
         metaDescription:
           "Premia luxury toilet cubicles combine premium finishes, Gold PVD hardware, Grade 316 stainless steel components, privacy, and lasting performance.",
@@ -688,7 +688,7 @@ export const allProducts = [
       {
         name: "Rove",
         slug: "rove",
-        image: "/product/Rove.webp",
+        image: "/Rove.webp",
         metaTitle: "Rove Wall-Hung Toilet Cubicles | Megha Systems",
         metaDescription:
           "Rove wall-hung toilet cubicles offer a modern floor-free design with durable panels, corrosion-resistant hardware, easy cleaning, and multiple finish options.",
@@ -748,7 +748,7 @@ export const allProducts = [
       {
         name: "Kiddiez",
         slug: "kiddiez",
-        image: "/product/Kiddiez.webp",
+        image: "/Kiddiez.webp",
         metaTitle: "Kiddiez",
         metaDescription:
           "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
@@ -826,7 +826,7 @@ export const allProducts = [
       {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
-        image: "/product/Kiddiez Pro.webp",
+        image: "/Kiddiez Pro.webp",
         metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
         metaDescription:
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
@@ -889,11 +889,9 @@ export const allProducts = [
           },
         ],
       },
-
       {
         name: "Nylon Kiddiez",
         slug: "nylon-kiddiez",
-        image: "/product/Nylon Kiddiez.webp",
 
         metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
 
@@ -903,7 +901,7 @@ export const allProducts = [
         shortDescription:
           "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
 
-        image: "/product/kids2.webp",
+        image: "/kids2.webp",
 
         slider: [
           "/kids/kids1.webp",
@@ -1041,7 +1039,7 @@ export const allProducts = [
       {
         name: "Urinal Modesty Panels",
         slug: "urinal-modesty-panels",
-        image: "/product/Commercial Urinal Partitions.webp",
+        image: "/Commercial Urinal Partitions.webp",
         metaTitle: "Urinal Modesty Panels | Megha Systems",
         metaDescription:
           "Stylish and durable urinal modesty panels made from high-quality compact-grade laminates with a strong phenolic core, ideal for high-traffic public restrooms.",

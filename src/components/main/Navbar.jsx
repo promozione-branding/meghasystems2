@@ -20,6 +20,7 @@ import {
     FaLinkedinIn,
     FaWhatsapp,
 } from "react-icons/fa";
+import { allProducts } from "@/data";
 
 const SOCIAL_LINKS = {
     facebook: "https://www.facebook.com/meghasystems/",
@@ -32,22 +33,22 @@ const products = [
     {
         title: "Restroom Cubicles",
         description: "Premium restroom cubicle systems",
-        href: "/products/restroom-cubicles",
+        href: "/products#restroom-cubicles",
     },
     {
         title: "Office Partitions",
         description: "Modern workspace partitions",
-        href: "/products/office-partitions",
+        href: "/products#office-partitions",
     },
     {
         title: "Workstations",
         description: "Smart office workstation systems",
-        href: "/products/workstations",
+        href: "/products#workstations",
     },
     {
         title: "Toilet Partitions",
         description: "Durable toilet partition solutions",
-        href: "/products/toilet-partitions",
+        href: "/products#toilet-partitions",
     },
 ];
 
@@ -844,14 +845,10 @@ export default function Navbar() {
                                                         p-2
                                                     "
                                             >
-                                                {products.map(
+                                                {allProducts.map(
                                                     (product) => (
-                                                        <ProductItem
-                                                            key={
-                                                                product.title
-                                                            }
-                                                            {...product}
-                                                        />
+                                                        <ProductItem key={product.categoryName}
+                                                            {...product} />
                                                     )
                                                 )}
 
@@ -1493,13 +1490,13 @@ function NavLink({
 }
 
 function ProductItem({
-    title,
+    categoryName,
     description,
-    href,
+    slug,
 }) {
     return (
         <Link
-            href={href}
+            href={`/products#${slug}`}
             className="
                 group
                 flex
@@ -1514,7 +1511,7 @@ function ProductItem({
         >
             <div>
                 <p className="text-sm font-semibold text-[#182640]">
-                    {title}
+                    {categoryName}
                 </p>
 
                 <p className="text-[10px] text-gray-400 mt-0.5">
