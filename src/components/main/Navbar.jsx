@@ -739,7 +739,7 @@ export default function Navbar() {
                             />
 
                             <NavLink
-                                href="/about"
+                                href="/about-us"
                                 label="About Us"
                             />
 
@@ -906,7 +906,7 @@ export default function Navbar() {
                             />
 
                             <NavLink
-                                href="/contact"
+                                href="/contact-us"
                                 label="Contact Us"
                             />
                         </nav>

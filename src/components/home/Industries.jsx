@@ -21,7 +21,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 /* =========================================================
-   INDUSTRIES
+   INDUSTRIES + PROJECTS
 ========================================================= */
 
 const INDUSTRIES = [
@@ -33,16 +33,30 @@ const INDUSTRIES = [
         description:
             "Premium restroom partition solutions designed for modern corporate offices, commercial buildings and professional workspaces.",
         icon: FiBriefcase,
+
+        project: {
+            name: "Business Park",
+            location: "Gurgaon",
+            image: "/WhatsApp Image 2026-09-14 at 5.10.25 PM.jpeg",
+        },
     },
+
     {
         id: 2,
         number: "02",
-        title: "HOSPITALS",
-        subtitle: "HEALTHCARE SPACES",
+        title: "STADIUM",
+        subtitle: "SPORTS & PUBLIC SPACES",
         description:
-            "Hygienic, durable and easy-to-maintain washroom solutions designed for demanding healthcare environments.",
+            "Durable, hygienic and high-performance washroom solutions designed to handle heavy footfall in sports and public environments.",
         icon: FiActivity,
+
+        project: {
+            name: "Indira Gandhi Stadium",
+            location: "Delhi",
+            image: "/ChatGPT Image Sep 14, 2026, 05_54_13 PM.png",
+        },
     },
+
     {
         id: 3,
         number: "03",
@@ -51,7 +65,14 @@ const INDUSTRIES = [
         description:
             "Elegant cubicle systems that combine premium aesthetics, privacy and long-term performance for hospitality spaces.",
         icon: FiHome,
+
+        project: {
+            name: "HOTEL NH8",
+            location: "Jaipur, India",
+            image: "/ChatGPT Image Sep 14, 2026, 05_21_14 PM.png",
+        },
     },
+
     {
         id: 4,
         number: "04",
@@ -60,7 +81,14 @@ const INDUSTRIES = [
         description:
             "Robust restroom systems engineered for high visitor volumes while maintaining a clean and premium appearance.",
         icon: FiShoppingBag,
+
+        project: {
+            name: "Pacific Mall",
+            location: "Jasola, Delhi",
+            image: "/ChatGPT Image Sep 14, 2026, 05_23_25 PM.png",
+        },
     },
+
     {
         id: 5,
         number: "05",
@@ -69,7 +97,14 @@ const INDUSTRIES = [
         description:
             "Heavy-duty and practical washroom partition systems built for industrial and high-usage environments.",
         icon: FiTruck,
+
+        project: {
+            name: "Yamaha Motors",
+            location: "Delhi",
+            image: "/ChatGPT Image Sep 14, 2026, 05_29_02 PM.png",
+        },
     },
+
     {
         id: 6,
         number: "06",
@@ -78,7 +113,14 @@ const INDUSTRIES = [
         description:
             "Safe, durable and practical cubicle solutions suitable for schools, colleges and institutional facilities.",
         icon: FiBookOpen,
+
+        project: {
+            name: "St. Xaviers School",
+            location: "Noida",
+            image: "/ChatGPT Image Sep 14, 2026, 05_32_01 PM.png",
+        },
     },
+
     {
         id: 7,
         number: "07",
@@ -87,7 +129,14 @@ const INDUSTRIES = [
         description:
             "Contemporary restroom solutions designed to complement restaurants, food courts, cafes and dining spaces.",
         icon: FiCoffee,
+
+        project: {
+            name: "Great Khali Dhaba",
+            location: "Haryana",
+            image: "/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png",
+        },
     },
+
     {
         id: 8,
         number: "08",
@@ -96,6 +145,43 @@ const INDUSTRIES = [
         description:
             "High-performance restroom partition systems designed for busy public and transportation environments.",
         icon: FiMapPin,
+
+        project: {
+            name: "Rajeev Gandhi Bhawan",
+            location: "Delhi Airport",
+            image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
+        },
+    },
+];
+
+/* =========================================================
+   ADDITIONAL PROJECTS
+========================================================= */
+
+const ADDITIONAL_PROJECTS = [
+    {
+        name: "Urbtech Trade Centre",
+        location: "Noida",
+        image: "/projects/urbtech-trade-centre.webp",
+        industry: "Corporate",
+    },
+    {
+        name: "Spaze Corporate Park",
+        location: "Gurgaon",
+        image: "/projects/spaze-corporate-park.webp",
+        industry: "Corporate",
+    },
+    {
+        name: "JBM Global School",
+        location: "Noida",
+        image: "/projects/jbm-global-school.webp",
+        industry: "Education",
+    },
+    {
+        name: "Indira Gandhi Stadium",
+        location: "Delhi",
+        image: "/projects/indira-gandhi-stadium.webp",
+        industry: "Institutional",
     },
 ];
 
@@ -112,8 +198,6 @@ function ArchitectureSVG() {
             className="h-full w-full"
             aria-hidden="true"
         >
-            {/* Main frame */}
-
             <path
                 className="industry-draw"
                 d="M140 540V150L500 55L860 150V540"
@@ -127,8 +211,6 @@ function ArchitectureSVG() {
                 stroke="#c99618"
                 strokeWidth="1"
             />
-
-            {/* Vertical structure */}
 
             <path
                 className="industry-draw"
@@ -162,8 +244,6 @@ function ArchitectureSVG() {
                 opacity=".35"
             />
 
-            {/* Horizontal structure */}
-
             <path
                 className="industry-draw"
                 d="M140 270H860"
@@ -188,8 +268,6 @@ function ArchitectureSVG() {
                 opacity=".3"
             />
 
-            {/* Circles */}
-
             <circle
                 className="industry-circle"
                 cx="500"
@@ -211,8 +289,6 @@ function ArchitectureSVG() {
                 opacity=".12"
             />
 
-            {/* Center lines */}
-
             <path
                 className="industry-draw"
                 d="M500 145V455"
@@ -230,8 +306,6 @@ function ArchitectureSVG() {
                 strokeDasharray="4 10"
                 opacity=".15"
             />
-
-            {/* Roof details */}
 
             <path
                 className="industry-draw"
@@ -261,6 +335,89 @@ function ArchitectureSVG() {
 }
 
 /* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
+function ProjectImage({ project }) {
+    if (!project) {
+        return (
+            <div className="relative flex h-full min-h-[180px] items-center justify-center bg-[#0a224d]">
+                <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:35px_35px]" />
+
+                <div className="relative text-center">
+                    <FiHome
+                        size={34}
+                        strokeWidth={1}
+                        className="mx-auto text-[#c99618]"
+                    />
+
+                    <p className="mt-4 text-[9px] font-bold tracking-[0.25em] text-white/40">
+                        PROJECT IMAGE
+                    </p>
+
+                    <p className="mt-2 text-xs text-white/30">
+                        Coming soon
+                    </p>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="relative h-full min-h-[180px] overflow-hidden bg-[#dfe3e6]">
+            {/* Image */}
+
+            <img
+                src={project.image}
+                alt={`${project.name} - ${project.location}`}
+                className="
+                    absolute
+                    inset-0
+                    h-full
+                    w-full
+                    object-cover
+                    transition-transform
+                    duration-[1.2s]
+                    ease-out
+                    group-hover:scale-[1.05]
+                "
+            />
+
+            {/* Image overlay */}
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d]/85 via-[#071a3d]/10 to-transparent" />
+
+            {/* Gold corner */}
+
+            <div className="absolute right-0 top-0 h-16 w-16 border-b border-l border-[#c99618]/60" />
+
+            {/* Project label */}
+
+            <div className="absolute bottom-5 left-5 right-5">
+                <p className="text-[8px] font-bold tracking-[0.3em] text-[#c99618]">
+                    FEATURED PROJECT
+                </p>
+
+                <h4 className="mt-1 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                    {project.name}
+                </h4>
+
+                <div className="mt-1 flex items-center gap-2">
+                    <FiMapPin
+                        size={11}
+                        className="text-[#c99618]"
+                    />
+
+                    <span className="text-[10px] tracking-[0.08em] text-white/60">
+                        {project.location}
+                    </span>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+/* =========================================================
    MAIN COMPONENT
 ========================================================= */
 
@@ -281,14 +438,6 @@ export default function IndustriesWeServe() {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            /* =================================================
-               INDUSTRY SCROLL CONTROLLER
-
-               1200vh total
-               8 industries
-               ~150vh per industry
-            ================================================= */
-
             const industryTrigger = ScrollTrigger.create({
                 trigger: scrollAreaRef.current,
                 start: "top top",
@@ -314,9 +463,7 @@ export default function IndustriesWeServe() {
                 },
             });
 
-            /* =================================================
-               HEADER REVEAL
-            ================================================= */
+            /* Header */
 
             gsap.fromTo(
                 ".industry-eyebrow",
@@ -375,9 +522,7 @@ export default function IndustriesWeServe() {
                 }
             );
 
-            /* =================================================
-               INDUSTRY LIST REVEAL
-            ================================================= */
+            /* Industry list */
 
             gsap.fromTo(
                 ".industry-item",
@@ -399,9 +544,7 @@ export default function IndustriesWeServe() {
                 }
             );
 
-            /* =================================================
-               PANEL REVEAL
-            ================================================= */
+            /* Panel */
 
             gsap.fromTo(
                 ".industry-panel",
@@ -422,9 +565,7 @@ export default function IndustriesWeServe() {
                 }
             );
 
-            /* =================================================
-               SVG DRAW
-            ================================================= */
+            /* SVG draw */
 
             const lines =
                 architectureRef.current?.querySelectorAll(
@@ -457,9 +598,7 @@ export default function IndustriesWeServe() {
                 });
             }
 
-            /* =================================================
-               ROTATING SVG CIRCLES
-            ================================================= */
+            /* Rotating circles */
 
             gsap.to(".industry-circle", {
                 rotation: 360,
@@ -469,9 +608,7 @@ export default function IndustriesWeServe() {
                 ease: "none",
             });
 
-            /* =================================================
-               SVG PARALLAX
-            ================================================= */
+            /* SVG parallax */
 
             gsap.to(architectureRef.current, {
                 y: -80,
@@ -485,9 +622,7 @@ export default function IndustriesWeServe() {
                 },
             });
 
-            /* =================================================
-               GRID PARALLAX
-            ================================================= */
+            /* Grid */
 
             gsap.to(".industry-grid", {
                 y: -50,
@@ -500,9 +635,7 @@ export default function IndustriesWeServe() {
                 },
             });
 
-            /* =================================================
-               GOLD LINE
-            ================================================= */
+            /* Gold line */
 
             gsap.fromTo(
                 ".industry-top-line",
@@ -537,7 +670,7 @@ export default function IndustriesWeServe() {
     }, []);
 
     /* =========================================================
-       CLICK
+       CHANGE INDUSTRY
     ========================================================= */
 
     const handleIndustryChange = (index) => {
@@ -571,10 +704,6 @@ export default function IndustriesWeServe() {
                 bg-[#f3f5f7]
             "
         >
-            {/* =================================================
-                STICKY VIEWPORT
-            ================================================= */}
-
             <section
                 ref={sectionRef}
                 className="
@@ -587,7 +716,7 @@ export default function IndustriesWeServe() {
                 "
             >
                 {/* =================================================
-                    TOP GOLD LINE
+                    GOLD LINE
                 ================================================= */}
 
                 <div
@@ -608,8 +737,6 @@ export default function IndustriesWeServe() {
                 ================================================= */}
 
                 <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                    {/* GRID */}
-
                     <div
                         className="
                             industry-grid
@@ -620,8 +747,6 @@ export default function IndustriesWeServe() {
                             [background-size:65px_65px]
                         "
                     />
-
-                    {/* ARCHITECTURE */}
 
                     <div
                         ref={architectureRef}
@@ -640,8 +765,6 @@ export default function IndustriesWeServe() {
                         <ArchitectureSVG />
                     </div>
 
-                    {/* LEFT LINE */}
-
                     <div
                         className="
                             absolute
@@ -652,8 +775,6 @@ export default function IndustriesWeServe() {
                             bg-[#071a3d]/[0.035]
                         "
                     />
-
-                    {/* RIGHT LINE */}
 
                     <div
                         className="
@@ -707,32 +828,13 @@ export default function IndustriesWeServe() {
                         "
                     >
                         <div>
-                            {/* EYEBROW */}
-
-                            <div
-                                className="
-                                    industry-eyebrow
-                                    flex
-                                    items-center
-                                    gap-3
-                                "
-                            >
+                            <div className="industry-eyebrow flex items-center gap-3">
                                 <span className="h-[2px] w-8 bg-[#c99618]" />
 
-                                <span
-                                    className="
-                                        text-[9px]
-                                        font-bold
-                                        tracking-[0.28em]
-                                        text-[#c99618]
-                                        sm:text-[10px]
-                                    "
-                                >
+                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618] sm:text-[10px]">
                                     INDUSTRIES WE SERVE
                                 </span>
                             </div>
-
-                            {/* HEADING */}
 
                             <h2
                                 className="
@@ -759,8 +861,6 @@ export default function IndustriesWeServe() {
                             </h2>
                         </div>
 
-                        {/* INTRO */}
-
                         <p
                             className="
                                 industry-intro
@@ -773,10 +873,10 @@ export default function IndustriesWeServe() {
                                 xl:text-[14px]
                             "
                         >
-                            From corporate offices to high-traffic
-                            public facilities, Megha Systems delivers
-                            restroom partition solutions engineered
-                            around the needs of every space.
+                            From corporate offices to high-traffic public
+                            facilities, Megha Systems delivers restroom
+                            partition solutions engineered around the needs
+                            of every space.
                         </p>
                     </div>
 
@@ -837,8 +937,6 @@ export default function IndustriesWeServe() {
                                             }
                                         `}
                                     >
-                                        {/* NUMBER */}
-
                                         <span
                                             className={`
                                                 w-8
@@ -855,8 +953,6 @@ export default function IndustriesWeServe() {
                                         >
                                             {industry.number}
                                         </span>
-
-                                        {/* ICON */}
 
                                         <span
                                             className={`
@@ -882,8 +978,6 @@ export default function IndustriesWeServe() {
                                                 strokeWidth={1.5}
                                             />
                                         </span>
-
-                                        {/* TEXT */}
 
                                         <span className="min-w-0 flex-1">
                                             <span
@@ -921,8 +1015,6 @@ export default function IndustriesWeServe() {
                                             </span>
                                         </span>
 
-                                        {/* ARROW */}
-
                                         <FiArrowUpRight
                                             size={16}
                                             className={`
@@ -936,8 +1028,6 @@ export default function IndustriesWeServe() {
                                                 }
                                             `}
                                         />
-
-                                        {/* ACTIVE LINE */}
 
                                         {isActive && (
                                             <motion.span
@@ -958,7 +1048,7 @@ export default function IndustriesWeServe() {
                         </div>
 
                         {/* =================================================
-                            ACTIVE PANEL
+                            ACTIVE PROJECT PANEL
                         ================================================= */}
 
                         <div
@@ -966,21 +1056,20 @@ export default function IndustriesWeServe() {
                             className="
                                 industry-panel
                                 relative
-                                h-[330px]
+                                h-[360px]
                                 overflow-hidden
                                 rounded-[3px]
                                 bg-[#071a3d]
-                                p-6
+                                p-3
                                 shadow-xl
-                                sm:h-[350px]
-                                sm:p-7
-                                lg:h-[365px]
-                                lg:p-8
-                                xl:h-[380px]
-                                xl:p-9
+                                sm:h-[390px]
+                                sm:p-4
+                                lg:h-[405px]
+                                lg:p-5
+                                xl:h-[420px]
                             "
                         >
-                            {/* PANEL GRID */}
+                            {/* Panel background */}
 
                             <div
                                 className="
@@ -992,8 +1081,6 @@ export default function IndustriesWeServe() {
                                     [background-size:42px_42px]
                                 "
                             />
-
-                            {/* LARGE CIRCLE */}
 
                             <div
                                 className="
@@ -1009,8 +1096,6 @@ export default function IndustriesWeServe() {
                                 "
                             />
 
-                            {/* SMALL CIRCLE */}
-
                             <div
                                 className="
                                     pointer-events-none
@@ -1022,21 +1107,6 @@ export default function IndustriesWeServe() {
                                     rounded-full
                                     border
                                     border-[#c99618]/10
-                                "
-                            />
-
-                            {/* DIAGONAL */}
-
-                            <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    right-[24%]
-                                    top-[-30%]
-                                    h-[160%]
-                                    w-px
-                                    rotate-[28deg]
-                                    bg-white/[0.045]
                                 "
                             />
 
@@ -1069,90 +1139,70 @@ export default function IndustriesWeServe() {
                                         flex
                                         h-full
                                         flex-col
-                                        justify-between
                                     "
                                 >
                                     {/* TOP */}
 
-                                    <div className="flex items-start justify-between">
-                                        <span
-                                            className="
-                                                text-[10px]
-                                                font-bold
-                                                tracking-[0.28em]
-                                                text-[#c99618]
-                                            "
-                                        >
-                                            {current.number} / 08
-                                        </span>
+                                    <div className="flex items-center justify-between px-2 pb-3">
+                                        <div>
+                                            <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618]">
+                                                {current.number} / 08
+                                            </span>
+
+                                            <p className="mt-1 text-[8px] font-semibold tracking-[0.22em] text-white/35">
+                                                {current.subtitle}
+                                            </p>
+                                        </div>
 
                                         <div
                                             className="
                                                 flex
-                                                h-11
-                                                w-11
+                                                h-10
+                                                w-10
                                                 items-center
                                                 justify-center
                                                 rounded-full
                                                 border
                                                 border-[#c99618]/40
                                                 text-[#c99618]
-                                                sm:h-12
-                                                sm:w-12
+                                                sm:h-11
+                                                sm:w-11
                                             "
                                         >
                                             <CurrentIcon
-                                                size={19}
+                                                size={18}
                                                 strokeWidth={1.4}
                                             />
                                         </div>
                                     </div>
 
-                                    {/* CENTER */}
+                                    {/* PROJECT IMAGE */}
 
-                                    <div className="max-w-[650px]">
-                                        <p
+                                    <div className="group relative min-h-0 flex-1 overflow-hidden rounded-[2px]">
+                                        <ProjectImage
+                                            project={current.project}
+                                        />
+
+                                        {/* Industry badge */}
+
+                                        <div
                                             className="
-                                                text-[9px]
-                                                font-semibold
-                                                tracking-[0.28em]
-                                                text-white/40
-                                                sm:text-[10px]
+                                                absolute
+                                                left-4
+                                                top-4
+                                                z-20
+                                                border
+                                                border-white/20
+                                                bg-[#071a3d]/75
+                                                px-3
+                                                py-1.5
+                                                backdrop-blur-md
                                             "
                                         >
-                                            {current.subtitle}
-                                        </p>
-
-                                        <h3
-                                            className="
-                                                mt-2
-                                                text-[40px]
-                                                font-semibold
-                                                leading-[0.88]
-                                                tracking-[-0.05em]
-                                                text-white
-                                                sm:text-[48px]
-                                                md:text-[54px]
-                                                lg:text-[58px]
-                                                xl:text-[64px]
-                                            "
-                                        >
-                                            {current.title}
-                                        </h3>
-
-                                        <p
-                                            className="
-                                                mt-4
-                                                max-w-[560px]
-                                                text-[11px]
-                                                leading-[1.7]
-                                                text-white/55
-                                                sm:text-[12px]
-                                                lg:text-[13px]
-                                            "
-                                        >
-                                            {current.description}
-                                        </p>
+                                            <span className="text-[7px] font-bold tracking-[0.22em] text-white/70">
+                                                {current.title}
+                                            </span>
+                                        </div>
                                     </div>
 
                                     {/* BOTTOM */}
@@ -1163,30 +1213,16 @@ export default function IndustriesWeServe() {
                                             items-center
                                             justify-between
                                             gap-4
-                                            border-t
-                                            border-white/10
-                                            pt-4
+                                            px-2
+                                            pt-3
                                         "
                                     >
                                         <div>
-                                            <span
-                                                className="
-                                                    text-[9px]
-                                                    font-bold
-                                                    tracking-[0.22em]
-                                                    text-[#c99618]
-                                                "
-                                            >
+                                            <span className="text-[8px] font-bold tracking-[0.22em] text-[#c99618]">
                                                 MEGHA SYSTEMS
                                             </span>
 
-                                            <p
-                                                className="
-                                                    
-                                                    text-[12px]
-                                                    text-white/40
-                                                "
-                                            >
+                                            <p className="mt-1 text-[10px] text-white/35">
                                                 Premium restroom solutions
                                             </p>
                                         </div>
@@ -1197,12 +1233,13 @@ export default function IndustriesWeServe() {
                                                 group
                                                 inline-flex
                                                 h-9
+                                                shrink-0
                                                 items-center
                                                 gap-2
                                                 border
                                                 border-[#c99618]
                                                 px-4
-                                                text-[10px]
+                                                text-[9px]
                                                 font-bold
                                                 tracking-[0.12em]
                                                 text-white
@@ -1215,11 +1252,12 @@ export default function IndustriesWeServe() {
                                             DISCUSS PROJECT
 
                                             <FiArrowUpRight
-                                                size={14}
+                                                size={13}
                                                 className="
                                                     transition-transform
                                                     duration-300
                                                     group-hover:translate-x-1
+                                                    group-hover:-translate-y-0.5
                                                 "
                                             />
                                         </Link>
@@ -1270,51 +1308,6 @@ export default function IndustriesWeServe() {
                         </p>
                     </div>
                 </div>
-
-                {/* =================================================
-                    SCROLL INDICATOR
-                ================================================= */}
-
-                {/* <div
-                    className="
-                        absolute
-                        bottom-3
-                        left-1/2
-                        hidden
-                        -translate-x-1/2
-                        flex-col
-                        items-center
-                        gap-1
-                        lg:flex
-                    "
-                >
-                    <span
-                        className="
-                            text-[7px]
-                            font-bold
-                            tracking-[0.3em]
-                            text-[#071a3d]/25
-                        "
-                    >
-                        SCROLL
-                    </span>
-
-                    <motion.span
-                        animate={{
-                            y: [0, 5, 0],
-                        }}
-                        transition={{
-                            duration: 1.5,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                        className="
-                            h-5
-                            w-px
-                            bg-[#c99618]
-                        "
-                    />
-                </div> */}
             </section>
         </div>
     );

@@ -138,7 +138,7 @@ export default function Categories() {
             <Link
               href={category.slug}
               key={idx}
-              className="category-card group relative block overflow-hidden bg-[#071a3d]"
+              className="category-card rounded-xl group relative block overflow-hidden bg-[#071a3d]"
             >
               {/* =============================================
                   IMAGE
