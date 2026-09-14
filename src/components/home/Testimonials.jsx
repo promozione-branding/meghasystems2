@@ -239,7 +239,7 @@ export default function Testimonials() {
                     <div className="mb-5 flex items-center justify-center gap-3">
                         <span className="h-[1px] w-12 bg-[#c99618]" />
 
-                        <span className="text-[8px] font-semibold tracking-[0.35em] text-[#c99618] sm:text-[9px]">
+                        <span className="text-[8px] font-semibold tracking-[0.35em] text-[#c99618] sm:text-[10px]">
                             CLIENT VOICES
                         </span>
 
@@ -347,7 +347,7 @@ export default function Testimonials() {
                                     />
                                 ))}
 
-                                <span className="ml-3 text-[8px] font-medium tracking-[0.2em] text-[#071a3d]/35">
+                                <span className="ml-3 mt-0.5 text-[10px] font-medium tracking-[0.2em] text-[#071a3d]/35">
                                     PROJECT EXPERIENCE
                                 </span>
                             </div>
@@ -362,7 +362,7 @@ export default function Testimonials() {
                                         {current.name}
                                     </p>
 
-                                    <p className="mt-1 text-[8px] tracking-[0.15em] text-[#071a3d]/40">
+                                    <p className="mt-1 text-[10px] tracking-[0.15em] text-[#071a3d]/40">
                                         {current.company} • {current.location}
                                     </p>
                                 </div>
@@ -397,7 +397,7 @@ export default function Testimonials() {
                                     absolute
                                     right-4
                                     top-5
-                                    text-[7px]
+                                    text-[10px]
                                     font-medium
                                     tracking-[0.3em]
                                     text-[#071a3d]/25
@@ -418,11 +418,11 @@ export default function Testimonials() {
                             </div>
 
                             <div className="mt-5 text-center">
-                                <p className="text-[8px] font-semibold tracking-[0.25em] text-[#071a3d]/45">
+                                <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071a3d]/45">
                                     {current.company}
                                 </p>
 
-                                <p className="mt-1 text-[8px] tracking-[0.2em] text-[#c99618]">
+                                <p className="mt-1 text-[10px] tracking-[0.2em] text-[#c99618]">
                                     {current.location}
                                 </p>
                             </div>
@@ -529,7 +529,7 @@ export default function Testimonials() {
                 <div className="mt-6 flex items-center justify-center gap-4">
                     <div className="h-[1px] w-10 bg-[#c99618] sm:w-16" />
 
-                    <span className="text-center text-[7px] font-medium tracking-[0.3em] text-[#071a3d]/30 sm:text-[8px]">
+                    <span className="text-center text-[10px] font-medium tracking-[0.3em] text-[#071a3d]/30 sm:text-[10px]">
                         QUALITY • PRECISION • TRUST
                     </span>
 

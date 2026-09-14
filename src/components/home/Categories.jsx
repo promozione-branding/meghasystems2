@@ -133,8 +133,7 @@ export default function Categories() {
             CATEGORY GRID
         ==================================================== */}
 
-        <div className="category-grid grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-
+        <div className="category-grid grid gap-5 sm:grid-cols-2">
           {allProducts.map((category, idx) => (
             <Link
               href={category.slug}
@@ -215,7 +214,7 @@ export default function Categories() {
                     {category.categoryName}
                   </h3>
 
-                  <p className="mt-3 max-w-[280px] text-[11px] leading-[1.7] text-white/55">
+                  <p className="mt-3 max-w-[280px] text-[12px] leading-[1.7] text-white/55">
                     {category.description}
                   </p>
 
@@ -249,7 +248,7 @@ export default function Categories() {
 
           <div className="h-[1px] w-12 bg-[#d99a17]" />
 
-          <span className="text-[8px] tracking-[0.3em] text-[#071a3d]/35">
+          <span className="text-[10px] tracking-[0.3em] text-[#071a3d]/35">
             PREMIUM PARTITION SOLUTIONS
           </span>
 

@@ -5,7 +5,7 @@ export const allProducts = [
     title: "Classic Cubicle System",
     excerpt: "Smart. Strong. Built for Every Budget.",
     description: "Cost-Effective Solutions with the Strength You Can Trust.",
-    image: "/Duro-Toilet-Cubicles.webp",
+    image: "/Black Maxi.webp",
     products: [
       {
         name: "Black Maxi",
@@ -562,7 +562,7 @@ export const allProducts = [
     title: "Luxe Cubicle System",
     excerpt: "Premium Looks. Elevated Spaces.",
     description: "Designed to Impress. Crafted for Premium Spaces.",
-    image: "/Premia.webp",
+    image: "/Cielo.webp",
     products: [
       {
         name: "Cielo",

@@ -562,7 +562,7 @@ export default function FAQSection() {
                 <div className="mt-5 flex items-center justify-center gap-3">
                     <span className="h-px w-7 bg-[#d99a17]" />
 
-                    <span className="text-[7px] font-bold tracking-[0.28em] text-[#071a3d]/35">
+                    <span className="text-[10px] font-bold tracking-[0.28em] text-[#071a3d]/35">
                         QUALITY • PRECISION • DURABILITY
                     </span>
 

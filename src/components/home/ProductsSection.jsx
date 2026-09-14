@@ -12,12 +12,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const PRODUCTS = [
     {
-        name: "Black Maxi",
-        slug: "black-maxi",
+        name: "Maxi PRO",
+        slug: "maxi-pro",
         category: "CLASSIC RANGE",
-        image: "/Black Maxi.webp",
+        image: "/Maxi Pro.webp",
         description:
-            "Bold matte black hardware with premium PVD finishing, engineered for high-traffic commercial washrooms.",
+            "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
     },
     {
         name: "Duro",
@@ -28,9 +28,9 @@ const PRODUCTS = [
             "Strong, durable and engineered for demanding commercial washrooms with Grade 316 stainless steel supports.",
     },
     {
-        name: "Cielo",
-        slug: "cielo",
-        image: "/Cielo.webp",
+        name: "Premia",
+        slug: "premia",
+        image: "/Premia.webp",
         category: "LUXE RANGE",
         description: "A premium ceiling-hung cubicle system creating a clean, floating aesthetic with effortless floor cleaning.",
     },

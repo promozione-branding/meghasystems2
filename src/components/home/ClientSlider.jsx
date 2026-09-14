@@ -350,7 +350,7 @@ export default function ClientSlider() {
                                         alt={client.alt}
                                         loading="lazy"
                                         className="
-                                            max-h-[65px]
+                                            max-h-[100px]
                                             max-w-[155px]
                                             object-contain
                                             opacity-90

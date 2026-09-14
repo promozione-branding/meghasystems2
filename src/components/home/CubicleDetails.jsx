@@ -10,15 +10,15 @@ const CUBICLE_LAYERS = [
         number: 1,
         title: "SS Adjustable Leg",
         subtitle: "Adjustable stainless steel support leg",
-        x: "45%",
-        y: "87%",
+        x: "46%",
+        y: "95%",
     },
     {
         id: 1,
         number: 2,
         title: "Door Stopper",
         subtitle: "Floor-mounted door protection stopper",
-        x: "38%",
+        x: "48%",
         y: "63%",
     },
     {
@@ -27,7 +27,7 @@ const CUBICLE_LAYERS = [
         title: "Top Rail",
         subtitle: "Strong aluminum top support",
         x: "50%",
-        y: "12%",
+        y: "8%",
     },
     {
         id: 3,
@@ -42,16 +42,16 @@ const CUBICLE_LAYERS = [
         number: 5,
         title: "Indicator Lock",
         subtitle: "Secure internal privacy locking mechanism",
-        x: "73%",
-        y: "47%",
+        x: "70%",
+        y: "56%",
     },
     {
         id: 5,
         number: 6,
         title: "Door Knob",
         subtitle: "Durable stainless steel door knob",
-        x: "15%",
-        y: "53%",
+        x: "26%",
+        y: "56%",
     },
 ];
 
@@ -428,7 +428,7 @@ export default function CubicleDetails() {
                                 className={`
                                     flex items-center gap-2
                                     border px-3 py-2
-                                    text-[9px] font-semibold
+                                    text-[10px] font-semibold
                                     tracking-[0.08em]
                                     transition-all duration-300
                                     ${isActive
@@ -441,7 +441,7 @@ export default function CubicleDetails() {
                                     className={`
                                         flex h-5 w-5 items-center
                                         justify-center rounded-full
-                                        text-[8px]
+                                        text-[10px]
                                         ${isActive
                                             ? "bg-[#d99a17] text-[#071a3d]"
                                             : "bg-[#071a3d]/5"
@@ -465,7 +465,7 @@ export default function CubicleDetails() {
                 <div className="mt-5 flex items-center justify-center gap-3">
                     <span className="h-px w-8 bg-[#d99a17]" />
 
-                    <span className="text-[8px] font-bold tracking-[0.25em] text-[#071a3d]/40">
+                    <span className="text-[10px] font-bold tracking-[0.25em] text-[#071a3d]/40">
                         PREMIUM HARDWARE • PRECISION INSTALLATION
                     </span>
 

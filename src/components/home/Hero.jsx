@@ -338,13 +338,13 @@ export default function HeroSection() {
           {/* Current client card */}
           <div className="mt-5 border-t border-white/10 pt-5">
             {/* Logo */}
-            <div className="relative h-[65px] w-[125px] sm:h-[75px] sm:w-[145px]">
+            <div className="relative flex justify-center items-center h-[65px] w-[125px] sm:h-[75px] sm:w-[145px] bg-white">
               <Image
                 src={current.logo}
                 alt={current.client}
                 fill
                 sizes="150px"
-                className="object-contain object-left brightness-0 invert"
+                className="object-contain"
               />
             </div>
 

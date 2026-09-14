@@ -68,42 +68,68 @@ const actions = [
 
 /* =========================================================
    PREMIUM CUBICLE SVG
+   5 SUPPORTS + 4 DOORS
 ========================================================= */
 
 function CubicleIllustration() {
-    const panels = [
+    /*
+      IMPORTANT:
+
+      5 vertical supports:
+      185
+      415
+      645
+      875
+      1105
+
+      4 yellow doors:
+      Door 1 -> between support 1 & 2
+      Door 2 -> between support 2 & 3
+      Door 3 -> between support 3 & 4
+      Door 4 -> between support 4 & 5
+
+      The FIRST support remains, but its yellow door
+      has intentionally been removed.
+    */
+
+    const supports = [
+        185,
+        415,
+        645,
+        875,
+        1105,
+    ];
+
+    const doors = [
         {
-            panelX: 35,
-            panelY: 150,
-            supportX: 185,
-            lockX: 57,
-            lockY: 304,
-        },
-        {
-            panelX: 255,
-            panelY: 145,
-            supportX: 415,
+            x: 255,
+            top: 145,
+            right: 420,
+            bottom: 414,
             lockX: 278,
             lockY: 314,
         },
         {
-            panelX: 485,
-            panelY: 145,
-            supportX: 645,
+            x: 485,
+            top: 145,
+            right: 650,
+            bottom: 415,
             lockX: 508,
             lockY: 316,
         },
         {
-            panelX: 715,
-            panelY: 145,
-            supportX: 875,
+            x: 715,
+            top: 145,
+            right: 880,
+            bottom: 416,
             lockX: 738,
             lockY: 318,
         },
         {
-            panelX: 945,
-            panelY: 145,
-            supportX: 1105,
+            x: 945,
+            top: 145,
+            right: 1110,
+            bottom: 417,
             lockX: 968,
             lockY: 320,
         },
@@ -111,10 +137,17 @@ function CubicleIllustration() {
 
     return (
         <svg
-            viewBox="0 0 1400 520"
+            viewBox="145 55 1025 415"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="h-auto w-full overflow-visible"
+            className="
+                block
+                h-auto
+                w-full
+                max-w-none
+                overflow-visible
+            "
+            preserveAspectRatio="xMidYMid meet"
             role="img"
             aria-label="Premium toilet cubicle partition system"
         >
@@ -123,17 +156,28 @@ function CubicleIllustration() {
                     YELLOW PANEL
                 ====================================================== */}
 
-                    <linearGradient
-                        id="ctaYellowPanel"
-                        x1="0"
-                        y1="0"
-                        x2="1"
-                        y2="1"
-                    >
-                        <stop offset="0%" stopColor="#FFE52A" />
-                        <stop offset="45%" stopColor="#FFD900" />
-                        <stop offset="100%" stopColor="#F2C900" />
-                    </linearGradient>
+                <linearGradient
+                    id="ctaYellowPanel"
+                    x1="0"
+                    y1="0"
+                    x2="1"
+                    y2="1"
+                >
+                    <stop
+                        offset="0%"
+                        stopColor="#FFE52A"
+                    />
+
+                    <stop
+                        offset="45%"
+                        stopColor="#FFD900"
+                    />
+
+                    <stop
+                        offset="100%"
+                        stopColor="#F2C900"
+                    />
+                </linearGradient>
 
                 {/* =====================================================
                     DARK SUPPORT
@@ -146,9 +190,20 @@ function CubicleIllustration() {
                     x2="1"
                     y2="1"
                 >
-                    <stop offset="0%" stopColor="#3B271F" />
-                    <stop offset="55%" stopColor="#2D1D17" />
-                    <stop offset="100%" stopColor="#211510" />
+                    <stop
+                        offset="0%"
+                        stopColor="#3B271F"
+                    />
+
+                    <stop
+                        offset="55%"
+                        stopColor="#2D1D17"
+                    />
+
+                    <stop
+                        offset="100%"
+                        stopColor="#211510"
+                    />
                 </linearGradient>
 
                 {/* =====================================================
@@ -162,11 +217,30 @@ function CubicleIllustration() {
                     x2="1"
                     y2="0"
                 >
-                    <stop offset="0%" stopColor="#777777" />
-                    <stop offset="25%" stopColor="#D8D8D8" />
-                    <stop offset="50%" stopColor="#A9A9A9" />
-                    <stop offset="75%" stopColor="#E6E6E6" />
-                    <stop offset="100%" stopColor="#737373" />
+                    <stop
+                        offset="0%"
+                        stopColor="#777777"
+                    />
+
+                    <stop
+                        offset="25%"
+                        stopColor="#D8D8D8"
+                    />
+
+                    <stop
+                        offset="50%"
+                        stopColor="#A9A9A9"
+                    />
+
+                    <stop
+                        offset="75%"
+                        stopColor="#E6E6E6"
+                    />
+
+                    <stop
+                        offset="100%"
+                        stopColor="#737373"
+                    />
                 </linearGradient>
 
                 {/* =====================================================
@@ -216,10 +290,10 @@ function CubicleIllustration() {
 
             <path
                 d="
-                    M45 150
-                    C180 126 310 126 445 145
-                    C585 164 715 164 850 145
-                    C990 125 1120 126 1355 150
+                    M165 150
+                    C285 128 405 130 520 145
+                    C640 160 760 160 875 145
+                    C990 130 1085 130 1155 150
                 "
                 stroke="#B58A12"
                 strokeWidth="3"
@@ -227,97 +301,67 @@ function CubicleIllustration() {
             />
 
             {/* =========================================================
-                CUBICLES
+                4 YELLOW DOORS
             ========================================================= */}
 
-            {panels.map((item, index) => {
-                const isFirst = index === 0;
-
-                const panelX = item.panelX;
-                const supportX = item.supportX;
-
-                const panelTop =
-                    index === 0 ? 150 : 145;
-
-                const panelBottom =
-                    index === 0 ? 405 : 414 + index * 1;
+            {doors.map((door, index) => {
+                const panelLeftBottom =
+                    door.x + 159;
 
                 const panelRight =
-                    index === 0 ? 190 : panelX + 165;
+                    door.right;
 
-                const panelLeftBottom =
-                    index === 0 ? 182 : panelX + 159;
-
-                const lockX = item.lockX;
-                const lockY = item.lockY;
+                const panelBottom =
+                    door.bottom;
 
                 return (
                     <g
-                        key={index}
+                        key={`door-${index}`}
                         filter="url(#ctaCubicleShadow)"
                     >
                         {/* =================================================
-                            YELLOW PANEL
+                            YELLOW DOOR
                         ================================================== */}
 
                         <path
-                            d={
-                                isFirst
-                                    ? `
-                                        M35 150
-                                        Q35 132 53 137
-                                        L190 160
-                                        L182 405
-                                        Q181 420 166 418
-                                        L50 398
-                                        Q35 396 35 380
-                                        Z
-                                    `
-                                    : `
-                                        M${panelX} ${panelTop}
-                                        L${panelRight} ${panelTop + 19}
-                                        L${panelRight - 6} ${panelBottom}
-                                        Q${panelRight - 6} ${panelBottom + 15}
-                                        ${panelRight - 20} ${panelBottom + 13}
-                                        L${panelLeftBottom} ${panelBottom - 1}
-                                        Q${panelX + 3} ${panelBottom - 2}
-                                        ${panelX + 3} ${panelBottom - 15}
-                                        Z
-                                    `
-                            }
+                            d={`
+                                M${door.x} ${door.top}
+                                L${panelRight} ${door.top + 19}
+                                L${panelRight - 6} ${panelBottom}
+                                Q${panelRight - 6} ${panelBottom + 15}
+                                ${panelRight - 20} ${panelBottom + 13}
+                                L${panelLeftBottom} ${panelBottom - 1}
+                                Q${door.x + 3} ${panelBottom - 2}
+                                ${door.x + 3} ${panelBottom - 15}
+                                Z
+                            `}
                             fill="url(#ctaYellowPanel)"
                             stroke="#D2A900"
                             strokeWidth="2"
                         />
 
                         {/* =================================================
-                            PANEL HIGHLIGHT
+                            DOOR HIGHLIGHT
                         ================================================== */}
 
                         <path
-                            d={
-                                isFirst
-                                    ? "M52 151L180 171L176 385"
-                                    : `M${panelX + 17} ${
-                                          panelTop + 19
-                                      }L${panelRight - 13} ${
-                                          panelTop + 36
-                                      }L${panelRight - 18} ${
-                                          panelBottom - 18
-                                      }`
-                            }
+                            d={`
+                                M${door.x + 17} ${door.top + 19}
+                                L${panelRight - 13} ${door.top + 36}
+                                L${panelRight - 18} ${panelBottom - 18}
+                            `}
                             stroke="#FFF58A"
                             strokeWidth="3"
                             opacity="0.42"
                         />
 
                         {/* =================================================
-                            LOCK
+                            DOOR LOCK
                         ================================================== */}
 
                         <circle
-                            cx={lockX}
-                            cy={lockY}
+                            cx={door.lockX}
+                            cy={door.lockY}
                             r="9"
                             fill="#E8E8E8"
                             stroke="#777"
@@ -326,49 +370,53 @@ function CubicleIllustration() {
                         />
 
                         <circle
-                            cx={lockX}
-                            cy={lockY}
+                            cx={door.lockX}
+                            cy={door.lockY}
                             r="3"
                             fill="#555"
                         />
+                    </g>
+                );
+            })}
 
+            {/* =========================================================
+                5 DARK SUPPORTS
+            ========================================================= */}
+
+            {supports.map((supportX, index) => {
+                const bottom =
+                    index === 0
+                        ? 405
+                        : 414 + index;
+
+                return (
+                    <g
+                        key={`support-${index}`}
+                        filter="url(#ctaCubicleShadow)"
+                    >
                         {/* =================================================
-                            DARK SUPPORT
+                            DARK VERTICAL SUPPORT
                         ================================================== */}
 
                         <path
                             d={`
                                 M${supportX} 125
-                                Q${supportX} 82 ${supportX + 40} 80
-                                Q${supportX + 80} 80 ${supportX + 80} 125
-                                L${supportX + 85} ${
-                                index === 0
-                                    ? 405
-                                    : 414 + index
-                            }
-                                Q${supportX + 85} ${
-                                index === 0
-                                    ? 423
-                                    : 430 + index
-                            } ${supportX + 67} ${
-                                index === 0
-                                    ? 425
-                                    : 432 + index
-                            }
-                                L${supportX + 17} ${
-                                index === 0
-                                    ? 421
-                                    : 428 + index
-                            }
-                                Q${supportX} ${
-                                index === 0
-                                    ? 420
-                                    : 427 + index
-                            } ${supportX} ${
-                                index === 0
-                                    ? 402
-                                    : 410 + index
-                            }
+                                Q${supportX} 82
+                                ${supportX + 40} 80
+
+                                Q${supportX + 80} 80
+                                ${supportX + 80} 125
+
+                                L${supportX + 85} ${bottom}
+
+                                Q${supportX + 85} ${bottom + 9}
+                                ${supportX + 67} ${bottom + 11}
+
+                                L${supportX + 17} ${bottom + 7}
+
+                                Q${supportX} ${bottom + 5}
+                                ${supportX} ${bottom - 3}
+
                                 Z
                             `}
                             fill="url(#ctaDarkPanel)"
@@ -382,44 +430,20 @@ function CubicleIllustration() {
 
                         <path
                             d={`
-                                M${supportX} ${
-                                index === 0
-                                    ? 397
-                                    : 406 + index
-                            }
-                                L${supportX + 83} ${
-                                index === 0
-                                    ? 400
-                                    : 409 + index
-                            }
-                                L${supportX + 85} ${
-                                index === 0
-                                    ? 431
-                                    : 438 + index
-                            }
-                                Q${supportX + 85} ${
-                                index === 0
-                                    ? 438
-                                    : 445 + index
-                            } ${supportX + 77} ${
-                                index === 0
-                                    ? 439
-                                    : 446 + index
-                            }
-                                L${supportX + 12} ${
-                                index === 0
-                                    ? 435
-                                    : 442 + index
-                            }
-                                Q${supportX + 2} ${
-                                index === 0
-                                    ? 434
-                                    : 441 + index
-                            } ${supportX + 2} ${
-                                index === 0
-                                    ? 425
-                                    : 432 + index
-                            }
+                                M${supportX} ${bottom - 8}
+
+                                L${supportX + 83} ${bottom - 5}
+
+                                L${supportX + 85} ${bottom + 24}
+
+                                Q${supportX + 85} ${bottom + 31}
+                                ${supportX + 77} ${bottom + 32}
+
+                                L${supportX + 12} ${bottom + 28}
+
+                                Q${supportX + 2} ${bottom + 27}
+                                ${supportX + 2} ${bottom + 18}
+
                                 Z
                             `}
                             fill="url(#ctaSteel)"
@@ -428,16 +452,12 @@ function CubicleIllustration() {
                         />
 
                         {/* =================================================
-                            SUPPORT LOCK
+                            SUPPORT HARDWARE
                         ================================================== */}
 
                         <circle
                             cx={supportX + 53}
-                            cy={
-                                index === 0
-                                    ? 315
-                                    : 316 + index
-                            }
+                            cy={315 + index}
                             r="9"
                             fill="#EAEAEA"
                             stroke="#777"
@@ -447,11 +467,7 @@ function CubicleIllustration() {
 
                         <circle
                             cx={supportX + 53}
-                            cy={
-                                index === 0
-                                    ? 315
-                                    : 316 + index
-                            }
+                            cy={315 + index}
                             r="3"
                             fill="#555"
                         />
@@ -460,32 +476,8 @@ function CubicleIllustration() {
             })}
 
             {/* =========================================================
-                RIGHT END SUPPORT
+                DOOR TOP HIGHLIGHTS
             ========================================================= */}
-
-            <path
-                d="
-                    M1105 130
-                    L1145 135
-                    L1150 430
-                    L1128 428
-                    Z
-                "
-                fill="#281914"
-                stroke="#21150F"
-                strokeWidth="2"
-            />
-
-            {/* =========================================================
-                GOLD PANEL TOP HIGHLIGHTS
-            ========================================================= */}
-
-            <path
-                d="M36 150L190 160"
-                stroke="#FFF7A0"
-                strokeWidth="2"
-                opacity="0.7"
-            />
 
             <path
                 d="M256 145L420 164"
@@ -520,14 +512,20 @@ function CubicleIllustration() {
             ========================================================= */}
 
             <path
-                d="M40 438 C300 455 720 465 1148 447"
+                d="
+                    M165 438
+                    C400 455 760 465 1150 447
+                "
                 stroke="#071a3d"
                 strokeWidth="2"
                 opacity="0.10"
             />
 
             <path
-                d="M70 450 C350 468 750 478 1120 460"
+                d="
+                    M180 450
+                    C430 468 780 478 1130 460
+                "
                 stroke="#c99618"
                 strokeWidth="1"
                 opacity="0.25"
@@ -621,7 +619,7 @@ export default function CTASection() {
                 );
 
             /* =====================================================
-               TECHNICAL SVG DRAWING ANIMATION
+               TECHNICAL SVG DRAWING
             ====================================================== */
 
             if (svgRef.current) {
@@ -645,7 +643,7 @@ export default function CTASection() {
             }
 
             /* =====================================================
-               VERY SUBTLE PRODUCT FLOAT
+               PRODUCT FLOAT
             ====================================================== */
 
             if (productRef.current) {
@@ -670,12 +668,12 @@ export default function CTASection() {
                 overflow-hidden
                 bg-[#f7f4ec]
                 py-6
-                sm:py-7
-                lg:py-8
+                sm:py-8
+                lg:py-10
             "
         >
             {/* =====================================================
-                SUBTLE BACKGROUND ARCHITECTURE
+                BACKGROUND ARCHITECTURE
             ====================================================== */}
 
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -705,7 +703,7 @@ export default function CTASection() {
                     "
                 />
 
-                {/* subtle horizontal line */}
+                {/* horizontal line */}
 
                 <div
                     className="
@@ -718,19 +716,19 @@ export default function CTASection() {
                     "
                 />
 
-                {/* small architectural circle */}
+                {/* architectural circle */}
 
                 <svg
                     viewBox="0 0 400 400"
                     className="
                         absolute
-                        right-[-75px]
-                        top-[-20px]
-                        h-[300px]
-                        w-[300px]
-                        opacity-[0.16]
-                        sm:h-[340px]
-                        sm:w-[340px]
+                        right-[-90px]
+                        top-[-30px]
+                        h-[260px]
+                        w-[260px]
+                        opacity-[0.14]
+                        sm:h-[320px]
+                        sm:w-[320px]
                         lg:right-[-45px]
                         lg:h-[380px]
                         lg:w-[380px]
@@ -795,9 +793,9 @@ export default function CTASection() {
                         z-20
                         grid
                         grid-cols-1
-                        gap-4
+                        gap-5
                         lg:grid-cols-[1fr_260px]
-                        lg:gap-6
+                        lg:gap-8
                     "
                 >
                     {/* =================================================
@@ -805,8 +803,6 @@ export default function CTASection() {
                     ================================================= */}
 
                     <div>
-                        {/* eyebrow */}
-
                         <div
                             className="
                                 cta-eyebrow
@@ -823,14 +819,12 @@ export default function CTASection() {
                                     font-semibold
                                     tracking-[0.30em]
                                     text-[#c99618]
-                                    sm:text-[8px]
+                                    sm:text-[10px]
                                 "
                             >
                                 PREMIUM TOILET CUBICLE SOLUTIONS
                             </span>
                         </div>
-
-                        {/* title */}
 
                         <h2
                             className="
@@ -843,6 +837,7 @@ export default function CTASection() {
                                 tracking-[-0.045em]
                                 text-[#071a3d]
                                 sm:text-[40px]
+                                md:text-[44px]
                                 lg:text-[50px]
                                 xl:text-[54px]
                             "
@@ -854,8 +849,6 @@ export default function CTASection() {
                                 Built for Every Space.
                             </span>
                         </h2>
-
-                        {/* description */}
 
                         <p
                             className="
@@ -884,9 +877,12 @@ export default function CTASection() {
                             relative
                             z-30
                             flex
-                            flex-col
-                            gap-2
-                            lg:pt-0
+                            flex-row
+                            flex-wrap
+                            gap-x-5
+                            gap-y-3
+                            lg:flex-col
+                            lg:gap-3
                         "
                     >
                         {features.map((feature) => {
@@ -902,8 +898,6 @@ export default function CTASection() {
                                         gap-3
                                     "
                                 >
-                                    {/* icon */}
-
                                     <div
                                         className="
                                             flex
@@ -923,8 +917,6 @@ export default function CTASection() {
                                             strokeWidth={1.7}
                                         />
                                     </div>
-
-                                    {/* text */}
 
                                     <div>
                                         <p
@@ -965,14 +957,13 @@ export default function CTASection() {
                 <div
                     className="
                         relative
-                        mt-[-3px]
-                        h-[190px]
-                        sm:mt-[-5px]
-                        sm:h-[240px]
-                        md:h-[270px]
-                        lg:mt-[-12px]
+                        mt-0
+                        h-[170px]
+                        sm:h-[220px]
+                        md:h-[260px]
+                        lg:-mt-4
                         lg:h-[315px]
-                        xl:h-[335px]
+                        xl:h-[340px]
                     "
                 >
                     {/* =================================================
@@ -1069,27 +1060,31 @@ export default function CTASection() {
                         className="
                             product-image
                             absolute
-                            bottom-[-3px]
+                            sm:bottom-[-3px]
                             left-1/2
                             z-10
-                            w-[88%]
+                            w-[96%]
                             -translate-x-1/2
-                            sm:w-[82%]
-                            md:w-[78%]
-                            lg:w-[76%]
-                            xl:w-[74%]
+                            sm:w-[94%]
+                            md:w-[90%]
+                            lg:w-[86%]
+                            xl:w-[60%]
                         "
                     >
                         <CubicleIllustration />
                     </div>
                 </div>
 
+                {/* =================================================
+                    CTA ACTION AREA
+                ================================================= */}
+
                 <div
                     className="
                         relative
                         z-40
-                        mt-0
-                        sm:mt-1
+                        mt-1
+                        sm:mt-2
                         lg:mt-0
                     "
                 >
@@ -1097,11 +1092,14 @@ export default function CTASection() {
                         className="
                             grid
                             items-center
-                            gap-4
+                            gap-5
                             lg:grid-cols-[220px_1fr]
-                            lg:gap-5
+                            lg:gap-6
                         "
                     >
+                        {/* =================================================
+                            GET STARTED
+                        ================================================= */}
 
                         <div>
                             <div className="flex items-center gap-2">
@@ -1109,7 +1107,7 @@ export default function CTASection() {
 
                                 <span
                                     className="
-                                        text-[7px]
+                                        text-[9px]
                                         font-semibold
                                         tracking-[0.27em]
                                         text-[#c99618]
@@ -1140,7 +1138,7 @@ export default function CTASection() {
                                 className="
                                     mt-2
                                     max-w-[200px]
-                                    text-[9px]
+                                    text-[10px]
                                     leading-[1.6]
                                     text-[#071a3d]/50
                                 "
@@ -1150,6 +1148,10 @@ export default function CTASection() {
                                 requirements.
                             </p>
                         </div>
+
+                        {/* =================================================
+                            ACTION BUTTONS
+                        ================================================= */}
 
                         <div
                             className="
@@ -1192,15 +1194,14 @@ export default function CTASection() {
                                                 duration-500
                                                 sm:h-[68px]
 
-                                                ${
-                                                    action.primary
-                                                        ? `
+                                                ${action.primary
+                                                    ? `
                                                             border-[#071a3d]
                                                             bg-[#071a3d]
                                                             text-white
                                                             shadow-[0_8px_20px_rgba(7,26,61,0.12)]
                                                         `
-                                                        : `
+                                                    : `
                                                             border-[#c99618]
                                                             bg-[#f9f8f3]
                                                             text-[#071a3d]
@@ -1208,9 +1209,7 @@ export default function CTASection() {
                                                 }
                                             `}
                                         >
-                                            {/* =================================================
-                                                DECORATIVE CIRCLES
-                                            ================================================= */}
+                                            {/* Decorative circles */}
 
                                             <span
                                                 className="
@@ -1243,9 +1242,7 @@ export default function CTASection() {
                                                 "
                                             />
 
-                                            {/* =================================================
-                                                LEFT CONTENT
-                                            ================================================= */}
+                                            {/* Content */}
 
                                             <span
                                                 className="
@@ -1256,8 +1253,6 @@ export default function CTASection() {
                                                     gap-2.5
                                                 "
                                             >
-                                                {/* icon */}
-
                                                 <span
                                                     className="
                                                         flex
@@ -1281,8 +1276,6 @@ export default function CTASection() {
                                                     />
                                                 </span>
 
-                                                {/* title */}
-
                                                 <span
                                                     className="
                                                         text-[10px]
@@ -1294,9 +1287,7 @@ export default function CTASection() {
                                                 </span>
                                             </span>
 
-                                            {/* =================================================
-                                                ARROW
-                                            ================================================= */}
+                                            {/* Arrow */}
 
                                             <span
                                                 className="
@@ -1313,9 +1304,7 @@ export default function CTASection() {
                                                 />
                                             </span>
 
-                                            {/* =================================================
-                                                BOTTOM GOLD LINE
-                                            ================================================= */}
+                                            {/* Bottom gold line */}
 
                                             <span
                                                 className="

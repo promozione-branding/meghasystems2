@@ -279,7 +279,7 @@ export default function Footer() {
                                 <a
                                     key={link.label}
                                     href={link.href}
-                                    className="group flex items-center gap-2 text-xs text-white/55 transition-colors duration-300 hover:text-white"
+                                    className="group flex items-center gap-2 text-sm text-white/55 transition-colors duration-300 hover:text-white"
                                 >
                                     <span className="h-px w-0 bg-[#d99a17] transition-all duration-300 group-hover:w-4" />
 
@@ -304,7 +304,7 @@ export default function Footer() {
                                 <a
                                     key={link.label}
                                     href={link.href}
-                                    className="group flex items-center gap-2 text-xs text-white/55 transition-colors duration-300 hover:text-white"
+                                    className="group flex items-center gap-2 text-sm text-white/55 transition-colors duration-300 hover:text-white"
                                 >
                                     <span className="h-px w-0 bg-[#d99a17] transition-all duration-300 group-hover:w-4" />
 
@@ -339,7 +339,7 @@ export default function Footer() {
                                     </p>
                                 </div>
 
-                                <p className="text-xs leading-6 text-white/50">
+                                <p className="text-sm leading-6 text-white/50">
                                     Plot Number-P10/J-3,
                                     <br />
                                     Adore Business City,
@@ -366,7 +366,7 @@ export default function Footer() {
                                     </p>
                                 </div>
 
-                                <p className="text-xs leading-6 text-white/50">
+                                <p className="text-sm leading-6 text-white/50">
                                     Plot No.341/1,2,3 & 4,
                                     <br />
                                     Safdar Nagar,
@@ -382,7 +382,7 @@ export default function Footer() {
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             <a
                                 href="mailto:contact@meghasystems.com"
-                                className="group flex items-center gap-2 text-xs text-white/65 transition-colors hover:text-[#d99a17]"
+                                className="group flex items-center gap-2 text-sm text-white/65 transition-colors hover:text-[#d99a17]"
                             >
                                 <FiMail
                                     size={14}
@@ -401,7 +401,7 @@ export default function Footer() {
 
                             <a
                                 href="tel:+919873735716"
-                                className="flex items-center gap-2 text-xs text-white/65 transition-colors hover:text-[#d99a17]"
+                                className="flex items-center gap-2 text-sm text-white/65 transition-colors hover:text-[#d99a17]"
                             >
                                 <FiPhone
                                     size={14}
@@ -413,7 +413,7 @@ export default function Footer() {
 
                             <a
                                 href="tel:+919873735713"
-                                className="flex items-center gap-2 text-xs text-white/65 transition-colors hover:text-[#d99a17]"
+                                className="flex items-center gap-2 text-sm text-white/65 transition-colors hover:text-[#d99a17]"
                             >
                                 <FiPhone
                                     size={14}
@@ -431,7 +431,7 @@ export default function Footer() {
                 ================================================== */}
                 <div className="flex flex-col gap-7 border-b border-white/10 py-8 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <p className="text-[9px] font-bold tracking-[0.28em] text-white/30">
+                        <p className="text-[9px] font-bold tracking-[0.28em] text-white/40">
                             CONNECT WITH US
                         </p>
 
@@ -459,7 +459,7 @@ export default function Footer() {
 
                     <a
                         href="/contact"
-                        className="group flex w-fit items-center gap-4 border border-[#d99a17]/50 bg-[#d99a17] px-6 py-3.5 text-[9px] font-bold tracking-[0.2em] text-[#071a3d] transition-all duration-300 hover:bg-white hover:border-white"
+                        className="group flex w-fit items-center gap-4 border border-[#d99a17]/50 bg-[#d99a17] px-6 py-3.5 text-[10px] font-bold tracking-[0.2em] text-[#071a3d] transition-all duration-300 hover:bg-white hover:border-white"
                     >
                         START YOUR PROJECT
 
@@ -473,12 +473,12 @@ export default function Footer() {
                     BOTTOM BAR
                 ================================================== */}
                 <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-[9px] tracking-[0.16em] text-white/30">
+                    <p className="text-[10px] tracking-[0.16em] text-white/30">
                         © {new Date().getFullYear()} MEGHA SYSTEMS. ALL RIGHTS
                         RESERVED.
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-4 text-[8px] font-semibold tracking-[0.18em] text-white/30">
+                    <div className="flex flex-wrap items-center gap-4 text-[10px] font-semibold tracking-[0.18em] text-white/30">
                         <a
                             href="/privacy-policy"
                             className="transition-colors hover:text-[#d99a17]"
