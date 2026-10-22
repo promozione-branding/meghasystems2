@@ -1,1314 +1,327 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { FiActivity, FiArrowUpRight, FiBookOpen, FiBriefcase, FiChevronLeft, FiChevronRight, FiCoffee, FiHome, FiMapPin, FiSettings, FiShield, FiShoppingBag, FiStar, FiTruck } from "react-icons/fi";
+import { BsFillAirplaneEnginesFill } from "react-icons/bs";
 
-import {
-    FiArrowUpRight,
-    FiBriefcase,
-    FiHome,
-    FiActivity,
-    FiShoppingBag,
-    FiTruck,
-    FiBookOpen,
-    FiCoffee,
-    FiMapPin,
-} from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* =========================================================
-   INDUSTRIES + PROJECTS
-========================================================= */
-
 const INDUSTRIES = [
-    {
-        id: 1,
-        number: "01",
-        title: "CORPORATE",
-        subtitle: "OFFICES & WORKSPACES",
-        description:
-            "Premium restroom partition solutions designed for modern corporate offices, commercial buildings and professional workspaces.",
-        icon: FiBriefcase,
-
-        project: {
-            name: "Business Park",
-            location: "Gurgaon",
-            image: "/WhatsApp Image 2026-09-14 at 5.10.25 PM.jpeg",
-        },
+  {
+    id: 1,
+    number: "01",
+    title: "Corporate",
+    subtitle: "Offices & Workspaces",
+    description:
+      "Premium restroom partition solutions designed for modern corporate offices, commercial buildings and professional workspaces.",
+    icon: FiBriefcase,
+    project: {
+      name: "Business Park",
+      location: "Gurgaon",
+      image: "/WhatsApp Image 2026-09-14 at 5.10.25 PM.jpeg",
     },
-
-    {
-        id: 2,
-        number: "02",
-        title: "STADIUM",
-        subtitle: "SPORTS & PUBLIC SPACES",
-        description:
-            "Durable, hygienic and high-performance washroom solutions designed to handle heavy footfall in sports and public environments.",
-        icon: FiActivity,
-
-        project: {
-            name: "Indira Gandhi Stadium",
-            location: "Delhi",
-            image: "/ChatGPT Image Sep 14, 2026, 05_54_13 PM.png",
-        },
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Stadium",
+    subtitle: "Sports & Public Spaces",
+    description:
+      "Durable, hygienic and high-performance restroom solutions designed to handle heavy footfall in sports and public environments.",
+    icon: FiActivity,
+    project: {
+      name: "Indira Gandhi Stadium",
+      location: "Delhi",
+      image: "/ChatGPT Image Sep 14, 2026, 05_54_13 PM.png",
     },
-
-    {
-        id: 3,
-        number: "03",
-        title: "HOTELS",
-        subtitle: "HOSPITALITY",
-        description:
-            "Elegant cubicle systems that combine premium aesthetics, privacy and long-term performance for hospitality spaces.",
-        icon: FiHome,
-
-        project: {
-            name: "HOTEL NH8",
-            location: "Jaipur, India",
-            image: "/ChatGPT Image Sep 14, 2026, 05_21_14 PM.png",
-        },
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Hotels",
+    subtitle: "Hospitality",
+    description:
+      "Elegant cubicle systems that combine premium aesthetics, privacy and long-term performance for hospitality spaces.",
+    icon: FiHome,
+    project: {
+      name: "Hotel NH8",
+      location: "Jaipur, India",
+      image: "/ChatGPT Image Sep 14, 2026, 05_21_14 PM.png",
     },
-
-    {
-        id: 4,
-        number: "04",
-        title: "MALLS & RETAIL",
-        subtitle: "HIGH-TRAFFIC SPACES",
-        description:
-            "Robust restroom systems engineered for high visitor volumes while maintaining a clean and premium appearance.",
-        icon: FiShoppingBag,
-
-        project: {
-            name: "Pacific Mall",
-            location: "Jasola, Delhi",
-            image: "/ChatGPT Image Sep 14, 2026, 05_23_25 PM.png",
-        },
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Malls & Retail",
+    subtitle: "High-Traffic Spaces",
+    description:
+      "Robust restroom systems engineered for high visitor volumes while maintaining a clean and premium appearance.",
+    icon: FiShoppingBag,
+    project: {
+      name: "Pacific Mall",
+      location: "Jasola, Delhi",
+      image: "/ChatGPT Image Sep 14, 2026, 05_23_25 PM.png",
     },
-
-    {
-        id: 5,
-        number: "05",
-        title: "FACTORIES",
-        subtitle: "INDUSTRIAL FACILITIES",
-        description:
-            "Heavy-duty and practical washroom partition systems built for industrial and high-usage environments.",
-        icon: FiTruck,
-
-        project: {
-            name: "Yamaha Motors",
-            location: "Delhi",
-            image: "/ChatGPT Image Sep 14, 2026, 05_29_02 PM.png",
-        },
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Factories",
+    subtitle: "Industrial Facilities",
+    description:
+      "Heavy-duty and practical restroom partition systems built for industrial and high-usage environments.",
+    icon: FiTruck,
+    project: {
+      name: "Yamaha Motors",
+      location: "Delhi",
+      image: "/ChatGPT Image Sep 14, 2026, 05_29_02 PM.png",
     },
-
-    {
-        id: 6,
-        number: "06",
-        title: "EDUCATION",
-        subtitle: "SCHOOLS & INSTITUTIONS",
-        description:
-            "Safe, durable and practical cubicle solutions suitable for schools, colleges and institutional facilities.",
-        icon: FiBookOpen,
-
-        project: {
-            name: "St. Xaviers School",
-            location: "Noida",
-            image: "/ChatGPT Image Sep 14, 2026, 05_32_01 PM.png",
-        },
+  },
+  {
+    id: 6,
+    number: "06",
+    title: "Education",
+    subtitle: "Schools & Institutions",
+    description:
+      "Safe, durable and practical cubicle solutions suitable for schools, colleges and institutional facilities.",
+    icon: FiBookOpen,
+    project: {
+      name: "St. Xaviers School",
+      location: "Noida",
+      image: "/ChatGPT Image Sep 14, 2026, 05_32_01 PM.png",
     },
-
-    {
-        id: 7,
-        number: "07",
-        title: "RESTAURANTS",
-        subtitle: "FOOD & DINING",
-        description:
-            "Contemporary restroom solutions designed to complement restaurants, food courts, cafes and dining spaces.",
-        icon: FiCoffee,
-
-        project: {
-            name: "Great Khali Dhaba",
-            location: "Haryana",
-            image: "/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png",
-        },
+  },
+  {
+    id: 7,
+    number: "07",
+    title: "Restaurants",
+    subtitle: "Food & Dining",
+    description:
+      "Contemporary restroom solutions designed to complement restaurants, food courts, cafes and dining spaces.",
+    icon: FiCoffee,
+    project: {
+      name: "Great Khali Dhaba",
+      location: "Haryana",
+      image: "/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png",
     },
-
-    {
-        id: 8,
-        number: "08",
-        title: "AIRPORTS",
-        subtitle: "TRANSPORT HUBS",
-        description:
-            "High-performance restroom partition systems designed for busy public and transportation environments.",
-        icon: FiMapPin,
-
-        project: {
-            name: "Rajeev Gandhi Bhawan",
-            location: "Delhi Airport",
-            image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
-        },
+  },
+  {
+    id: 8,
+    number: "08",
+    title: "Airports",
+    subtitle: "Transport Hubs",
+    description:
+      "High-performance restroom partition systems designed for busy public and transportation environments.",
+    icon: BsFillAirplaneEnginesFill ,
+    project: {
+      name: "Rajeev Gandhi Bhawan",
+      location: "Delhi Airport",
+      image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
     },
+  },
 ];
 
-/* =========================================================
-   ADDITIONAL PROJECTS
-========================================================= */
-
-const ADDITIONAL_PROJECTS = [
-    {
-        name: "Urbtech Trade Centre",
-        location: "Noida",
-        image: "/projects/urbtech-trade-centre.webp",
-        industry: "Corporate",
-    },
-    {
-        name: "Spaze Corporate Park",
-        location: "Gurgaon",
-        image: "/projects/spaze-corporate-park.webp",
-        industry: "Corporate",
-    },
-    {
-        name: "JBM Global School",
-        location: "Noida",
-        image: "/projects/jbm-global-school.webp",
-        industry: "Education",
-    },
-    {
-        name: "Indira Gandhi Stadium",
-        location: "Delhi",
-        image: "/projects/indira-gandhi-stadium.webp",
-        industry: "Institutional",
-    },
+const BENEFITS = [
+  { icon: FiShield, title: "Durable Solutions", detail: "Built for high-traffic environments" },
+  { icon: FiSettings, title: "Custom Engineering", detail: "Tailored to industry requirements" },
+  { icon: FiStar, title: "Trusted Across India", detail: "Reliable project execution" },
 ];
-
-/* =========================================================
-   ARCHITECTURAL SVG
-========================================================= */
-
-function ArchitectureSVG() {
-    return (
-        <svg
-            viewBox="0 0 1000 650"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-full w-full"
-            aria-hidden="true"
-        >
-            <path
-                className="industry-draw"
-                d="M140 540V150L500 55L860 150V540"
-                stroke="#071a3d"
-                strokeWidth="1"
-            />
-
-            <path
-                className="industry-draw"
-                d="M180 540V175L500 92L820 175V540"
-                stroke="#c99618"
-                strokeWidth="1"
-            />
-
-            <path
-                className="industry-draw"
-                d="M280 540V150"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".35"
-            />
-
-            <path
-                className="industry-draw"
-                d="M390 540V120"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".25"
-            />
-
-            <path
-                className="industry-draw"
-                d="M610 540V120"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".25"
-            />
-
-            <path
-                className="industry-draw"
-                d="M720 540V150"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".35"
-            />
-
-            <path
-                className="industry-draw"
-                d="M140 270H860"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".18"
-            />
-
-            <path
-                className="industry-draw"
-                d="M140 380H860"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".14"
-            />
-
-            <path
-                className="industry-draw"
-                d="M140 540H860"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".3"
-            />
-
-            <circle
-                className="industry-circle"
-                cx="500"
-                cy="300"
-                r="105"
-                stroke="#c99618"
-                strokeWidth="1"
-                opacity=".18"
-            />
-
-            <circle
-                className="industry-circle"
-                cx="500"
-                cy="300"
-                r="145"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="3 12"
-                opacity=".12"
-            />
-
-            <path
-                className="industry-draw"
-                d="M500 145V455"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="4 10"
-                opacity=".15"
-            />
-
-            <path
-                className="industry-draw"
-                d="M345 300H655"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="4 10"
-                opacity=".15"
-            />
-
-            <path
-                className="industry-draw"
-                d="M140 150L180 175"
-                stroke="#c99618"
-                strokeWidth="2"
-                opacity=".35"
-            />
-
-            <path
-                className="industry-draw"
-                d="M860 150L820 175"
-                stroke="#c99618"
-                strokeWidth="2"
-                opacity=".35"
-            />
-
-            <circle
-                cx="500"
-                cy="300"
-                r="5"
-                fill="#c99618"
-                opacity=".4"
-            />
-        </svg>
-    );
-}
-
-/* =========================================================
-   PROJECT IMAGE
-========================================================= */
-
-function ProjectImage({ project }) {
-    if (!project) {
-        return (
-            <div className="relative flex h-full min-h-[180px] items-center justify-center bg-[#0a224d]">
-                <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:35px_35px]" />
-
-                <div className="relative text-center">
-                    <FiHome
-                        size={34}
-                        strokeWidth={1}
-                        className="mx-auto text-[#c99618]"
-                    />
-
-                    <p className="mt-4 text-[9px] font-bold tracking-[0.25em] text-white/40">
-                        PROJECT IMAGE
-                    </p>
-
-                    <p className="mt-2 text-xs text-white/30">
-                        Coming soon
-                    </p>
-                </div>
-            </div>
-        );
-    }
-
-    return (
-        <div className="relative h-full min-h-[180px] overflow-hidden bg-[#dfe3e6]">
-            {/* Image */}
-
-            <img
-                src={project.image}
-                alt={`${project.name} - ${project.location}`}
-                className="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    transition-transform
-                    duration-[1.2s]
-                    ease-out
-                    group-hover:scale-[1.05]
-                "
-            />
-
-            {/* Image overlay */}
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d]/85 via-[#071a3d]/10 to-transparent" />
-
-            {/* Gold corner */}
-
-            <div className="absolute right-0 top-0 h-16 w-16 border-b border-l border-[#c99618]/60" />
-
-            {/* Project label */}
-
-            <div className="absolute bottom-5 left-5 right-5">
-                <p className="text-[8px] font-bold tracking-[0.3em] text-[#c99618]">
-                    FEATURED PROJECT
-                </p>
-
-                <h4 className="mt-1 text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                    {project.name}
-                </h4>
-
-                <div className="mt-1 flex items-center gap-2">
-                    <FiMapPin
-                        size={11}
-                        className="text-[#c99618]"
-                    />
-
-                    <span className="text-[10px] tracking-[0.08em] text-white/60">
-                        {project.location}
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-/* =========================================================
-   MAIN COMPONENT
-========================================================= */
 
 export default function IndustriesWeServe() {
-    const sectionRef = useRef(null);
-    const scrollAreaRef = useRef(null);
-    const architectureRef = useRef(null);
-    const panelRef = useRef(null);
-
-    const [active, setActive] = useState(0);
-
-    const current = INDUSTRIES[active];
-    const CurrentIcon = current.icon;
-
-    /* =========================================================
-       GSAP
-    ========================================================= */
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            const industryTrigger = ScrollTrigger.create({
-                trigger: scrollAreaRef.current,
-                start: "top top",
-                end: "bottom bottom",
-
-                onUpdate: (self) => {
-                    const progress = self.progress;
-
-                    const index = Math.min(
-                        INDUSTRIES.length - 1,
-                        Math.floor(
-                            progress * INDUSTRIES.length
-                        )
-                    );
-
-                    setActive((previous) => {
-                        if (previous === index) {
-                            return previous;
-                        }
-
-                        return index;
-                    });
-                },
-            });
-
-            /* Header */
-
-            gsap.fromTo(
-                ".industry-eyebrow",
-                {
-                    y: 20,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 85%",
-                        once: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(
-                ".industry-heading",
-                {
-                    y: 25,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 82%",
-                        once: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(
-                ".industry-intro",
-                {
-                    y: 20,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
-
-            /* Industry list */
-
-            gsap.fromTo(
-                ".industry-item",
-                {
-                    x: -20,
-                    opacity: 0,
-                },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 0.5,
-                    stagger: 0.05,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 75%",
-                        once: true,
-                    },
-                }
-            );
-
-            /* Panel */
-
-            gsap.fromTo(
-                ".industry-panel",
-                {
-                    x: 25,
-                    opacity: 0,
-                },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 75%",
-                        once: true,
-                    },
-                }
-            );
-
-            /* SVG draw */
-
-            const lines =
-                architectureRef.current?.querySelectorAll(
-                    ".industry-draw"
-                );
-
-            if (lines?.length) {
-                lines.forEach((line) => {
-                    const length =
-                        typeof line.getTotalLength === "function"
-                            ? line.getTotalLength()
-                            : 1000;
-
-                    gsap.set(line, {
-                        strokeDasharray: length,
-                        strokeDashoffset: length,
-                    });
-                });
-
-                gsap.to(lines, {
-                    strokeDashoffset: 0,
-                    duration: 2,
-                    stagger: 0.04,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 85%",
-                        once: true,
-                    },
-                });
-            }
-
-            /* Rotating circles */
-
-            gsap.to(".industry-circle", {
-                rotation: 360,
-                transformOrigin: "50% 50%",
-                duration: 60,
-                repeat: -1,
-                ease: "none",
-            });
-
-            /* SVG parallax */
-
-            gsap.to(architectureRef.current, {
-                y: -80,
-                x: -30,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: scrollAreaRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-
-            /* Grid */
-
-            gsap.to(".industry-grid", {
-                y: -50,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: scrollAreaRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 2,
-                },
-            });
-
-            /* Gold line */
-
-            gsap.fromTo(
-                ".industry-top-line",
-                {
-                    scaleX: 0,
-                    transformOrigin: "left center",
-                },
-                {
-                    scaleX: 1,
-                    duration: 1,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: scrollAreaRef.current,
-                        start: "top 90%",
-                        once: true,
-                    },
-                }
-            );
-
-            requestAnimationFrame(() => {
-                ScrollTrigger.refresh();
-            });
-
-            return () => {
-                industryTrigger.kill();
-            };
-        }, sectionRef);
-
-        return () => {
-            ctx.revert();
-        };
-    }, []);
-
-    /* =========================================================
-       CHANGE INDUSTRY
-    ========================================================= */
-
-    const handleIndustryChange = (index) => {
-        setActive(index);
-
-        if (panelRef.current) {
-            gsap.fromTo(
-                panelRef.current,
-                {
-                    y: 10,
-                },
-                {
-                    y: 0,
-                    duration: 0.4,
-                    ease: "power3.out",
-                }
-            );
-        }
-    };
-
-    /* =========================================================
-       RENDER
-    ========================================================= */
-
-    return (
-        <div
-            ref={scrollAreaRef}
-            className="
-                relative
-                h-[500vh]
-                bg-[#f3f5f7]
-            "
-        >
-            <section
-                ref={sectionRef}
-                className="
-                    sticky
-                    top-0
-                    h-screen
-                    w-full
-                    overflow-hidden
-                    bg-[#f3f5f7]
-                "
-            >
-                {/* =================================================
-                    GOLD LINE
-                ================================================= */}
-
-                <div
-                    className="
-                        industry-top-line
-                        absolute
-                        left-0
-                        top-0
-                        z-50
-                        h-[3px]
-                        w-full
-                        bg-[#c99618]
-                    "
-                />
-
-                {/* =================================================
-                    BACKGROUND
-                ================================================= */}
-
-                <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                    <div
-                        className="
-                            industry-grid
-                            absolute
-                            inset-0
-                            opacity-[0.045]
-                            [background-image:linear-gradient(#071a3d_1px,transparent_1px),linear-gradient(90deg,#071a3d_1px,transparent_1px)]
-                            [background-size:65px_65px]
-                        "
-                    />
-
-                    <div
-                        ref={architectureRef}
-                        className="
-                            absolute
-                            right-[-280px]
-                            top-1/2
-                            h-[600px]
-                            w-[900px]
-                            -translate-y-1/2
-                            opacity-[0.12]
-                            sm:right-[-230px]
-                            lg:right-[-140px]
-                        "
-                    >
-                        <ArchitectureSVG />
-                    </div>
-
-                    <div
-                        className="
-                            absolute
-                            left-[5%]
-                            top-0
-                            h-full
-                            w-px
-                            bg-[#071a3d]/[0.035]
-                        "
-                    />
-
-                    <div
-                        className="
-                            absolute
-                            right-[5%]
-                            top-0
-                            h-full
-                            w-px
-                            bg-[#071a3d]/[0.035]
-                        "
-                    />
-                </div>
-
-                {/* =================================================
-                    CONTENT
-                ================================================= */}
-
-                <div
-                    className="
-                        relative
-                        z-10
-                        mx-auto
-                        flex
-                        h-full
-                        w-full
-                        max-w-[1450px]
-                        flex-col
-                        justify-center
-                        px-5
-                        py-5
-                        sm:px-8
-                        sm:py-6
-                        lg:px-12
-                        lg:py-5
-                        xl:px-16
-                    "
-                >
-                    {/* =================================================
-                        HEADER
-                    ================================================= */}
-
-                    <div
-                        className="
-                            grid
-                            shrink-0
-                            gap-3
-                            lg:grid-cols-[minmax(0,1fr)_390px]
-                            lg:items-end
-                            lg:gap-8
-                            xl:grid-cols-[minmax(0,1fr)_430px]
-                        "
-                    >
-                        <div>
-                            <div className="industry-eyebrow flex items-center gap-3">
-                                <span className="h-[2px] w-8 bg-[#c99618]" />
-
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618] sm:text-[10px]">
-                                    INDUSTRIES WE SERVE
-                                </span>
-                            </div>
-
-                            <h2
-                                className="
-                                    industry-heading
-                                    mt-2
-                                    max-w-[850px]
-                                    text-[38px]
-                                    font-semibold
-                                    leading-[0.88]
-                                    tracking-[-0.055em]
-                                    text-[#071a3d]
-                                    sm:text-[44px]
-                                    md:text-[50px]
-                                    lg:text-[56px]
-                                    xl:text-[62px]
-                                "
-                            >
-                                Designed for
-                                <br />
-
-                                <span className="text-[#c99618]">
-                                    every environment.
-                                </span>
-                            </h2>
-                        </div>
-
-                        <p
-                            className="
-                                industry-intro
-                                max-w-[430px]
-                                text-[11px]
-                                leading-[1.65]
-                                text-[#071a3d]/60
-                                sm:text-[12px]
-                                lg:text-[13px]
-                                xl:text-[14px]
-                            "
-                        >
-                            From corporate offices to high-traffic public
-                            facilities, Megha Systems delivers restroom
-                            partition solutions engineered around the needs
-                            of every space.
-                        </p>
-                    </div>
-
-                    {/* =================================================
-                        MAIN
-                    ================================================= */}
-
-                    <div
-                        className="
-                            mt-4
-                            grid
-                            min-h-0
-                            flex-1
-                            items-center
-                            gap-5
-                            lg:mt-5
-                            lg:grid-cols-[400px_minmax(0,1fr)]
-                            lg:gap-8
-                            xl:grid-cols-[420px_minmax(0,1fr)]
-                            xl:gap-10
-                        "
-                    >
-                        {/* =================================================
-                            INDUSTRY LIST
-                        ================================================= */}
-
-                        <div className="industry-list min-w-0">
-                            {INDUSTRIES.map((industry, index) => {
-                                const Icon = industry.icon;
-                                const isActive = active === index;
-
-                                return (
-                                    <button
-                                        key={industry.id}
-                                        type="button"
-                                        onClick={() =>
-                                            handleIndustryChange(index)
-                                        }
-                                        className={`
-                                            industry-item
-                                            group
-                                            relative
-                                            flex
-                                            min-h-[47px]
-                                            w-full
-                                            items-center
-                                            gap-3
-                                            border-b
-                                            border-[#071a3d]/10
-                                            py-1.5
-                                            text-left
-                                            transition-all
-                                            duration-300
-
-                                            ${isActive
-                                                ? "bg-white px-4 shadow-sm"
-                                                : "px-1 hover:bg-white/70 hover:px-3"
-                                            }
-                                        `}
-                                    >
-                                        <span
-                                            className={`
-                                                w-8
-                                                shrink-0
-                                                text-[10px]
-                                                font-bold
-                                                tracking-[0.18em]
-
-                                                ${isActive
-                                                    ? "text-[#c99618]"
-                                                    : "text-[#071a3d]/30"
-                                                }
-                                            `}
-                                        >
-                                            {industry.number}
-                                        </span>
-
-                                        <span
-                                            className={`
-                                                flex
-                                                h-8
-                                                w-8
-                                                shrink-0
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                border
-                                                transition-all
-                                                duration-300
-
-                                                ${isActive
-                                                    ? "border-[#c99618] bg-[#071a3d] text-white"
-                                                    : "border-[#071a3d]/15 text-[#071a3d]/50 group-hover:border-[#c99618] group-hover:text-[#c99618]"
-                                                }
-                                            `}
-                                        >
-                                            <Icon
-                                                size={14}
-                                                strokeWidth={1.5}
-                                            />
-                                        </span>
-
-                                        <span className="min-w-0 flex-1">
-                                            <span
-                                                className={`
-                                                    block
-                                                    truncate
-                                                    text-[11px]
-                                                    font-bold
-                                                    tracking-[0.12em]
-                                                    sm:text-[12px]
-                                                    lg:text-[13px]
-
-                                                    ${isActive
-                                                        ? "text-[#071a3d]"
-                                                        : "text-[#071a3d]/60"
-                                                    }
-                                                `}
-                                            >
-                                                {industry.title}
-                                            </span>
-
-                                            <span
-                                                className="
-                                                    mt-0.5
-                                                    block
-                                                    truncate
-                                                    text-[8px]
-                                                    font-semibold
-                                                    tracking-[0.13em]
-                                                    text-[#071a3d]/35
-                                                    sm:text-[9px]
-                                                "
-                                            >
-                                                {industry.subtitle}
-                                            </span>
-                                        </span>
-
-                                        <FiArrowUpRight
-                                            size={16}
-                                            className={`
-                                                shrink-0
-                                                transition-all
-                                                duration-300
-
-                                                ${isActive
-                                                    ? "text-[#c99618] opacity-100"
-                                                    : "text-[#071a3d]/20 opacity-0 group-hover:text-[#c99618] group-hover:opacity-100"
-                                                }
-                                            `}
-                                        />
-
-                                        {isActive && (
-                                            <motion.span
-                                                layoutId="industry-active-line"
-                                                className="
-                                                    absolute
-                                                    left-0
-                                                    top-0
-                                                    h-full
-                                                    w-[3px]
-                                                    bg-[#c99618]
-                                                "
-                                            />
-                                        )}
-                                    </button>
-                                );
-                            })}
-                        </div>
-
-                        {/* =================================================
-                            ACTIVE PROJECT PANEL
-                        ================================================= */}
-
-                        <div
-                            ref={panelRef}
-                            className="
-                                industry-panel
-                                relative
-                                h-[360px]
-                                overflow-hidden
-                                rounded-[3px]
-                                bg-[#071a3d]
-                                p-3
-                                shadow-xl
-                                sm:h-[390px]
-                                sm:p-4
-                                lg:h-[405px]
-                                lg:p-5
-                                xl:h-[420px]
-                            "
-                        >
-                            {/* Panel background */}
-
-                            <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    inset-0
-                                    opacity-[0.055]
-                                    [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)]
-                                    [background-size:42px_42px]
-                                "
-                            />
-
-                            <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    -right-24
-                                    -top-24
-                                    h-[330px]
-                                    w-[330px]
-                                    rounded-full
-                                    border
-                                    border-[#c99618]/20
-                                "
-                            />
-
-                            <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    -right-5
-                                    -top-5
-                                    h-[220px]
-                                    w-[220px]
-                                    rounded-full
-                                    border
-                                    border-[#c99618]/10
-                                "
-                            />
-
-                            {/* =================================================
-                                CONTENT
-                            ================================================= */}
-
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={current.id}
-                                    initial={{
-                                        opacity: 0,
-                                        y: 18,
-                                    }}
-                                    animate={{
-                                        opacity: 1,
-                                        y: 0,
-                                    }}
-                                    exit={{
-                                        opacity: 0,
-                                        y: -12,
-                                    }}
-                                    transition={{
-                                        duration: 0.45,
-                                        ease: [0.22, 1, 0.36, 1],
-                                    }}
-                                    className="
-                                        relative
-                                        z-10
-                                        flex
-                                        h-full
-                                        flex-col
-                                    "
-                                >
-                                    {/* TOP */}
-
-                                    <div className="flex items-center justify-between px-2 pb-3">
-                                        <div>
-                                            <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618]">
-                                                {current.number} / 08
-                                            </span>
-
-                                            <p className="mt-1 text-[8px] font-semibold tracking-[0.22em] text-white/35">
-                                                {current.subtitle}
-                                            </p>
-                                        </div>
-
-                                        <div
-                                            className="
-                                                flex
-                                                h-10
-                                                w-10
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                border
-                                                border-[#c99618]/40
-                                                text-[#c99618]
-                                                sm:h-11
-                                                sm:w-11
-                                            "
-                                        >
-                                            <CurrentIcon
-                                                size={18}
-                                                strokeWidth={1.4}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    {/* PROJECT IMAGE */}
-
-                                    <div className="group relative min-h-0 flex-1 overflow-hidden rounded-[2px]">
-                                        <ProjectImage
-                                            project={current.project}
-                                        />
-
-                                        {/* Industry badge */}
-
-                                        <div
-                                            className="
-                                                absolute
-                                                left-4
-                                                top-4
-                                                z-20
-                                                border
-                                                border-white/20
-                                                bg-[#071a3d]/75
-                                                px-3
-                                                py-1.5
-                                                backdrop-blur-md
-                                            "
-                                        >
-                                            <span className="text-[7px] font-bold tracking-[0.22em] text-white/70">
-                                                {current.title}
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    {/* BOTTOM */}
-
-                                    <div
-                                        className="
-                                            flex
-                                            items-center
-                                            justify-between
-                                            gap-4
-                                            px-2
-                                            pt-3
-                                        "
-                                    >
-                                        <div>
-                                            <span className="text-[8px] font-bold tracking-[0.22em] text-[#c99618]">
-                                                MEGHA SYSTEMS
-                                            </span>
-
-                                            <p className="mt-1 text-[10px] text-white/35">
-                                                Premium restroom solutions
-                                            </p>
-                                        </div>
-
-                                        <Link
-                                            href="/contact"
-                                            className="
-                                                group
-                                                inline-flex
-                                                h-9
-                                                shrink-0
-                                                items-center
-                                                gap-2
-                                                border
-                                                border-[#c99618]
-                                                px-4
-                                                text-[9px]
-                                                font-bold
-                                                tracking-[0.12em]
-                                                text-white
-                                                transition-all
-                                                duration-300
-                                                hover:bg-[#c99618]
-                                                hover:text-[#071a3d]
-                                            "
-                                        >
-                                            DISCUSS PROJECT
-
-                                            <FiArrowUpRight
-                                                size={13}
-                                                className="
-                                                    transition-transform
-                                                    duration-300
-                                                    group-hover:translate-x-1
-                                                    group-hover:-translate-y-0.5
-                                                "
-                                            />
-                                        </Link>
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-                        </div>
-                    </div>
-
-                    {/* =================================================
-                        BOTTOM BAR
-                    ================================================= */}
-
-                    <div
-                        className="
-                            mt-3
-                            flex
-                            shrink-0
-                            items-center
-                            justify-between
-                            border-t
-                            border-[#071a3d]/10
-                            pt-2
-                        "
-                    >
-                        <p
-                            className="
-                                text-[8px]
-                                font-bold
-                                tracking-[0.18em]
-                                text-[#071a3d]/30
-                                sm:text-[9px]
-                            "
-                        >
-                            COMMERCIAL • INSTITUTIONAL • INDUSTRIAL
-                        </p>
-
-                        <p
-                            className="
-                                text-[8px]
-                                font-semibold
-                                tracking-[0.16em]
-                                text-[#c99618]
-                                sm:text-[9px]
-                            "
-                        >
-                            BUILT FOR PERFORMANCE
-                        </p>
-                    </div>
-                </div>
-            </section>
+  const sectionRef = useRef(null);
+  const [active, setActive] = useState(0);
+  const current = INDUSTRIES[active];
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const entrance = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        scrollTrigger: { trigger: sectionRef.current, start: "top 78%", once: true },
+      });
+
+      entrance
+        .fromTo(".industries-eyebrow", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55 })
+        .fromTo(".industries-title", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75 }, "-=0.3")
+        .fromTo(".industries-benefit", { x: -18, opacity: 0 }, { x: 0, opacity: 1, duration: 0.55, stagger: 0.12 }, "-=0.35")
+        .fromTo(".industries-showcase", { x: 28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8 }, "-=0.45")
+        .fromTo(".industry-tile", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.07 }, "-=0.35");
+
+      gsap.to(".industries-blueprint", {
+        y: -24,
+        ease: "none",
+        scrollTrigger: { trigger: sectionRef.current, start: "top bottom", end: "bottom top", scrub: 1.2 },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const changeIndustry = (index) => {
+    setActive((index + INDUSTRIES.length) % INDUSTRIES.length);
+  };
+
+  return (
+    <section ref={sectionRef} className="relative isolate overflow-hidden bg-[#f5f1e9] py-16 text-[#101820] sm:py-20 lg:py-24">
+      {/* Warm architectural backdrop */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="industries-blueprint absolute -right-24 top-0 h-[620px] w-[650px] opacity-[0.055]">
+          <svg viewBox="0 0 650 620" className="h-full w-full" fill="none">
+            <path d="M30 570V170L325 35L620 170V570M85 570V205L325 95L565 205V570M150 570V245H500V570M30 330H620M30 445H620M325 35V570" stroke="#12283a" strokeWidth="1" />
+            <path d="M85 205L150 245M565 205L500 245M150 330L500 445M500 330L150 445" stroke="#c99618" strokeWidth="1" />
+          </svg>
         </div>
-    );
+        <div className="absolute inset-x-0 top-0 h-px bg-[#c99618]/70" />
+        <div className="absolute -left-32 top-32 h-96 w-96 rounded-full bg-white/70 blur-3xl" />
+      </div>
+
+      <div className="relative mx-auto max-w-[1600px] px-4 sm:px-7 lg:px-11">
+        <div className="grid gap-8 xl:grid-cols-[0.78fr_1.55fr] xl:items-stretch xl:gap-10">
+          {/* Editorial introduction */}
+          <div className="flex flex-col justify-center py-2 xl:py-6">
+            <div className="industries-eyebrow mb-5 flex items-center gap-3">
+              <span className="h-[2px] w-14 bg-[#d5a54b]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#716657]">Industries we serve</span>
+            </div>
+
+            <h2 className="industries-title max-w-[590px] font-serif text-[clamp(3.5rem,6.3vw,6.8rem)] leading-[0.83] tracking-[-0.065em] text-[#101820]">
+              Industries
+              <span className="mt-2 block text-[#c99a4a]">We Serve</span>
+            </h2>
+
+            <p className="mt-7 max-w-[470px] text-sm leading-7 text-[#5c6062] sm:text-base">
+              From corporate offices to airports, we deliver premium restroom partition solutions across diverse industries, combining quality, durability and modern design.
+            </p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
+              {BENEFITS.map((benefit) => {
+                const Icon = benefit.icon;
+                return (
+                  <div key={benefit.title} className="industries-benefit flex items-center gap-3.5">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#101820]/15 bg-white/40 text-[#101820]">
+                      <Icon size={21} strokeWidth={1.45} />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-[#101820]">{benefit.title}</h3>
+                      <p className="mt-1 text-xs leading-5 text-[#6b6d6d]">{benefit.detail}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Large active project showcase */}
+          <div className="industries-showcase grid min-w-0 overflow-hidden rounded-[28px] bg-[#071720] shadow-[0_28px_80px_rgba(20,30,35,0.16)] lg:grid-cols-[minmax(0,1.25fr)_minmax(300px,0.8fr)]">
+            <div className="relative min-h-[360px] overflow-hidden bg-[#d5d0c6] sm:min-h-[460px] lg:min-h-[600px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current.id}
+                  initial={{ opacity: 0, scale: 1.035 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.015 }}
+                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={current.project.image}
+                    alt={`${current.project.name} - ${current.project.location}`}
+                    fill
+                    priority={active === 0}
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                    className="object-cover"
+                  />
+                </motion.div>
+              </AnimatePresence>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/70 via-transparent to-[#071720]/10" />
+              <div className="absolute left-5 top-5 border border-white/40 bg-[#071720]/35 px-3 py-2 backdrop-blur-md sm:left-7 sm:top-7">
+                <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-white">Featured project</span>
+              </div>
+              <AnimatePresence mode="wait">
+                <motion.div key={current.id + "-location"} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.3 }} className="absolute bottom-5 left-5 flex max-w-[calc(100%-40px)] items-center gap-3 rounded-xl bg-black/55 px-4 py-3 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:px-5">
+                  <FiMapPin className="shrink-0 text-[#efc277]" size={21} />
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-semibold sm:text-base">{current.project.name}</p>
+                    <p className="mt-0.5 text-xs text-white/70">{current.project.location}</p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+              <div className="absolute bottom-5 right-5 flex gap-2 sm:bottom-7 sm:right-7">
+                <button type="button" aria-label="Previous industry" onClick={() => changeIndustry(active - 1)} className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#071720] transition hover:bg-[#efc277]">
+                  <FiChevronLeft size={21} />
+                </button>
+                <button type="button" aria-label="Next industry" onClick={() => changeIndustry(active + 1)} className="flex h-11 w-11 items-center justify-center rounded-full bg-[#071720] text-white ring-1 ring-white/20 transition hover:bg-[#c99618]" >
+                  <FiChevronRight size={21} />
+                </button>
+              </div>
+            </div>
+
+            <div className="relative flex min-w-0 flex-col justify-center overflow-hidden px-6 py-8 text-white sm:px-8 sm:py-10 lg:px-9 lg:py-12">
+              <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-[#d6a74f]/20" />
+              <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#d6a74f]/15" />
+              <AnimatePresence mode="wait">
+                <motion.div key={current.id + "-details"} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.35 }} className="relative z-10 flex h-full flex-col">
+                  <div className="flex items-center gap-2 text-sm">
+                    <span className="font-semibold text-[#f1c579]">{current.number}</span>
+                    <span className="text-white/40">/ 08</span>
+                  </div>
+                  <h3 className="mt-7 font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">{current.title}</h3>
+                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.19em] text-white/65 sm:text-xs">{current.subtitle}</p>
+                  <div className="mt-6 h-[2px] w-14 bg-[#f1c579]" />
+                  <p className="mt-6 text-sm leading-6 text-white/75">{current.description}</p>
+                  <ul className="mt-6 space-y-3">
+                    {["Modern & elegant design", "Durable for high usage", "Customised solutions", "Professional installation"].map((point) => (
+                      <li key={point} className="flex items-center gap-2.5 text-xs text-white/85 sm:text-sm">
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#efc277] text-[#071720]">✓</span>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-auto pt-8">
+                    <Link href="/contact" className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#efc277] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs">
+                      View project <FiArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Link>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
+
+        {/* Industry selector strip */}
+        <div className="mt-7 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:grid-cols-8">
+          {INDUSTRIES.map((industry, index) => {
+            const Icon = industry.icon;
+            const isActive = active === index;
+            return (
+              <button
+                key={industry.id}
+                type="button"
+                onClick={() => changeIndustry(index)}
+                aria-pressed={isActive}
+                className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[220px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
+              >
+                <div className="flex flex-1 flex-col items-center px-2 pb-3 pt-3 text-center sm:px-3 sm:pt-4">
+                  <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#efc277]" : "text-[#4d5357]"}`}>{industry.number}</span>
+                  <Icon size={25} strokeWidth={1.35} className={`mt-2 ${isActive ? "text-[#efc277]" : "text-[#101820]"}`} />
+                  <span className="mt-3 text-xs font-semibold sm:text-sm">{industry.title}</span>
+                  <span className={`mt-1 line-clamp-2 text-[8px] uppercase leading-4 tracking-[0.08em] sm:text-[9px] ${isActive ? "text-white/60" : "text-[#65696b]"}`}>{industry.subtitle}</span>
+                </div>
+                <div className="relative h-[76px] w-full overflow-hidden sm:h-[88px]">
+                  <Image src={industry.project.image} alt={`${industry.title} industry project`} fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 13vw" className={`object-cover transition duration-700 group-hover:scale-105 ${isActive ? "opacity-100" : "opacity-75 grayscale-[15%] group-hover:opacity-100"}`} />
+                  <div className={`absolute inset-0 ${isActive ? "bg-[#071720]/5" : "bg-[#f5f1e9]/10"}`} />
+                </div>
+                {isActive && <motion.span layoutId="industry-active-border" className="absolute inset-0 rounded-xl ring-1 ring-inset ring-[#d6a74f]" />}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -835,7 +835,7 @@ export default function CTASection() {
                                 font-semibold
                                 leading-[0.98]
                                 tracking-[-0.045em]
-                                text-[#071a3d]
+                                text-[#000]
                                 sm:text-[40px]
                                 md:text-[44px]
                                 lg:text-[50px]
@@ -1124,7 +1124,7 @@ export default function CTASection() {
                                     font-semibold
                                     leading-[0.98]
                                     tracking-[-0.04em]
-                                    text-[#071a3d]
+                                    text-[#000]
                                     sm:text-[28px]
                                     lg:text-[30px]
                                 "

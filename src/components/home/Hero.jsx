@@ -168,13 +168,27 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-[760px] mt-34 w-full overflow-hidden bg-[#061a3d] text-white sm:min-h-[780px] lg:h-[680px] lg:min-h-0">
+    <section className=" relative
+    mt-6 sm:mt-8 lg:mt-2
+    mx-3 sm:mx-5 lg:mx-3
+    w-auto
+    min-h-[760px]
+    pt-20
+    
+    rounded-3xl
+    overflow-hidden
+    bg-[#e8fcff]
+    text-white
+    
+    lg:h-[550px]
+    
+    lg:rounded-[32px]">
 
-      <div className="absolute inset-0 bg-[#061a3d]" />
+      <div className="absolute inset-0 bg-[#c8beac]" />
 
       <div className="pointer-events-none absolute left-1/2 top-[10%] h-[600px] w-[700px] -translate-x-1/2 rounded-full bg-[#c99618]/[0.035] blur-[120px]" />
 
-      <div className="absolute left-0 top-0 z-50 h-[2px] w-full bg-[#dca01a]" />
+      {/* <div className="absolute left-0 top-0 z-50 h-[2px] w-full bg-[#dca01a]" /> */}
 
       <div className="relative z-20 mx-auto h-full max-w-[1800px] px-5 sm:px-8 lg:px-[4%]">
         <div
@@ -185,7 +199,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-3">
             <div className="h-[2px] w-12 bg-[#e4a21a]" />
 
-            <span className="text-[9px] tracking-[0.28em] text-white/65 sm:text-[10px]">
+            <span className="text-[9px] tracking-[0.28em] text-black sm:text-[10px]">
               PROJECT
             </span>
           </div>
@@ -203,20 +217,20 @@ export default function HeroSection() {
 
           {/* Amount */}
           <div className="mt-6">
-            <div className="text-[9px] tracking-[0.18em] text-white/45">
+            <div className="text-[9px] tracking-[0.18em] font-bold text-black">
               {current.title}
             </div>
 
-            <div className="mt-1 text-[68px] font-semibold leading-none tracking-[-0.05em] text-[#dfa11a] sm:text-[76px] lg:text-[75px]">
+            <div className="mt-1 text-[68px] font-semibold leading-none tracking-[-0.05em] text-[#D95538] sm:text-[76px] lg:text-[75px]">
               {current.amount}
             </div>
           </div>
 
           {/* Divider */}
-          <div className="mt-6 h-[2px] w-14 bg-[#e4a21a]" />
+          <div className="mt-6 h-[2px] w-14 bg-black" />
 
           {/* Description */}
-          <p className="mt-4 max-w-[225px] text-[12px] leading-[1.65] text-white/55 sm:text-[13px]">
+          <p className="mt-4 max-w-[225px] text-[12px] leading-[1.65] text-black sm:text-[13px]">
             {current.description}
           </p>
 
@@ -240,7 +254,7 @@ export default function HeroSection() {
 
         <div
           ref={imageContentRef}
-          className="absolute left-[18%] right-[16%] top-[105px] h-[520px] sm:left-[19%] sm:right-[15%] sm:top-[120px] sm:h-[530px] lg:left-[18%] lg:right-[10%] lg:top-12 lg:h-[555px]"
+          className="absolute left-[18%] right-[16%] top-[105px] h-[520px] sm:left-[19%] sm:right-[15%] sm:top-[120px] sm:h-[530px] lg:left-[18%] lg:right-[10%] lg:top-12 lg:h-[485px]"
         >
           {/* Gold outer trapezoid */}
           <div
@@ -330,7 +344,7 @@ export default function HeroSection() {
           <div className="flex items-center gap-3">
             <div className="h-[1px] w-8 bg-[#e4a21a]" />
 
-            <span className="text-[9px] tracking-[0.28em] text-white/55 sm:text-[10px]">
+            <span className="text-[9px] tracking-[0.28em] text-black/95 sm:text-[10px]">
               PROJECT CLIENT
             </span>
           </div>
@@ -349,7 +363,7 @@ export default function HeroSection() {
             </div>
 
             {/* Client name */}
-            <div className="mt-4 text-[13px] font-medium tracking-[0.08em] text-white sm:text-[15px]">
+            <div className="mt-4 text-[13px] font-medium tracking-[0.08em] text-black sm:text-[15px]">
               {current.client}
             </div>
 

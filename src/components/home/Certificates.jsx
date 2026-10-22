@@ -136,7 +136,7 @@ export default function Certificates() {
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#071a3d] sm:text-4xl lg:text-5xl">
+                        <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Certified for
                             <br />
                             <span className="text-[#d99a17]">

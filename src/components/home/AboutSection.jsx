@@ -264,14 +264,14 @@ export default function AboutSection() {
 
                 <div className="mb-10 lg:mb-14">
                     <div className="mb-3 flex items-center gap-3">
-                        <span className="h-px w-10 bg-[#d99a17]" />
+                        <span className="h-px w-10 bg-[#EB8258]" />
 
                         <span
                             className="
                                 text-[10px]
                                 font-semibold
                                 tracking-[0.3em]
-                                text-[#d99a17]
+                                text-[#EB8258]
                                 sm:text-[11px]
                             "
                         >
@@ -286,15 +286,15 @@ export default function AboutSection() {
                             font-semibold
                             leading-tight
                             tracking-tight
-                            text-[#071a3d]
+                            text-[#000000]
                             sm:text-4xl
                             lg:text-5xl
                         "
-                    >
+                    > 
                         Built on experience.
                         <br />
 
-                        <span className="text-[#d99a17]">
+                        <span className="text-[#EB8258]">
                             Designed for performance.
                         </span>
                     </h2>
@@ -365,7 +365,7 @@ export default function AboutSection() {
                             className="
                                 relative
                                 overflow-hidden
-                                bg-[#071a3d]
+                                bg-[#EB8258]
                                 p-2
                                 shadow-[0_25px_70px_rgba(7,26,61,0.18)]
                             "
@@ -379,7 +379,7 @@ export default function AboutSection() {
                                     relative
                                     aspect-[4/3]
                                     overflow-hidden
-                                    bg-[#06152f]
+                                    bg-[#EB8258]
                                 "
                                 style={{
                                     clipPath:
@@ -420,9 +420,9 @@ export default function AboutSection() {
                                         pointer-events-none
                                         absolute
                                         inset-0
-                                        bg-gradient-to-t
+                                        bg-[gradient-to-t
                                         from-[#071a3d]/85
-                                        via-[#071a3d]/10
+                                        via-[#071a3d]/10]
                                         to-transparent
                                     "
                                 />
@@ -486,7 +486,7 @@ export default function AboutSection() {
                                                 items-center
                                                 justify-center
                                                 rounded-full
-                                                bg-[#d99a17]
+                                                bg-[#EB8258]
                                                 text-[#071a3d]
                                             "
                                         >
@@ -536,7 +536,7 @@ export default function AboutSection() {
                                 -right-1
                                 -top-5
                                 z-30
-                                bg-[#071a3d]
+                                bg-[#efac39]
                                 px-5
                                 py-4
                                 shadow-xl
@@ -548,7 +548,7 @@ export default function AboutSection() {
                                     text-[9px]
                                     font-medium
                                     tracking-[0.25em]
-                                    text-[#d99a17]
+                                    text-[#000]
                                 "
                             >
                                 ESTABLISHED
@@ -576,7 +576,7 @@ export default function AboutSection() {
                         <div className="mb-4 flex items-center gap-3">
                             <Building2
                                 size={18}
-                                className="text-[#d99a17]"
+                                className="text-[#EB8258]"
                                 strokeWidth={1.8}
                             />
 
@@ -605,7 +605,7 @@ export default function AboutSection() {
                         >
                             Complete restroom solutions,
 
-                            <span className="text-[#d99a17]">
+                            <span className="text-[#EB8258]">
                                 {" "}built to last.
                             </span>
                         </h3>

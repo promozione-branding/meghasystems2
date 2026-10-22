@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -51,6 +52,13 @@ export default function WhyChooseUs() {
     const imageRef = useRef(null);
 
     useEffect(() => {
+        const section = sectionRef.current;
+
+        if (!section) return;
+
+        let floatTween;
+        let ringTween;
+
         const ctx = gsap.context(() => {
             /* ==========================================
                INITIAL IMAGE STATE
@@ -78,19 +86,18 @@ export default function WhyChooseUs() {
             =========================================== */
 
             const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 65%",
-                    once: true,
+                paused: true,
+                defaults: {
+                    ease: "power2.out",
                 },
             });
 
             tl.to(".image-frame-line", {
                 opacity: 1,
                 scaleX: 1,
-                duration: 0.8,
-                stagger: 0.12,
-                ease: "power2.out",
+                duration: 0.5,
+                stagger: 0.1,
+                ease: "power2.inOut",
             })
                 .to(
                     imageRef.current,
@@ -98,40 +105,59 @@ export default function WhyChooseUs() {
                         opacity: 1,
                         scale: 1,
                         y: 0,
-                        duration: 1,
+                        duration: 0.2,
                         ease: "power3.out",
                     },
-                    "-=0.45"
+                    "-=0.1"
                 )
                 .to(
                     ".why-card",
                     {
                         opacity: 1,
                         y: 0,
-                        duration: 0.65,
-                        stagger: 0.12,
+                        duration: 0.2,
+                        stagger: 0.2,
                         ease: "power3.out",
                     },
-                    "-=0.45"
+                    "-=0.2"
                 );
 
             /* ==========================================
-               SUBTLE IMAGE FLOAT
+               SCROLL TRIGGER
+               Starts earlier and plays the full
+               animation at a comfortable pace.
             =========================================== */
 
-            gsap.to(imageRef.current, {
-                y: -6,
-                duration: 3.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top bottom",
+                once: true,
+                onEnter: () => {
+                    tl.play();
+                },
+            });
+
+            /* ==========================================
+               SUBTLE IMAGE FLOAT
+               Starts after the entrance animation,
+               avoiding a conflict with the image reveal.
+            =========================================== */
+
+            tl.eventCallback("onComplete", () => {
+                floatTween = gsap.to(imageRef.current, {
+                    y: -6,
+                    duration: 3.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "sine.inOut",
+                });
             });
 
             /* ==========================================
                TECHNICAL RING ROTATION
             =========================================== */
 
-            gsap.to(".technical-ring", {
+            ringTween = gsap.to(".technical-ring", {
                 rotate: 360,
                 duration: 25,
                 repeat: -1,
@@ -139,7 +165,11 @@ export default function WhyChooseUs() {
             });
         }, sectionRef);
 
-        return () => ctx.revert();
+        return () => {
+            floatTween?.kill();
+            ringTween?.kill();
+            ctx.revert();
+        };
     }, []);
 
     return (
@@ -183,7 +213,6 @@ export default function WhyChooseUs() {
                     />
                 </svg>
 
-
                 {/* Large Technical Circle */}
 
                 <svg
@@ -222,7 +251,6 @@ export default function WhyChooseUs() {
                     />
                 </svg>
 
-
                 {/* Diagonal Architectural Geometry */}
 
                 <svg
@@ -255,19 +283,16 @@ export default function WhyChooseUs() {
                     />
                 </svg>
 
-
                 {/* Guide Lines */}
 
                 <div className="absolute left-1/2 top-0 h-full w-px bg-[#071a3d]/[0.035]" />
 
                 <div className="absolute left-0 right-0 top-1/2 h-px bg-[#071a3d]/[0.035]" />
 
-
                 {/* Gold Top Line */}
 
                 <div className="absolute left-0 right-0 top-0 h-px bg-[#d99a17]/40" />
             </div>
-
 
             {/* =====================================================
                 CONTENT
@@ -291,16 +316,14 @@ export default function WhyChooseUs() {
 
                     </div>
 
-
-                    <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#071a3d] sm:text-4xl lg:text-5xl">
+                    <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                         Built on experience.
                         <br />
 
-                        <span className="text-[#c99618]">
+                        <span className="text-[#F4A259]">
                             Engineered to last.
                         </span>
                     </h2>
-
 
                     <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/55 sm:text-base">
                         We combine technical expertise, premium materials and
@@ -309,7 +332,6 @@ export default function WhyChooseUs() {
                     </p>
 
                 </div>
-
 
                 {/* =================================================
                     MAIN CONTENT
@@ -326,7 +348,6 @@ export default function WhyChooseUs() {
                         {/* Gold Glow */}
 
                         <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d99a17]/10 blur-[90px]" />
-
 
                         <div className="relative w-full max-w-[620px]">
 
@@ -407,7 +428,6 @@ export default function WhyChooseUs() {
                                 />
                             </svg>
 
-
                             {/* =================================================
                                 IMAGE FRAME
                             ================================================= */}
@@ -421,21 +441,17 @@ export default function WhyChooseUs() {
 
                                 <div className="image-frame-line absolute -left-3 -right-3 -top-3 h-px bg-[#d99a17] sm:-left-5 sm:-right-5 sm:-top-5" />
 
-
                                 {/* Right architectural line */}
 
                                 <div className="image-frame-line absolute -bottom-3 -right-3 top-[-12px] w-px bg-[#071a3d]/20 sm:-bottom-5 sm:-right-5 sm:top-[-20px]" />
-
 
                                 {/* Bottom architectural line */}
 
                                 <div className="image-frame-line absolute -bottom-3 -left-3 -right-3 h-px bg-[#071a3d]/20 sm:-bottom-5 sm:-left-5 sm:-right-5" />
 
-
                                 {/* Left architectural line */}
 
                                 <div className="image-frame-line absolute -bottom-3 -left-3 top-[-12px] w-px bg-[#d99a17]/60 sm:-bottom-5 sm:-left-5 sm:top-[-20px]" />
-
 
                                 {/* =================================================
                                     REAL PRODUCT IMAGE
@@ -452,22 +468,19 @@ export default function WhyChooseUs() {
                                         className="object-cover transition-transform duration-700 hover:scale-[1.025]"
                                     />
 
-
                                     {/* Image Overlay */}
 
                                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a3d]/20 via-transparent to-transparent" />
 
-
                                     {/* Top Label */}
 
-                                    <div className="absolute left-0 top-0 bg-[#071a3d] px-4 py-3 sm:px-5">
+                                    <div className="absolute left-0 top-0 bg-[#c99618] px-4 py-3 sm:px-5">
 
                                         <p className="text-[8px] font-bold tracking-[0.28em] text-white sm:text-[9px]">
                                             MEGHA SYSTEMS
                                         </p>
 
                                     </div>
-
 
                                     {/* Product Label */}
 
@@ -480,7 +493,6 @@ export default function WhyChooseUs() {
                                     </div>
 
                                 </div>
-
 
                                 {/* =================================================
                                     PRODUCT BADGE
@@ -499,7 +511,6 @@ export default function WhyChooseUs() {
                         </div>
 
                     </div>
-
 
                     {/* =================================================
                         WHY CHOOSE US CARDS
@@ -530,7 +541,6 @@ export default function WhyChooseUs() {
 
                                             </div>
 
-
                                             {/* Icon */}
 
                                             <div
@@ -549,7 +559,7 @@ export default function WhyChooseUs() {
                                                     transition-all
                                                     duration-500
                                                     group-hover:border-[#d99a17]
-                                                    group-hover:bg-[#071a3d]
+                                                    group-hover:bg-[#000]
                                                 "
                                             >
 
@@ -561,24 +571,22 @@ export default function WhyChooseUs() {
 
                                             </div>
 
-
                                             {/* Content */}
 
                                             <div className="flex-1">
 
                                                 <div className="flex items-start justify-between gap-4">
 
-                                                    <h3 className="text-lg font-semibold text-[#071a3d]">
+                                                    <h3 className="text-lg font-semibold text-[#000]">
                                                         {item.title}
                                                     </h3>
 
                                                     <ArrowUpRight
                                                         size={17}
-                                                        className="mt-1 shrink-0 text-[#c99618] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
+                                                        className="mt-1 shrink-0 text-[#3B3923] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
                                                     />
 
                                                 </div>
-
 
                                                 <p className="mt-2 text-sm leading-6 text-[#071a3d]/50">
                                                     {item.description}
@@ -597,7 +605,6 @@ export default function WhyChooseUs() {
                     </div>
 
                 </div>
-
 
                 {/* =================================================
                     BOTTOM TRUST BAR
@@ -629,7 +636,6 @@ export default function WhyChooseUs() {
 
                     </div>
 
-
                     {/* Quality */}
 
                     <div className="flex items-center gap-3 border-b border-[#071a3d]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
@@ -653,7 +659,6 @@ export default function WhyChooseUs() {
                         </div>
 
                     </div>
-
 
                     {/* Execution */}
 

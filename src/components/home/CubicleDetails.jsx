@@ -101,7 +101,7 @@ export default function CubicleDetails() {
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#071a3d] sm:text-4xl lg:text-5xl">
+                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Designed around
                             <span className="text-[#c99618]">
                                 {" "}
@@ -352,7 +352,7 @@ export default function CubicleDetails() {
                                         <div className="absolute left-0 top-0 h-full w-[3px] bg-[#d99a17]" />
 
                                         <div className="flex items-start gap-3">
-                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-xs font-bold text-white">
+                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#000] text-xs font-bold text-white">
                                                 {active.number}
                                             </div>
 
@@ -362,11 +362,11 @@ export default function CubicleDetails() {
                                                     {active.number}
                                                 </p>
 
-                                                <h3 className="mt-1 text-sm font-semibold text-[#071a3d] sm:text-base">
+                                                <h3 className="mt-1 text-sm font-semibold text-[#000] sm:text-base">
                                                     {active.title}
                                                 </h3>
 
-                                                <p className="mt-0.5 text-[10px] leading-4 text-[#071a3d]/55 sm:text-xs">
+                                                <p className="mt-0.5 text-[10px] leading-4 text-[#000]/95 sm:text-xs">
                                                     {active.subtitle}
                                                 </p>
                                             </div>
@@ -384,7 +384,7 @@ export default function CubicleDetails() {
                                 DETAIL COUNTER
                             ================================================== */}
                             <div className="absolute bottom-4 right-4 z-30 hidden sm:block">
-                                <div className="border border-white/20 bg-[#071a3d]/90 px-3 py-2 backdrop-blur-md">
+                                <div className="border border-white/20 bg-[#000] px-3 py-2 backdrop-blur-md">
                                     <p className="text-[7px] font-bold tracking-[0.22em] text-white/50">
                                         SYSTEM DETAIL
                                     </p>
@@ -432,7 +432,7 @@ export default function CubicleDetails() {
                                     tracking-[0.08em]
                                     transition-all duration-300
                                     ${isActive
-                                        ? "border-[#071a3d] bg-[#071a3d] text-white"
+                                        ? "border-[#071a3d] bg-[#000] text-white"
                                         : "border-[#071a3d]/10 bg-white/60 text-[#071a3d]/60 hover:border-[#d99a17]/50 hover:bg-white"
                                     }
                                 `}

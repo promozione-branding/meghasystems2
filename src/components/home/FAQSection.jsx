@@ -235,10 +235,10 @@ export default function FAQSection() {
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#071a3d] sm:text-4xl lg:text-5xl">
+                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Questions,
                             <br />
-                            <span className="text-[#c99618]">
+                            <span className="text-[#D95538]">
                                 clearly answered.
                             </span>
                         </h2>
@@ -257,7 +257,7 @@ export default function FAQSection() {
                     {/* =================================================
                         LEFT INFORMATION PANEL
                     ================================================== */}
-                    <div className="relative hidden min-h-[470px] overflow-hidden border border-[#071a3d]/10 bg-[#071a3d] lg:block">
+                    <div className="relative hidden min-h-[470px] overflow-hidden border border-[#071a3d]/10 bg-[#D95538] lg:block">
                         {/* SVG background */}
                         <svg
                             className="absolute inset-0 h-full w-full"
@@ -268,48 +268,48 @@ export default function FAQSection() {
                             {/* Main frame */}
                             <path
                                 d="M55 115H445V485H55V115Z"
-                                stroke="#ffffff"
+                                stroke="#5762D5"
                                 strokeWidth="1"
-                                opacity="0.12"
+                                opacity="0.87"
                             />
 
                             {/* Perspective roof */}
                             <path
                                 d="M55 115L250 45L445 115"
-                                stroke="#d99a17"
+                                stroke="#5762D5"
                                 strokeWidth="2"
-                                opacity="0.45"
+                                opacity="0.87"
                             />
 
                             {/* Perspective floor */}
                             <path
                                 d="M55 485L250 550L445 485"
-                                stroke="#ffffff"
+                                stroke="#5762D5"
                                 strokeWidth="1"
-                                opacity="0.15"
+                                opacity="0.87"
                             />
 
                             {/* Cubicle panels */}
                             <path
                                 d="M110 135V440L180 465V110L110 135Z"
-                                stroke="#ffffff"
+                                stroke="#5762D5"
                                 strokeWidth="1.5"
-                                opacity="0.2"
+                                opacity="0.87"
                             />
 
                             <path
                                 d="M390 135V440L320 465V110L390 135Z"
-                                stroke="#ffffff"
+                                stroke="#5762D5"
                                 strokeWidth="1.5"
-                                opacity="0.2"
+                                opacity="0.87"
                             />
 
                             {/* Center door */}
                             <path
                                 d="M195 105H305V465L250 485L195 465V105Z"
-                                stroke="#d99a17"
+                                stroke="#5762D5"
                                 strokeWidth="2"
-                                opacity="0.55"
+                                opacity="0.87"
                             />
 
                             {/* Handle */}
@@ -317,7 +317,7 @@ export default function FAQSection() {
                                 cx="278"
                                 cy="285"
                                 r="7"
-                                stroke="#d99a17"
+                                stroke="#5762D5"
                                 strokeWidth="2"
                             />
 
@@ -326,7 +326,7 @@ export default function FAQSection() {
                                 cx="250"
                                 cy="285"
                                 r="150"
-                                stroke="#ffffff"
+                                stroke="#5762D5"
                                 strokeWidth="1"
                                 strokeDasharray="5 13"
                                 animate={{
@@ -346,7 +346,7 @@ export default function FAQSection() {
                             {/* Vertical center */}
                             <path
                                 d="M250 45V550"
-                                stroke="#d99a17"
+                                stroke="#5762D5"
                                 strokeWidth="1"
                                 strokeDasharray="3 9"
                                 opacity="0.25"
@@ -365,7 +365,7 @@ export default function FAQSection() {
                                     <br />
                                     starts with
                                     <br />
-                                    <span className="text-[#d99a17]">
+                                    <span className="text-[#5762D5]">
                                         clarity.
                                     </span>
                                 </h3>
@@ -375,7 +375,7 @@ export default function FAQSection() {
                             <div>
                                 <div className="mb-4 h-px w-10 bg-[#d99a17]" />
 
-                                <p className="max-w-xs text-xs leading-5 text-white/50">
+                                <p className="max-w-xs text-xs leading-5 text-white/99">
                                     From initial consultation to final
                                     installation, our team works with you to
                                     create a solution that fits your project.
@@ -387,11 +387,11 @@ export default function FAQSection() {
                                     </div>
 
                                     <div>
-                                        <p className="text-[7px] font-bold tracking-[0.2em] text-white/30">
+                                        <p className="text-[7px] font-bold tracking-[0.2em] text-white/99">
                                             PROJECT SUPPORT
                                         </p>
 
-                                        <p className="mt-1 text-[10px] font-medium text-white/75">
+                                        <p className="mt-1 text-[10px] font-medium text-white/95">
                                             DESIGN • MANUFACTURING • INSTALLATION
                                         </p>
                                     </div>
@@ -429,7 +429,7 @@ export default function FAQSection() {
                                         transition={{
                                             duration: 0.25,
                                         }}
-                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#d99a17]"
+                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#D95538]"
                                     />
 
                                     <button
@@ -450,7 +450,7 @@ export default function FAQSection() {
                                                 rounded-full text-[8px]
                                                 font-bold transition-all
                                                 ${isOpen
-                                                    ? "bg-[#071a3d] text-white"
+                                                    ? "bg-[#000] text-white"
                                                     : "bg-[#071a3d]/[0.06] text-[#071a3d]/55"
                                                 }
                                             `}
@@ -464,7 +464,7 @@ export default function FAQSection() {
                                                 flex-1 text-xs font-semibold
                                                 leading-5 sm:text-sm
                                                 ${isOpen
-                                                    ? "text-[#071a3d]"
+                                                    ? "text-[#000]"
                                                     : "text-[#071a3d]/70"
                                                 }
                                             `}
@@ -485,7 +485,7 @@ export default function FAQSection() {
                                                 items-center justify-center
                                                 border transition-colors
                                                 ${isOpen
-                                                    ? "border-[#d99a17] bg-[#d99a17] text-[#071a3d]"
+                                                    ? "border-[#d99a17] bg-[#D95538] text-[#fff]"
                                                     : "border-[#071a3d]/10 text-[#071a3d]/40"
                                                 }
                                             `}
@@ -517,7 +517,7 @@ export default function FAQSection() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="px-5 pb-5 pl-[60px] pr-8 sm:pl-[68px] sm:pr-12">
-                                                    <div className="border-l border-[#d99a17]/40 pl-4">
+                                                    <div className="border-l border-[#D95538]/40 pl-4">
                                                         <p className="text-[11px] leading-5 text-[#071a3d]/55 sm:text-xs sm:leading-6">
                                                             {faq.answer}
                                                         </p>
@@ -548,7 +548,7 @@ export default function FAQSection() {
 
                     <button
                         type="button"
-                        className="group flex w-fit items-center gap-3 bg-[#071a3d] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#c99618] hover:text-[#071a3d]"
+                        className="group flex w-fit items-center gap-3 bg-[#000] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#c99618] hover:text-[#071a3d]"
                     >
                         TALK TO OUR TEAM
 

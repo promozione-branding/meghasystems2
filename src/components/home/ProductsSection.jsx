@@ -114,7 +114,7 @@ export default function ProductSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative bg-[#071a3d]"
+            className="relative bg-[#3B3923] py-10"
             style={{
                 height: `${PRODUCTS.length * 100}vh`,
             }}
@@ -147,7 +147,7 @@ export default function ProductSection() {
 
                         <div className="flex items-end justify-between gap-6">
                             <div>
-                                <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+                                <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
                                     Engineered for{" "}
                                     {/* <br /> */}
                                     <span className="text-[#d99a17]">

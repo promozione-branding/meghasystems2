@@ -196,10 +196,10 @@ export default function ClientSlider() {
                             </span>
                         </div>
 
-                        <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-[#071a3d] sm:text-4xl lg:text-5xl">
+                        <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Trusted by brands
                             <br />
-                            <span className="text-[#c99618]">
+                            <span className="bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent">
                                 that demand more.
                             </span>
                         </h2>

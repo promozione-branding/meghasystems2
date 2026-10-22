@@ -259,19 +259,11 @@ export default function Partners() {
                PARTNER CARDS
             ===================================================== */
 
-            gsap.to(".partner-card", {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.65,
-                stagger: 0.1,
-                ease: "power3.out",
-                clearProps: "opacity,visibility,transform",
-                scrollTrigger: {
-                    trigger: ".partner-grid",
-                    start: "top 88%",
-                    once: true,
-                },
-            });
+           gsap.set(".partner-card", {
+  autoAlpha: 1,
+  y: 0,
+  clearProps: "opacity,visibility,transform",
+});
 
             /* =====================================================
                BOTTOM STATEMENT
@@ -372,7 +364,7 @@ export default function Partners() {
             className="
                 relative
                 overflow-hidden
-                bg-[#eef1f4]
+                bg-[#eef1f4]/10
                 py-10
                 sm:py-12
                 lg:py-16
@@ -538,13 +530,13 @@ export default function Partners() {
                             font-medium
                             leading-[1.05]
                             tracking-[-0.04em]
-                            text-[#071a3d]
+                            text-[#000]
                             sm:text-[44px]
                             lg:text-[56px]
                         "
                     >
                         Authorised{" "}
-                        <span className="text-[#c99618]">
+                        <span className="bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent">
                             Channel Partners
                         </span>
                     </h2>

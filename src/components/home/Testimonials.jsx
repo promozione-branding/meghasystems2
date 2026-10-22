@@ -246,7 +246,7 @@ export default function Testimonials() {
                         <span className="h-[1px] w-12 bg-[#c99618]" />
                     </div>
 
-                    <h2 className="text-[34px] font-medium leading-[1.08] tracking-[-0.04em] sm:text-[46px] lg:text-[54px]">
+                    <h2 className="text-[34px] text-[#000] font-medium leading-[1.08] tracking-[-0.04em] sm:text-[46px] lg:text-[54px]">
                         Trusted by
                         <span className="text-[#c99618]">
                             {" "}Industry Leaders

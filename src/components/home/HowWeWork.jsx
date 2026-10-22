@@ -238,7 +238,7 @@ export default function HowWeWork() {
     return (
         <section
             ref={sectionRef}
-            className="relative overflow-hidden bg-[#071a3d] py-10 sm:py-12 lg:py-15"
+            className="relative overflow-hidden bg-[#628da1] py-10 sm:py-12 lg:py-15"
         >
             {/* ================================================= */}
             {/* BACKGROUND                                        */}
@@ -262,9 +262,9 @@ export default function HowWeWork() {
 
                 <div className="how-heading mb-5 max-w-3xl sm:mb-8 lg:mb-10">
                     <div className="mb-4 flex items-center gap-3">
-                        <span className="h-px w-10 bg-[#d99a17]" />
+                        <span className="h-px w-10 bg-[#000]" />
 
-                        <span className="text-[10px] font-semibold tracking-[0.32em] text-[#d99a17] sm:text-[11px]">
+                        <span className="text-[10px] font-semibold tracking-[0.32em] text-[#000] sm:text-[11px]">
                             HOW WE WORK
                         </span>
                     </div>
@@ -272,12 +272,12 @@ export default function HowWeWork() {
                     <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
                         From concept
                         <br />
-                        <span className="text-[#d99a17]">
+                        <span className="text-[#000]">
                             to completion.
                         </span>
                     </h2>
 
-                    <p className="mt-5 max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">
                         A structured approach that brings together design,
                         precision manufacturing and professional installation
                         to deliver restroom solutions built for lasting
@@ -593,9 +593,9 @@ export default function HowWeWork() {
                                 x="350"
                                 y="545"
                                 textAnchor="middle"
-                                fill="white"
-                                fillOpacity="0.35"
-                                fontSize="11"
+                                fill="black"
+                                fillOpacity="0.95"
+                                fontSize="15"
                                 letterSpacing="3"
                             >
                                 PRECISION ENGINEERED
@@ -633,7 +633,7 @@ export default function HowWeWork() {
                             return (
                                 <motion.div
                                     key={step.number}
-                                    className="work-step group relative border-b border-white/10 py-6 first:pt-0 last:border-b-0 sm:py-7"
+                                    className="work-step group relative border-b border-white/90 py-6 first:pt-0 last:border-b-0 sm:py-7"
                                     whileHover={{
                                         x: 6,
                                     }}
@@ -645,21 +645,21 @@ export default function HowWeWork() {
 
                                         {/* Number */}
                                         <div className="relative flex w-12 shrink-0 flex-col items-center">
-                                            <span className="text-xs font-semibold tracking-widest text-[#d99a17]">
+                                            <span className="text-xs font-semibold tracking-widest text-[#000]">
                                                 {step.number}
                                             </span>
 
                                             {index !== STEPS.length - 1 && (
-                                                <span className="absolute top-8 h-[calc(100%+1.5rem)] w-px bg-white/10" />
+                                                <span className="absolute top-8 h-[calc(100%+1.5rem)] w-px bg-white/90" />
                                             )}
                                         </div>
 
                                         {/* Icon */}
-                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/10 transition-all duration-300 group-hover:border-[#d99a17] group-hover:bg-[#d99a17]">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/10 transition-all duration-300 group-hover:border-[#d99a17] group-hover:bg-[#fff]">
                                             <Icon
                                                 size={19}
                                                 strokeWidth={1.6}
-                                                className="text-[#d99a17] transition-colors duration-300 group-hover:text-[#071a3d]"
+                                                className="text-[#000] transition-colors duration-300 group-hover:text-[#071a3d]"
                                             />
                                         </div>
 
@@ -670,12 +670,12 @@ export default function HowWeWork() {
                                                     {step.title}
                                                 </h3>
 
-                                                <span className="text-[9px] font-semibold tracking-[0.15em] text-[#d99a17]">
+                                                <span className="text-[9px] font-semibold tracking-[0.15em] text-[#000]">
                                                     {step.subtitle.toUpperCase()}
                                                 </span>
                                             </div>
 
-                                            <p className="mt-2 max-w-xl text-sm leading-6 text-white/45">
+                                            <p className="mt-2 max-w-xl text-sm leading-6 text-white/95">
                                                 {step.description}
                                             </p>
                                         </div>
@@ -688,7 +688,7 @@ export default function HowWeWork() {
                         <div className="mt-8">
                             <Link
                                 href="/contact"
-                                className="group inline-flex items-center gap-4 border border-[#d99a17]/50 px-6 py-3.5 text-xs font-semibold tracking-[0.16em] text-white transition-all duration-300 hover:border-[#d99a17] hover:bg-[#d99a17] hover:text-[#071a3d]"
+                                className="group inline-flex items-center gap-4 border border-[#fff]/50 px-6 py-3.5 text-xs font-semibold tracking-[0.16em] text-white transition-all duration-300 hover:border-[#d99a17] hover:bg-[#d99a17] hover:text-[#071a3d]"
                             >
                                 START YOUR PROJECT
 
@@ -706,31 +706,31 @@ export default function HowWeWork() {
                 {/* ================================================= */}
 
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-7 sm:mt-10">
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/30">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
                         SITE STUDY
                     </span>
 
                     <span className="h-1 w-1 bg-[#d99a17]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/30">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
                         DESIGN
                     </span>
 
                     <span className="h-1 w-1 bg-[#d99a17]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/30">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
                         MANUFACTURING
                     </span>
 
                     <span className="h-1 w-1 bg-[#d99a17]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/30">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
                         INSTALLATION
                     </span>
 
                     <span className="h-1 w-1 bg-[#d99a17]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/30">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
                         QUALITY CHECK
                     </span>
                 </div>
