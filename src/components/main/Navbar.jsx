@@ -515,7 +515,7 @@ function SocialIcon({ href, label, children }) {
       title={label}
       whileHover={{ y: -3, scale: 1.08 }}
       whileTap={{ scale: 0.92 }}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e17e3a] text-[14px] text-[#e17e3a] transition-all duration-300 hover:border-[#e17e3a] hover:bg-[#e17e3a] hover:text-white xl:h-10 xl:w-10 xl:text-[15px]"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e17e3a] text-[14px] text-[#e17e3a] transition-all duration-300 border-[#e17e3a] bg-[#e17e3a] text-white xl:h-10 xl:w-10 xl:text-[15px]"
     >
       {children}
     </motion.a>
