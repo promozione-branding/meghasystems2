@@ -808,17 +808,17 @@ export default function CTASection() {
                                 cta-eyebrow
                                 flex
                                 items-center
-                                gap-3
+                                gap-3 mb-2
                             "
                         >
-                            <span className="h-[2px] w-8 bg-[#c99618]" />
+                            <span className="h-[2px] w-8 bg-[#efac39]" />
 
                             <span
                                 className="
                                     text-[7px]
                                     font-semibold
                                     tracking-[0.30em]
-                                    text-[#c99618]
+                                    text-[#efac39]
                                     sm:text-[10px]
                                 "
                             >
@@ -826,26 +826,11 @@ export default function CTASection() {
                             </span>
                         </div>
 
-                        <h2
-                            className="
-                                cta-title
-                                mt-3
-                                max-w-[650px]
-                                text-[32px]
-                                font-semibold
-                                leading-[0.98]
-                                tracking-[-0.045em]
-                                text-[#000]
-                                sm:text-[40px]
-                                md:text-[44px]
-                                lg:text-[50px]
-                                xl:text-[54px]
-                            "
-                        >
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                             Stylish. Durable.
                             <br />
 
-                            <span className="text-[#c99618]">
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 Built for Every Space.
                             </span>
                         </h2>
@@ -857,7 +842,7 @@ export default function CTASection() {
                                 max-w-[430px]
                                 text-[10px]
                                 leading-[1.65]
-                                text-[#071a3d]/55
+                                text-[#071a3d]/90
                                 sm:text-[11px]
                                 lg:text-[12px]
                             "
@@ -908,7 +893,7 @@ export default function CTASection() {
                                             justify-center
                                             rounded-full
                                             border
-                                            border-[#c99618]
+                                            border-[#efac39]
                                             text-[#071a3d]
                                         "
                                     >
@@ -1103,14 +1088,14 @@ export default function CTASection() {
 
                         <div>
                             <div className="flex items-center gap-2">
-                                <span className="h-[2px] w-7 bg-[#c99618]" />
+                                <span className="h-[2px] w-7 bg-[#efac39]" />
 
                                 <span
                                     className="
                                         text-[9px]
                                         font-semibold
                                         tracking-[0.27em]
-                                        text-[#c99618]
+                                        text-[#efac39]
                                     "
                                 >
                                     TAKE THE NEXT STEP
@@ -1140,7 +1125,7 @@ export default function CTASection() {
                                     max-w-[200px]
                                     text-[10px]
                                     leading-[1.6]
-                                    text-[#071a3d]/50
+                                    text-[#071a3d]/90
                                 "
                             >
                                 Choose an option below and let our
@@ -1202,7 +1187,7 @@ export default function CTASection() {
                                                             shadow-[0_8px_20px_rgba(7,26,61,0.12)]
                                                         `
                                                     : `
-                                                            border-[#c99618]
+                                                            border-[#efac39]
                                                             bg-[#f9f8f3]
                                                             text-[#071a3d]
                                                         `
@@ -1221,7 +1206,7 @@ export default function CTASection() {
                                                     -translate-y-1/2
                                                     rounded-full
                                                     border
-                                                    border-[#c99618]/40
+                                                    border-[#efac39]/40
                                                     transition-transform
                                                     duration-700
                                                     group-hover:scale-[1.35]
@@ -1238,7 +1223,7 @@ export default function CTASection() {
                                                     -translate-y-1/2
                                                     rounded-full
                                                     border
-                                                    border-[#c99618]/15
+                                                    border-[#efac39]/15
                                                 "
                                             />
 
@@ -1263,8 +1248,8 @@ export default function CTASection() {
                                                         justify-center
                                                         rounded-[7px]
                                                         border
-                                                        border-[#c99618]
-                                                        text-[#c99618]
+                                                        border-[#efac39]
+                                                        text-[#efac39]
                                                         transition-transform
                                                         duration-500
                                                         group-hover:rotate-3
@@ -1293,7 +1278,7 @@ export default function CTASection() {
                                                 className="
                                                     relative
                                                     z-10
-                                                    text-[#c99618]
+                                                    text-[#efac39]
                                                     transition-transform
                                                     duration-300
                                                     group-hover:translate-x-1
@@ -1313,7 +1298,7 @@ export default function CTASection() {
                                                     left-0
                                                     h-[2px]
                                                     w-0
-                                                    bg-[#c99618]
+                                                    bg-[#efac39]
                                                     transition-all
                                                     duration-500
                                                     group-hover:w-full

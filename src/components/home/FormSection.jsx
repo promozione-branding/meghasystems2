@@ -208,7 +208,7 @@ export default function FormSection() {
     <section
       ref={heroRef}
       id="home"
-      className="relative isolate overflow-hidden bg-[#F8F5F1] text-[#252329]"
+      className="relative isolate overflow-hidden bg-[#f5f3ed] text-[#252329] border border-orange-300"
     >
       <div className="relative py-4">
         {/* Desktop image placeholder */}
@@ -220,14 +220,14 @@ export default function FormSection() {
         </div>
 
         {/* Mobile image placeholder */}
-        <div className="absolute inset-x-0 top-0 h-[310px] bg-[#D6C8B8] lg:hidden">
+        <div className="absolute inset-x-0 top-0 h-[310px] bg-[#f5f3ed] lg:hidden">
           {/* Add your mobile restroom image here */}
         </div>
 
         {/* Curved left panel */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-0 hidden w-[64%] bg-[#F8F5F1] lg:block"
+          className="pointer-events-none absolute inset-y-0 left-0 z-0 hidden w-[64%] bg-[#f5f3ed] lg:block"
           style={{
             clipPath: "ellipse(86% 105% at 0% 50%)",
           }}
@@ -240,7 +240,7 @@ export default function FormSection() {
             className="max-w-[650px] will-change-[clip-path]"
           >
             <div className="hero-eyebrow mb-6 flex items-center gap-3">
-              <span className="h-[2px] w-11 bg-[#B95D35]" />
+              <span className="h-[2px] w-11 bg-[#efac39]" />
 
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#77716D] sm:text-xs">
                 Modern <span className="mx-2">|</span> Durable
@@ -248,12 +248,14 @@ export default function FormSection() {
               </p>
             </div>
 
-            <h1 className="hero-title max-w-[620px] text-[42px] font-bold leading-[1.04] tracking-[-0.045em] sm:text-5xl">
+            <h2 className="max-w-[700px] text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
               Premium
-              <span className="block text-[#B95D35]">
+              <br />
+
+              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparentbg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                 Toilet Cubicle Systems
               </span>
-            </h1>
+            </h2>
 
             <p className="hero-description mt-6 max-w-[500px] text-[15px] leading-5 text-[#68625F] sm:text-base sm:leading-6">
               Stylish, durable and low-maintenance restroom partitions
@@ -264,7 +266,7 @@ export default function FormSection() {
             <div className="hero-actions mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#quote"
-                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[#B95732] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
+                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
                 Get a Free Quote
                 <ArrowUpRight
@@ -275,7 +277,7 @@ export default function FormSection() {
 
               <a
                 href="#systems"
-                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg border border-[#C96D47] bg-white/80 px-5 text-sm font-semibold text-[#29252A] transition-colors duration-300 hover:bg-white sm:text-base"
+                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg border border-[#efac39] bg-white/80 px-5 text-sm font-semibold text-[#efac39] transition-colors duration-300 hover:bg-white sm:text-base"
               >
                 Explore Our Systems
                 <ArrowUpRight
@@ -295,12 +297,12 @@ export default function FormSection() {
                     key={stat.label}
                     className="hero-stat flex items-center gap-3 sm:flex-col sm:items-start sm:gap-3"
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F0E3D8] text-[#B95D35] transition-transform duration-500 hover:rotate-12 sm:h-14 sm:w-14">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f3e7dd] text-[#efac39] transition-transform duration-500 hover:rotate-12 sm:h-14 sm:w-14">
                       <Icon size={25} strokeWidth={1.6} />
                     </div>
 
                     <div>
-                      <p className="text-2xl font-bold tracking-tight text-[#B95D35] sm:text-3xl lg:text-[34px]">
+                      <p className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent sm:text-3xl lg:text-[34px]">
                         {stat.value}
                       </p>
 
@@ -322,7 +324,7 @@ export default function FormSection() {
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-[2px] w-8 bg-[#B95D35]" />
+              <span className="h-[2px] w-8 bg-[#efac39]" />
 
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#817771]">
                 Request a Quote
@@ -389,7 +391,7 @@ export default function FormSection() {
 
               <button
                 type="submit"
-                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[#B95732] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
+                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
                 Request Free Quote
                 <ArrowUpRight
@@ -400,7 +402,7 @@ export default function FormSection() {
             </form>
 
             <div className="mt-6 flex items-center gap-2 border-t border-[#EEE6E0] pt-5 text-xs text-[#77716D]">
-              <Award size={18} className="shrink-0 text-[#B95D35]" />
+              <Award size={18} className="shrink-0 text-[#efac39]" />
               <span>
                 Designed for demanding commercial environments
               </span>

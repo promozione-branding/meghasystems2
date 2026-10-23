@@ -135,16 +135,14 @@ export default function Navbar() {
         duration: 0.7,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={`fixed left-0 right-0 top-0 z-[100] px-2 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
-        scrolled
-          ? "bg-white/95 shadow-[0_8px_30px_rgba(7,26,61,0.10)] backdrop-blur-md"
-          : "bg-transparent shadow-none"
-      }`}
+      className={`fixed left-0 right-0 top-0 z-[100] px-2 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${scrolled
+        ? "bg-white/95 shadow-[0_8px_30px_rgba(7,26,61,0.10)] backdrop-blur-md"
+        : "bg-transparent shadow-none"
+        }`}
     >
       <div
-        className={`overflow-visible transition-colors duration-500 ${
-          scrolled ? "bg-white/95" : "bg-transparent"
-        }`}
+        className={`overflow-visible transition-colors duration-500 ${scrolled ? "bg-white/95" : "bg-transparent"
+          }`}
       >
         {/* DESKTOP HEADER */}
         <div className="relative hidden h-[88px] items-center justify-between gap-4 overflow-visible px-3 lg:flex xl:px-5">
@@ -191,18 +189,17 @@ export default function Navbar() {
                 type="button"
                 aria-expanded={productsOpen}
                 onClick={() => setProductsOpen((prev) => !prev)}
-                className="group relative flex h-full items-center gap-1 px-3 text-[12px] font-semibold text-[#182640] transition-colors hover:text-[#c99618] xl:px-4 xl:text-[13px]"
+                className="group relative flex h-full items-center gap-1 px-3 text-[12px] font-semibold text-[#182640] transition-colors hover:text-[#c99618] xl:px-4 xl:text-[15px]"
               >
                 Products
 
                 <ChevronDown
                   size={14}
-                  className={`transition-transform duration-300 ${
-                    productsOpen ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-300 ${productsOpen ? "rotate-180" : ""
+                    }`}
                 />
 
-                <span className="absolute bottom-0 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
+                <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
               </button>
 
               <AnimatePresence>
@@ -212,7 +209,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.22 }}
-                    className="absolute left-0 top-full z-50 w-[310px] pt-3 xl:w-[330px]"
+                    className="absolute left-0 top-15 z-50 w-[310px] pt-3 xl:w-[330px]"
                   >
                     <div className="rounded-xl border border-gray-100 bg-white p-2 shadow-[0_25px_70px_rgba(7,26,61,0.16)]">
                       {allProducts.map((product) => (
@@ -225,7 +222,7 @@ export default function Navbar() {
                       <Link
                         href="/products"
                         onClick={() => setProductsOpen(false)}
-                        className="group mt-1 flex items-center justify-between rounded-lg bg-[#E17E3A] px-4 py-3.5 text-white"
+                        className="group mt-1 flex items-center justify-between rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-4 py-3.5 text-white"
                       >
                         <div>
                           <p className="text-sm font-semibold">
@@ -292,7 +289,7 @@ export default function Navbar() {
             aria-label="Megha Systems home"
           >
             <Image
-              src="/1.png"
+              src="/cubilo.png"
               alt="MEGHA SYSTEMS"
               width={300}
               height={90}
@@ -348,9 +345,8 @@ export default function Navbar() {
 
                   <ChevronDown
                     size={17}
-                    className={`transition-transform ${
-                      mobileProductsOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform ${mobileProductsOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
@@ -471,16 +467,15 @@ function NavLink({ href, label, active = false }) {
   return (
     <Link
       href={href}
-      className={`group relative flex h-full shrink-0 items-center px-3 text-[12px] font-semibold transition-all duration-300 xl:px-4 xl:text-[13px] ${
-        active
-          ? "bg-[#d95538] text-white"
-          : "text-[#182640] hover:text-[#c99618]"
-      }`}
+      className={`group relative flex h-full shrink-0 items-center px-3 text-[12px] font-semibold transition-all duration-300 xl:px-4 xl:text-[15px] ${active
+        ? "bg-[#d95538] text-white"
+        : "text-[#182640] hover:text-[#c99618]"
+        }`}
     >
       {label}
 
       {!active && (
-        <span className="absolute bottom-0 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
+        <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
       )}
     </Link>
   );
@@ -520,7 +515,7 @@ function SocialIcon({ href, label, children }) {
       title={label}
       whileHover={{ y: -3, scale: 1.08 }}
       whileTap={{ scale: 0.92 }}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 text-[14px] text-[#e17e3a] transition-all duration-300 hover:border-[#e17e3a] hover:bg-[#e17e3a] hover:text-white xl:h-10 xl:w-10 xl:text-[15px]"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e17e3a] text-[14px] text-[#e17e3a] transition-all duration-300 hover:border-[#e17e3a] hover:bg-[#e17e3a] hover:text-white xl:h-10 xl:w-10 xl:text-[15px]"
     >
       {children}
     </motion.a>

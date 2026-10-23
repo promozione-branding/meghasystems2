@@ -106,7 +106,7 @@ export default function Testimonials() {
             className="
                 relative
                 overflow-hidden
-                bg-[#f4f5f6]
+                bg-[#fff]
                 py-12
                 text-[#071a3d]
                 sm:py-14
@@ -235,25 +235,26 @@ export default function Testimonials() {
                 ================================================== */}
 
                 <div className="testimonial-header mx-auto max-w-[750px] text-center">
+                    <div className="mb-2 flex items-center justify-center gap-3">
+                        <span className="h-[1px] w-12 bg-[#efac39]" />
 
-                    <div className="mb-5 flex items-center justify-center gap-3">
-                        <span className="h-[1px] w-12 bg-[#c99618]" />
-
-                        <span className="text-[8px] font-semibold tracking-[0.35em] text-[#c99618] sm:text-[10px]">
+                        <span className="text-[8px] font-semibold tracking-[0.35em] text-[#efac39] sm:text-[10px]">
                             CLIENT VOICES
                         </span>
 
-                        <span className="h-[1px] w-12 bg-[#c99618]" />
+                        <span className="h-[1px] w-12 bg-[#efac39]" />
                     </div>
 
-                    <h2 className="text-[34px] text-[#000] font-medium leading-[1.08] tracking-[-0.04em] sm:text-[46px] lg:text-[54px]">
+                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                         Trusted by
-                        <span className="text-[#c99618]">
-                            {" "}Industry Leaders
+                        <br />
+
+                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                            Industry Leaders
                         </span>
                     </h2>
 
-                    <p className="mx-auto mt-4 max-w-[600px] text-[12px] leading-[1.8] text-[#071a3d]/50 sm:text-[13px]">
+                    <p className="mx-auto mt-4 max-w-[700px] text-[12px] leading-[1.8] text-[#071a3d]/90 sm:text-[13px]">
                         Our commitment to quality, precision and dependable
                         execution is reflected in the experiences of our clients.
                     </p>
@@ -273,12 +274,11 @@ export default function Testimonials() {
                         border
                         border-[#071a3d]/10
                         bg-white
-                        sm:mt-10
                     "
                 >
 
                     {/* Top gold line */}
-                    <div className="absolute left-0 right-0 top-0 h-[2px] bg-[#c99618]" />
+                    <div className="absolute left-0 right-0 top-0 h-[2px] bg-[#efac39]" />
 
                     {/* Corner */}
                     <div
@@ -290,7 +290,7 @@ export default function Testimonials() {
                             w-12
                             border-r
                             border-t
-                            border-[#c99618]
+                            border-[#efac39]
                         "
                     />
 
@@ -312,9 +312,9 @@ export default function Testimonials() {
                                     items-center
                                     justify-center
                                     border
-                                    border-[#c99618]/30
-                                    bg-[#c99618]/[0.06]
-                                    text-[#c99618]
+                                    border-[#efac39]/30
+                                    bg-[#efac39]/[0.06]
+                                    text-[#efac39]
                                 "
                             >
                                 <Quote size={21} />
@@ -342,12 +342,12 @@ export default function Testimonials() {
                                 {[1, 2, 3, 4, 5].map((star) => (
                                     <FaStar
                                         key={star}
-                                        className="text-[#c99618]"
+                                        className="text-[#efac39]"
                                         size={11}
                                     />
                                 ))}
 
-                                <span className="ml-3 mt-0.5 text-[10px] font-medium tracking-[0.2em] text-[#071a3d]/35">
+                                <span className="ml-3 mt-0.5 text-[10px] font-medium tracking-[0.2em] text-[#071a3d]/95">
                                     PROJECT EXPERIENCE
                                 </span>
                             </div>
@@ -355,7 +355,7 @@ export default function Testimonials() {
                             {/* Client information */}
                             <div className="mt-7 flex items-center gap-4">
 
-                                <div className="h-[1px] w-8 bg-[#c99618]" />
+                                <div className="h-[1px] w-8 bg-[#efac39]" />
 
                                 <div>
                                     <p className="text-[10px] font-semibold tracking-[0.12em] text-[#071a3d]">
@@ -400,7 +400,7 @@ export default function Testimonials() {
                                     text-[10px]
                                     font-medium
                                     tracking-[0.3em]
-                                    text-[#071a3d]/25
+                                    text-[#071a3d]/90
                                 "
                             >
                                 CLIENT
@@ -418,17 +418,17 @@ export default function Testimonials() {
                             </div>
 
                             <div className="mt-5 text-center">
-                                <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071a3d]/45">
+                                <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071a3d]/90">
                                     {current.company}
                                 </p>
 
-                                <p className="mt-1 text-[10px] tracking-[0.2em] text-[#c99618]">
+                                <p className="mt-1 text-[10px] tracking-[0.2em] text-[#efac39]">
                                     {current.location}
                                 </p>
                             </div>
 
                             {/* Number */}
-                            <div className="absolute bottom-5 left-6 text-[9px] font-medium tracking-[0.2em] text-[#071a3d]/20">
+                            <div className="absolute bottom-5 left-6 text-[9px] font-medium tracking-[0.2em] text-[#071a3d]/90">
                                 {String(active + 1).padStart(2, "0")} /{" "}
                                 {String(testimonials.length).padStart(2, "0")}
                             </div>
@@ -464,10 +464,9 @@ export default function Testimonials() {
                                         h-[2px]
                                         transition-all
                                         duration-300
-                                        ${
-                                            active === index
-                                                ? "w-8 bg-[#c99618]"
-                                                : "w-4 bg-[#071a3d]/15 hover:bg-[#071a3d]/35"
+                                        ${active === index
+                                            ? "w-8 bg-[#efac39]"
+                                            : "w-4 bg-[#071a3d]/15 hover:bg-[#071a3d]/35"
                                         }
                                     `}
                                 />
@@ -491,8 +490,8 @@ export default function Testimonials() {
                                     text-[#071a3d]
                                     transition-all
                                     duration-300
-                                    hover:border-[#c99618]
-                                    hover:bg-[#c99618]
+                                    hover:border-[#efac39]
+                                    hover:bg-[#efac39]
                                     hover:text-white
                                 "
                             >
@@ -514,8 +513,8 @@ export default function Testimonials() {
                                     text-[#071a3d]
                                     transition-all
                                     duration-300
-                                    hover:border-[#c99618]
-                                    hover:bg-[#c99618]
+                                    hover:border-[#efac39]
+                                    hover:bg-[#efac39]
                                     hover:text-white
                                 "
                             >
@@ -527,13 +526,13 @@ export default function Testimonials() {
 
                 {/* Bottom statement */}
                 <div className="mt-6 flex items-center justify-center gap-4">
-                    <div className="h-[1px] w-10 bg-[#c99618] sm:w-16" />
+                    <div className="h-[1px] w-10 bg-[#efac39] sm:w-16" />
 
-                    <span className="text-center text-[10px] font-medium tracking-[0.3em] text-[#071a3d]/30 sm:text-[10px]">
+                    <span className="text-center text-[10px] font-medium tracking-[0.3em] text-[#071a3d]/90 sm:text-[10px]">
                         QUALITY • PRECISION • TRUST
                     </span>
 
-                    <div className="h-[1px] w-10 bg-[#c99618] sm:w-16" />
+                    <div className="h-[1px] w-10 bg-[#efac39] sm:w-16" />
                 </div>
             </div>
         </section>

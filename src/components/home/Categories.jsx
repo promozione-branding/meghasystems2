@@ -87,7 +87,7 @@ export default function Categories() {
 
       <div className="pointer-events-none absolute right-[-180px] top-[15%] h-[500px] w-[500px] rounded-full bg-[#d99a17]/[0.06] blur-[100px]" />
 
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-[1px] bg-[#d99a17]/30" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-[1px] bg-[#d99a17]/20" />
 
       {/* =====================================================
           CONTAINER
@@ -105,9 +105,9 @@ export default function Categories() {
             {/* Eyebrow */}
 
             <div className="mb-5 flex items-center gap-3">
-              <span className="h-[2px] w-12 bg-[#D95538]" />
+              <span className="h-[2px] w-12 bg-[#efac39]" />
 
-              <span className="text-[9px] font-medium tracking-[0.3em] text-[#D95538]">
+              <span className="text-[9px] font-medium tracking-[0.3em] text-[#efac39]">
                 OUR SOLUTIONS
               </span>
             </div>
@@ -117,13 +117,16 @@ export default function Categories() {
             <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
               Built for spaces
               <br />
-              <span className="text-[#D95538]">that demand more.</span>
+
+              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                that demand more.
+              </span>
             </h2>
           </div>
 
           {/* Description */}
 
-          <p className="max-w-[350px] text-[13px] leading-[1.8] text-[#071a3d]/55 md:pb-2">
+          <p className="max-w-[350px] text-[13px] leading-[1.8] text-[#071a3d]/95 md:pb-2">
             Explore our range of premium partition and washroom solutions,
             engineered for durability, privacy and modern commercial spaces.
           </p>
@@ -138,7 +141,7 @@ export default function Categories() {
             <Link
               href={category.slug}
               key={idx}
-              className="category-card rounded-xl group relative block overflow-hidden bg-[#071a3d]"
+              className="category-card rounded-xl group relative block overflow-hidden bg-[#fff]"
             >
               {/* =============================================
                   IMAGE
@@ -176,11 +179,11 @@ export default function Categories() {
 
                 <div className="absolute left-5 top-5 flex items-center gap-3">
 
-                  <span className="text-[11px] tracking-[0.2em] text-white/70">
+                  <span className="text-[11px] tracking-[0.2em] text-[#efac39]">
                     {idx + 1}
                   </span>
 
-                  <span className="h-[1px] w-8 bg-[#d99a17]" />
+                  <span className="h-[1px] w-8 bg-[#efac39]" />
 
                 </div>
 
@@ -195,7 +198,7 @@ export default function Categories() {
                     w-14
                     border-r
                     border-t
-                    border-[#d99a17]
+                    border-[#efac39]
                     opacity-70
                     transition-all
                     duration-500
@@ -208,7 +211,7 @@ export default function Categories() {
 
                 <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
 
-                  <div className="mb-3 h-[2px] w-8 bg-[#76BED0] transition-all duration-500 group-hover:w-14" />
+                  <div className="mb-3 h-[2px] w-8 bg-[#efac39] transition-all duration-500 group-hover:w-14" />
 
                   <h3 className="text-[21px] font-medium tracking-[-0.02em] text-white sm:text-[23px]">
                     {category.categoryName}
@@ -220,7 +223,7 @@ export default function Categories() {
 
                   {/* View */}
 
-                  <div className="mt-5 flex items-center gap-3 text-[9px] font-medium tracking-[0.22em] text-[#76BED0]">
+                  <div className="mt-5 flex items-center gap-3 text-[9px] font-medium tracking-[0.22em] text-[#efac39]">
                     <span>VIEW CATEGORY</span>
 
                     <span className="transition-transform duration-300 group-hover:translate-x-2">
@@ -235,7 +238,7 @@ export default function Categories() {
                   BOTTOM GOLD LINE
               ================================================== */}
 
-              <div className="h-[3px] w-0 bg-[#76BED0] transition-all duration-500 group-hover:w-full" />
+              <div className="h-[3px] w-0 bg-[#efac39] transition-all duration-500 group-hover:w-full" />
             </Link>
           ))}
         </div>
@@ -246,13 +249,13 @@ export default function Categories() {
 
         <div className="mt-8 flex items-center justify-center gap-4">
 
-          <div className="h-[1px] w-12 bg-[#d99a17]" />
+          <div className="h-[1px] w-12 bg-[#efac39]" />
 
-          <span className="text-[10px] tracking-[0.3em] text-[#071a3d]/35">
+          <span className="text-[10px] tracking-[0.3em] text-[#efac39]/95">
             PREMIUM PARTITION SOLUTIONS
           </span>
 
-          <div className="h-[1px] w-12 bg-[#d99a17]" />
+          <div className="h-[1px] w-12 bg-[#efac39]" />
 
         </div>
 

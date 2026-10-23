@@ -118,7 +118,7 @@ const INDUSTRIES = [
     subtitle: "Transport Hubs",
     description:
       "High-performance restroom partition systems designed for busy public and transportation environments.",
-    icon: BsFillAirplaneEnginesFill ,
+    icon: BsFillAirplaneEnginesFill,
     project: {
       name: "Rajeev Gandhi Bhawan",
       location: "Delhi Airport",
@@ -167,7 +167,7 @@ export default function IndustriesWeServe() {
   };
 
   return (
-    <section ref={sectionRef} className="relative isolate overflow-hidden bg-[#f5f1e9] py-16 text-[#101820] sm:py-20 lg:py-24">
+    <section ref={sectionRef} className="relative isolate overflow-hidden bg-[#f5f3ed] py-10 text-[#101820] sm:py-12 lg:py-15">
       {/* Warm architectural backdrop */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="industries-blueprint absolute -right-24 top-0 h-[620px] w-[650px] opacity-[0.055]">
@@ -185,18 +185,22 @@ export default function IndustriesWeServe() {
           {/* Editorial introduction */}
           <div className="flex flex-col justify-center py-2 xl:py-6">
             <div className="industries-eyebrow mb-5 flex items-center gap-3">
-              <span className="h-[2px] w-14 bg-[#d5a54b]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#716657]">Industries we serve</span>
+              <span className="h-[2px] w-14 bg-[#efac39]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#efac39]">Industries we serve</span>
             </div>
 
-            <h2 className="industries-title max-w-[590px] font-serif text-[clamp(3.5rem,6.3vw,6.8rem)] leading-[0.83] tracking-[-0.065em] text-[#101820]">
+            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
               Industries
-              <span className="mt-2 block text-[#c99a4a]">We Serve</span>
+              <br />
+
+              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                We Serve
+              </span>
             </h2>
 
-            <p className="mt-7 max-w-[470px] text-sm leading-7 text-[#5c6062] sm:text-base">
+            {/* <p className="mt-7 max-w-[470px] text-sm leading-7 text-[#5c6062] sm:text-base">
               From corporate offices to airports, we deliver premium restroom partition solutions across diverse industries, combining quality, durability and modern design.
-            </p>
+            </p> */}
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
               {BENEFITS.map((benefit) => {
@@ -216,75 +220,169 @@ export default function IndustriesWeServe() {
             </div>
           </div>
 
-          {/* Large active project showcase */}
-          <div className="industries-showcase grid min-w-0 overflow-hidden rounded-[28px] bg-[#071720] shadow-[0_28px_80px_rgba(20,30,35,0.16)] lg:grid-cols-[minmax(0,1.25fr)_minmax(300px,0.8fr)]">
-            <div className="relative min-h-[360px] overflow-hidden bg-[#d5d0c6] sm:min-h-[460px] lg:min-h-[600px]">
+          <div className="industries-showcase h-fit flex min-w-0 flex-col overflow-hidden rounded-[28px] bg-[#071720] shadow-[0_28px_80px_rgba(20,30,35,0.16)]">
+
+            {/* TOP: Full-width project image */}
+            <div className="relative h-[300px] w-full overflow-hidden bg-[#d5d0c6] sm:h-[400px] lg:h-[300px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current.id}
                   initial={{ opacity: 0, scale: 1.035 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 1.015 }}
-                  transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-0"
+                  transition={{
+                    duration: 0.55,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="absolute inset-0 h-full"
                 >
                   <Image
                     src={current.project.image}
                     alt={`${current.project.name} - ${current.project.location}`}
                     fill
                     priority={active === 0}
-                    sizes="(max-width: 1024px) 100vw, 55vw"
                     className="object-cover"
                   />
                 </motion.div>
               </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/70 via-transparent to-[#071720]/10" />
+
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071720]/70 via-transparent to-[#071720]/10" />
+
+              {/* Featured project badge */}
               <div className="absolute left-5 top-5 border border-white/40 bg-[#071720]/35 px-3 py-2 backdrop-blur-md sm:left-7 sm:top-7">
-                <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-white">Featured project</span>
+                <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-white">
+                  Featured project
+                </span>
               </div>
+
+              {/* Project location */}
               <AnimatePresence mode="wait">
-                <motion.div key={current.id + "-location"} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.3 }} className="absolute bottom-5 left-5 flex max-w-[calc(100%-40px)] items-center gap-3 rounded-xl bg-black/55 px-4 py-3 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:px-5">
-                  <FiMapPin className="shrink-0 text-[#efc277]" size={21} />
+                <motion.div
+                  key={current.id + "-location"}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute bottom-5 left-5 flex max-w-[calc(100%-140px)] items-center gap-3 rounded-xl bg-black/55 px-4 py-3 text-white backdrop-blur-md sm:bottom-2 sm:left-2 sm:px-5"
+                >
+                  <FiMapPin
+                    className="shrink-0 text-[#efac39]"
+                    size={21}
+                  />
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold sm:text-base">{current.project.name}</p>
-                    <p className="mt-0.5 text-xs text-white/70">{current.project.location}</p>
+                    <p className="truncate text-sm font-semibold sm:text-base">
+                      {current.project.name}
+                    </p>
+                    <p className="mt-0.5 text-xs text-white/70">
+                      {current.project.location}
+                    </p>
                   </div>
                 </motion.div>
               </AnimatePresence>
-              <div className="absolute bottom-5 right-5 flex gap-2 sm:bottom-7 sm:right-7">
-                <button type="button" aria-label="Previous industry" onClick={() => changeIndustry(active - 1)} className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#071720] transition hover:bg-[#efc277]">
+
+              {/* Navigation arrows */}
+              <div className="absolute bottom-5 right-5 flex gap-2 sm:bottom-2 sm:right-2">
+                <button
+                  type="button"
+                  aria-label="Previous industry"
+                  onClick={() => changeIndustry(active - 1)}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#071720] transition hover:bg-[#efac39] sm:h-11 sm:w-11"
+                >
                   <FiChevronLeft size={21} />
                 </button>
-                <button type="button" aria-label="Next industry" onClick={() => changeIndustry(active + 1)} className="flex h-11 w-11 items-center justify-center rounded-full bg-[#071720] text-white ring-1 ring-white/20 transition hover:bg-[#c99618]" >
+
+                <button
+                  type="button"
+                  aria-label="Next industry"
+                  onClick={() => changeIndustry(active + 1)}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#071720] text-white ring-1 ring-white/20 transition hover:bg-[#efac39] sm:h-11 sm:w-11"
+                >
                   <FiChevronRight size={21} />
                 </button>
               </div>
             </div>
 
-            <div className="relative flex min-w-0 flex-col justify-center overflow-hidden px-6 py-8 text-white sm:px-8 sm:py-10 lg:px-9 lg:py-12">
-              <div aria-hidden="true" className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-[#d6a74f]/20" />
-              <div aria-hidden="true" className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#d6a74f]/15" />
+            {/* BOTTOM: Industry information */}
+            <div className="relative min-w-0 overflow-hidden px-5 py-7 text-white sm:px-8 sm:py-9 lg:px-10 lg:py-6">
+
+              {/* Decorative background */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-[#d6a74f]/20"
+              />
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-10 -top-10 h-44 w-44 rounded-full border border-[#d6a74f]/15"
+              />
+
               <AnimatePresence mode="wait">
-                <motion.div key={current.id + "-details"} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.35 }} className="relative z-10 flex h-full flex-col">
-                  <div className="flex items-center gap-2 text-sm">
-                    <span className="font-semibold text-[#f1c579]">{current.number}</span>
-                    <span className="text-white/40">/ 08</span>
+                <motion.div
+                  key={current.id + "-details"}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.35 }}
+                  className="relative z-10 flex items-center justify-between"
+                >
+                  {/* Industry number */}
+                  {/* <div className="flex items-center gap-2 text-sm">
+                    <span className="font-semibold text-[#f1c579]">
+                      {current.number}
+                    </span>
+                    <span className="text-white/40">
+                      / {String(INDUSTRIES.length).padStart(2, "0")}
+                    </span>
+                  </div> */}
+
+                  {/* Industry heading */}
+                  <div>
+                    <h3 className="font-serif text-3xl leading-tight tracking-[-0.04em] sm:text-4xl lg:text-[42px]">
+                      {current.title}
+                    </h3>
+
+                    <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.19em] text-white/65 sm:text-xs">
+                      {current.subtitle}
+                    </p>
                   </div>
-                  <h3 className="mt-7 font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">{current.title}</h3>
-                  <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.19em] text-white/65 sm:text-xs">{current.subtitle}</p>
-                  <div className="mt-6 h-[2px] w-14 bg-[#f1c579]" />
-                  <p className="mt-6 text-sm leading-6 text-white/75">{current.description}</p>
-                  <ul className="mt-6 space-y-3">
-                    {["Modern & elegant design", "Durable for high usage", "Customised solutions", "Professional installation"].map((point) => (
-                      <li key={point} className="flex items-center gap-2.5 text-xs text-white/85 sm:text-sm">
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#efc277] text-[#071720]">✓</span>
+
+                  {/* <div className="mt-5 h-[2px] w-14 bg-[#f1c579]" /> */}
+
+                  {/* Description */}
+                  {/* <p className="mt-5 max-w-[700px] text-sm leading-7 text-white/75">
+                    {current.description}
+                  </p> */}
+
+                  {/* Features */}
+                  {/* <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+                    {[
+                      "Modern & elegant design",
+                      "Durable for high usage",
+                      "Customised solutions",
+                      "Professional installation",
+                    ].map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-center gap-2.5 text-xs text-white/85 sm:text-sm"
+                      >
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#efc277] text-[#071720]">
+                          ✓
+                        </span>
                         {point}
                       </li>
                     ))}
-                  </ul>
-                  <div className="mt-auto pt-8">
-                    <Link href="/contact" className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#efc277] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs">
-                      View project <FiArrowUpRight size={17} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </ul> */}
+
+                  {/* CTA */}
+                  <div className="">
+                    <Link
+                      href="/contact"
+                      className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#efac39] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs"
+                    >
+                      View project
+                      <FiArrowUpRight
+                        size={17}
+                        className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                      />
                     </Link>
                   </div>
                 </motion.div>
@@ -294,7 +392,7 @@ export default function IndustriesWeServe() {
         </div>
 
         {/* Industry selector strip */}
-        <div className="mt-7 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:grid-cols-8">
+        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:grid-cols-8">
           {INDUSTRIES.map((industry, index) => {
             const Icon = industry.icon;
             const isActive = active === index;
@@ -304,7 +402,7 @@ export default function IndustriesWeServe() {
                 type="button"
                 onClick={() => changeIndustry(index)}
                 aria-pressed={isActive}
-                className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[220px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
+                className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[120px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
               >
                 <div className="flex flex-1 flex-col items-center px-2 pb-3 pt-3 text-center sm:px-3 sm:pt-4">
                   <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#efc277]" : "text-[#4d5357]"}`}>{industry.number}</span>
@@ -312,10 +410,10 @@ export default function IndustriesWeServe() {
                   <span className="mt-3 text-xs font-semibold sm:text-sm">{industry.title}</span>
                   <span className={`mt-1 line-clamp-2 text-[8px] uppercase leading-4 tracking-[0.08em] sm:text-[9px] ${isActive ? "text-white/60" : "text-[#65696b]"}`}>{industry.subtitle}</span>
                 </div>
-                <div className="relative h-[76px] w-full overflow-hidden sm:h-[88px]">
+                {/* <div className="relative h-[76px] w-full overflow-hidden sm:h-[88px]">
                   <Image src={industry.project.image} alt={`${industry.title} industry project`} fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 13vw" className={`object-cover transition duration-700 group-hover:scale-105 ${isActive ? "opacity-100" : "opacity-75 grayscale-[15%] group-hover:opacity-100"}`} />
                   <div className={`absolute inset-0 ${isActive ? "bg-[#071720]/5" : "bg-[#f5f1e9]/10"}`} />
-                </div>
+                </div> */}
                 {isActive && <motion.span layoutId="industry-active-border" className="absolute inset-0 rounded-xl ring-1 ring-inset ring-[#d6a74f]" />}
               </button>
             );

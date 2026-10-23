@@ -26,7 +26,7 @@ export default function Home() {
       <Partners />
       <ProductsSection />
       <FormSection />
-      <Certificates />
+      {/* <Certificates /> */}
       <HowWeWork />
       <ClientSlider />
       <ParallaxCTA />

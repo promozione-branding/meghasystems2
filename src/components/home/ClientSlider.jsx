@@ -189,9 +189,9 @@ export default function ClientSlider() {
 
                     <div>
                         <div className="mb-4 flex items-center gap-3">
-                            <span className="h-px w-10 bg-[#d99a17]" />
+                            <span className="h-px w-10 bg-[#efac39]" />
 
-                            <span className="text-[10px] font-bold tracking-[0.32em] text-[#d99a17]">
+                            <span className="text-[10px] font-bold tracking-[0.32em] text-[#efac39]">
                                 OUR CLIENTS
                             </span>
                         </div>
@@ -199,7 +199,7 @@ export default function ClientSlider() {
                         <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Trusted by brands
                             <br />
-                            <span className="bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 that demand more.
                             </span>
                         </h2>
@@ -208,7 +208,7 @@ export default function ClientSlider() {
                     <div className="flex items-center gap-3 text-right">
                         <Building2
                             size={19}
-                            className="text-[#c99618]"
+                            className="text-[#efac39]"
                             strokeWidth={1.6}
                         />
 
@@ -230,9 +230,9 @@ export default function ClientSlider() {
                 <div className="relative">
 
                     {/* Side architectural accents */}
-                    <div className="pointer-events-none absolute -left-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#d99a17]" />
+                    <div className="pointer-events-none absolute -left-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#efac39]" />
 
-                    <div className="pointer-events-none absolute -right-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#d99a17]" />
+                    <div className="pointer-events-none absolute -right-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#efac39]" />
 
                     <Swiper
                         modules={[Autoplay]}
@@ -288,7 +288,7 @@ export default function ClientSlider() {
                                         transition-all
                                         duration-500
                                         hover:-translate-y-1
-                                        hover:border-[#d99a17]/60
+                                        hover:border-[#efac39]/60
                                         hover:shadow-[0_18px_40px_rgba(7,26,61,0.10)]
                                         sm:h-[145px]
                                     "
@@ -301,7 +301,7 @@ export default function ClientSlider() {
                                             top-0
                                             h-[2px]
                                             w-0
-                                            bg-[#d99a17]
+                                            bg-[#efac39]
                                             transition-all
                                             duration-500
                                             group-hover:w-full
@@ -321,7 +321,7 @@ export default function ClientSlider() {
                                             border-[#d99a17]/0
                                             transition-all
                                             duration-500
-                                            group-hover:border-[#d99a17]
+                                            group-hover:border-[#efac39]
                                         "
                                     />
 
@@ -338,7 +338,7 @@ export default function ClientSlider() {
                                             border-[#d99a17]/0
                                             transition-all
                                             duration-500
-                                            group-hover:border-[#d99a17]
+                                            group-hover:border-[#efac39]
                                         "
                                     />
 
@@ -374,7 +374,7 @@ export default function ClientSlider() {
                                             items-center
                                             justify-center
                                             rounded-full
-                                            bg-[#d99a17]
+                                            bg-[#efac39]
                                             text-[#071a3d]
                                             opacity-0
                                             transition-all
@@ -401,9 +401,9 @@ export default function ClientSlider() {
                     </p>
 
                     <div className="flex items-center gap-3">
-                        <span className="h-px w-8 bg-[#d99a17]" />
+                        <span className="h-px w-8 bg-[#efac39]" />
 
-                        <span className="text-[10px] font-bold tracking-[0.2em] text-[#c99618]">
+                        <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
                             TRUSTED PARTNERS
                         </span>
                     </div>

@@ -169,20 +169,13 @@ export default function HeroSection() {
 
   return (
     <section className=" relative
-    mt-6 sm:mt-8 lg:mt-2
-    mx-3 sm:mx-5 lg:mx-3
     w-auto
     min-h-[760px]
     pt-20
-    
-    rounded-3xl
     overflow-hidden
     bg-[#e8fcff]
     text-white
-    
-    lg:h-[550px]
-    
-    lg:rounded-[32px]">
+    lg:h-[550px]">
 
       <div className="absolute inset-0 bg-[#c8beac]" />
 

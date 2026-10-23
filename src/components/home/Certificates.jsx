@@ -129,24 +129,25 @@ export default function Certificates() {
                 >
                     <div>
                         <div className="mb-3 flex items-center gap-3">
-                            <span className="h-px w-10 bg-[#d99a17]" />
+                            <span className="h-px w-10 bg-[#efac39]" />
 
-                            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#d99a17] sm:text-[11px]">
+                            <span className="text-[10px] font-semibold tracking-[0.3em] text-[#efac39] sm:text-[11px]">
                                 TRUST & CREDENTIALS
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                             Certified for
                             <br />
-                            <span className="text-[#d99a17]">
+
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 quality & trust.
                             </span>
                         </h2>
                     </div>
 
-                    <div className="max-w-md lg:text-right">
-                        <p className="text-sm leading-6 text-slate-500">
+                    <div className="max-w-lg lg:text-right">
+                        <p className="text-sm leading-6 text-[#071a3d]/90">
                             Our authorised partnerships and quality credentials
                             reflect our commitment to reliable products,
                             trusted materials, and professional execution.
@@ -193,12 +194,12 @@ export default function Certificates() {
                                 <div className="group relative h-full">
 
                                     {/* Gold corner */}
-                                    <div className="absolute -left-1 -top-1 z-10 h-8 w-8 border-l border-t border-[#d99a17] opacity-60 transition-all duration-500 group-hover:h-12 group-hover:w-12 group-hover:opacity-100" />
+                                    <div className="absolute -left-1 -top-1 z-10 h-8 w-8 border-l border-t border-[#efac39] opacity-60 transition-all duration-500 group-hover:h-12 group-hover:w-12 group-hover:opacity-100" />
 
-                                    <div className="absolute -bottom-1 -right-1 z-10 h-8 w-8 border-b border-r border-[#d99a17] opacity-60 transition-all duration-500 group-hover:h-12 group-hover:w-12 group-hover:opacity-100" />
+                                    <div className="absolute -bottom-1 -right-1 z-10 h-8 w-8 border-b border-r border-[#efac39] opacity-60 transition-all duration-500 group-hover:h-12 group-hover:w-12 group-hover:opacity-100" />
 
                                     {/* Card */}
-                                    <div className="relative overflow-hidden border border-[#071a3d]/10 bg-white p-3 transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#d99a17]/40 group-hover:shadow-[0_20px_50px_rgba(7,26,61,0.12)]">
+                                    <div className="relative overflow-hidden border border-[#071a3d]/10 bg-white p-3 transition-all duration-500 group-hover:-translate-y-2 group-hover:border-[#efac39]/40 group-hover:shadow-[0_20px_50px_rgba(7,26,61,0.12)]">
 
                                         {/* Certificate image */}
                                         <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f5f5]">
@@ -224,7 +225,7 @@ export default function Certificates() {
                                         <div className="flex items-center justify-between gap-4 px-2 py-5">
 
                                             <div>
-                                                <p className="mb-1 text-[9px] font-semibold tracking-[0.2em] text-[#d99a17]">
+                                                <p className="mb-1 text-[9px] font-semibold tracking-[0.2em] text-[#efac39]">
                                                     CREDENTIAL
                                                 </p>
 
@@ -233,11 +234,11 @@ export default function Certificates() {
                                                 </h3>
                                             </div>
 
-                                            <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-[#071a3d]/10 transition-colors duration-300 group-hover:border-[#d99a17]">
+                                            <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-[#071a3d]/10 transition-colors duration-300 group-hover:border-[#efac39]">
                                                 <ShieldCheck
                                                     size={17}
                                                     strokeWidth={1.6}
-                                                    className="text-[#d99a17]"
+                                                    className="text-[#efac39]"
                                                 />
                                             </div>
                                         </div>

@@ -59,7 +59,7 @@ export default function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(0);
 
     return (
-        <section className="relative overflow-hidden bg-[#f8f7f3] py-9 sm:py-11 lg:py-14">
+        <section className="relative overflow-hidden bg-[#f5f3ed] py-9 sm:py-11 lg:py-14">
             {/* =====================================================
                 BACKGROUND
             ====================================================== */}
@@ -228,177 +228,251 @@ export default function FAQSection() {
                 <div className="mb-7 grid gap-4 lg:mb-8 lg:grid-cols-[1fr_400px] lg:items-end">
                     <div>
                         <div className="mb-2.5 flex items-center gap-3">
-                            <span className="h-px w-9 bg-[#d99a17]" />
+                            <span className="h-px w-9 bg-[#efac39]" />
 
-                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#c99618]">
+                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#efac39]">
                                 FREQUENTLY ASKED QUESTIONS
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                             Questions,
                             <br />
-                            <span className="text-[#D95538]">
+
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 clearly answered.
                             </span>
                         </h2>
                     </div>
 
-                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/55 lg:text-right">
+                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/90 lg:text-right">
                         Find answers about our toilet cubicles, materials,
                         customization, installation, and project execution.
                     </p>
                 </div>
 
-                {/* =================================================
-                    FAQ AREA
-                ================================================== */}
                 <div className="relative grid gap-5 lg:grid-cols-[0.7fr_1.3fr]">
                     {/* =================================================
                         LEFT INFORMATION PANEL
                     ================================================== */}
-                    <div className="relative hidden min-h-[470px] overflow-hidden border border-[#071a3d]/10 bg-[#D95538] lg:block">
-                        {/* SVG background */}
-                        <svg
-                            className="absolute inset-0 h-full w-full"
-                            viewBox="0 0 500 600"
-                            fill="none"
-                            preserveAspectRatio="none"
-                        >
-                            {/* Main frame */}
-                            <path
-                                d="M55 115H445V485H55V115Z"
-                                stroke="#5762D5"
-                                strokeWidth="1"
-                                opacity="0.87"
-                            />
 
-                            {/* Perspective roof */}
-                            <path
-                                d="M55 115L250 45L445 115"
-                                stroke="#5762D5"
-                                strokeWidth="2"
-                                opacity="0.87"
-                            />
+                    {/* Premium FAQ information panel */}
+                    <div className="relative hidden min-h-[470px] overflow-hidden rounded-2xl bg-[#071720] text-white shadow-[0_20px_55px_rgba(7,23,32,0.14)] lg:block">
 
-                            {/* Perspective floor */}
-                            <path
-                                d="M55 485L250 550L445 485"
-                                stroke="#5762D5"
-                                strokeWidth="1"
-                                opacity="0.87"
-                            />
+                        {/* Architectural background grid */}
+                        <div
+                            aria-hidden="true"
+                            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+                            style={{
+                                backgroundImage: `
+        linear-gradient(#efc277 1px, transparent 1px),
+        linear-gradient(90deg, #efc277 1px, transparent 1px)
+      `,
+                                backgroundSize: "38px 38px",
+                            }}
+                        />
 
-                            {/* Cubicle panels */}
-                            <path
-                                d="M110 135V440L180 465V110L110 135Z"
-                                stroke="#5762D5"
-                                strokeWidth="1.5"
-                                opacity="0.87"
-                            />
+                        {/* Ambient glow */}
+                        <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-[#d6a74f]/10 blur-[85px]" />
 
-                            <path
-                                d="M390 135V440L320 465V110L390 135Z"
-                                stroke="#5762D5"
-                                strokeWidth="1.5"
-                                opacity="0.87"
-                            />
+                        <div className="relative z-10 flex min-h-[470px] flex-col p-7 xl:p-8">
 
-                            {/* Center door */}
-                            <path
-                                d="M195 105H305V465L250 485L195 465V105Z"
-                                stroke="#5762D5"
-                                strokeWidth="2"
-                                opacity="0.87"
-                            />
-
-                            {/* Handle */}
-                            <circle
-                                cx="278"
-                                cy="285"
-                                r="7"
-                                stroke="#5762D5"
-                                strokeWidth="2"
-                            />
-
-                            {/* Technical ring */}
-                            <motion.circle
-                                cx="250"
-                                cy="285"
-                                r="150"
-                                stroke="#5762D5"
-                                strokeWidth="1"
-                                strokeDasharray="5 13"
-                                animate={{
-                                    rotate: 360,
-                                }}
-                                transition={{
-                                    duration: 40,
-                                    repeat: Infinity,
-                                    ease: "linear",
-                                }}
-                                style={{
-                                    transformOrigin: "250px 285px",
-                                }}
-                                opacity="0.16"
-                            />
-
-                            {/* Vertical center */}
-                            <path
-                                d="M250 45V550"
-                                stroke="#5762D5"
-                                strokeWidth="1"
-                                strokeDasharray="3 9"
-                                opacity="0.25"
-                            />
-                        </svg>
-
-                        <div className="relative z-10 flex min-h-[470px] flex-col justify-between p-7">
-                            {/* Top */}
-                            <div>
-                                <p className="text-[8px] font-bold tracking-[0.3em] text-[#d99a17]">
-                                    MEGHA SYSTEMS
-                                </p>
-
-                                <h3 className="mt-5 text-2xl font-semibold leading-tight text-white">
-                                    Every project
-                                    <br />
-                                    starts with
-                                    <br />
-                                    <span className="text-[#5762D5]">
-                                        clarity.
+                            {/* Top branding */}
+                            <div className="flex items-center justify-between gap-3">
+                                <div className="flex items-center gap-2.5">
+                                    <span className="h-[2px] w-6 bg-[#efac39]" />
+                                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#efac39]">
+                                        Megha Systems
                                     </span>
-                                </h3>
+                                </div>
+
+                                <span className="text-[9px] font-medium tracking-[0.12em] text-white/85">
+                                    01 / PROJECT CARE
+                                </span>
                             </div>
 
-                            {/* Bottom */}
-                            <div>
-                                <div className="mb-4 h-px w-10 bg-[#d99a17]" />
+                            {/* Main heading */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 18 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                className="mt-9"
+                            >
+                                <h3 className="font-serif text-[34px] leading-[1.12] tracking-[-0.035em] text-white xl:text-[39px]">
+                                    Built around
+                                    <br />
+                                    your <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">vision.</span>
+                                </h3>
 
-                                <p className="max-w-xs text-xs leading-5 text-white/99">
-                                    From initial consultation to final
-                                    installation, our team works with you to
-                                    create a solution that fits your project.
+                                <p className="mt-4 max-w-[290px] text-xs leading-6 text-white/80">
+                                    From the first drawing to the final installation,
+                                    every detail matters.
                                 </p>
+                            </motion.div>
 
-                                <div className="mt-6 flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-full border border-[#d99a17]/50">
-                                        <span className="h-1.5 w-1.5 rounded-full bg-[#d99a17]" />
+                            {/* Animated architectural cubicle drawing */}
+                            <div className="relative my-6 flex min-h-[180px] flex-1 items-center justify-center">
+                                <svg
+                                    viewBox="0 0 320 230"
+                                    fill="none"
+                                    className="h-full max-h-[235px] w-full"
+                                    aria-hidden="true"
+                                >
+                                    {/* Rotating technical ring */}
+                                    <motion.circle
+                                        cx="160"
+                                        cy="115"
+                                        r="100"
+                                        stroke="#efc277"
+                                        strokeWidth="0.8"
+                                        strokeDasharray="3 10"
+                                        opacity="0.25"
+                                        style={{ transformOrigin: "160px 115px" }}
+                                        animate={{ rotate: 360 }}
+                                        transition={{
+                                            duration: 55,
+                                            repeat: Infinity,
+                                            ease: "linear",
+                                        }}
+                                    />
+
+                                    {/* Main cubicle perspective */}
+                                    <motion.g
+                                        stroke="#efc277"
+                                        strokeLinejoin="round"
+                                        strokeLinecap="round"
+                                        fill="none"
+                                        initial={{ opacity: 0, pathLength: 0 }}
+                                        whileInView={{ opacity: 1, pathLength: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.5 }}
+                                    >
+                                        {/* Outer cubicle */}
+                                        <path
+                                            d="M52 65L160 25L268 65V178L160 213L52 178Z"
+                                            strokeWidth="1.3"
+                                            opacity="0.6"
+                                        />
+
+                                        {/* Top perspective */}
+                                        <path
+                                            d="M52 65L160 104L268 65"
+                                            strokeWidth="1.2"
+                                            opacity="0.5"
+                                        />
+
+                                        {/* Center vertical */}
+                                        <path
+                                            d="M160 104V213"
+                                            strokeWidth="1"
+                                            opacity="0.5"
+                                        />
+
+                                        {/* Left partition */}
+                                        <path
+                                            d="M78 74L119 89V185L78 171Z"
+                                            strokeWidth="1.6"
+                                        />
+
+                                        {/* Inner partition */}
+                                        <path
+                                            d="M119 89L160 75V170L119 185Z"
+                                            strokeWidth="1.3"
+                                        />
+
+                                        {/* Right door frame */}
+                                        <path
+                                            d="M174 98L245 73V168L174 193Z"
+                                            strokeWidth="1.8"
+                                        />
+
+                                        {/* Right door panel */}
+                                        <path
+                                            d="M185 104L235 87V162L185 179Z"
+                                            strokeWidth="1.2"
+                                            opacity="0.75"
+                                        />
+
+                                        {/* Door handle */}
+                                        <circle
+                                            cx="222"
+                                            cy="131"
+                                            r="3.5"
+                                            fill="#efc277"
+                                            stroke="none"
+                                        />
+
+                                        {/* Construction guides */}
+                                        <path
+                                            d="M35 42V192M285 42V192"
+                                            strokeWidth="0.8"
+                                            strokeDasharray="4 7"
+                                            opacity="0.25"
+                                        />
+
+                                        <path
+                                            d="M27 42H43M27 192H43M277 42H293M277 192H293"
+                                            strokeWidth="1"
+                                            opacity="0.35"
+                                        />
+                                    </motion.g>
+
+                                    {/* Animated marker */}
+                                    <motion.circle
+                                        cx="160"
+                                        cy="115"
+                                        r="3"
+                                        fill="#efc277"
+                                        animate={{
+                                            opacity: [0.3, 1, 0.3],
+                                            scale: [0.8, 1.3, 0.8],
+                                        }}
+                                        transition={{
+                                            duration: 3,
+                                            repeat: Infinity,
+                                            ease: "easeInOut",
+                                        }}
+                                        style={{ transformOrigin: "160px 115px" }}
+                                    />
+                                </svg>
+                            </div>
+
+                            {/* Bottom project support */}
+                            <div className="border-t border-[#efc277]/25 pt-5">
+                                <div className="flex items-center gap-3">
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#efc277]/25 bg-[#efc277]/10">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            className="h-5 w-5 text-[#efac39]"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                        >
+                                            <path d="M4 18L18 4L20 6L6 20H4V18Z" />
+                                            <path d="M12 10L14 12M9 13L11 15" />
+                                        </svg>
                                     </div>
 
-                                    <div>
-                                        <p className="text-[7px] font-bold tracking-[0.2em] text-white/99">
-                                            PROJECT SUPPORT
+                                    <div className="min-w-0 flex-1">
+                                        <p className="text-xs font-semibold text-white">
+                                            Complete project support
                                         </p>
 
-                                        <p className="mt-1 text-[10px] font-medium text-white/95">
-                                            DESIGN • MANUFACTURING • INSTALLATION
+                                        <p className="mt-1 text-[10px] leading-4 text-white/55">
+                                            Design • Manufacturing • Installation
                                         </p>
                                     </div>
+
+                                    <ArrowUpRight
+                                        size={18}
+                                        className="shrink-0 text-[#efac39]"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     {/* =================================================
                         FAQ ACCORDION
@@ -429,7 +503,7 @@ export default function FAQSection() {
                                         transition={{
                                             duration: 0.25,
                                         }}
-                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#D95538]"
+                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#efac39]"
                                     />
 
                                     <button
@@ -485,7 +559,7 @@ export default function FAQSection() {
                                                 items-center justify-center
                                                 border transition-colors
                                                 ${isOpen
-                                                    ? "border-[#d99a17] bg-[#D95538] text-[#fff]"
+                                                    ? "border-[#efac39] bg-[#efac39] text-[#fff]"
                                                     : "border-[#071a3d]/10 text-[#071a3d]/40"
                                                 }
                                             `}
@@ -517,7 +591,7 @@ export default function FAQSection() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="px-5 pb-5 pl-[60px] pr-8 sm:pl-[68px] sm:pr-12">
-                                                    <div className="border-l border-[#D95538]/40 pl-4">
+                                                    <div className="border-l border-[#efac39]/40 pl-4">
                                                         <p className="text-[11px] leading-5 text-[#071a3d]/55 sm:text-xs sm:leading-6">
                                                             {faq.answer}
                                                         </p>
@@ -532,23 +606,20 @@ export default function FAQSection() {
                     </div>
                 </div>
 
-                {/* =================================================
-                    BOTTOM CTA
-                ================================================== */}
-                <div className="mt-5 flex flex-col gap-3 border-t border-[#071a3d]/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-5 flex flex-col gap-3 border-t border-[#071a3d]/30 pt-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <p className="text-[8px] font-bold tracking-[0.25em] text-[#071a3d]/35">
+                        <p className="text-[8px] font-bold tracking-[0.25em] text-[#071a3d]/65">
                             STILL HAVE QUESTIONS?
                         </p>
 
-                        <p className="mt-1 text-xs text-[#071a3d]/55">
+                        <p className="mt-1 text-xs text-[#071a3d]/95">
                             Let's discuss your project requirements.
                         </p>
                     </div>
 
                     <button
                         type="button"
-                        className="group flex w-fit items-center gap-3 bg-[#000] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#c99618] hover:text-[#071a3d]"
+                        className="group flex w-fit items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#c99618]"
                     >
                         TALK TO OUR TEAM
 
@@ -556,17 +627,6 @@ export default function FAQSection() {
                             <ArrowUpRight size={13} />
                         </span>
                     </button>
-                </div>
-
-                {/* Bottom micro label */}
-                <div className="mt-5 flex items-center justify-center gap-3">
-                    <span className="h-px w-7 bg-[#d99a17]" />
-
-                    <span className="text-[10px] font-bold tracking-[0.28em] text-[#071a3d]/35">
-                        QUALITY • PRECISION • DURABILITY
-                    </span>
-
-                    <span className="h-px w-7 bg-[#d99a17]" />
                 </div>
             </div>
         </section>

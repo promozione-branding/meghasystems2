@@ -21,7 +21,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Megha Systems",
+  title: "Cubiloo Cubicles",
   description: "Your website description",
 };
 

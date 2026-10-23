@@ -259,11 +259,11 @@ export default function Partners() {
                PARTNER CARDS
             ===================================================== */
 
-           gsap.set(".partner-card", {
-  autoAlpha: 1,
-  y: 0,
-  clearProps: "opacity,visibility,transform",
-});
+            gsap.set(".partner-card", {
+                autoAlpha: 1,
+                y: 0,
+                clearProps: "opacity,visibility,transform",
+            });
 
             /* =====================================================
                BOTTOM STATEMENT
@@ -381,13 +381,9 @@ export default function Partners() {
                     top-0
                     h-[2px]
                     w-full
-                    bg-[#c99618]
+                    bg-[#efac39]
                 "
             />
-
-            {/* =====================================================
-                BACKGROUND
-            ===================================================== */}
 
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 {/* grid */}
@@ -475,10 +471,6 @@ export default function Partners() {
                 />
             </div>
 
-            {/* =====================================================
-                CONTENT
-            ===================================================== */}
-
             <div
                 className="
                     relative
@@ -490,53 +482,40 @@ export default function Partners() {
                     lg:px-12
                 "
             >
-                {/* =================================================
-                    HEADER
-                ================================================= */}
 
                 <div
                     className="
                         partner-header
                         mx-auto
-                        max-w-[800px]
+                        max-w-[900px]
                         text-center
                     "
                 >
                     {/* eyebrow */}
 
-                    <div className="mb-4 flex items-center justify-center gap-3 sm:mb-5">
-                        <span className="h-px w-10 bg-[#c99618] sm:w-12" />
+                    <div className="mb-5 flex items-center justify-center gap-3">
+                        <span className="h-px w-10 bg-[#efac39] sm:w-12" />
 
                         <span
                             className="
                                 text-[8px]
                                 font-semibold
                                 tracking-[0.35em]
-                                text-[#c99618]
+                                text-[#efac39]
                                 sm:text-[9px]
                             "
                         >
                             OUR NETWORK
                         </span>
 
-                        <span className="h-px w-10 bg-[#c99618] sm:w-12" />
+                        <span className="h-px w-10 bg-[#efac39] sm:w-12" />
                     </div>
 
                     {/* heading */}
 
-                    <h2
-                        className="
-                            text-[32px]
-                            font-medium
-                            leading-[1.05]
-                            tracking-[-0.04em]
-                            text-[#000]
-                            sm:text-[44px]
-                            lg:text-[56px]
-                        "
-                    >
+                    <h2 className="text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                         Authorised{" "}
-                        <span className="bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent">
+                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                             Channel Partners
                         </span>
                     </h2>
@@ -546,12 +525,11 @@ export default function Partners() {
                     <p
                         className="
                             mx-auto
-                            mt-4
+                            mt-2
                             max-w-[620px]
                             text-[11px]
                             leading-[1.8]
-                            text-[#071a3d]/55
-                            sm:mt-5
+                            text-[#071a3d]/95
                             sm:text-[13px]
                         "
                     >
@@ -560,10 +538,6 @@ export default function Partners() {
                         premium solutions to every project.
                     </p>
                 </div>
-
-                {/* =================================================
-                    PARTNER GRID
-                ================================================= */}
 
                 <div
                     className="
@@ -595,11 +569,10 @@ export default function Partners() {
                                 border-b
                                 border-r
                                 border-[#071a3d]/10
-                                bg-white/60
                                 px-4
                                 transition-all
                                 duration-500
-                                hover:bg-white
+                                bg-white
                                 sm:h-[165px]
                                 sm:px-5
                                 lg:h-[185px]
@@ -618,7 +591,7 @@ export default function Partners() {
                                     text-[#071a3d]/25
                                     transition-colors
                                     duration-300
-                                    group-hover:text-[#c99618]
+                                    group-hover:text-[#efac39]
                                 "
                             >
                                 {String(index + 1).padStart(2, "0")}
@@ -635,7 +608,7 @@ export default function Partners() {
                                     w-7
                                     border-r
                                     border-t
-                                    border-[#c99618]
+                                    border-[#efac39]
                                     opacity-40
                                     transition-all
                                     duration-500
@@ -674,7 +647,7 @@ export default function Partners() {
                                     transition-transform
                                     duration-500
                                     group-hover:scale-105
-                                    sm:h-[72px]
+                                    sm:h-[100px]
                                     sm:w-[160px]
                                 "
                             >
@@ -684,7 +657,7 @@ export default function Partners() {
                                     fill
                                     sizes="160px"
                                     className="
-                                        object-contain
+                                        object-cover
                                     "
                                 />
                             </div>
@@ -708,7 +681,7 @@ export default function Partners() {
                                         text-[#071a3d]/55
                                         transition-colors
                                         duration-300
-                                        group-hover:text-[#c99618]
+                                        group-hover:text-[#efac39]
                                         sm:text-[10px]
                                     "
                                 >
@@ -725,7 +698,7 @@ export default function Partners() {
                                     left-0
                                     h-[2px]
                                     w-0
-                                    bg-[#c99618]
+                                    bg-[#efac39]
                                     transition-all
                                     duration-500
                                     group-hover:w-full
@@ -734,10 +707,6 @@ export default function Partners() {
                         </div>
                     ))}
                 </div>
-
-                {/* =================================================
-                    BOTTOM STATEMENT
-                ================================================= */}
 
                 <div
                     className="
@@ -751,7 +720,7 @@ export default function Partners() {
                         sm:gap-4
                     "
                 >
-                    <div className="h-px w-8 bg-[#c99618] sm:w-16" />
+                    <div className="h-px w-8 bg-[#efac39] sm:w-16" />
 
                     <span
                         className="
@@ -759,7 +728,7 @@ export default function Partners() {
                             text-[8px]
                             font-medium
                             tracking-[0.25em]
-                            text-[#071a3d]/40
+                            text-[#071a3d]/90
                             sm:text-[10px]
                             sm:tracking-[0.3em]
                         "
@@ -767,7 +736,7 @@ export default function Partners() {
                         TRUSTED MATERIAL • AUTHORISED PARTNERSHIP • QUALITY
                     </span>
 
-                    <div className="h-px w-8 bg-[#c99618] sm:w-16" />
+                    <div className="h-px w-8 bg-[#efac39] sm:w-16" />
                 </div>
             </div>
         </section>

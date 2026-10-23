@@ -17,29 +17,23 @@ export default function ParallaxCTA() {
         <div className="max-w-6xl">
           {/* Eyebrow */}
           <div className="mb-6 flex items-center gap-3">
-            <span className="h-px w-10 bg-[#D6B36A]" />
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#D6B36A]">
+            <span className="h-px w-10 bg-[#071a3d]" />
+            <span className="text-sm font-medium uppercase tracking-[0.2em] text-[#071a3d]">
               Let's build something better
             </span>
           </div>
 
-          {/* Heading */}
-          <h2 className="text-4xl font-medium leading-[1.12] tracking-tight text-white sm:text-5xl ">
+          <h2 className="text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
             Turn Your Vision Into A Space{" "}
-            <span className="text-[#D6B36A]">
+            <br />
+
+            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
               You'll Love Every Day.
             </span>
           </h2>
 
-          {/* Description */}
-          {/* <p className="mt-7 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-            From thoughtful planning to precise execution, we help you
-            create spaces that combine functionality, quality, and
-            lasting value.
-          </p> */}
-
           {/* Benefits */}
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 text-sm text-white/90">
+          <div className="mt-4 flex flex-wrap gap-x-8 gap-y-4 text-sm text-white">
             {[
               "Expert consultation",
               "Custom solutions",
@@ -49,7 +43,7 @@ export default function ParallaxCTA() {
                 key={item}
                 className="flex items-center gap-2"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#D6B36A]" />
+                <span className="h-1.5 w-1.5 rounded-full bg-[#efac39]" />
                 <span>{item}</span>
               </div>
             ))}
@@ -58,7 +52,7 @@ export default function ParallaxCTA() {
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="group mt-10 inline-flex items-center gap-4 rounded-full bg-[#D6B36A] px-7 py-4 text-sm font-semibold text-[#111827] transition-all duration-300 hover:bg-white"
+            className="group mt-10 inline-flex text-white items-center gap-4 rounded-full bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-7 py-4 text-sm font-semibold text-[#111827] transition-all duration-300 hover:bg-white"
           >
             Book a Consultation
 
@@ -67,19 +61,7 @@ export default function ParallaxCTA() {
               className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
             />
           </Link>
-
-          {/* Tagline */}
-          <p className="mt-8 text-xs uppercase tracking-[0.22em] text-white/60">
-            Quality
-            <span className="px-2 text-[#D6B36A]">·</span>
-            Precision
-            <span className="px-2 text-[#D6B36A]">·</span>
-            Durability
-          </p>
         </div>
-
-        {/* Bottom Decorative Line */}
-        <div className="mt-20 h-px w-full bg-white/30" />
       </div>
     </section>
   );

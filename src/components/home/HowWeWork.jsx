@@ -238,11 +238,8 @@ export default function HowWeWork() {
     return (
         <section
             ref={sectionRef}
-            className="relative overflow-hidden bg-[#628da1] py-10 sm:py-12 lg:py-15"
+            className="relative overflow-hidden bg-[#fff] py-10 sm:py-12 lg:py-15"
         >
-            {/* ================================================= */}
-            {/* BACKGROUND                                        */}
-            {/* ================================================= */}
 
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div className="absolute -right-48 top-20 h-[600px] w-[600px] rotate-45 border border-white/[0.035]" />
@@ -255,29 +252,25 @@ export default function HowWeWork() {
             </div>
 
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-
-                {/* ================================================= */}
-                {/* HEADING                                           */}
-                {/* ================================================= */}
-
                 <div className="how-heading mb-5 max-w-3xl sm:mb-8 lg:mb-10">
                     <div className="mb-4 flex items-center gap-3">
-                        <span className="h-px w-10 bg-[#000]" />
+                        <span className="h-px w-10 bg-[#efac39]" />
 
-                        <span className="text-[10px] font-semibold tracking-[0.32em] text-[#000] sm:text-[11px]">
+                        <span className="text-[10px] font-semibold tracking-[0.32em] text-[#efac39] sm:text-[11px]">
                             HOW WE WORK
                         </span>
                     </div>
 
-                    <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                         From concept
                         <br />
-                        <span className="text-[#000]">
+
+                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                             to completion.
                         </span>
                     </h2>
 
-                    <p className="mt-5 max-w-2xl text-sm leading-7 text-white/90 sm:text-base">
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/90 sm:text-base">
                         A structured approach that brings together design,
                         precision manufacturing and professional installation
                         to deliver restroom solutions built for lasting
@@ -290,11 +283,6 @@ export default function HowWeWork() {
                 {/* ================================================= */}
 
                 <div className="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-
-                    {/* ================================================= */}
-                    {/* LEFT — ANIMATED PARTITION SVG                     */}
-                    {/* ================================================= */}
-
                     <div
                         ref={svgRef}
                         className="relative mx-auto w-full max-w-[650px]"
@@ -621,10 +609,6 @@ export default function HowWeWork() {
                         </div>
                     </div>
 
-                    {/* ================================================= */}
-                    {/* RIGHT — STEPS                                      */}
-                    {/* ================================================= */}
-
                     <div className="work-steps">
 
                         {STEPS.map((step, index) => {
@@ -633,7 +617,7 @@ export default function HowWeWork() {
                             return (
                                 <motion.div
                                     key={step.number}
-                                    className="work-step group relative border-b border-white/90 py-6 first:pt-0 last:border-b-0 sm:py-7"
+                                    className="work-step group relative border-b border-[#071a3d]/90 py-6 first:pt-0 last:border-b-0 sm:py-7"
                                     whileHover={{
                                         x: 6,
                                     }}
@@ -645,17 +629,17 @@ export default function HowWeWork() {
 
                                         {/* Number */}
                                         <div className="relative flex w-12 shrink-0 flex-col items-center">
-                                            <span className="text-xs font-semibold tracking-widest text-[#000]">
+                                            <span className="text-xs font-semibold tracking-widest text-[#071a3d]">
                                                 {step.number}
                                             </span>
 
                                             {index !== STEPS.length - 1 && (
-                                                <span className="absolute top-8 h-[calc(100%+1.5rem)] w-px bg-white/90" />
+                                                <span className="absolute top-8 h-[calc(100%+1.5rem)] w-px bg-[#071a3d]/90" />
                                             )}
                                         </div>
 
                                         {/* Icon */}
-                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-white/10 transition-all duration-300 group-hover:border-[#d99a17] group-hover:bg-[#fff]">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-[#071a3d]/30 transition-all duration-300 group-hover:border-[#efac39] group-hover:bg-[#fff]">
                                             <Icon
                                                 size={19}
                                                 strokeWidth={1.6}
@@ -666,16 +650,16 @@ export default function HowWeWork() {
                                         {/* Content */}
                                         <div className="flex-1">
                                             <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                                                <h3 className="text-lg font-semibold text-white sm:text-xl">
+                                                <h3 className="text-lg font-semibold text-[#071a3d] sm:text-xl">
                                                     {step.title}
                                                 </h3>
 
-                                                <span className="text-[9px] font-semibold tracking-[0.15em] text-[#000]">
+                                                <span className="text-[9px] font-semibold tracking-[0.15em] text-[#efac39]">
                                                     {step.subtitle.toUpperCase()}
                                                 </span>
                                             </div>
 
-                                            <p className="mt-2 max-w-xl text-sm leading-6 text-white/95">
+                                            <p className="mt-2 max-w-xl text-sm leading-6 text-[#efac39]">
                                                 {step.description}
                                             </p>
                                         </div>
@@ -688,7 +672,7 @@ export default function HowWeWork() {
                         <div className="mt-8">
                             <Link
                                 href="/contact"
-                                className="group inline-flex items-center gap-4 border border-[#fff]/50 px-6 py-3.5 text-xs font-semibold tracking-[0.16em] text-white transition-all duration-300 hover:border-[#d99a17] hover:bg-[#d99a17] hover:text-[#071a3d]"
+                                className="group inline-flex items-center gap-4 px-6 py-3.5 text-xs font-semibold tracking-[0.16em] text-white transition-all duration-300 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)]"
                             >
                                 START YOUR PROJECT
 
@@ -705,32 +689,32 @@ export default function HowWeWork() {
                 {/* BOTTOM TRUST LINE                                */}
                 {/* ================================================= */}
 
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-7 sm:mt-10">
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-[#071a3d]/10 pt-7 sm:mt-10">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
                         SITE STUDY
                     </span>
 
-                    <span className="h-1 w-1 bg-[#d99a17]" />
+                    <span className="h-1 w-1 bg-[#efac39]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
                         DESIGN
                     </span>
 
-                    <span className="h-1 w-1 bg-[#d99a17]" />
+                    <span className="h-1 w-1 bg-[#efac39]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
                         MANUFACTURING
                     </span>
 
-                    <span className="h-1 w-1 bg-[#d99a17]" />
+                    <span className="h-1 w-1 bg-[#efac39]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
                         INSTALLATION
                     </span>
 
-                    <span className="h-1 w-1 bg-[#d99a17]" />
+                    <span className="h-1 w-1 bg-[#efac39]" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-white/90">
+                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
                         QUALITY CHECK
                     </span>
                 </div>

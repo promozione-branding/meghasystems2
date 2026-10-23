@@ -175,12 +175,8 @@ export default function WhyChooseUs() {
     return (
         <section
             ref={sectionRef}
-            className="relative overflow-hidden bg-[#f7f5ef] py-10 sm:py-12 lg:py-15"
+            className="relative overflow-hidden bg-[#f5f3ed] py-10 sm:py-12 lg:py-15"
         >
-            {/* =====================================================
-                ARCHITECTURAL BACKGROUND
-            ====================================================== */}
-
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
                 {/* Blueprint Grid */}
@@ -294,38 +290,29 @@ export default function WhyChooseUs() {
                 <div className="absolute left-0 right-0 top-0 h-px bg-[#d99a17]/40" />
             </div>
 
-            {/* =====================================================
-                CONTENT
-            ====================================================== */}
-
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-
-                {/* =================================================
-                    HEADER
-                ================================================= */}
-
-                <div className="mb-8 max-w-3xl lg:mb-10">
+                <div className="mb-8 max-w-3xl">
 
                     <div className="mb-5 flex items-center gap-3">
 
-                        <span className="h-px w-10 bg-[#d99a17]" />
+                        <span className="h-px w-10 bg-[#efac39]" />
 
-                        <span className="text-[10px] font-bold tracking-[0.35em] text-[#c99618]">
+                        <span className="text-[10px] font-bold tracking-[0.35em] text-[#efac39]">
                             WHY CHOOSE US
                         </span>
 
                     </div>
 
-                    <h2 className="text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
+                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                         Built on experience.
                         <br />
 
-                        <span className="text-[#F4A259]">
+                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                             Engineered to last.
                         </span>
                     </h2>
 
-                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/55 sm:text-base">
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/95 sm:text-base">
                         We combine technical expertise, premium materials and
                         disciplined execution to create restroom environments
                         that perform beautifully for years.
@@ -333,20 +320,10 @@ export default function WhyChooseUs() {
 
                 </div>
 
-                {/* =================================================
-                    MAIN CONTENT
-                ================================================= */}
-
                 <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-
-                    {/* =================================================
-                        PRODUCT IMAGE
-                    ================================================= */}
-
                     <div className="relative order-1 flex min-h-[280px] items-center justify-center sm:min-h-[360px] lg:min-h-[500px]">
 
                         {/* Gold Glow */}
-
                         <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d99a17]/10 blur-[90px]" />
 
                         <div className="relative w-full max-w-[620px]">
@@ -456,7 +433,6 @@ export default function WhyChooseUs() {
                                 {/* =================================================
                                     REAL PRODUCT IMAGE
                                 ================================================= */}
-
                                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-white shadow-[0_25px_70px_rgba(7,26,61,0.14)]">
 
                                     <Image
@@ -505,16 +481,10 @@ export default function WhyChooseUs() {
                                     </p>
 
                                 </div>
-
                             </div>
 
                         </div>
-
                     </div>
-
-                    {/* =================================================
-                        WHY CHOOSE US CARDS
-                    ================================================= */}
 
                     <div className="order-2">
 
@@ -535,7 +505,7 @@ export default function WhyChooseUs() {
 
                                             <div className="shrink-0 pt-1">
 
-                                                <span className="text-[10px] font-bold tracking-[0.2em] text-[#c99618]">
+                                                <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
                                                     {item.number}
                                                 </span>
 
@@ -554,19 +524,19 @@ export default function WhyChooseUs() {
                                                     border
                                                     border-[#071a3d]/10
                                                     bg-white
-                                                    text-[#c99618]
+                                                    text-[#efac39]
                                                     shadow-sm
                                                     transition-all
                                                     duration-500
-                                                    group-hover:border-[#d99a17]
-                                                    group-hover:bg-[#000]
+                                                    group-hover:border-[#071a3d]
+                                                    group-hover:bg-[#071a3d]
                                                 "
                                             >
 
                                                 <Icon
                                                     size={19}
                                                     strokeWidth={1.5}
-                                                    className="transition-colors duration-500 group-hover:text-[#d99a17]"
+                                                    className="transition-colors duration-500 group-hover:text-[#fff]"
                                                 />
 
                                             </div>
@@ -603,7 +573,6 @@ export default function WhyChooseUs() {
                         </div>
 
                     </div>
-
                 </div>
 
                 {/* =================================================

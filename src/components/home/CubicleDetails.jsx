@@ -61,7 +61,7 @@ export default function CubicleDetails() {
     const active = CUBICLE_LAYERS[activeLayer];
 
     return (
-        <section className="relative overflow-hidden bg-[#eef2f5] py-8 sm:py-10 lg:py-12">
+        <section className="relative overflow-hidden bg-[#fff] py-8 sm:py-10 lg:py-12">
             {/* =====================================================
                 BACKGROUND
             ====================================================== */}
@@ -94,23 +94,24 @@ export default function CubicleDetails() {
                 <div className="mb-6 flex flex-col gap-4 sm:mb-8 lg:flex-row lg:items-end lg:justify-between">
                     <div>
                         <div className="mb-2 flex items-center gap-3">
-                            <span className="h-px w-8 bg-[#d99a17]" />
+                            <span className="h-px w-8 bg-[#efac39]" />
 
-                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#c99618]">
+                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#efac39]">
                                 SYSTEM DETAILS
                             </span>
                         </div>
 
-                        <h2 className="text-3xl font-semibold leading-[1.05] tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                             Designed around
-                            <span className="text-[#c99618]">
-                                {" "}
+                            <br />
+
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 every detail.
                             </span>
                         </h2>
                     </div>
 
-                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/55 lg:text-right">
+                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/90 lg:text-right">
                         Explore the key components of our cubicle system.
                         Hover or tap a marker to inspect each detail.
                     </p>
@@ -433,7 +434,7 @@ export default function CubicleDetails() {
                                     transition-all duration-300
                                     ${isActive
                                         ? "border-[#071a3d] bg-[#000] text-white"
-                                        : "border-[#071a3d]/10 bg-white/60 text-[#071a3d]/60 hover:border-[#d99a17]/50 hover:bg-white"
+                                        : "border-[#071a3d]/10 bg-white/60 text-[#071a3d]/60 hover:border-[#efac39]/50 hover:bg-white"
                                     }
                                 `}
                             >
@@ -443,7 +444,7 @@ export default function CubicleDetails() {
                                         justify-center rounded-full
                                         text-[10px]
                                         ${isActive
-                                            ? "bg-[#d99a17] text-[#071a3d]"
+                                            ? "bg-[#efac39] text-[#071a3d]"
                                             : "bg-[#071a3d]/5"
                                         }
                                     `}
@@ -463,13 +464,13 @@ export default function CubicleDetails() {
                     BOTTOM MICRO LINE
                 ====================================================== */}
                 <div className="mt-5 flex items-center justify-center gap-3">
-                    <span className="h-px w-8 bg-[#d99a17]" />
+                    <span className="h-px w-8 bg-[#efac39]" />
 
-                    <span className="text-[10px] font-bold tracking-[0.25em] text-[#071a3d]/40">
+                    <span className="text-[10px] font-bold tracking-[0.25em] text-[#071a3d]/90">
                         PREMIUM HARDWARE • PRECISION INSTALLATION
                     </span>
 
-                    <span className="h-px w-8 bg-[#d99a17]" />
+                    <span className="h-px w-8 bg-[#efac39]" />
                 </div>
             </div>
         </section>

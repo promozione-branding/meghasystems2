@@ -89,7 +89,7 @@ function ProjectCard({ project, className = "" }) {
       <Link
         href={project.href}
         aria-label={`Explore ${project.title}`}
-        className="absolute inset-0 z-20 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#BD5735]"
+        className="absolute inset-0 z-20 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#efac39]"
       >
         <span className="sr-only">Explore project</span>
       </Link>
@@ -121,23 +121,21 @@ function ProjectCard({ project, className = "" }) {
 
       {/* Content */}
       <div
-        className={`absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6 ${
-          isLarge ? "lg:p-7" : ""
-        }`}
+        className={`absolute inset-x-0 bottom-0 z-10 p-5 sm:p-6 ${isLarge ? "lg:p-7" : ""
+          }`}
       >
         <div className="mb-3 flex items-center gap-2">
-          <span className="h-px w-6 bg-[#D97955] transition-all duration-300 group-hover:w-10" />
+          <span className="h-px w-6 bg-[#efac39] transition-all duration-300 group-hover:w-10" />
           <p className="text-[9px] font-semibold uppercase tracking-[0.17em] text-white/80 sm:text-[10px]">
             {project.category}
           </p>
         </div>
 
         <h3
-          className={`max-w-[400px] font-semibold leading-[1.15] tracking-[-0.025em] text-white ${
-            isLarge
-              ? "text-xl sm:text-2xl lg:text-[27px]"
-              : "text-lg sm:text-xl"
-          }`}
+          className={`max-w-[400px] font-semibold leading-[1.15] tracking-[-0.025em] text-white ${isLarge
+            ? "text-xl sm:text-2xl lg:text-[27px]"
+            : "text-lg sm:text-xl"
+            }`}
         >
           {project.title}
         </h3>
@@ -151,7 +149,7 @@ function ProjectCard({ project, className = "" }) {
             Explore Project
           </span>
 
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#BD5735] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#BD5735]">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#efac39] text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#efac39]">
             <ArrowUpRight size={17} />
           </span>
         </div>
@@ -162,7 +160,7 @@ function ProjectCard({ project, className = "" }) {
 
 export default function Projects() {
   return (
-    <section className="overflow-hidden bg-[#F6F4F1] px-5 py-6 sm:px-8 sm:py-13">
+    <section className="overflow-hidden bg-[#fff] px-5 py-6 sm:px-8 sm:py-13">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -173,32 +171,32 @@ export default function Projects() {
           className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:items-end lg:mb-12"
         >
           <div>
-            <div className="mb-4 flex items-center gap-2 text-[#BD5735]">
+            <div className="mb-4 flex items-center gap-2 text-[#efac39]">
               <PanelsTopLeft size={16} strokeWidth={1.7} />
               <span className="text-[10px] font-semibold uppercase tracking-[0.22em] sm:text-xs">
                 Our Projects
               </span>
             </div>
 
-            <h2 className="max-w-[570px] text-3xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#17202A] sm:text-4xl lg:text-5xl">
+            <h2 className="text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
               Workspaces Designed
               <br />
-              <span className="text-[#BD5735]">
+
+              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                 Around Your Business.
               </span>
             </h2>
           </div>
 
           <div className="md:justify-self-end md:pl-8">
-            <p className="max-w-lg text-sm leading-7 text-[#625E59] sm:text-base">
+            <p className="max-w-lg text-sm leading-7 text-[#071a3d]/95 sm:text-base">
               Explore modular cubicles, employee workstations and custom
-              office furniture solutions designed to maximize space,
-              encourage collaboration and create a more productive workplace.
+              office furniture solutions designed to maximize space.
             </p>
 
             <Link
               href="/projects"
-              className="group mt-5 inline-flex items-center gap-3 border-b border-[#BD5735] pb-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#17202A] transition-colors hover:text-[#BD5735] sm:text-sm"
+              className="group mt-5 inline-flex items-center gap-3 border-b border-[#efac39] pb-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#17202A] transition-colors hover:text-[#efac39] sm:text-sm"
             >
               View All Projects
               <MoveRight
@@ -215,20 +213,20 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 flex flex-wrap items-center justify-between gap-4 border-y border-[#DAD5CE] py-4"
+          className="mb-6 flex flex-wrap items-center justify-between gap-4 border-y border-[#efac39] py-4"
         >
           <div className="flex items-center gap-3">
             <BriefcaseBusiness
               size={18}
               strokeWidth={1.5}
-              className="text-[#BD5735]"
+              className="text-[#efac39]"
             />
             <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#34332F] sm:text-xs">
               Functional Design. Smarter Workspaces.
             </p>
           </div>
 
-          <span className="text-[10px] uppercase tracking-[0.14em] text-[#77716A]">
+          <span className="text-[10px] uppercase tracking-[0.14em] text-[#efac39]">
             Featured Projects — 01 / 04
           </span>
         </motion.div>
@@ -280,7 +278,7 @@ export default function Projects() {
           className="mt-8 flex flex-col justify-between gap-5 bg-[#EAE5DE] p-6 sm:flex-row sm:items-center sm:p-8 lg:mt-10 lg:p-10"
         >
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#BD5735]">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#efac39]">
               Have a workspace in mind?
             </p>
 
@@ -296,7 +294,7 @@ export default function Projects() {
 
           <Link
             href="/contact"
-            className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-4 bg-[#BD5735] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-colors duration-300 hover:bg-[#17202A] sm:text-sm"
+            className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-4 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-colors duration-300 hover:bg-[#17202A] sm:text-sm"
           >
             Discuss Your Project
             <ArrowUpRight

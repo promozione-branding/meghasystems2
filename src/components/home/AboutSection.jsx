@@ -213,10 +213,6 @@ export default function AboutSection() {
             ref={sectionRef}
             className="relative overflow-hidden bg-white py-12 sm:py-16 lg:py-16"
         >
-            {/* =====================================
-                BACKGROUND ARCHITECTURAL ELEMENTS
-            ====================================== */}
-
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div
                     className="
@@ -257,52 +253,25 @@ export default function AboutSection() {
             </div>
 
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
+                <div className="mb-5">
+                    <div className="mb-2 flex items-center gap-3">
+                        <span className="h-[2px] w-12 bg-[#efac39]" />
 
-                {/* =====================================
-                    HEADER
-                ====================================== */}
-
-                <div className="mb-10 lg:mb-14">
-                    <div className="mb-3 flex items-center gap-3">
-                        <span className="h-px w-10 bg-[#EB8258]" />
-
-                        <span
-                            className="
-                                text-[10px]
-                                font-semibold
-                                tracking-[0.3em]
-                                text-[#EB8258]
-                                sm:text-[11px]
-                            "
-                        >
+                        <span className="text-[9px] font-medium tracking-[0.3em] text-[#efac39]">
                             ABOUT US
                         </span>
                     </div>
 
-                    <h2
-                        className="
-                            max-w-3xl
-                            text-3xl
-                            font-semibold
-                            leading-tight
-                            tracking-tight
-                            text-[#000000]
-                            sm:text-4xl
-                            lg:text-5xl
-                        "
-                    > 
+                    {/* Heading */}
+                    <h2 className="max-w-[800px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                         Built on experience.
                         <br />
 
-                        <span className="text-[#EB8258]">
+                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                             Designed for performance.
                         </span>
                     </h2>
                 </div>
-
-                {/* =====================================
-                    MAIN CONTENT
-                ====================================== */}
 
                 <div
                     className="
@@ -339,7 +308,7 @@ export default function AboutSection() {
                                 w-[75%]
                                 border-b
                                 border-l
-                                border-[#d99a17]
+                                border-[#efac39]
                             "
                         />
 
@@ -355,7 +324,7 @@ export default function AboutSection() {
                                 w-16
                                 border-r
                                 border-b
-                                border-[#d99a17]
+                                border-[#efac39]
                             "
                         />
 
@@ -365,7 +334,7 @@ export default function AboutSection() {
                             className="
                                 relative
                                 overflow-hidden
-                                bg-[#EB8258]
+                                bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)]
                                 p-2
                                 shadow-[0_25px_70px_rgba(7,26,61,0.18)]
                             "
@@ -379,16 +348,13 @@ export default function AboutSection() {
                                     relative
                                     aspect-[4/3]
                                     overflow-hidden
-                                    bg-[#EB8258]
+                                    bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)]
                                 "
                                 style={{
                                     clipPath:
                                         "polygon(0 0, 100% 0, 100% 87%, 87% 100%, 0 100%)",
                                 }}
                             >
-
-                                {/* VIDEO */}
-
                                 <video
                                     autoPlay
                                     muted
@@ -413,8 +379,6 @@ export default function AboutSection() {
                                     the video tag.
                                 </video>
 
-                                {/* Dark gradient */}
-
                                 <div
                                     className="
                                         pointer-events-none
@@ -426,8 +390,6 @@ export default function AboutSection() {
                                         to-transparent
                                     "
                                 />
-
-                                {/* Top label */}
 
                                 <div
                                     className="
@@ -447,7 +409,7 @@ export default function AboutSection() {
                                 >
                                     <Play
                                         size={12}
-                                        className="fill-[#d99a17] text-[#d99a17]"
+                                        className="fill-[#efac39] text-[#efac39]"
                                     />
 
                                     <span
@@ -460,68 +422,6 @@ export default function AboutSection() {
                                     >
                                         OUR WORK
                                     </span>
-                                </div>
-
-                                {/* Bottom information */}
-
-                                <div
-                                    className="
-                                        absolute
-                                        bottom-6
-                                        left-6
-                                        right-6
-                                        flex
-                                        items-end
-                                        justify-between
-                                        gap-4
-                                    "
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <div
-                                            className="
-                                                flex
-                                                h-10
-                                                w-10
-                                                shrink-0
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                bg-[#EB8258]
-                                                text-[#071a3d]
-                                            "
-                                        >
-                                            <CheckCircle2
-                                                size={20}
-                                                strokeWidth={2.2}
-                                            />
-                                        </div>
-
-                                        <div>
-                                            <p
-                                                className="
-                                                    text-[9px]
-                                                    font-semibold
-                                                    tracking-[0.25em]
-                                                    text-white/60
-                                                "
-                                            >
-                                                OUR EXPERTISE
-                                            </p>
-
-                                            <p
-                                                className="
-                                                    mt-1
-                                                    text-xs
-                                                    font-semibold
-                                                    text-white
-                                                    sm:text-sm
-                                                "
-                                            >
-                                                Design • Manufacturing
-                                                • Installation
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -573,10 +473,10 @@ export default function AboutSection() {
 
                     <div ref={contentRef}>
 
-                        <div className="mb-4 flex items-center gap-3">
+                        <div className="mb-2 flex items-center gap-3">
                             <Building2
                                 size={18}
-                                className="text-[#EB8258]"
+                                className="text-[#efac39]"
                                 strokeWidth={1.8}
                             />
 
@@ -585,10 +485,10 @@ export default function AboutSection() {
                                     text-xs
                                     font-semibold
                                     tracking-[0.22em]
-                                    text-[#0d2461]
+                                    text-black uppercase
                                 "
                             >
-                                MEGHA SYSTEMS
+                                Cubiloo Cubicles
                             </span>
                         </div>
 
@@ -597,7 +497,7 @@ export default function AboutSection() {
                                 max-w-2xl
                                 text-2xl
                                 font-semibold
-                                leading-snug
+                                leading-
                                 text-[#071a3d]
                                 sm:text-3xl
                                 lg:text-[38px]
@@ -605,7 +505,7 @@ export default function AboutSection() {
                         >
                             Complete restroom solutions,
 
-                            <span className="text-[#EB8258]">
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                 {" "}built to last.
                             </span>
                         </h3>
@@ -654,10 +554,6 @@ export default function AboutSection() {
                             </p>
                         </div>
 
-                        {/* =================================
-                            VALUES
-                        ================================= */}
-
                         <div
                             className="
                                 mt-7
@@ -672,13 +568,13 @@ export default function AboutSection() {
                             <div
                                 className="
                                     border-l-2
-                                    border-[#d99a17]
+                                    border-[#efac39]
                                     pl-4
                                 "
                             >
                                 <Target
                                     size={18}
-                                    className="mb-2 text-[#d99a17]"
+                                    className="mb-2 text-[#efac39]"
                                     strokeWidth={1.8}
                                 />
 
@@ -710,13 +606,13 @@ export default function AboutSection() {
                             <div
                                 className="
                                     border-l-2
-                                    border-[#d99a17]
+                                    border-[#efac39]
                                     pl-4
                                 "
                             >
                                 <Award
                                     size={18}
-                                    className="mb-2 text-[#d99a17]"
+                                    className="mb-2 text-[#efac39]"
                                     strokeWidth={1.8}
                                 />
 
@@ -748,13 +644,13 @@ export default function AboutSection() {
                             <div
                                 className="
                                     border-l-2
-                                    border-[#d99a17]
+                                    border-[#efac39]
                                     pl-4
                                 "
                             >
                                 <Users
                                     size={18}
-                                    className="mb-2 text-[#d99a17]"
+                                    className="mb-2 text-[#efac39]"
                                     strokeWidth={1.8}
                                 />
 
@@ -781,10 +677,6 @@ export default function AboutSection() {
                                 </p>
                             </div>
                         </div>
-
-                        {/* =================================
-                            BUTTONS
-                        ================================= */}
 
                         <div
                             className="
@@ -835,7 +727,7 @@ export default function AboutSection() {
                                     text-white
                                     transition-all
                                     duration-300
-                                    hover:bg-[#d99a17]
+                                    hover:bg-[#efac39]
                                     hover:text-[#071a3d]
                                 "
                             >
@@ -845,19 +737,14 @@ export default function AboutSection() {
                     </div>
                 </div>
 
-                {/* =====================================
-                    STATISTICS
-                ====================================== */}
-
                 <div
                     ref={statsRef}
                     className="
-                        mt-5
+                        mt-8
                         grid
                         grid-cols-2
                         border-y
                         border-[#071a3d]/10
-                        lg:mt-8
                         lg:grid-cols-4
                     "
                 >
@@ -889,7 +776,7 @@ export default function AboutSection() {
                                         top-0
                                         h-[2px]
                                         w-0
-                                        bg-[#d99a17]
+                                        bg-[#efac39]
                                         transition-all
                                         duration-500
                                         group-hover:w-full
@@ -906,7 +793,7 @@ export default function AboutSection() {
                                 >
                                     <Icon
                                         size={21}
-                                        className="text-[#d99a17]"
+                                        className="text-[#efac39]"
                                         strokeWidth={1.7}
                                     />
 

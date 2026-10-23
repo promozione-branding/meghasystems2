@@ -114,7 +114,7 @@ export default function ProductSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative bg-[#3B3923] py-10"
+            className="relative bg-[#f5f3ed] py-10"
             style={{
                 height: `${PRODUCTS.length * 100}vh`,
             }}
@@ -137,25 +137,24 @@ export default function ProductSection() {
 
                     {/* Header */}
                     <div className="mb-5 lg:mb-8">
-                        <div className="flex items-center gap-3">
-                            <span className="h-px w-10 bg-[#d99a17]" />
+                        <div className="flex items-center gap-3 mb-2">
+                            <span className="h-px w-10 bg-[#efac39]" />
 
-                            <span className="text-[10px] font-semibold tracking-[0.32em] text-[#d99a17] sm:text-[11px]">
+                            <span className="text-[10px] font-semibold tracking-[0.32em] text-[#efac39] sm:text-[11px]">
                                 OUR PRODUCTS
                             </span>
                         </div>
 
                         <div className="flex items-end justify-between gap-6">
                             <div>
-                                <h2 className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight bg-[linear-gradient(90deg,#EDDD53_0%,#EB8258_100%)] bg-clip-text text-transparent sm:text-4xl lg:text-5xl">
-                                    Engineered for{" "}
-                                    {/* <br /> */}
-                                    <span className="text-[#d99a17]">
+                                <h2 className="max-w-[800px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                                    Engineered for {" "}
+
+                                    <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                         every space.
                                     </span>
                                 </h2>
-
-                                <p className="mt-1 max-w-xl text-sm leading-6 text-white/50 sm:text-base">
+                                <p className="mt-4 max-w-xl text-sm leading-6 text-[#071a3d]/90 sm:text-base">
                                     Explore our range of premium toilet
                                     cubicle and restroom partition systems.
                                 </p>
@@ -163,7 +162,7 @@ export default function ProductSection() {
 
                             {/* Counter */}
                             <div className="hidden shrink-0 text-right sm:block">
-                                <div className="text-4xl font-light text-white">
+                                <div className="text-4xl font-light text-[#071a3d]/90">
                                     {String(activeIndex + 1).padStart(2, "0")}
                                     <span className="text-white/20">
                                         {" "}
@@ -182,9 +181,9 @@ export default function ProductSection() {
                         <div className="relative mx-auto w-full max-w-[620px]">
 
                             {/* Gold frame */}
-                            <div className="absolute -bottom-3 -left-3 h-[85%] w-[70%] border-b border-l border-[#d99a17]/70" />
+                            <div className="absolute -bottom-3 -left-3 h-[85%] w-[70%] border-b border-l border-[#efac39]/70" />
 
-                            <div className="absolute -right-3 -top-3 h-16 w-16 border-r border-t border-[#d99a17]/50" />
+                            <div className="absolute -right-3 -top-3 h-16 w-16 border-r border-t border-[#efac39]/50" />
 
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -232,7 +231,7 @@ export default function ProductSection() {
                                         </div>
 
                                         {/* Product number */}
-                                        <div className="absolute bottom-5 right-5 text-5xl font-light text-white/20 sm:bottom-7 sm:right-7 sm:text-7xl">
+                                        <div className="absolute bottom-5 right-5 text-5xl font-light text-white/60 sm:bottom-7 sm:right-7 sm:text-7xl">
                                             {String(activeIndex + 1).padStart(2, "0")}
                                         </div>
                                     </div>
@@ -263,18 +262,18 @@ export default function ProductSection() {
                                     }}
                                 >
                                     <div className="mb-4 flex items-center gap-3">
-                                        <span className="h-px w-8 bg-[#d99a17]" />
+                                        <span className="h-px w-8 bg-[#efac39]" />
 
-                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#d99a17]">
+                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#efac39]">
                                             {product.category}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                                    <h3 className="text-3xl font-semibold tracking-tight text-[#071a3d]/90 sm:text-4xl lg:text-5xl">
                                         {product.name}
                                     </h3>
 
-                                    <p className="mt-5 max-w-xl text-sm leading-7 text-white/55 sm:text-base">
+                                    <p className="mt-5 max-w-xl text-sm leading-7 text-[#071a3d]/60 sm:text-base">
                                         {product.description}
                                     </p>
 
@@ -290,9 +289,9 @@ export default function ProductSection() {
                                                 key={feature}
                                                 className="flex items-center gap-2"
                                             >
-                                                <span className="h-1.5 w-1.5 bg-[#d99a17]" />
+                                                <span className="h-1.5 w-1.5 bg-[#efac39]" />
 
-                                                <span className="text-xs text-white/60">
+                                                <span className="text-xs text-[#071a3d]/60">
                                                     {feature}
                                                 </span>
                                             </div>
@@ -303,7 +302,7 @@ export default function ProductSection() {
                                     <div className="mt-8">
                                         <Link
                                             href={`/products/${product.slug}`}
-                                            className="group inline-flex items-center gap-4 bg-[#d99a17] px-6 py-3.5 text-xs font-bold tracking-[0.15em] text-[#071a3d] transition-all duration-300 hover:bg-white"
+                                            className="group inline-flex items-center gap-4 bg-[#efac39] px-6 py-3.5 text-xs font-bold tracking-[0.15em] text-[#071a3d] transition-all duration-300 hover:text-white hover:bg-[#071a3d]"
                                         >
                                             EXPLORE PRODUCT
 
@@ -326,7 +325,7 @@ export default function ProductSection() {
                                         )
                                     }
                                     disabled={activeIndex === 0}
-                                    className="flex h-10 w-10 items-center justify-center border border-white/15 text-white transition-all hover:border-[#d99a17] hover:text-[#d99a17] disabled:cursor-not-allowed disabled:opacity-30"
+                                    className="flex h-10 w-10 items-center justify-center transition-all border border-[#efac39] text-[#efac39] hover:text-white hover:bg-[#efac39] disabled:cursor-not-allowed disabled:opacity-30"
                                     aria-label="Previous product"
                                 >
                                     <ChevronLeft size={18} />
@@ -345,7 +344,7 @@ export default function ProductSection() {
                                     disabled={
                                         activeIndex === PRODUCTS.length - 1
                                     }
-                                    className="flex h-10 w-10 items-center justify-center border border-white/15 text-white transition-all hover:border-[#d99a17] hover:text-[#d99a17] disabled:cursor-not-allowed disabled:opacity-30"
+                                    className="flex h-10 w-10 items-center justify-center border border-[#efac39] text-[#efac39] transition-all hover:text-white hover:bg-[#efac39] disabled:cursor-not-allowed disabled:opacity-30"
                                     aria-label="Next product"
                                 >
                                     <ChevronRight size={18} />
@@ -361,8 +360,8 @@ export default function ProductSection() {
                                                 setActiveIndex(index)
                                             }
                                             className={`h-1 transition-all duration-300 ${index === activeIndex
-                                                ? "w-8 bg-[#d99a17]"
-                                                : "w-3 bg-white/20"
+                                                ? "w-8 bg-[#efac39]"
+                                                : "w-3 bg-black/20"
                                                 }`}
                                             aria-label={`Show ${item.name}`}
                                         />
@@ -376,12 +375,12 @@ export default function ProductSection() {
                         <div className="h-px w-full bg-white/10">
                             <div
                                 ref={progressRef}
-                                className="h-px w-0 bg-[#d99a17]"
+                                className="h-px w-0 bg-[#efac39]"
                             />
                         </div>
 
-                        <div className="mt-3 flex justify-between text-[9px] font-semibold tracking-[0.2em] text-white/25">
-                            <span>MEGHA SYSTEMS</span>
+                        <div className="mt-3 flex justify-between text-[9px] font-semibold tracking-[0.2em] text-black/95">
+                            <span className="uppercase">Cubiloo Cubicles</span>
                             <span>TOILET CUBICLE COLLECTION</span>
                         </div>
                     </div>
