@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 
 import { allProducts } from "@/data";
+import { FiArrowUpRight } from "react-icons/fi";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,237 +136,53 @@ export default function Products() {
   return (
     <main
       ref={pageRef}
-      className="min-h-screen overflow-hidden bg-[#f3f5f7] text-[#071a3d] mt-20"
+      className="min-h-screen overflow-hidden bg-[#f3f5f7] text-[#071a3d]"
     >
-      {/* =====================================================
-                HERO
-            ====================================================== */}
+      <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-cover bg- bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
-      <section className="products-hero relative overflow-hidden bg-[#071a3d] pt-28 sm:pt-32 lg:pt-36">
-        {/* Architectural background */}
-
-        <div className="pointer-events-none absolute inset-0">
-          {/* Grid */}
-
-          <div
-            className="
-                            absolute
-                            inset-0
-                            opacity-[0.055]
-                            [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)]
-                            [background-size:80px_80px]
-                        "
-          />
-
-          {/* Large circle */}
-
-          <svg
-            viewBox="0 0 600 600"
-            className="
-                            absolute
-                            right-[-180px]
-                            top-[-160px]
-                            h-[500px]
-                            w-[500px]
-                            opacity-[0.16]
-                            sm:h-[600px]
-                            sm:w-[600px]
-                        "
-            fill="none"
-          >
-            <circle
-              cx="300"
-              cy="300"
-              r="180"
-              stroke="#c99618"
-              strokeWidth="1"
-            />
-
-            <circle
-              cx="300"
-              cy="300"
-              r="240"
-              stroke="#c99618"
-              strokeWidth="1"
-              strokeDasharray="3 12"
-            />
-
-            <circle
-              cx="300"
-              cy="300"
-              r="290"
-              stroke="#ffffff"
-              strokeWidth="1"
-              strokeDasharray="2 15"
-            />
-
-            <path
-              d="M300 0V600"
-              stroke="#c99618"
-              strokeWidth="1"
-              strokeDasharray="3 12"
-            />
-
-            <path
-              d="M0 300H600"
-              stroke="#c99618"
-              strokeWidth="1"
-              strokeDasharray="3 12"
-            />
-          </svg>
-
-          {/* Left architectural lines */}
-
-          <div
-            className="
-                            absolute
-                            left-[7%]
-                            top-0
-                            h-full
-                            w-px
-                            rotate-[18deg]
-                            bg-[#c99618]/10
-                        "
-          />
-
-          <div
-            className="
-                            absolute
-                            left-[13%]
-                            top-0
-                            h-full
-                            w-px
-                            rotate-[18deg]
-                            bg-white/[0.04]
-                        "
-          />
-
-          {/* Bottom diagonal */}
-
-          <svg
-            viewBox="0 0 1000 300"
-            className="
-                            absolute
-                            bottom-0
-                            left-0
-                            h-[180px]
-                            w-full
-                            opacity-[0.12]
-                        "
-            fill="none"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0 250L250 100L500 220L750 40L1000 170"
-              stroke="#c99618"
-              strokeWidth="1"
-            />
-
-            <path
-              d="M0 275L250 125L500 245L750 65L1000 195"
-              stroke="#ffffff"
-              strokeWidth="1"
-            />
-          </svg>
-        </div>
-
-        {/* Hero content */}
-
-        <div
-          className="
-                        relative
-                        z-10
-                        mx-auto
-                        max-w-[1380px]
-                        px-5
-                        pb-16
-                        sm:px-8
-                        sm:pb-20
-                        lg:px-12
-                        lg:pb-24
-                    "
-        >
-          <div className="grid items-end gap-10 lg:grid-cols-[1fr_360px] lg:gap-16">
-            {/* Left */}
-
-            <div>
-              <div className="products-eyebrow flex items-center gap-3">
-                <span className="h-[2px] w-10 bg-[#c99618]" />
-
-                <span className="text-[9px] font-semibold tracking-[0.3em] text-[#c99618] sm:text-[10px]">
-                  MEGHA SYSTEMS
-                </span>
-              </div>
-
-              <h1
-                className="
-                                    products-title
-                                    mt-5
-                                    max-w-[900px]
-                                    text-[48px]
-                                    font-semibold
-                                    leading-[0.92]
-                                    tracking-[-0.055em]
-                                    text-white
-                                    sm:text-[64px]
-                                    md:text-[76px]
-                                    lg:text-[92px]
-                                    xl:text-[105px]
-                                "
-              >
-                Our
-                <br />
-
-                <span className="text-[#c99618]">
-                  Products.
-                </span>
-              </h1>
-
-              <p
-                className="
-                                    products-description
-                                    mt-6
-                                    max-w-[600px]
-                                    text-[12px]
-                                    leading-[1.8]
-                                    text-white/55
-                                    sm:text-[13px]
-                                    lg:text-[14px]
-                                "
-              >
-                Explore our complete range of premium toilet
-                cubicles, restroom partitions and washroom
-                systems designed for commercial,
-                institutional and high-traffic environments.
-              </p>
+        {/* Main Content */}
+        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
+          <div className="max-w-7xl flex flex-col items-center">
+            {/* Small Heading */}
+            <div className="about-hero-item mb-7 flex items-center gap-4">
+              <span className="h-px w-12 bg-[#fff]" />
+              <span className="text-[12px] uppercase font-semibold uppercase tracking-[0.28em] text-[#fff]">
+                Cubiloo Cubicles
+              </span>
             </div>
 
-            {/* Right stats */}
+            {/* Main Heading */}
+            <h1 className="about-hero-item text-[#fff] text-5xl font-medium leading-[0.98] tracking-[-0.015em] sm:text-7xl">
+              Our {" "}
+              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-[#fff]">
+                Products
+              </span>
+            </h1>
 
-            <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
-              <Stat
-                number={allProducts.length}
-                label="PRODUCT RANGES"
-              />
+            <div className="about-hero-item mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/about-us"
+                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-6 py-4 text-sm font-semibold text-[#071a3d] transition-all duration-300 hover:bg-[#e5b53c]"
+              >
+                Explore Cubiloo Cubicles
+                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </Link>
 
-              <Stat
-                number={totalProducts}
-                label="PRODUCT SYSTEMS"
-              />
+              <Link
+                href="/contact-us"
+                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
+              >
+                Talk to Our Team
+                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </Link>
             </div>
           </div>
         </div>
-
-        {/* Gold bottom line */}
-
-        <div className="absolute bottom-0 left-0 h-[2px] w-full bg-[#c99618]" />
       </section>
 
-      {/* =====================================================
-                CATEGORY NAVIGATION
-            ====================================================== */}
-
-      <section className="sticky top-0 z-40 border-b border-[#071a3d]/10 bg-[#f3f5f7]/95 backdrop-blur-xl">
+      <section className="sticky top-0 z-40 border-b border-[#071a3d]/30 bg-[#f3f5f7]/95 backdrop-blur-xl">
         <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
           <div className="flex overflow-x-auto justify-center scrollbar-hide">
             {allProducts.map((category, index) => (
@@ -379,34 +196,30 @@ export default function Products() {
                                     items-center
                                     gap-2
                                     border-r
-                                    border-[#071a3d]/10
+                                    border-[#071a3d]/30
                                     px-4
                                     py-4
                                     first:border-l
                                     sm:px-5
                                 "
               >
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/50 transition-colors duration-300 group-hover:text-[#c99618]">
+                <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/60 transition-colors duration-300 group-hover:text-[#efac39]">
                   0{index + 1}
                 </span>
 
-                <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071a3d]/70 transition-colors duration-300 group-hover:text-[#071a3d] sm:text-[12px]">
+                <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071a3d]/95 transition-colors duration-300 group-hover:text-[#071a3d] sm:text-[12px]">
                   {category.categoryName}
                 </span>
 
                 <ChevronRight
                   size={12}
-                  className="text-[#c99618] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                  className="text-[#efac39] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
                 />
               </a>
             ))}
           </div>
         </div>
       </section>
-
-      {/* =====================================================
-                PRODUCT CATEGORIES
-            ====================================================== */}
 
       <div>
         {allProducts.map((category, categoryIndex) => (
@@ -417,157 +230,6 @@ export default function Products() {
           />
         ))}
       </div>
-
-      {/* =====================================================
-                BOTTOM CTA
-            ====================================================== */}
-
-      <section className="relative overflow-hidden bg-[#071a3d] py-16 sm:py-20 lg:py-24">
-        {/* SVG background */}
-
-        <svg
-          viewBox="0 0 1200 500"
-          className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.12]"
-          fill="none"
-          preserveAspectRatio="none"
-        >
-          <rect
-            x="80"
-            y="60"
-            width="1040"
-            height="380"
-            stroke="#c99618"
-            strokeWidth="1"
-          />
-
-          <rect
-            x="120"
-            y="100"
-            width="960"
-            height="300"
-            stroke="#ffffff"
-            strokeWidth="1"
-            strokeDasharray="3 10"
-          />
-
-          <circle
-            cx="600"
-            cy="250"
-            r="160"
-            stroke="#c99618"
-            strokeWidth="1"
-          />
-
-          <circle
-            cx="600"
-            cy="250"
-            r="210"
-            stroke="#c99618"
-            strokeWidth="1"
-            strokeDasharray="3 12"
-          />
-
-          <path
-            d="M0 430L350 100L1200 420"
-            stroke="#c99618"
-            strokeWidth="1"
-          />
-        </svg>
-
-        <div className="relative z-10 mx-auto max-w-[900px] px-5 text-center sm:px-8">
-          <div className="flex items-center justify-center gap-3">
-            <span className="h-[2px] w-8 bg-[#c99618]" />
-
-            <span className="text-[8px] font-semibold tracking-[0.3em] text-[#c99618]">
-              HAVE A PROJECT IN MIND?
-            </span>
-
-            <span className="h-[2px] w-8 bg-[#c99618]" />
-          </div>
-
-          <h2
-            className="
-                            mt-5
-                            text-[38px]
-                            font-semibold
-                            leading-[0.95]
-                            tracking-[-0.045em]
-                            text-white
-                            sm:text-[52px]
-                            lg:text-[68px]
-                        "
-          >
-            Let&apos;s Build
-            <br />
-
-            <span className="text-[#c99618]">
-              Your Washroom.
-            </span>
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-[560px] text-[11px] leading-[1.7] text-white/50 sm:text-[12px]">
-            Tell us about your project requirements and our team
-            will help you choose the right cubicle system,
-            configuration and finish.
-          </p>
-
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link
-              href="/contact?type=quote"
-              className="
-                                group
-                                flex
-                                h-12
-                                items-center
-                                justify-center
-                                gap-3
-                                rounded-[7px]
-                                bg-[#c99618]
-                                px-7
-                                text-[10px]
-                                font-semibold
-                                tracking-[0.12em]
-                                text-[#071a3d]
-                                transition-all
-                                duration-300
-                                hover:bg-[#dfa01a]
-                            "
-            >
-              GET A QUOTE
-
-              <ArrowUpRight
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-              />
-            </Link>
-
-            <Link
-              href="/contact"
-              className="
-                                flex
-                                h-12
-                                items-center
-                                justify-center
-                                gap-3
-                                rounded-[7px]
-                                border
-                                border-white/20
-                                px-7
-                                text-[10px]
-                                font-semibold
-                                tracking-[0.12em]
-                                text-white
-                                transition-all
-                                duration-300
-                                hover:border-[#c99618]
-                                hover:text-[#c99618]
-                            "
-            >
-              CONTACT US
-            </Link>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
@@ -682,9 +344,9 @@ function CategorySection({ category, categoryIndex }) {
           {/* Left */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="h-[2px] w-9 bg-[#c99618]" />
+              <span className="h-[2px] w-9 bg-[#efac39]" />
 
-              <span className="text-[9px] font-semibold tracking-[0.3em] text-[#c99618] sm:text-[10px]">
+              <span className="text-[9px] font-semibold tracking-[0.3em] text-[#efac39] sm:text-[10px]">
                 RANGE 0{categoryIndex + 1}
               </span>
             </div>
@@ -704,14 +366,14 @@ function CategorySection({ category, categoryIndex }) {
               {category.categoryName}
             </h2>
 
-            <p className="mt-3 max-w-[600px] text-[10px] font-medium tracking-[0.08em] text-[#071a3d]/45 sm:text-[11px]">
+            <p className="mt-3 max-w-[600px] text-[10px] font-medium tracking-[0.08em] text-[#071a3d]/80 sm:text-[11px]">
               {category.excerpt}
             </p>
           </div>
 
           {/* Right */}
           <div className="lg:text-right">
-            <p className="text-[10px] leading-[1.7] text-[#071a3d]/50 sm:text-[12px]">
+            <p className="text-[10px] leading-[1.7] text-[#071a3d]/80 sm:text-[12px]">
               {category.description}
             </p>
 
@@ -762,10 +424,10 @@ function CategoryFeature({ icon: Icon, text }) {
       <Icon
         size={14}
         strokeWidth={1.5}
-        className="text-[#c99618]"
+        className="text-[#efac39]"
       />
 
-      <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/50">
+      <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/80">
         {text}
       </span>
     </div>
@@ -824,7 +486,7 @@ function ProductCard({ product, index, categoryIndex }) {
 
         {/* Number */}
 
-        <div className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-[#071a3d]/70 backdrop-blur-md">
+        <div className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-[#071a3d]/90 backdrop-blur-md">
           <span className="text-[8px] font-semibold text-white">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -833,7 +495,7 @@ function ProductCard({ product, index, categoryIndex }) {
         {/* Range label */}
 
         <div className="absolute bottom-4 left-4">
-          <span className="rounded-[4px] border border-white/20 bg-[#071a3d]/75 px-2.5 py-1.5 text-[7px] font-semibold tracking-[0.16em] text-white backdrop-blur-md">
+          <span className="rounded-[4px] border border-white/20 bg-[#071a3d]/90 px-2.5 py-1.5 text-[7px] font-semibold tracking-[0.16em] text-white backdrop-blur-md">
             {categoryIndexLabel(categoryIndex)}
           </span>
         </div>
@@ -853,7 +515,7 @@ function ProductCard({ product, index, categoryIndex }) {
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#c99618]
+                        bg-[#efac39]
                         text-[#071a3d]
                         opacity-0
                         transition-all
@@ -874,13 +536,12 @@ function ProductCard({ product, index, categoryIndex }) {
       <div className="relative p-5 sm:p-6">
         {/* Gold top line */}
 
-        <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#c99618] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
+        <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#efac39] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
 
         {/* Product title */}
-
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#c99618]">
+            <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#efac39]">
               TOILET CUBICLE SYSTEM
             </p>
 
@@ -888,15 +549,10 @@ function ProductCard({ product, index, categoryIndex }) {
               {product.name}
             </h3>
           </div>
-
-          <div className="mt-1 text-[#071a3d]/20">
-            <Sparkles size={17} strokeWidth={1.4} />
-          </div>
         </div>
 
         {/* Description */}
-
-        <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071a3d]/50 sm:text-[12px]">
+        <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071a3d]/90 sm:text-[12px]">
           {product.shortDescription}
         </p>
 
@@ -923,7 +579,7 @@ function ProductCard({ product, index, categoryIndex }) {
         >
           <span>VIEW PRODUCT</span>
 
-          <span className="flex items-center gap-1.5 text-[#c99618]">
+          <span className="flex items-center gap-1.5 text-[#efac39]">
             EXPLORE
 
             <ArrowUpRight
@@ -937,11 +593,11 @@ function ProductCard({ product, index, categoryIndex }) {
       {/* Bottom architectural corner */}
 
       <div className="pointer-events-none absolute bottom-0 right-0 h-16 w-16 overflow-hidden">
-        <div className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full border border-[#c99618]/20" />
+        <div className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full border border-[#efac39]/20" />
 
-        <div className="absolute bottom-0 right-0 h-px w-10 bg-[#c99618]/40" />
+        <div className="absolute bottom-0 right-0 h-px w-10 bg-[#efac39]/40" />
 
-        <div className="absolute bottom-0 right-0 h-10 w-px bg-[#c99618]/40" />
+        <div className="absolute bottom-0 right-0 h-10 w-px bg-[#efac39]/40" />
       </div>
     </motion.article>
   );

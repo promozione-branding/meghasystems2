@@ -17,6 +17,7 @@ import {
     FiAlertCircle,
     FiClock,
 } from "react-icons/fi";
+import { Mail, PhoneCall } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -258,237 +259,74 @@ export default function ContactPage() {
             ref={pageRef}
             className="overflow-hidden bg-[#f3f5f7] text-[#071a3d]"
         >
-            {/* =====================================================
-                HERO
-            ===================================================== */}
+            <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
+                {/* Background Image */}
+                <div className="absolute inset-0 bg-cover bg- bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
-            <section className="relative overflow-hidden bg-[#071a3d] pt-28 sm:pt-32 lg:pt-36">
-                {/* Grid */}
+                {/* Main Content */}
+                <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
+                    <div className="max-w-7xl flex flex-col items-center">
+                        {/* Small Heading */}
+                        <div className="about-hero-item mb-7 flex items-center gap-4">
+                            <span className="h-px w-12 bg-[#fff]" />
+                            <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#fff]">
+                                GET IN TOUCH
+                            </span>
+                        </div>
 
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                        opacity-[0.055]
-                        [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)]
-                        [background-size:60px_60px]
-                    "
-                />
+                        {/* Main Heading */}
+                        <h1 className="about-hero-item text-[#fff] text-5xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-7xl">
+                            Let's build {" "}
+                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-[#fff]">
+                                your space.
+                            </span>
+                        </h1>
 
-                {/* Architectural circles */}
-
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        -right-32
-                        -top-32
-                        h-[520px]
-                        w-[520px]
-                        rounded-full
-                        border
-                        border-[#c99618]/20
-                    "
-                />
-
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        -right-10
-                        top-10
-                        h-[350px]
-                        w-[350px]
-                        rounded-full
-                        border
-                        border-[#c99618]/10
-                    "
-                />
-
-                {/* Vertical architectural line */}
-
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        right-[18%]
-                        top-0
-                        h-[130%]
-                        w-px
-                        rotate-[25deg]
-                        bg-white/[0.045]
-                    "
-                />
-
-                {/* Gold top line */}
-
-                <div className="absolute left-0 top-0 h-[3px] w-full bg-[#c99618]" />
-
-                <div
-                    className="
-                        relative
-                        z-10
-                        mx-auto
-                        max-w-[1450px]
-                        px-5
-                        py-16
-                        sm:px-8
-                        sm:py-20
-                        lg:px-12
-                        lg:py-24
-                        xl:px-16
-                    "
-                >
-                    <div className="grid gap-10 lg:grid-cols-[1fr_430px] lg:items-end lg:gap-16">
-                        {/* Left */}
-
-                        <div>
-                            <div className="contact-hero-item flex items-center gap-3">
-                                <span className="h-[2px] w-9 bg-[#c99618]" />
-
-                                <span className="text-[9px] font-bold tracking-[0.3em] text-[#c99618] sm:text-[10px]">
-                                    GET IN TOUCH
-                                </span>
-                            </div>
-
-                            <h1
-                                className="
-                                    contact-hero-item
-                                    mt-5
-                                    max-w-[900px]
-                                    text-[48px]
-                                    font-semibold
-                                    leading-[0.88]
-                                    tracking-[-0.055em]
-                                    text-white
-                                    sm:text-[62px]
-                                    md:text-[72px]
-                                    lg:text-[82px]
-                                    xl:text-[96px]
-                                "
+                        {/* Buttons */}
+                        <div className="about-hero-item mt-10 flex flex-wrap gap-4">
+                            <Link
+                                href="/products"
+                                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-6 py-4 text-sm font-semibold text-[#071a3d] transition-all duration-300 hover:bg-[#e5b53c]"
                             >
-                                Let's build
-                                <br />
-                                <span className="text-[#c99618]">
-                                    your space.
-                                </span>
-                            </h1>
+                                Explore Our Products
+                                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            </Link>
+
+                            <Link
+                                href="/contact"
+                                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
+                            >
+                                Talk to Our Team
+                                <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                            </Link>
                         </div>
-
-                        {/* Right */}
-
-                        <div className="contact-hero-item">
-                            <p className="text-[12px] leading-[1.8] text-white/55 sm:text-[13px] lg:text-[14px]">
-                                Have a project in mind? Talk to our team about
-                                toilet cubicles, restroom partitions, urinal
-                                partitions and custom solutions for your
-                                project.
-                            </p>
-
-                            <div className="mt-7 flex flex-wrap gap-3">
-                                <a
-                                    href="tel:+919810000000"
-                                    className="
-                                        inline-flex
-                                        items-center
-                                        gap-2
-                                        border
-                                        border-[#c99618]
-                                        px-4
-                                        py-3
-                                        text-[9px]
-                                        font-bold
-                                        tracking-[0.14em]
-                                        text-white
-                                        transition-all
-                                        duration-300
-                                        hover:bg-[#c99618]
-                                        hover:text-[#071a3d]
-                                    "
-                                >
-                                    <FiPhone size={13} />
-                                    CALL OUR TEAM
-                                </a>
-
-                                <a
-                                    href="mailto:contact@meghasystems.com"
-                                    className="
-                                        inline-flex
-                                        items-center
-                                        gap-2
-                                        border
-                                        border-white/15
-                                        px-4
-                                        py-3
-                                        text-[9px]
-                                        font-bold
-                                        tracking-[0.14em]
-                                        text-white/70
-                                        transition-all
-                                        duration-300
-                                        hover:border-[#c99618]
-                                        hover:text-[#c99618]
-                                    "
-                                >
-                                    <FiMail size={13} />
-                                    EMAIL US
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Bottom architectural bar */}
-
-                    <div className="contact-hero-item mt-14 flex items-center justify-between border-t border-white/10 pt-4">
-                        <span className="text-[8px] font-bold tracking-[0.2em] text-white/25 sm:text-[9px]">
-                            MEGHA SYSTEMS
-                        </span>
-
-                        <span className="text-[8px] font-bold tracking-[0.2em] text-[#c99618] sm:text-[9px]">
-                            PROJECT • QUOTE • CONSULTATION
-                        </span>
                     </div>
                 </div>
             </section>
 
-            {/* =====================================================
-                CONTACT FORM
-            ===================================================== */}
-
-            <section className="contact-form-section relative bg-[#f3f5f7] py-16 sm:py-20 lg:py-24">
+            <section className="contact-form-section relative bg-[#f5f3ed] py-16 sm:py-20 lg:py-24">
                 <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)] xl:gap-20">
                         {/* Intro */}
-
                         <div className="contact-form-reveal">
-                            <div className="flex items-center gap-3">
-                                <span className="h-[2px] w-8 bg-[#c99618]" />
+                            <div className="flex items-center gap-3 mb-4">
+                                <span className="h-[2px] w-8 bg-[#efac39]" />
 
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618]">
+                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
                                     PROJECT ENQUIRY
                                 </span>
                             </div>
 
-                            <h2
-                                className="
-                                    mt-4
-                                    text-[38px]
-                                    font-semibold
-                                    leading-[0.92]
-                                    tracking-[-0.05em]
-                                    sm:text-[48px]
-                                    lg:text-[56px]
-                                "
-                            >
+                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                                 Tell us about
                                 <br />
-                                <span className="text-[#c99618]">
+
+                                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                     your project.
                                 </span>
                             </h2>
 
-                            <p className="mt-6 max-w-[350px] text-[12px] leading-[1.8] text-[#071a3d]/55 sm:text-[13px]">
+                            <p className="mt-6 max-w-[350px] text-[12px] leading-[1.8] text-[#071a3d]/90 sm:text-[13px]">
                                 Share your requirements and our team will help
                                 you select the right restroom partition system
                                 for your space.
@@ -496,12 +334,12 @@ export default function ContactPage() {
 
                             <div className="mt-9 space-y-5 border-t border-[#071a3d]/10 pt-6">
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#c99618]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
                                         <FiSend size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/35">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
                                             QUICK RESPONSE
                                         </p>
 
@@ -512,12 +350,12 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#c99618]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
                                         <FiClock size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/35">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
                                             PROJECT SUPPORT
                                         </p>
 
@@ -527,10 +365,43 @@ export default function ContactPage() {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="mt-9 space-y-5 border-t border-[#071a3d]/10 pt-6">
+                                <div className="flex gap-4">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                        <Mail size={14} />
+                                    </div>
+
+                                    <div>
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                            Mail
+                                        </p>
+
+                                        <p className="mt-1 text-[12px] font-medium">
+                                            cubiloocubicles@gmail.com
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                        <PhoneCall size={14} />
+                                    </div>
+
+                                    <div>
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                            Call
+                                        </p>
+
+                                        <p className="mt-1 text-[12px] font-medium">
+                                            783-783-0803
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Form */}
-
                         <div className="contact-form-reveal">
                             <form
                                 onSubmit={handleSubmit}
@@ -547,13 +418,11 @@ export default function ContactPage() {
                                 "
                             >
                                 {/* Gold corner */}
-
-                                <div className="absolute right-0 top-0 h-14 w-14 border-b border-l border-[#c99618]/40" />
+                                <div className="absolute right-0 top-0 h-14 w-14 border-b border-l border-[#efac39]/40" />
 
                                 {/* Form heading */}
-
-                                <div className="mb-8">
-                                    <span className="text-[9px] font-bold tracking-[0.25em] text-[#c99618]">
+                                <div className="mb-6">
+                                    <span className="text-[9px] font-bold tracking-[0.25em] text-[#efac39]">
                                         CONTACT FORM
                                     </span>
 
@@ -564,11 +433,10 @@ export default function ContactPage() {
 
                                 <div className="grid gap-5 sm:grid-cols-2">
                                     {/* Name */}
-
                                     <div>
                                         <label
                                             htmlFor="contactPerson"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/45"
+                                            className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071a3d]/80"
                                         >
                                             FULL NAME *
                                         </label>
@@ -594,7 +462,7 @@ export default function ContactPage() {
                                                 text-[#071a3d]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/30
+                                                placeholder:text-[#071a3d]/60
                                                 focus:border-[#c99618]
                                                 focus:bg-white
                                             "
@@ -602,11 +470,10 @@ export default function ContactPage() {
                                     </div>
 
                                     {/* Email */}
-
                                     <div>
                                         <label
                                             htmlFor="email"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/45"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
                                         >
                                             EMAIL ADDRESS *
                                         </label>
@@ -629,7 +496,7 @@ export default function ContactPage() {
                                                 text-[12px]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/30
+                                                placeholder:text-[#071a3d]/60
                                                 focus:border-[#c99618]
                                                 focus:bg-white
                                             "
@@ -637,11 +504,10 @@ export default function ContactPage() {
                                     </div>
 
                                     {/* Phone */}
-
                                     <div>
                                         <label
                                             htmlFor="phone"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/45"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
                                         >
                                             PHONE NUMBER *
                                         </label>
@@ -664,7 +530,7 @@ export default function ContactPage() {
                                                 text-[12px]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/30
+                                                placeholder:text-[#071a3d]/60
                                                 focus:border-[#c99618]
                                                 focus:bg-white
                                             "
@@ -672,11 +538,10 @@ export default function ContactPage() {
                                     </div>
 
                                     {/* Product */}
-
                                     <div>
                                         <label
                                             htmlFor="product"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/45"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
                                         >
                                             PRODUCT / REQUIREMENT *
                                         </label>
@@ -719,11 +584,10 @@ export default function ContactPage() {
                                 </div>
 
                                 {/* Message */}
-
                                 <div className="mt-5">
                                     <label
                                         htmlFor="message"
-                                        className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/45"
+                                        className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071a3d]/80"
                                     >
                                         PROJECT MESSAGE *
                                     </label>
@@ -748,7 +612,7 @@ export default function ContactPage() {
                                             leading-[1.7]
                                             outline-none
                                             transition-all
-                                            placeholder:text-[#071a3d]/30
+                                            placeholder:text-[#071a3d]/60
                                             focus:border-[#c99618]
                                             focus:bg-white
                                         "
@@ -770,10 +634,9 @@ export default function ContactPage() {
                                             text-[11px]
                                             leading-[1.5]
 
-                                            ${
-                                                status.type === "success"
-                                                    ? "border-green-200 bg-green-50 text-green-700"
-                                                    : "border-red-200 bg-red-50 text-red-700"
+                                            ${status.type === "success"
+                                                ? "border-green-200 bg-green-50 text-green-700"
+                                                : "border-red-200 bg-red-50 text-red-700"
                                             }
                                         `}
                                     >
@@ -794,9 +657,8 @@ export default function ContactPage() {
                                 )}
 
                                 {/* Submit */}
-
-                                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                                    <p className="max-w-[300px] text-[9px] leading-[1.6] text-[#071a3d]/35">
+                                <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <p className="max-w-[300px] text-[10px] leading-[1.6] text-[#071a3d]/80">
                                         By submitting this form, you are
                                         requesting our team to contact you
                                         regarding your project enquiry.
@@ -851,44 +713,30 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* =====================================================
-                OFFICES
-            ===================================================== */}
-
-            <section className="offices-section relative bg-white py-16 sm:py-20 lg:py-24">
+            <section className="offices-section relative bg-white py-10 sm:py-12 lg:py-15">
                 <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
                     {/* Header */}
-
                     <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:items-end">
                         <div>
                             <div className="flex items-center gap-3">
-                                <span className="h-[2px] w-8 bg-[#c99618]" />
+                                <span className="h-[2px] w-8 bg-[#efac39]" />
 
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618]">
+                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
                                     OUR LOCATIONS
                                 </span>
                             </div>
 
-                            <h2
-                                className="
-                                    mt-4
-                                    text-[40px]
-                                    font-semibold
-                                    leading-[0.9]
-                                    tracking-[-0.05em]
-                                    sm:text-[52px]
-                                    lg:text-[62px]
-                                "
-                            >
+                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
                                 Find us
                                 <br />
-                                <span className="text-[#c99618]">
+
+                                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
                                     near you.
                                 </span>
                             </h2>
                         </div>
 
-                        <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071a3d]/50 sm:text-[13px]">
+                        <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071a3d]/80 sm:text-[13px]">
                             With offices across key locations, Megha Systems
                             supports commercial, institutional and industrial
                             projects across India.
@@ -896,8 +744,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Office cards */}
-
-                    <div className="mt-12 grid gap-px overflow-hidden border border-[#071a3d]/10 bg-[#071a3d]/10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-8 grid gap-px overflow-hidden border border-[#071a3d]/10 bg-[#071a3d]/10 sm:grid-cols-2 lg:grid-cols-3">
                         {offices.map((office, index) => (
                             <motion.div
                                 key={office.title}
@@ -921,13 +768,13 @@ export default function ContactPage() {
                                 {/* Number */}
 
                                 <div className="flex items-start justify-between">
-                                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#c99618]">
+                                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
 
                                     <FiMapPin
                                         size={17}
-                                        className="text-[#071a3d]/25 transition-colors duration-300 group-hover:text-[#c99618]"
+                                        className="text-[#071a3d]/80 transition-colors duration-300 group-hover:text-[#efac39]"
                                     />
                                 </div>
 
@@ -939,7 +786,7 @@ export default function ContactPage() {
 
                                 {/* Address */}
 
-                                <p className="mt-3 max-w-[310px] text-[11px] leading-[1.7] text-[#071a3d]/50 transition-colors duration-300 group-hover:text-white/50">
+                                <p className="mt-3 max-w-[310px] text-[11px] leading-[1.7] text-[#071a3d]/80 transition-colors duration-300 group-hover:text-white/80">
                                     {office.address}
                                 </p>
 
@@ -948,47 +795,42 @@ export default function ContactPage() {
                                 <div className="absolute bottom-5 right-6">
                                     <FiArrowUpRight
                                         size={17}
-                                        className="text-[#071a3d]/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#c99618]"
+                                        className="text-[#071a3d]/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#efac39]"
                                     />
                                 </div>
 
                                 {/* Gold line */}
 
-                                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#c99618] transition-all duration-500 group-hover:w-full" />
+                                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#efac39] transition-all duration-500 group-hover:w-full" />
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* =====================================================
-                MAP
-            ===================================================== */}
-
-            <section className="map-section bg-[#f3f5f7] py-16 sm:py-20 lg:py-24">
-                <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
-                    <div className="map-reveal overflow-hidden border border-[#071a3d]/10 bg-white">
+            <section className="map-section bg-[#f5f3ed] py-16 sm:py-20 lg:py-24">
+                <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
+                    <div className="map-reveal rounded-2xl overflow-hidden border border-[#071a3d]/10 bg-white">
                         {/* Map header */}
-
-                        <div className="flex flex-col gap-4 border-b border-[#071a3d]/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6 lg:p-7">
+                        <div className="flex flex-col gap-4 border-b border-[#071a3d]/10 p-5 sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <div className="flex items-center gap-3">
                                     <FiMapPin
                                         size={15}
-                                        className="text-[#c99618]"
+                                        className="text-[#efac39]"
                                     />
 
-                                    <span className="text-[9px] font-bold tracking-[0.25em] text-[#c99618]">
-                                        MEGHA SYSTEMS
+                                    <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#efac39]">
+                                        Cubiloo Cubicles
                                     </span>
                                 </div>
 
-                                <h3 className="mt-2 text-[24px] font-semibold tracking-[-0.03em]">
+                                <h3 className="text-[24px] font-semibold tracking-[-0.03em]">
                                     Our presence across India
                                 </h3>
                             </div>
 
-                            <p className="max-w-[350px] text-[10px] leading-[1.7] text-[#071a3d]/45">
+                            <p className="max-w-[400px] text-[10px] leading-[1.7] text-[#071a3d]/80">
                                 Visit one of our offices or contact our team to
                                 discuss your upcoming project.
                             </p>
@@ -999,7 +841,7 @@ export default function ContactPage() {
                         <div className="relative h-[350px] w-full sm:h-[450px] lg:h-[520px]">
                             <iframe
                                 title="Megha Systems Location"
-                                src="https://www.google.com/maps?q=Megha%20Systems%20Faridabad%20Haryana&output=embed"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.9068267438424!2d77.3600067!3d28.361666399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdbe0b5eed79f%3A0xb843b6cdf62d7ece!2sAdore%20Business%20City!5e0!3m2!1sen!2sin!4v1792833582418!5m2!1sen!2sin"
                                 className="h-full w-full border-0 grayscale-[20%]"
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -1017,86 +859,6 @@ export default function ContactPage() {
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* =====================================================
-                FINAL CTA
-            ===================================================== */}
-
-            <section className="relative overflow-hidden bg-[#071a3d]">
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                        opacity-[0.045]
-                        [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)]
-                        [background-size:55px_55px]
-                    "
-                />
-
-                <div className="absolute right-[-100px] top-[-150px] h-[400px] w-[400px] rounded-full border border-[#c99618]/15" />
-
-                <div className="relative z-10 mx-auto max-w-[1450px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24 xl:px-16">
-                    <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-                        <div>
-                            <span className="text-[9px] font-bold tracking-[0.28em] text-[#c99618]">
-                                READY TO START?
-                            </span>
-
-                            <h2
-                                className="
-                                    mt-3
-                                    max-w-[800px]
-                                    text-[40px]
-                                    font-semibold
-                                    leading-[0.9]
-                                    tracking-[-0.05em]
-                                    text-white
-                                    sm:text-[52px]
-                                    lg:text-[64px]
-                                "
-                            >
-                                Let's create a better
-                                <br />
-                                <span className="text-[#c99618]">
-                                    restroom experience.
-                                </span>
-                            </h2>
-                        </div>
-
-                        <Link
-                            href="/products"
-                            className="
-                                group
-                                inline-flex
-                                h-12
-                                shrink-0
-                                items-center
-                                justify-center
-                                gap-3
-                                border
-                                border-[#c99618]
-                                px-6
-                                text-[10px]
-                                font-bold
-                                tracking-[0.15em]
-                                text-white
-                                transition-all
-                                duration-300
-                                hover:bg-[#c99618]
-                                hover:text-[#071a3d]
-                            "
-                        >
-                            EXPLORE PRODUCTS
-
-                            <FiArrowUpRight
-                                size={15}
-                                className="transition-transform duration-300 group-hover:translate-x-1"
-                            />
-                        </Link>
                     </div>
                 </div>
             </section>
