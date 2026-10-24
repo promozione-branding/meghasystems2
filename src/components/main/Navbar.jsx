@@ -20,10 +20,10 @@ import {
 import { allProducts } from "@/data";
 
 const SOCIAL_LINKS = {
-  facebook: "https://www.facebook.com/meghasystems/",
-  linkedin: "https://in.linkedin.com/company/meghasystems",
-  instagram: "https://www.instagram.com/megha_systems_restroomcubicles",
-  whatsapp: "https://wa.me/919873735716",
+  facebook: "https://www.facebook.com/p/Cubiloo-Cubicles-61593586059881/",
+  // linkedin: "https://in.linkedin.com/company/meghasystems",
+  instagram: "https://www.instagram.com/cubiloocubicles/",
+  whatsapp: "https://web.whatsapp.com/send?phone=917837830803&text=",
 };
 
 const mobileProducts = [
@@ -265,12 +265,12 @@ export default function Navbar() {
               <FaInstagram />
             </SocialIcon>
 
-            <SocialIcon
+            {/* <SocialIcon
               href={SOCIAL_LINKS.linkedin}
               label="LinkedIn"
             >
               <FaLinkedinIn />
-            </SocialIcon>
+            </SocialIcon> */}
 
             <SocialIcon
               href={SOCIAL_LINKS.whatsapp}

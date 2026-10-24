@@ -11,6 +11,7 @@ import {
     FaInstagram,
     FaFacebookF,
     FaLinkedinIn,
+    FaWhatsapp,
 } from "react-icons/fa";
 
 const LOGO_SRC = "/logo2.webp";
@@ -35,19 +36,25 @@ const PRODUCT_LINKS = [
 const SOCIAL_LINKS = [
     {
         label: "Instagram",
-        href: "https://www.instagram.com/megha_systems_restroomcubicles",
+        href: "https://www.instagram.com/cubiloocubicles/",
         icon: FaInstagram,
     },
     {
         label: "Facebook",
-        href: "https://www.facebook.com/meghasystems/",
+        href: "https://www.facebook.com/p/Cubiloo-Cubicles-61593586059881/",
         icon: FaFacebookF,
     },
     {
-        label: "LinkedIn",
-        href: "https://in.linkedin.com/company/meghasystems",
-        icon: FaLinkedinIn,
+        label: "Whatapp",
+        href: "https://web.whatsapp.com/send?phone=917837830803&text=",
+        icon: FaWhatsapp,
     },
+
+    // {
+    //     label: "LinkedIn",
+    //     href: "https://in.linkedin.com/company/meghasystems",
+    //     icon: FaLinkedinIn,
+    // },
 ];
 
 export default function Footer() {
@@ -381,7 +388,7 @@ export default function Footer() {
                         {/* Contact details */}
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             <a
-                                href="mailto:contact@meghasystems.com"
+                                href="mailto:cubiloocubicles@gmail.com"
                                 className="group flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#efac39]"
                             >
                                 <FiMail
@@ -389,7 +396,7 @@ export default function Footer() {
                                     className="text-[#efac39]"
                                 />
 
-                                <span>contact@meghasystems.com</span>
+                                <span>cubiloocubicles@gmail.com</span>
 
                                 <FiArrowUpRight
                                     size={12}
@@ -458,7 +465,7 @@ export default function Footer() {
                     </div>
 
                     <a
-                        href="/contact"
+                        href="/contact-us"
                         className="group flex w-fit items-center gap-4 border border-[#efac39]/50 bg-[#efac39] px-6 py-3.5 text-[10px] font-bold tracking-[0.2em] text-[#071a3d] transition-all duration-300 hover:bg-white hover:border-white"
                     >
                         START YOUR PROJECT
