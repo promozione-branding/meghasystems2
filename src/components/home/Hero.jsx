@@ -11,16 +11,16 @@ import "swiper/css/pagination";
 const HERO_SLIDES = [
   {
     id: 1,
-    desktop: "/banner1.png",
-    mobile: "/banner/apple-mobile.webp",
+    desktop: "/banner/1.png",
+    mobile: "/banner/2.png",
     alt: "Apple Mumbai BKC Toilet Cubicles",
   },
-  // {
-  //   id: 2,
-  //   desktop: "/banner2.png",
-  //   mobile: "/banner/maruti-mobile.webp",
-  //   alt: "Maruti Suzuki Kharkhoda Toilet Cubicles",
-  // },
+  {
+    id: 2,
+    desktop: "/banner/3.png",
+    mobile: "/banner/4.png",
+    alt: "Maruti Suzuki Kharkhoda Toilet Cubicles",
+  },
   // {
   //   id: 3,
   //   desktop: "/banner/mcdonalds-desktop.webp",

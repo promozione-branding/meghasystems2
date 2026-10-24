@@ -189,7 +189,7 @@ export default function Navbar() {
                 type="button"
                 aria-expanded={productsOpen}
                 onClick={() => setProductsOpen((prev) => !prev)}
-                className="group relative flex h-full items-center gap-1 px-3 text-[12px] font-semibold text-[#182640] transition-colors hover:text-[#c99618] xl:px-4 xl:text-[15px]"
+                className="group relative flex h-full items-center gap-1 px-3 text-[12px] font-semibold text-[#182640] transition-colors hover:text-[#e17e3a] xl:px-4 xl:text-[15px]"
               >
                 Products
 
@@ -199,7 +199,7 @@ export default function Navbar() {
                     }`}
                 />
 
-                <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
+                <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#e17e3a] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
               </button>
 
               <AnimatePresence>
@@ -468,14 +468,14 @@ function NavLink({ href, label, active = false }) {
     <Link
       href={href}
       className={`group relative flex h-full shrink-0 items-center px-3 text-[12px] font-semibold transition-all duration-300 xl:px-4 xl:text-[15px] ${active
-        ? "bg-[#d95538] text-white"
-        : "text-[#182640] hover:text-[#c99618]"
+        ? "bg-[#e17e3a] text-white"
+        : "text-[#182640] hover:text-[#e17e3a]"
         }`}
     >
       {label}
 
       {!active && (
-        <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#c99618] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
+        <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#e17e3a] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
       )}
     </Link>
   );
@@ -499,7 +499,7 @@ function ProductItem({ categoryName, description, slug }) {
 
       <ArrowUpRight
         size={15}
-        className="text-gray-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#c99618]"
+        className="text-gray-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#e17e3a]"
       />
     </Link>
   );
@@ -531,7 +531,7 @@ function MobileLink({ href, label, onClick }) {
     >
       {label}
 
-      <ArrowUpRight size={15} className="text-[#c99618]" />
+      <ArrowUpRight size={15} className="text-[#e17e3a]" />
     </Link>
   );
 }
