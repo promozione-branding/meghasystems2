@@ -391,7 +391,7 @@ export default function AboutPage() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/Maxi Pro.webp"
-                  alt="Megha Systems premium toilet cubicle"
+                  alt="Cubiloo Cubicles premium toilet cubicle"
                   fill
                   priority
                   className="object-cover"
@@ -403,7 +403,7 @@ export default function AboutPage() {
                 <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7">
                   <div className="bg-[#071a3d]/90 backdrop-blur-sm px-5 py-4 border-l-2 border-[#c99618]">
                     <p className="text-[10px] tracking-[0.2em] uppercase text-[#c99618]">
-                      Megha Systems
+                      Cubiloo Cubicles
                     </p>
                     <p className="mt-1 text-sm text-white/80">
                       Designed for modern spaces
@@ -444,7 +444,7 @@ export default function AboutPage() {
             </div>
 
             <p className="max-w-md text-[#071a3d]/90 leading-7">
-              From product selection to installation, Megha Systems provides
+              From product selection to installation, Cubiloo Cubicles provides
               coordinated solutions for modern washroom environments.
             </p>
           </div>
@@ -492,7 +492,7 @@ export default function AboutPage() {
                 </span>
                 <span className="w-10 h-px bg-[#efac39]" />
                 <span className="text-xs tracking-[0.22em] uppercase text-[#071a3d]/80 font-semibold">
-                  Why Megha Systems
+                  Why Cubiloo Cubicles
                 </span>
               </div>
 

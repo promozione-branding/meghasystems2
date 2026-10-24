@@ -52,7 +52,7 @@ const SOCIAL_LINKS = [
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden bg-[#4e4f4f] text-white">
+        <footer className="relative overflow-hidden bg-[#071720] text-white">
             {/* =====================================================
                 ARCHITECTURAL BACKGROUND
             ====================================================== */}
@@ -70,22 +70,22 @@ export default function Footer() {
                 />
 
                 {/* Large architectural circle */}
-                <div className="absolute -right-64 -top-64 h-[700px] w-[700px] rounded-full border border-[#d99a17]/10" />
+                <div className="absolute -right-64 -top-64 h-[700px] w-[700px] rounded-full border border-[#efac39]/10" />
 
                 <div className="absolute -right-44 -top-44 h-[500px] w-[500px] rounded-full border border-white/[0.04]" />
 
                 {/* Left circle */}
-                <div className="absolute -bottom-72 -left-72 h-[700px] w-[700px] rounded-full border border-[#d99a17]/[0.07]" />
+                <div className="absolute -bottom-72 -left-72 h-[700px] w-[700px] rounded-full border border-[#efac39]/[0.07]" />
 
                 {/* Diagonal architectural lines */}
-                <div className="absolute right-[12%] top-0 h-[650px] w-px rotate-[32deg] bg-[#d99a17]/[0.08]" />
+                <div className="absolute right-[12%] top-0 h-[650px] w-px rotate-[32deg] bg-[#efac39]/[0.08]" />
 
                 <div className="absolute right-[28%] top-[-100px] h-[650px] w-px rotate-[32deg] bg-white/[0.035]" />
 
                 <div className="absolute left-[18%] bottom-[-150px] h-[550px] w-px rotate-[32deg] bg-white/[0.035]" />
 
                 {/* Top gold line */}
-                <div className="absolute left-0 top-0 h-px w-full bg-[#d99a17]/50" />
+                <div className="absolute left-0 top-0 h-px w-full bg-[#efac39]/50" />
 
                 {/* =================================================
                     TECHNICAL SVG
@@ -119,7 +119,7 @@ export default function Footer() {
                     {/* Door */}
                     <path
                         d="M235 125H365V390L300 415L235 390V125Z"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="2"
                     />
 
@@ -128,7 +128,7 @@ export default function Footer() {
                         cx="337"
                         cy="265"
                         r="8"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="2"
                     />
 
@@ -136,13 +136,13 @@ export default function Footer() {
                         cx="337"
                         cy="265"
                         r="2.5"
-                        fill="#d99a17"
+                        fill="#efac39"
                     />
 
                     {/* Top rail */}
                     <path
                         d="M110 150L300 75L490 150"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="3"
                     />
 
@@ -162,7 +162,7 @@ export default function Footer() {
                     {/* Vertical center line */}
                     <path
                         d="M300 75V455"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="1"
                         strokeDasharray="4 10"
                     />
@@ -172,7 +172,7 @@ export default function Footer() {
                         cx="300"
                         cy="265"
                         r="175"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="1"
                         strokeDasharray="5 14"
                     />
@@ -180,13 +180,13 @@ export default function Footer() {
                     {/* Corner marks */}
                     <path
                         d="M75 150H105M90 135V165"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="2"
                     />
 
                     <path
                         d="M495 150H525M510 135V165"
-                        stroke="#d99a17"
+                        stroke="#efac39"
                         strokeWidth="2"
                     />
 
@@ -216,15 +216,15 @@ export default function Footer() {
                         {/* Brand */}
                         <div>
                             <div className="relative inline-block">
-                                <div className="absolute -left-3 -top-3 h-7 w-7 border-l border-t border-[#d99a17]" />
+                                <div className="absolute -left-3 -top-3 h-7 w-7 border-l border-t border-[#efac39]" />
 
                                 <img
                                     src={LOGO_SRC}
-                                    alt="Megha Systems"
+                                    alt="Cubiloo Cubicles"
                                     className="relative h-auto w-[190px] object-contain sm:w-[220px]"
                                 />
 
-                                <div className="absolute -bottom-3 -right-3 h-7 w-7 border-b border-r border-[#d99a17]" />
+                                <div className="absolute -bottom-3 -right-3 h-7 w-7 border-b border-r border-[#efac39]" />
                             </div>
 
                             <p className="mt-8 max-w-xl text-sm leading-7 text-white/95 sm:text-[15px]">
@@ -235,9 +235,9 @@ export default function Footer() {
                             </p>
 
                             <div className="mt-7 flex items-center gap-3">
-                                <span className="h-px w-12 bg-[#d99a17]" />
+                                <span className="h-px w-12 bg-[#efac39]" />
 
-                                <span className="text-[9px] font-semibold tracking-[0.28em] text-[#d99a17]">
+                                <span className="text-[9px] font-semibold tracking-[0.28em] text-[#efac39]">
                                     DESIGN • MANUFACTURE • INSTALL
                                 </span>
                             </div>
@@ -245,8 +245,8 @@ export default function Footer() {
 
                         {/* Right statement */}
                         <div className="lg:text-right">
-                            <p className="text-[9px] font-bold tracking-[0.3em] text-[#d99a17]">
-                                MEGHA SYSTEMS
+                            <p className="text-[9px] font-bold tracking-[0.3em] text-[#efac39]">
+                                CUBILOO CUBICLES
                             </p>
 
                             <h3 className="mt-3 text-2xl font-semibold leading-tight text-white sm:text-3xl">
@@ -267,9 +267,9 @@ export default function Footer() {
                     {/* Useful Links */}
                     <div>
                         <div className="mb-5 flex items-center gap-3">
-                            <span className="h-px w-7 bg-[#d99a17]" />
+                            <span className="h-px w-7 bg-[#efac39]" />
 
-                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#d99a17]">
+                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
                                 USEFUL LINKS
                             </p>
                         </div>
@@ -281,7 +281,7 @@ export default function Footer() {
                                     href={link.href}
                                     className="group flex items-center gap-2 text-sm text-white/95 transition-colors duration-300 hover:text-white"
                                 >
-                                    <span className="h-px w-0 bg-[#d99a17] transition-all duration-300 group-hover:w-4" />
+                                    <span className="h-px w-0 bg-[#efac39] transition-all duration-300 group-hover:w-4" />
 
                                     <span>{link.label}</span>
                                 </a>
@@ -292,9 +292,9 @@ export default function Footer() {
                     {/* Products */}
                     <div>
                         <div className="mb-5 flex items-center gap-3">
-                            <span className="h-px w-7 bg-[#d99a17]" />
+                            <span className="h-px w-7 bg-[#efac39]" />
 
-                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#d99a17]">
+                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
                                 PRODUCTS
                             </p>
                         </div>
@@ -306,7 +306,7 @@ export default function Footer() {
                                     href={link.href}
                                     className="group flex items-center gap-2 text-sm text-white/95 transition-colors duration-300 hover:text-white"
                                 >
-                                    <span className="h-px w-0 bg-[#d99a17] transition-all duration-300 group-hover:w-4" />
+                                    <span className="h-px w-0 bg-[#efac39] transition-all duration-300 group-hover:w-4" />
 
                                     <span>{link.label}</span>
                                 </a>
@@ -317,9 +317,9 @@ export default function Footer() {
                     {/* Contact */}
                     <div>
                         <div className="mb-5 flex items-center gap-3">
-                            <span className="h-px w-7 bg-[#d99a17]" />
+                            <span className="h-px w-7 bg-[#efac39]" />
 
-                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#d99a17]">
+                            <p className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
                                 CONTACT
                             </p>
                         </div>
@@ -330,7 +330,7 @@ export default function Footer() {
                                 <div className="mb-3 flex items-center gap-2">
                                     <FiMapPin
                                         size={14}
-                                        className="text-[#d99a17]"
+                                        className="text-[#efac39]"
                                         strokeWidth={1.6}
                                     />
 
@@ -357,7 +357,7 @@ export default function Footer() {
                                 <div className="mb-3 flex items-center gap-2">
                                     <FiMapPin
                                         size={14}
-                                        className="text-[#d99a17]"
+                                        className="text-[#efac39]"
                                         strokeWidth={1.6}
                                     />
 
@@ -382,11 +382,11 @@ export default function Footer() {
                         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                             <a
                                 href="mailto:contact@meghasystems.com"
-                                className="group flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#d99a17]"
+                                className="group flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#efac39]"
                             >
                                 <FiMail
                                     size={14}
-                                    className="text-[#d99a17]"
+                                    className="text-[#efac39]"
                                 />
 
                                 <span>contact@meghasystems.com</span>
@@ -401,11 +401,11 @@ export default function Footer() {
 
                             <a
                                 href="tel:+919873735716"
-                                className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#d99a17]"
+                                className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#efac39]"
                             >
                                 <FiPhone
                                     size={14}
-                                    className="text-[#d99a17]"
+                                    className="text-[#efac39]"
                                 />
 
                                 <span>+91 9873735716</span>
@@ -413,11 +413,11 @@ export default function Footer() {
 
                             <a
                                 href="tel:+919873735713"
-                                className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#d99a17]"
+                                className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#efac39]"
                             >
                                 <FiPhone
                                     size={14}
-                                    className="text-[#d99a17]"
+                                    className="text-[#efac39]"
                                 />
 
                                 <span>+91 9873735713</span>
@@ -444,7 +444,7 @@ export default function Footer() {
                                         key={social.label}
                                         href={social.href}
                                         aria-label={social.label}
-                                        className="group flex h-9 w-9 items-center justify-center border border-white/10 bg-white/[0.03] text-white/50 transition-all duration-300 hover:border-[#d99a17]/60 hover:bg-[#d99a17] hover:text-[#071a3d]"
+                                        className="group flex h-9 w-9 items-center justify-center border border-white/10 bg-white/[0.03] text-white/50 transition-all duration-300 hover:border-[#efac39]/60 hover:bg-[#efac39] hover:text-[#071a3d]"
                                     >
                                         <Icon
                                             size={15}
@@ -459,7 +459,7 @@ export default function Footer() {
 
                     <a
                         href="/contact"
-                        className="group flex w-fit items-center gap-4 border border-[#d99a17]/50 bg-[#d99a17] px-6 py-3.5 text-[10px] font-bold tracking-[0.2em] text-[#071a3d] transition-all duration-300 hover:bg-white hover:border-white"
+                        className="group flex w-fit items-center gap-4 border border-[#efac39]/50 bg-[#efac39] px-6 py-3.5 text-[10px] font-bold tracking-[0.2em] text-[#071a3d] transition-all duration-300 hover:bg-white hover:border-white"
                     >
                         START YOUR PROJECT
 
@@ -474,14 +474,14 @@ export default function Footer() {
                 ================================================== */}
                 <div className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-[10px] tracking-[0.16em] text-white/30">
-                        © {new Date().getFullYear()} MEGHA SYSTEMS. ALL RIGHTS
+                        © {new Date().getFullYear()} CUBILOO CUBICLES. ALL RIGHTS
                         RESERVED.
                     </p>
 
                     <div className="flex flex-wrap items-center gap-4 text-[10px] font-semibold tracking-[0.18em] text-white/90">
                         <a
                             href="/privacy-policy"
-                            className="transition-colors hover:text-[#d99a17]"
+                            className="transition-colors hover:text-[#efac39]"
                         >
                             PRIVACY POLICY
                         </a>
@@ -490,14 +490,14 @@ export default function Footer() {
 
                         <a
                             href="/terms"
-                            className="transition-colors hover:text-[#d99a17]"
+                            className="transition-colors hover:text-[#efac39]"
                         >
                             TERMS & CONDITIONS
                         </a>
 
                         <span className="h-3 w-px bg-white/10" />
 
-                        <span className="text-[#d99a17]">
+                        <span className="text-[#efac39]">
                             QUALITY • PRECISION • DURABILITY
                         </span>
                     </div>

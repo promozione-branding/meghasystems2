@@ -737,7 +737,7 @@ export default function ContactPage() {
                         </div>
 
                         <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071a3d]/80 sm:text-[13px]">
-                            With offices across key locations, Megha Systems
+                            With offices across key locations, Cubiloo Cubicles
                             supports commercial, institutional and industrial
                             projects across India.
                         </p>
@@ -840,7 +840,7 @@ export default function ContactPage() {
 
                         <div className="relative h-[350px] w-full sm:h-[450px] lg:h-[520px]">
                             <iframe
-                                title="Megha Systems Location"
+                                title="Cubiloo Cubicles Location"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.9068267438424!2d77.3600067!3d28.361666399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdbe0b5eed79f%3A0xb843b6cdf62d7ece!2sAdore%20Business%20City!5e0!3m2!1sen!2sin!4v1792833582418!5m2!1sen!2sin"
                                 className="h-full w-full border-0 grayscale-[20%]"
                                 loading="lazy"
@@ -851,7 +851,7 @@ export default function ContactPage() {
 
                             <div className="pointer-events-none absolute bottom-5 left-5 bg-[#071a3d] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
                                 <span className="text-[8px] font-bold tracking-[0.22em] text-[#c99618]">
-                                    MEGHA SYSTEMS
+                                    CUBILOO CUBICLES
                                 </span>
 
                                 <p className="mt-1 text-[11px] text-white/70">

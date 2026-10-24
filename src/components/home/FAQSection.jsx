@@ -9,7 +9,7 @@ const FAQS = [
         id: 1,
         question: "What are toilet cubicles?",
         answer:
-            "Toilet cubicles are modular restroom partition systems used to create individual private toilet compartments. Megha Systems provides complete cubicle solutions including panels, doors, hardware, support systems, and installation.",
+            "Toilet cubicles are modular restroom partition systems used to create individual private toilet compartments. Cubiloo Cubicles provides complete cubicle solutions including panels, doors, hardware, support systems, and installation.",
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const FAQS = [
         id: 4,
         question: "Do you provide installation services?",
         answer:
-            "Yes. Megha Systems provides end-to-end support from design and material planning through manufacturing and professional site installation.",
+            "Yes. Cubiloo Cubicles provides end-to-end support from design and material planning through manufacturing and professional site installation.",
     },
     {
         id: 5,
@@ -282,7 +282,7 @@ export default function FAQSection() {
                                 <div className="flex items-center gap-2.5">
                                     <span className="h-[2px] w-6 bg-[#efac39]" />
                                     <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#efac39]">
-                                        Megha Systems
+                                        Cubiloo Cubicles
                                     </span>
                                 </div>
 

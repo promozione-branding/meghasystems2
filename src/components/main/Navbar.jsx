@@ -155,7 +155,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link
             href="/"
-            aria-label="Megha Systems home"
+            aria-label="Cubiloo Cubicles home"
             className="relative z-30 shrink-0"
           >
             <motion.div
@@ -164,7 +164,7 @@ export default function Navbar() {
             >
               <Image
                 src="/cubilo.png"
-                alt="MEGHA SYSTEMS"
+                alt="CUBILOO CUBICLES"
                 width={360}
                 height={105}
                 priority
@@ -286,11 +286,11 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={closeMobile}
-            aria-label="Megha Systems home"
+            aria-label="Cubiloo Cubicles home"
           >
             <Image
               src="/cubilo.png"
-              alt="MEGHA SYSTEMS"
+              alt="CUBILOO CUBICLES"
               width={300}
               height={90}
               priority

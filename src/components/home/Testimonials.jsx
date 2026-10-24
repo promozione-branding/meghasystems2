@@ -18,7 +18,7 @@ const testimonials = [
     {
         id: 1,
         quote:
-            "The quality of execution and attention to detail from Megha Systems was excellent. The entire installation was handled professionally and delivered as committed.",
+            "The quality of execution and attention to detail from Cubiloo Cubicles was excellent. The entire installation was handled professionally and delivered as committed.",
         name: "Project Management Team",
         company: "Commercial Project",
         location: "Mumbai",
@@ -27,7 +27,7 @@ const testimonials = [
     {
         id: 2,
         quote:
-            "Megha Systems provided a reliable restroom solution with excellent finish quality. Their team was responsive throughout the manufacturing and installation process.",
+            "Cubiloo Cubicles provided a reliable restroom solution with excellent finish quality. Their team was responsive throughout the manufacturing and installation process.",
         name: "Facility Management Team",
         company: "Industrial Project",
         location: "Haryana",

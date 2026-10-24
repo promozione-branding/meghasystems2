@@ -58,17 +58,17 @@ export async function generateMetadata({ params }) {
 
     if (!result) {
         return {
-            title: "Product Not Found | Megha Systems",
+            title: "Product Not Found | Cubiloo Cubicles",
         };
     }
 
     const { product } = result;
     return {
-        title: product.metaTitle || `${product.name} | Megha Systems`,
+        title: product.metaTitle || `${product.name} | Cubiloo Cubicles`,
         description:
             product.metaDescription ||
             product.shortDescription ||
-            `Explore ${product.name} by Megha Systems.`,
+            `Explore ${product.name} by Cubiloo Cubicles.`,
     };
 }
 
@@ -113,7 +113,7 @@ export default async function ProductPage({ params }) {
     const { product, category } = result;
 
     const whatsappMessage = encodeURIComponent(
-        `Hello Megha Systems,\n\nI am interested in the ${product.name} toilet cubicle system.\n\nPlease share pricing, specifications and quotation details.`
+        `Hello Cubiloo Cubicles,\n\nI am interested in the ${product.name} toilet cubicle system.\n\nPlease share pricing, specifications and quotation details.`
     );
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
@@ -283,7 +283,7 @@ export default async function ProductPage({ params }) {
                                 />
 
                                 <div className="absolute left-0 top-0 bg-[#071a3d] px-4 py-3 text-[9px] font-bold tracking-[0.2em] text-white">
-                                    MEGHA SYSTEMS
+                                    CUBILOO CUBICLES
                                 </div>
 
                                 <div className="absolute bottom-0 right-0 bg-[#efac39] px-5 py-3 text-[9px] font-bold tracking-[0.2em] text-white">

@@ -254,7 +254,7 @@ export default function Certificates() {
                         {/* Progress text */}
                         <div>
                             <span className="text-[9px] font-semibold tracking-[0.25em] text-slate-400">
-                                MEGHA SYSTEMS
+                                CUBILOO CUBICLES
                             </span>
                         </div>
 

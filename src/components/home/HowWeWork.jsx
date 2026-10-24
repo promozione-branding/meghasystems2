@@ -599,7 +599,7 @@ export default function HowWeWork() {
 
                             <div>
                                 <p className="text-[9px] font-semibold tracking-[0.22em] text-[#d99a17]">
-                                    MEGHA SYSTEMS
+                                    CUBILOO CUBICLES
                                 </p>
 
                                 <p className="mt-0.5 text-xs text-white/60">

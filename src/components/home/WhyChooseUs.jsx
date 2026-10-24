@@ -453,7 +453,7 @@ export default function WhyChooseUs() {
                                     <div className="absolute left-0 top-0 bg-[#c99618] px-4 py-3 sm:px-5">
 
                                         <p className="text-[8px] font-bold tracking-[0.28em] text-white sm:text-[9px]">
-                                            MEGHA SYSTEMS
+                                            CUBILOO CUBICLES
                                         </p>
 
                                     </div>

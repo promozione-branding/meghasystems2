@@ -521,7 +521,7 @@ export default function AboutSection() {
                             "
                         >
                             <p>
-                                Established in 2012, Megha Systems has
+                                Established in 2012, Cubiloo Cubicles has
                                 grown into a trusted name in toilet
                                 cubicle and restroom partition
                                 solutions. With expertise spanning

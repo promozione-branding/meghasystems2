@@ -611,5 +611,5 @@ function categoryIndexLabel(index) {
     "URINAL PARTITIONS",
   ];
 
-  return labels[index] || "MEGHA SYSTEMS";
+  return labels[index] || "CUBILOO CUBICLES";
 }

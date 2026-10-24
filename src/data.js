@@ -348,7 +348,7 @@ export const allProducts = [
         name: "NEO",
         slug: "neo",
         image: "/Neo.webp",
-        metaTitle: "NEO Modular Toilet Cubicles | Megha Systems",
+        metaTitle: "NEO Modular Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
         shortDescription:
@@ -568,7 +568,7 @@ export const allProducts = [
         name: "Cielo",
         slug: "cielo",
         image: "/Cielo.webp",
-        metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Megha Systems",
+        metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "Cielo ceiling-hung toilet cubicles create a clean, floor-free washroom with easy cleaning, modern aesthetics, moisture resistance, and premium finishes.",
         shortDescription:
@@ -689,7 +689,7 @@ export const allProducts = [
         name: "Rove",
         slug: "rove",
         image: "/Rove.webp",
-        metaTitle: "Rove Wall-Hung Toilet Cubicles | Megha Systems",
+        metaTitle: "Rove Wall-Hung Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "Rove wall-hung toilet cubicles offer a modern floor-free design with durable panels, corrosion-resistant hardware, easy cleaning, and multiple finish options.",
         shortDescription:
@@ -827,7 +827,7 @@ export const allProducts = [
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
         image: "/Kiddiez Pro.webp",
-        metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Megha Systems",
+        metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
         shortDescription:
@@ -893,7 +893,7 @@ export const allProducts = [
         name: "Nylon Kiddiez",
         slug: "nylon-kiddiez",
 
-        metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Megha Systems",
+        metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Cubiloo Cubicles",
 
         metaDescription:
           "Nylon Kiddiez child-friendly toilet cubicles feature durable nylon components, modular construction, easy maintenance, multiple colour options, and secure washroom design for kids' facilities.",
@@ -1040,7 +1040,7 @@ export const allProducts = [
         name: "Urinal Modesty Panels",
         slug: "urinal-modesty-panels",
         image: "/Commercial Urinal Partitions.webp",
-        metaTitle: "Urinal Modesty Panels | Megha Systems",
+        metaTitle: "Urinal Modesty Panels | Cubiloo Cubicles",
         metaDescription:
           "Stylish and durable urinal modesty panels made from high-quality compact-grade laminates with a strong phenolic core, ideal for high-traffic public restrooms.",
         shortDescription:

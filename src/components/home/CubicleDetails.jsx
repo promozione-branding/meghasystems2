@@ -244,7 +244,7 @@ export default function CubicleDetails() {
                         <div className="relative h-[330px] overflow-hidden bg-[#dfe4e8] sm:h-[400px] lg:h-[520px]">
                             <img
                                 src="/Kiddiez.webp"
-                                alt="Megha Systems toilet cubicle installation"
+                                alt="Cubiloo Cubicles toilet cubicle installation"
                                 className="absolute inset-0 h-full w-full object-cover"
                             />
 
