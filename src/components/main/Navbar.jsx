@@ -176,8 +176,8 @@ export default function Navbar() {
       >
         <div
           className={`relative mx-auto max-w-[1560px] rounded-[22px] border transition-all duration-500 lg:rounded-[24px] ${scrolled || mobileOpen
-              ? "border-white/15 bg-[#111114]/95 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
-              : "border-white/10 bg-[#111114]/45 backdrop-blur-xl"
+            ? "border-white/15 bg-[#111114]/95 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+            : "border-white/10 bg-[#111114]/45 backdrop-blur-xl"
             }`}
         >
           {/* Thin gradient line */}
@@ -238,8 +238,8 @@ export default function Navbar() {
                     setProductsOpen((prev) => !prev)
                   }
                   className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${isProductsActive || productsOpen
-                      ? "text-[#EFAC39]"
-                      : "text-white/80 hover:text-white"
+                    ? "text-[#EFAC39]"
+                    : "text-white/80 hover:text-white"
                     }`}
                 >
                   Products
@@ -252,8 +252,8 @@ export default function Navbar() {
 
                   <span
                     className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${isProductsActive || productsOpen
-                        ? "scale-x-100"
-                        : "scale-x-0 group-hover:scale-x-100"
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
                       }`}
                     style={{ background: GRADIENT }}
                   />
@@ -278,17 +278,17 @@ export default function Navbar() {
                         scale: 0.97,
                       }}
                       transition={{ duration: 0.22 }}
-                      className="absolute left-1/2 top-full z-50 w-[360px] -translate-x-1/2 pt-3"
+                      className="absolute left-1/2 top-full z-50 w-[360px] -translate-x-1/2 pt-"
                     >
                       <div className="overflow-hidden rounded-[20px] border border-white/15 bg-[#18181B] p-3 shadow-[0_25px_70px_rgba(0,0,0,0.5)] backdrop-blur-2xl">
-                        <div className="mb-2 border-b border-white/10 px-3 pb-3 pt-2">
+                        {/* <div className="mb-2 border-b border-white/10 px-3 pb-3 pt-2">
                           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#EFAC39]">
                             Our Collection
                           </p>
                           <h3 className="mt-1 text-lg font-semibold text-white">
                             Explore Products
                           </h3>
-                        </div>
+                        </div> */}
 
                         <div className="max-h-[350px] overflow-y-auto">
                           {allProducts.map((product, index) => (
@@ -556,8 +556,8 @@ export default function Navbar() {
                     <ChevronDown
                       size={20}
                       className={`text-[#EFAC39] transition-transform duration-300 ${mobileProductsOpen
-                          ? "rotate-180"
-                          : ""
+                        ? "rotate-180"
+                        : ""
                         }`}
                     />
                   </button>
@@ -701,16 +701,16 @@ function NavItem({ href, label, active }) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={`group relative flex h-full shrink-0 items-center px-3 text-[13px] font-medium transition-colors duration-300 xl:px-4 xl:text-sm ${active
-          ? "text-[#EFAC39]"
-          : "text-white/80 hover:text-white"
+        ? "text-[#EFAC39]"
+        : "text-white/80 hover:text-white"
         }`}
     >
       {label}
 
       <span
         className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${active
-            ? "scale-x-100"
-            : "scale-x-0 group-hover:scale-x-100"
+          ? "scale-x-100"
+          : "scale-x-0 group-hover:scale-x-100"
           }`}
         style={{ background: GRADIENT }}
       />
@@ -730,8 +730,8 @@ function MobileNavLink({
       onClick={onClick}
       aria-current={active ? "page" : undefined}
       className={`flex items-center justify-between border-b border-white/10 py-4 text-lg font-medium transition-colors ${active
-          ? "text-[#EFAC39]"
-          : "text-white hover:text-[#EFAC39]"
+        ? "text-[#EFAC39]"
+        : "text-white hover:text-[#EFAC39]"
         }`}
     >
       {label}

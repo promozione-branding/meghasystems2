@@ -1,20 +1,33 @@
+
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import {
+    ArrowUpRight,
+    ArrowRight,
+    ArrowLeft,
     Ruler,
     PenTool,
     Factory,
     Wrench,
-    CheckCircle2,
-    ArrowRight,
+    ShieldCheck,
+    Check,
+    Layers3,
+    Settings2,
 } from "lucide-react";
-import Link from "next/link";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const GRADIENT = "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
 
 const STEPS = [
     {
@@ -22,703 +35,529 @@ const STEPS = [
         title: "Understand",
         subtitle: "Consultation & Site Study",
         description:
-            "We understand your requirements, washroom layout, usage, dimensions and project expectations before moving forward.",
+            "We study your space, requirements and project expectations to create the right restroom solution.",
         icon: Ruler,
+        type: "consultation",
     },
     {
         number: "02",
         title: "Design",
         subtitle: "Planning & Customisation",
         description:
-            "Our team develops a practical cubicle layout with the right materials, finishes, hardware and configurations for your space.",
+            "Thoughtful layouts, premium materials and precise detailing come together in every design.",
         icon: PenTool,
+        type: "design",
     },
     {
         number: "03",
         title: "Manufacture",
         subtitle: "Precision Production",
         description:
-            "Every component is manufactured with attention to material quality, dimensions, finishing and structural performance.",
+            "Every cubicle component is manufactured with precision, consistency and lasting quality.",
         icon: Factory,
+        type: "manufacture",
     },
     {
         number: "04",
         title: "Install",
         subtitle: "Professional Execution",
         description:
-            "Our installation team brings the design to life with accurate fitting, alignment and finishing at your site.",
+            "Our installation team ensures accurate fitting, clean alignment and a professional finish.",
         icon: Wrench,
+        type: "install",
+    },
+    {
+        number: "05",
+        title: "Quality Check",
+        subtitle: "Built to Last",
+        description:
+            "We inspect every detail to ensure the finished installation meets our quality standards.",
+        icon: ShieldCheck,
+        type: "quality",
     },
 ];
 
+function ConsultationVisual() {
+    return (
+        <div className="flex h-full items-center justify-center p-5">
+            <div className="w-full max-w-[300px] rounded-2xl border border-white/10 bg-[#19191D] p-4 shadow-2xl">
+                <div className="mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
+                    <span className="h-2 w-2 rounded-full bg-[#E58B3B]" />
+                    <span className="h-2 w-2 rounded-full bg-white/20" />
+                    <span className="h-2 w-2 rounded-full bg-white/20" />
+
+                    <span className="ml-2 text-[10px] font-medium text-white/50">
+                        Project Requirements
+                    </span>
+                </div>
+
+                <div className="grid grid-cols-3 gap-2">
+                    {[
+                        { label: "Layout", icon: Ruler },
+                        { label: "Space", icon: Layers3 },
+                        { label: "Details", icon: Settings2 },
+                    ].map((item, index) => {
+                        const Icon = item.icon;
+
+                        return (
+                            <div
+                                key={item.label}
+                                className={`flex h-[80px] flex-col items-center justify-center gap-2 rounded-xl border ${index === 0
+                                    ? "border-[#E58B3B] bg-[#E58B3B]/10 text-[#EFAC39]"
+                                    : "border-white/10 bg-white/[0.035] text-white/55"
+                                    }`}
+                            >
+                                <Icon size={19} />
+                                <span className="text-[10px]">{item.label}</span>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                <div className="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] p-3">
+                    <div className="h-2 w-2 rounded-full bg-[#EFAC39]" />
+                    <div className="h-1.5 w-24 rounded-full bg-white/20" />
+                    <div className="ml-auto h-1.5 w-10 rounded-full bg-[#E58B3B]" />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function DesignVisual() {
+    return (
+        <div className="flex h-full items-center justify-center p-5">
+            <div className="w-full max-w-[300px] space-y-3">
+                <div className="rounded-xl border border-white/10 bg-[#19191D] p-4">
+                    <div className="mb-3 flex items-center justify-between">
+                        <span className="text-[10px] text-white/50">
+                            Layout Planning
+                        </span>
+                        <PenTool size={15} className="text-[#EFAC39]" />
+                    </div>
+
+                    <div className="relative h-[75px] overflow-hidden rounded-lg border border-white/10 bg-[#101013] p-3">
+                        <div className="flex h-full gap-2">
+                            {[0, 1, 2, 3].map((item) => (
+                                <div
+                                    key={item}
+                                    className="flex-1 rounded-t-md border border-[#E58B3B]/60 bg-[#E58B3B]/15"
+                                >
+                                    <div className="mx-auto mt-3 h-1 w-5 rounded-full bg-[#EFAC39]/70" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="rounded-xl border border-white/10 bg-[#19191D] p-3">
+                    <div className="mb-3 h-1.5 w-2/3 rounded-full bg-white/20" />
+                    <div className="mb-2 h-1.5 w-1/2 rounded-full bg-white/10" />
+
+                    <div className="flex gap-2">
+                        {["#E58B3B", "#46464B", "#797979", "#D85538"].map(
+                            (color) => (
+                                <div
+                                    key={color}
+                                    className="h-7 flex-1 rounded-md"
+                                    style={{ backgroundColor: color }}
+                                />
+                            )
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ManufactureVisual() {
+    return (
+        <div className="flex h-full items-center justify-center p-5">
+            <div className="relative flex h-[200px] w-full max-w-[300px] items-center justify-center">
+                <div className="absolute h-[160px] w-[160px] rounded-full border border-[#EFAC39]/25" />
+                <div className="absolute h-[130px] w-[130px] rounded-full border-[8px] border-[#E58B3B]/20" />
+                <div className="absolute h-[100px] w-[100px] rounded-full border-[6px] border-[#EFAC39]" />
+
+                <div
+                    className="relative flex h-[65px] w-[65px] items-center justify-center rounded-full text-black shadow-[0_0_45px_rgba(229,139,59,0.25)]"
+                    style={{ background: GRADIENT }}
+                >
+                    <Factory size={29} />
+                </div>
+
+                <div className="absolute left-0 top-5 rounded-full border border-white/15 bg-[#19191D] px-3 py-2 text-[10px] text-white/70">
+                    Precision
+                </div>
+
+                <div className="absolute bottom-5 right-0 rounded-full border border-white/15 bg-[#19191D] px-3 py-2 text-[10px] text-white/70">
+                    Quality Materials
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function InstallVisual() {
+    return (
+        <div className="flex h-full items-center justify-center p-5">
+            <div className="w-full max-w-[300px] rounded-xl border border-white/10 bg-[#19191D] p-5">
+                <div className="mb-4 flex items-center justify-between">
+                    <span className="text-xs font-medium text-white/60">
+                        Installation Progress
+                    </span>
+                    <Wrench size={17} className="text-[#EFAC39]" />
+                </div>
+
+                {[
+                    { name: "Site Preparation", progress: "100%" },
+                    { name: "Panel Fitting", progress: "85%" },
+                    { name: "Final Alignment", progress: "60%" },
+                ].map((item) => (
+                    <div key={item.name} className="mb-4 last:mb-0">
+                        <div className="mb-2 flex justify-between text-[10px] text-white/55">
+                            <span>{item.name}</span>
+                            <span>{item.progress}</span>
+                        </div>
+
+                        <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                            <div
+                                className="h-full rounded-full"
+                                style={{
+                                    width: item.progress,
+                                    background: GRADIENT,
+                                }}
+                            />
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+function QualityVisual() {
+    return (
+        <div className="flex h-full items-center justify-center p-5">
+            <div className="w-full max-w-[300px] rounded-xl border border-white/10 bg-[#19191D] p-5">
+                <div className="mb-5 flex items-center gap-3">
+                    <div
+                        className="flex h-11 w-11 items-center justify-center rounded-full text-black"
+                        style={{ background: GRADIENT }}
+                    >
+                        <ShieldCheck size={23} />
+                    </div>
+
+                    <div>
+                        <p className="text-sm font-semibold text-white">
+                            Quality Assured
+                        </p>
+                        <p className="mt-1 text-[10px] text-white/45">
+                            Final inspection checklist
+                        </p>
+                    </div>
+                </div>
+
+                {[
+                    "Material Inspection",
+                    "Hardware Testing",
+                    "Finish Verification",
+                ].map((item) => (
+                    <div
+                        key={item}
+                        className="flex items-center gap-3 border-t border-white/10 py-3"
+                    >
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#E58B3B]/15 text-[#EFAC39]">
+                            <Check size={13} />
+                        </span>
+
+                        <span className="text-xs text-white/65">{item}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+const VISUALS = {
+    consultation: ConsultationVisual,
+    design: DesignVisual,
+    manufacture: ManufactureVisual,
+    install: InstallVisual,
+    quality: QualityVisual,
+};
+
 export default function HowWeWork() {
     const sectionRef = useRef(null);
-    const svgRef = useRef(null);
-    const panelLeftRef = useRef(null);
-    const panelRightRef = useRef(null);
-    const doorRef = useRef(null);
-    const topRailRef = useRef(null);
-    const floorRef = useRef(null);
+    const swiperRef = useRef(null);
 
     useEffect(() => {
-        const section = sectionRef.current;
-
-        if (!section) return;
-
         const ctx = gsap.context(() => {
-            // ---------------------------------------
-            // Section reveal
-            // ---------------------------------------
-
             gsap.fromTo(
-                ".how-heading",
-                {
-                    opacity: 0,
-                    y: 35,
-                },
+                ".how-reveal",
+                { opacity: 0, y: 35 },
                 {
                     opacity: 1,
                     y: 0,
                     duration: 0.9,
+                    stagger: 0.12,
                     ease: "power3.out",
                     scrollTrigger: {
-                        trigger: section,
+                        trigger: sectionRef.current,
                         start: "top 78%",
                         once: true,
                     },
                 }
             );
 
-            // ---------------------------------------
-            // SVG PARTITION ANIMATION
-            // ---------------------------------------
-
             gsap.fromTo(
-                panelLeftRef.current,
+                ".how-swiper-wrap",
+                { opacity: 0, y: 55 },
                 {
-                    x: -100,
-                    opacity: 0,
-                    rotationY: -12,
-                },
-                {
-                    x: 0,
                     opacity: 1,
-                    rotationY: 0,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: svgRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(
-                panelRightRef.current,
-                {
-                    x: 100,
-                    opacity: 0,
-                    rotationY: 12,
-                },
-                {
-                    x: 0,
-                    opacity: 1,
-                    rotationY: 0,
-                    duration: 1.2,
-                    ease: "power3.out",
-                    delay: 0.1,
-                    scrollTrigger: {
-                        trigger: svgRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(
-                doorRef.current,
-                {
-                    y: 80,
-                    opacity: 0,
-                },
-                {
                     y: 0,
-                    opacity: 1,
                     duration: 1,
                     ease: "power3.out",
-                    delay: 0.3,
                     scrollTrigger: {
-                        trigger: svgRef.current,
-                        start: "top 80%",
+                        trigger: ".how-swiper-wrap",
+                        start: "top 85%",
                         once: true,
                     },
                 }
             );
-
-            gsap.fromTo(
-                topRailRef.current,
-                {
-                    scaleX: 0,
-                    transformOrigin: "center",
-                },
-                {
-                    scaleX: 1,
-                    duration: 1.2,
-                    ease: "power3.inOut",
-                    delay: 0.2,
-                    scrollTrigger: {
-                        trigger: svgRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
-
-            gsap.fromTo(
-                floorRef.current,
-                {
-                    scaleX: 0,
-                    transformOrigin: "center",
-                },
-                {
-                    scaleX: 1,
-                    duration: 1,
-                    ease: "power3.inOut",
-                    delay: 0.45,
-                    scrollTrigger: {
-                        trigger: svgRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
-
-            // ---------------------------------------
-            // Continuous subtle movement
-            // ---------------------------------------
-
-            gsap.to(".partition-glow", {
-                opacity: 0.35,
-                scale: 1.08,
-                duration: 2.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-            });
-
-            // ---------------------------------------
-            // Step cards
-            // ---------------------------------------
-
-            gsap.fromTo(
-                ".work-step",
-                {
-                    opacity: 0,
-                    x: 45,
-                },
-                {
-                    opacity: 1,
-                    x: 0,
-                    duration: 0.7,
-                    stagger: 0.14,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: ".work-steps",
-                        start: "top 82%",
-                        once: true,
-                    },
-                }
-            );
-        }, section);
+        }, sectionRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <section
-            ref={sectionRef}
-            className="relative overflow-hidden bg-[#fff] py-10 sm:py-12 lg:py-15"
-        >
+        <section ref={sectionRef} className="relative isolate overflow-hidden bg-[#0A0A0D] py-10 text-[#F4F4EF] sm:py-12 lg:py-15">
+            {/* Background Grid */}
+            <div
+                className="pointer-events-none absolute inset-0 opacity-50"
+                style={{
+                    backgroundImage:
+                        "linear-gradient(rgba(255,255,255,0.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.045) 1px,transparent 1px)",
+                    backgroundSize: "90px 90px",
+                }}
+            />
 
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                <div className="absolute -right-48 top-20 h-[600px] w-[600px] rotate-45 border border-white/[0.035]" />
-
-                <div className="absolute -left-48 bottom-0 h-[500px] w-[500px] -rotate-45 border border-[#d99a17]/10" />
-
-                <div className="absolute left-1/2 top-0 h-full w-px bg-white/[0.025]" />
-
-                <div className="absolute right-[10%] top-[25%] h-[300px] w-[300px] rounded-full bg-[#d99a17]/[0.025] blur-3xl" />
-            </div>
+            {/* Background Glow */}
+            <div className="pointer-events-none absolute -top-[250px] left-[25%] h-[550px] w-[550px] rounded-full bg-[#E58B3B]/[0.07] blur-[130px]" />
 
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
-                <div className="how-heading mb-5 max-w-3xl sm:mb-8 lg:mb-10">
-                    <div className="mb-4 flex items-center gap-3">
-                        <span className="h-px w-10 bg-[#efac39]" />
-
-                        <span className="text-[10px] font-semibold tracking-[0.32em] text-[#efac39] sm:text-[11px]">
-                            HOW WE WORK
-                        </span>
-                    </div>
-
-                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
-                        From concept
-                        <br />
-
-                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
-                            to completion.
-                        </span>
-                    </h2>
-
-                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/90 sm:text-base">
-                        A structured approach that brings together design,
-                        precision manufacturing and professional installation
-                        to deliver restroom solutions built for lasting
-                        performance.
-                    </p>
-                </div>
-
-                {/* ================================================= */}
-                {/* MAIN GRID                                         */}
-                {/* ================================================= */}
-
-                <div className="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-                    <div
-                        ref={svgRef}
-                        className="relative mx-auto w-full max-w-[650px]"
-                    >
-                        {/* Glow */}
-                        <div className="partition-glow absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d99a17]/10 blur-3xl" />
-
-                        {/* Architectural border */}
-                        <div className="absolute -bottom-5 -left-5 h-[80%] w-[65%] border-b border-l border-[#d99a17]/50" />
-
-                        <div className="absolute -right-4 -top-4 h-16 w-16 border-r border-t border-[#d99a17]/40" />
-
-                        {/* SVG */}
-                        <svg
-                            viewBox="0 0 700 560"
-                            className="relative z-10 w-full"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            {/* ----------------------------------------- */}
-                            {/* FLOOR SHADOW                               */}
-                            {/* ----------------------------------------- */}
-
-                            <ellipse
-                                cx="350"
-                                cy="500"
-                                rx="260"
-                                ry="24"
-                                fill="#000"
-                                opacity="0.25"
-                            />
-
-                            {/* ----------------------------------------- */}
-                            {/* LEFT PARTITION                             */}
-                            {/* ----------------------------------------- */}
-
-                            <g
-                                ref={panelLeftRef}
-                                style={{
-                                    transformOrigin: "230px 100px",
-                                }}
+                {/* HEADER */}
+                <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+                    {/* Left Heading */}
+                    <div className="how-reveal">
+                        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.035] px-3 py-2">
+                            <span
+                                className="flex h-6 w-6 items-center justify-center rounded-md text-black"
+                                style={{ background: GRADIENT }}
                             >
-                                {/* Main panel */}
-                                <path
-                                    d="M105 125 L225 85 L225 455 L105 475 Z"
-                                    fill="#102957"
-                                    stroke="#d99a17"
-                                    strokeWidth="2"
-                                />
+                                <Layers3 size={14} />
+                            </span>
 
-                                {/* Panel inner */}
-                                <path
-                                    d="M125 145 L205 118 L205 425 L125 438 Z"
-                                    fill="#0b2148"
-                                    stroke="white"
-                                    strokeOpacity="0.12"
-                                />
-
-                                {/* Vertical aluminium edge */}
-                                <path
-                                    d="M205 118 L225 108 L225 455 L205 425 Z"
-                                    fill="#d99a17"
-                                    opacity="0.8"
-                                />
-
-                                {/* Hardware */}
-                                <circle
-                                    cx="165"
-                                    cy="275"
-                                    r="7"
-                                    fill="#d99a17"
-                                />
-
-                                <circle
-                                    cx="165"
-                                    cy="275"
-                                    r="11"
-                                    stroke="white"
-                                    strokeOpacity="0.2"
-                                />
-                            </g>
-
-                            {/* ----------------------------------------- */}
-                            {/* RIGHT PARTITION                            */}
-                            {/* ----------------------------------------- */}
-
-                            <g
-                                ref={panelRightRef}
-                                style={{
-                                    transformOrigin: "470px 100px",
-                                }}
-                            >
-                                <path
-                                    d="M475 85 L595 125 L595 475 L475 455 Z"
-                                    fill="#102957"
-                                    stroke="#d99a17"
-                                    strokeWidth="2"
-                                />
-
-                                <path
-                                    d="M495 118 L575 145 L575 438 L495 425 Z"
-                                    fill="#0b2148"
-                                    stroke="white"
-                                    strokeOpacity="0.12"
-                                />
-
-                                <path
-                                    d="M475 108 L495 118 L495 425 L475 455 Z"
-                                    fill="#d99a17"
-                                    opacity="0.8"
-                                />
-
-                                <circle
-                                    cx="535"
-                                    cy="275"
-                                    r="7"
-                                    fill="#d99a17"
-                                />
-
-                                <circle
-                                    cx="535"
-                                    cy="275"
-                                    r="11"
-                                    stroke="white"
-                                    strokeOpacity="0.2"
-                                />
-                            </g>
-
-                            {/* ----------------------------------------- */}
-                            {/* CENTER DOOR                                */}
-                            {/* ----------------------------------------- */}
-
-                            <g ref={doorRef}>
-                                <rect
-                                    x="225"
-                                    y="105"
-                                    width="250"
-                                    height="350"
-                                    fill="#0d2461"
-                                    stroke="#d99a17"
-                                    strokeWidth="3"
-                                />
-
-                                {/* Door face */}
-                                <rect
-                                    x="245"
-                                    y="125"
-                                    width="210"
-                                    height="310"
-                                    fill="#0a1f46"
-                                    stroke="white"
-                                    strokeOpacity="0.1"
-                                />
-
-                                {/* Door decorative panel */}
-                                <path
-                                    d="M270 150 L430 150 L430 410 L270 410 Z"
-                                    stroke="#d99a17"
-                                    strokeOpacity="0.18"
-                                />
-
-                                {/* Door handle */}
-                                <circle
-                                    cx="405"
-                                    cy="280"
-                                    r="8"
-                                    fill="#d99a17"
-                                />
-
-                                <circle
-                                    cx="405"
-                                    cy="280"
-                                    r="13"
-                                    stroke="#d99a17"
-                                    strokeOpacity="0.3"
-                                />
-
-                                {/* Door indicator */}
-                                <rect
-                                    x="380"
-                                    y="245"
-                                    width="50"
-                                    height="18"
-                                    rx="2"
-                                    fill="#071a3d"
-                                    stroke="white"
-                                    strokeOpacity="0.15"
-                                />
-
-                                <circle
-                                    cx="392"
-                                    cy="254"
-                                    r="4"
-                                    fill="#d99a17"
-                                />
-
-                                {/* Door bottom */}
-                                <rect
-                                    x="245"
-                                    y="425"
-                                    width="210"
-                                    height="10"
-                                    fill="#d99a17"
-                                    opacity="0.7"
-                                />
-                            </g>
-
-                            {/* ----------------------------------------- */}
-                            {/* TOP RAIL                                   */}
-                            {/* ----------------------------------------- */}
-
-                            <g ref={topRailRef}>
-                                <path
-                                    d="M90 105 L225 60 L475 60 L610 105"
-                                    stroke="#d99a17"
-                                    strokeWidth="8"
-                                    strokeLinecap="square"
-                                />
-
-                                <path
-                                    d="M105 91 L225 50 L475 50 L595 91"
-                                    stroke="white"
-                                    strokeOpacity="0.2"
-                                    strokeWidth="2"
-                                />
-                            </g>
-
-                            {/* ----------------------------------------- */}
-                            {/* FLOOR RAIL                                 */}
-                            {/* ----------------------------------------- */}
-
-                            <g ref={floorRef}>
-                                <path
-                                    d="M95 475 L225 455 L475 455 L605 475"
-                                    stroke="#d99a17"
-                                    strokeWidth="7"
-                                />
-
-                                <path
-                                    d="M120 490 L225 475 L475 475 L580 490"
-                                    stroke="white"
-                                    strokeOpacity="0.12"
-                                    strokeWidth="2"
-                                />
-                            </g>
-
-                            {/* ----------------------------------------- */}
-                            {/* FLOOR LEGS                                 */}
-                            {/* ----------------------------------------- */}
-
-                            <path
-                                d="M135 480 L135 505"
-                                stroke="#d99a17"
-                                strokeWidth="5"
-                            />
-
-                            <path
-                                d="M565 480 L565 505"
-                                stroke="#d99a17"
-                                strokeWidth="5"
-                            />
-
-                            <path
-                                d="M330 460 L330 500"
-                                stroke="#d99a17"
-                                strokeWidth="5"
-                            />
-
-                            <path
-                                d="M370 460 L370 500"
-                                stroke="#d99a17"
-                                strokeWidth="5"
-                            />
-
-                            {/* ----------------------------------------- */}
-                            {/* DIMENSION LINE                             */}
-                            {/* ----------------------------------------- */}
-
-                            <path
-                                d="M105 525 L595 525"
-                                stroke="white"
-                                strokeOpacity="0.15"
-                            />
-
-                            <path
-                                d="M105 519 L105 531"
-                                stroke="#d99a17"
-                            />
-
-                            <path
-                                d="M595 519 L595 531"
-                                stroke="#d99a17"
-                            />
-
-                            <text
-                                x="350"
-                                y="545"
-                                textAnchor="middle"
-                                fill="black"
-                                fillOpacity="0.95"
-                                fontSize="15"
-                                letterSpacing="3"
-                            >
-                                PRECISION ENGINEERED
-                            </text>
-                        </svg>
-
-                        {/* Floating label */}
-                        <div className="absolute bottom-3 left-3 z-20 flex items-center gap-3 border border-white/10 bg-[#071a3d]/90 px-4 py-3 backdrop-blur-md sm:bottom-5 sm:left-5">
-                            <CheckCircle2
-                                size={18}
-                                className="text-[#d99a17]"
-                            />
-
-                            <div>
-                                <p className="text-[9px] font-semibold tracking-[0.22em] text-[#d99a17]">
-                                    CUBILOO CUBICLES
-                                </p>
-
-                                <p className="mt-0.5 text-xs text-white/60">
-                                    Built with precision
-                                </p>
-                            </div>
+                            <span className="text-[11px] font-medium text-white/75">
+                                Cubiloo • Our Working Process
+                            </span>
                         </div>
+
+                        <h2 className="text-[clamp(2.8rem,5vw,4.8rem)] font-medium leading-[1] tracking-[-0.02em]">
+                            From concept
+                            <br />
+
+                            <span
+                                className="bg-clip-text text-transparent"
+                                style={{ backgroundImage: GRADIENT }}
+                            >
+                                to completion.
+                            </span>
+                        </h2>
                     </div>
 
-                    <div className="work-steps">
+                    {/* Right Description */}
+                    <div className="how-reveal lg:pb-2">
+                        <p className="max-w-[450px] text-[14px] leading-[1.85] text-white/55 sm:text-[15px]">
+                            At Cubiloo Cubicles, every project follows a
+                            thoughtful process — from understanding your
+                            requirements and creating precise designs to
+                            manufacturing, installation and final quality
+                            checks.
+                        </p>
 
-                        {STEPS.map((step, index) => {
-                            const Icon = step.icon;
-
-                            return (
-                                <motion.div
-                                    key={step.number}
-                                    className="work-step group relative border-b border-[#071a3d]/90 py-6 first:pt-0 last:border-b-0 sm:py-7"
-                                    whileHover={{
-                                        x: 6,
-                                    }}
-                                    transition={{
-                                        duration: 0.25,
-                                    }}
-                                >
-                                    <div className="flex gap-5 sm:gap-7">
-
-                                        {/* Number */}
-                                        <div className="relative flex w-12 shrink-0 flex-col items-center">
-                                            <span className="text-xs font-semibold tracking-widest text-[#071a3d]">
-                                                {step.number}
-                                            </span>
-
-                                            {index !== STEPS.length - 1 && (
-                                                <span className="absolute top-8 h-[calc(100%+1.5rem)] w-px bg-[#071a3d]/90" />
-                                            )}
-                                        </div>
-
-                                        {/* Icon */}
-                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-[#071a3d]/30 transition-all duration-300 group-hover:border-[#efac39] group-hover:bg-[#fff]">
-                                            <Icon
-                                                size={19}
-                                                strokeWidth={1.6}
-                                                className="text-[#000] transition-colors duration-300 group-hover:text-[#071a3d]"
-                                            />
-                                        </div>
-
-                                        {/* Content */}
-                                        <div className="flex-1">
-                                            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                                                <h3 className="text-lg font-semibold text-[#071a3d] sm:text-xl">
-                                                    {step.title}
-                                                </h3>
-
-                                                <span className="text-[9px] font-semibold tracking-[0.15em] text-[#efac39]">
-                                                    {step.subtitle.toUpperCase()}
-                                                </span>
-                                            </div>
-
-                                            <p className="mt-2 max-w-xl text-sm leading-6 text-[#efac39]">
-                                                {step.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
-
-                        {/* CTA */}
-                        <div className="mt-8">
+                        <div className="mt-7 flex flex-wrap items-center gap-3">
                             <Link
-                                href="/contact"
-                                className="group inline-flex items-center gap-4 px-6 py-3.5 text-xs font-semibold tracking-[0.16em] text-white transition-all duration-300 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)]"
+                                href="/contact-us"
+                                className="group inline-flex items-center gap-5 rounded-full p-1.5 pl-6 text-xs font-bold text-black transition-shadow hover:shadow-[0_10px_35px_rgba(229,139,59,0.25)] sm:text-sm"
+                                style={{ background: GRADIENT }}
                             >
-                                START YOUR PROJECT
+                                Start Your Project
 
-                                <ArrowRight
-                                    size={16}
-                                    className="transition-transform duration-300 group-hover:translate-x-1"
-                                />
+                                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:rotate-45">
+                                    <ArrowUpRight size={18} />
+                                </span>
+                            </Link>
+
+                            <Link
+                                href="/about-us"
+                                className="inline-flex h-[52px] items-center rounded-full border border-white/20 px-6 text-xs font-semibold text-white transition-colors hover:border-[#E58B3B] hover:text-[#EFAC39] sm:text-sm"
+                            >
+                                Learn More
                             </Link>
                         </div>
                     </div>
                 </div>
 
-                {/* ================================================= */}
-                {/* BOTTOM TRUST LINE                                */}
-                {/* ================================================= */}
+                {/* SWIPER CARDS */}
+                <div className="how-swiper-wrap mt-10">
+                    <Swiper
+                        modules={[Autoplay, Navigation, Pagination]}
+                        onSwiper={(swiper) => {
+                            swiperRef.current = swiper;
+                        }}
+                        slidesPerView={1.1}
+                        spaceBetween={16}
+                        loop={true}
+                        speed={800}
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        pagination={{
+                            clickable: true,
+                            el: ".how-pagination",
+                        }}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 1.6,
+                                spaceBetween: 18,
+                            },
+                            1024: {
+                                slidesPerView: 2.5,
+                                spaceBetween: 20,
+                            },
+                            1280: {
+                                slidesPerView: 3,
+                                spaceBetween: 22,
+                            },
+                        }}
+                        className="!overflow-visible"
+                    >
+                        {STEPS.map((step) => {
+                            const Icon = step.icon;
+                            const Visual = VISUALS[step.type];
 
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-[#071a3d]/10 pt-7 sm:mt-10">
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
-                        SITE STUDY
-                    </span>
+                            return (
+                                <SwiperSlide key={step.number} className="!h-auto">
+                                    <div className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-white/[0.10] bg-[#111114] p-3 transition-all duration-500 hover:border-[#E58B3B]/45 hover:bg-[#161619]">
+                                        {/* VISUAL */}
+                                        <div className="relative flex h-[235px] items-center justify-center overflow-hidden rounded-[16px] border border-white/[0.07] bg-[#0C0C0F] sm:h-[245px]">
+                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(229,139,59,0.055),transparent_70%)]" />
 
-                    <span className="h-1 w-1 bg-[#efac39]" />
+                                            {/* Number badge */}
+                                            <span className="absolute left-4 top-4 z-10 rounded-full border border-white/15 bg-[#17171B] px-3 py-1.5 text-[10px] font-semibold text-white/65">
+                                                Step {step.number}
+                                            </span>
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
-                        DESIGN
-                    </span>
+                                            <Visual />
+                                        </div>
 
-                    <span className="h-1 w-1 bg-[#efac39]" />
+                                        {/* CONTENT */}
+                                        <div className="flex flex-1 flex-col px-3 pb-4 pt-6 sm:px-4">
+                                            <div className="mb-3 flex items-center justify-between">
+                                                <h3 className="text-[21px] font-semibold tracking-[-0.04em] text-white sm:text-[23px]">
+                                                    {step.title}
+                                                </h3>
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
-                        MANUFACTURING
-                    </span>
+                                                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#EFAC39] transition-all duration-300 group-hover:border-[#E58B3B] group-hover:bg-[#E58B3B] group-hover:text-black">
+                                                    <Icon size={18} />
+                                                </span>
+                                            </div>
 
-                    <span className="h-1 w-1 bg-[#efac39]" />
+                                            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#EFAC39]">
+                                                {step.subtitle}
+                                            </p>
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
-                        INSTALLATION
-                    </span>
+                                            <p className="text-[13px] leading-[1.8] text-white/50">
+                                                {step.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            );
+                        })}
+                    </Swiper>
 
-                    <span className="h-1 w-1 bg-[#efac39]" />
+                    {/* SWIPER CONTROLS */}
+                    <div className="mt-5 flex items-center justify-between gap-5">
+                        <div className="how-pagination !static !flex !w-auto items-center gap-2" />
 
-                    <span className="text-[9px] font-semibold tracking-[0.2em] text-[#071a3d]/90">
-                        QUALITY CHECK
-                    </span>
+                        <div className="flex items-center gap-3">
+                            <button
+                                type="button"
+                                aria-label="Previous step"
+                                onClick={() => swiperRef.current?.slidePrev()}
+                                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all hover:border-[#E58B3B] hover:text-[#EFAC39]"
+                            >
+                                <ArrowLeft size={19} />
+                            </button>
+
+                            <button
+                                type="button"
+                                aria-label="Next step"
+                                onClick={() => swiperRef.current?.slideNext()}
+                                className="flex h-12 w-12 items-center justify-center rounded-full text-black transition-transform hover:scale-105"
+                                style={{ background: GRADIENT }}
+                            >
+                                <ArrowRight size={19} />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                {/* BOTTOM TRUST LINE */}
+                <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-5">
+                    {[
+                        "SITE STUDY",
+                        "DESIGN",
+                        "MANUFACTURING",
+                        "INSTALLATION",
+                        "QUALITY CHECK",
+                    ].map((item, index) => (
+                        <div
+                            key={item}
+                            className="flex items-center gap-6"
+                        >
+                            {index > 0 && (
+                                <span className="h-1 w-1 rounded-full bg-[#E58B3B]" />
+                            )}
+
+                            <span className="text-[10px] font-semibold tracking-[0.15em] text-white/40">
+                                {item}
+                            </span>
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            <style jsx global>{`
+        .how-pagination .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          margin: 0 !important;
+          background: rgba(255, 255, 255, 0.35);
+          opacity: 1;
+          transition: all 0.3s ease;
+        }
+
+        .how-pagination .swiper-pagination-bullet-active {
+          width: 28px;
+          border-radius: 20px;
+          background: #e58b3b;
+        }
+      `}</style>
         </section>
     );
 }

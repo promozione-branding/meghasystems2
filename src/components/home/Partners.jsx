@@ -1,742 +1,225 @@
+
 "use client";
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+    ArrowUpRight,
+    ArrowRight,
+    Check,
+    ShieldCheck,
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* =========================================================
-   PARTNERS
-========================================================= */
-
 const partners = [
-    {
-        name: "TESA",
-        logo: "/clients/14 (1).webp",
-    },
-    {
-        name: "STYLAM",
-        logo: "/clients/15 (2).webp",
-    },
-    {
-        name: "CENTURYPLY",
-        logo: "/clients/16 (2).webp",
-    },
-    {
-        name: "CROWN",
-        logo: "/clients/17 (2).webp",
-    },
-    {
-        name: "VIRGO",
-        logo: "/clients/18 (2).webp",
-    },
-    {
-        name: "GREENPLY",
-        logo: "/clients/19 (1).webp",
-    },
+    { name: "TESA", logo: "/clients/14 (1).webp" },
+    { name: "STYLAM", logo: "/clients/15 (2).webp" },
+    { name: "CENTURYPLY", logo: "/clients/16 (2).webp" },
+    { name: "CROWN", logo: "/clients/17 (2).webp" },
+    { name: "VIRGO", logo: "/clients/18 (2).webp" },
+    { name: "GREENPLY", logo: "/clients/19 (1).webp" },
 ];
 
-/* =========================================================
-   ARCHITECTURAL SVG
-========================================================= */
-
-function PartnerArchitecture() {
-    return (
-        <svg
-            viewBox="0 0 1000 600"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-full w-full"
-            aria-hidden="true"
-        >
-            {/* outer frame */}
-
-            <path
-                className="partner-svg-line"
-                d="M120 500V140L500 45L880 140V500"
-                stroke="#071a3d"
-                strokeWidth="1"
-            />
-
-            {/* inner frame */}
-
-            <path
-                className="partner-svg-line"
-                d="M165 500V165L500 82L835 165V500"
-                stroke="#c99618"
-                strokeWidth="1"
-            />
-
-            {/* vertical construction lines */}
-
-            <path
-                className="partner-svg-line"
-                d="M270 500V140"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".35"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M380 500V110"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".22"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M620 500V110"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".22"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M730 500V140"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".35"
-            />
-
-            {/* horizontal construction lines */}
-
-            <path
-                className="partner-svg-line"
-                d="M120 260H880"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".18"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M120 380H880"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".12"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M120 500H880"
-                stroke="#071a3d"
-                strokeWidth="1"
-                opacity=".25"
-            />
-
-            {/* center circle */}
-
-            <circle
-                className="partner-svg-circle"
-                cx="500"
-                cy="300"
-                r="115"
-                stroke="#c99618"
-                strokeWidth="1"
-                opacity=".18"
-            />
-
-            <circle
-                className="partner-svg-circle"
-                cx="500"
-                cy="300"
-                r="155"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="3 12"
-                opacity=".12"
-            />
-
-            {/* center cross */}
-
-            <path
-                className="partner-svg-line"
-                d="M500 135V465"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="4 12"
-                opacity=".15"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M335 300H665"
-                stroke="#c99618"
-                strokeWidth="1"
-                strokeDasharray="4 12"
-                opacity=".15"
-            />
-
-            {/* roof accents */}
-
-            <path
-                className="partner-svg-line"
-                d="M120 140L165 165"
-                stroke="#c99618"
-                strokeWidth="2"
-                opacity=".45"
-            />
-
-            <path
-                className="partner-svg-line"
-                d="M880 140L835 165"
-                stroke="#c99618"
-                strokeWidth="2"
-                opacity=".45"
-            />
-
-            {/* center marker */}
-
-            <circle
-                cx="500"
-                cy="300"
-                r="4"
-                fill="#c99618"
-                opacity=".45"
-            />
-        </svg>
-    );
-}
-
-/* =========================================================
-   MAIN
-========================================================= */
+const gradient =
+    "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
 
 export default function Partners() {
     const sectionRef = useRef(null);
-    const architectureRef = useRef(null);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            /* =====================================================
-               INITIAL STATES
-
-               Use set + to instead of from.
-               This prevents elements staying invisible.
-            ===================================================== */
-
-            gsap.set(".partner-header", {
-                autoAlpha: 0,
-                y: 30,
-            });
-
-            gsap.set(".partner-card", {
-                autoAlpha: 0,
-                y: 35,
-            });
-
-            gsap.set(".partner-bottom", {
-                autoAlpha: 0,
-                y: 20,
-            });
-
-            gsap.set(".partner-svg-line", {
-                opacity: 0,
-            });
-
-            /* =====================================================
-               HEADER REVEAL
-            ===================================================== */
-
-            gsap.to(".partner-header", {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 85%",
-                    once: true,
-                },
-            });
-
-            /* =====================================================
-               PARTNER CARDS
-            ===================================================== */
-
-            gsap.set(".partner-card", {
-                autoAlpha: 1,
-                y: 0,
-                clearProps: "opacity,visibility,transform",
-            });
-
-            /* =====================================================
-               BOTTOM STATEMENT
-            ===================================================== */
-
-            gsap.to(".partner-bottom", {
-                autoAlpha: 1,
-                y: 0,
-                duration: 0.6,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".partner-bottom",
-                    start: "top 92%",
-                    once: true,
-                },
-            });
-
-            /* =====================================================
-               SVG DRAW
-            ===================================================== */
-
-            const svgLines =
-                architectureRef.current?.querySelectorAll(
-                    ".partner-svg-line"
-                );
-
-            if (svgLines?.length) {
-                svgLines.forEach((line) => {
-                    if (
-                        typeof line.getTotalLength === "function"
-                    ) {
-                        const length = line.getTotalLength();
-
-                        gsap.set(line, {
-                            opacity: 1,
-                            strokeDasharray: length,
-                            strokeDashoffset: length,
-                        });
-                    }
-                });
-
-                gsap.to(svgLines, {
-                    strokeDashoffset: 0,
-                    duration: 1.8,
-                    stagger: 0.035,
-                    ease: "power2.out",
+            gsap.fromTo(
+                ".partner-left",
+                { opacity: 0, y: 45 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.9,
+                    ease: "power3.out",
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start: "top 80%",
                         once: true,
                     },
-                });
-            }
+                }
+            );
 
-            /* =====================================================
-               SVG CIRCLE ROTATION
-            ===================================================== */
-
-            gsap.to(".partner-svg-circle", {
-                rotation: 360,
-                transformOrigin: "50% 50%",
-                duration: 55,
-                repeat: -1,
-                ease: "none",
-            });
-
-            /* =====================================================
-               ARCHITECTURAL PARALLAX
-            ===================================================== */
-
-            gsap.to(architectureRef.current, {
-                y: -70,
-                x: -25,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 1.3,
-                },
-            });
-
-            /* =====================================================
-               REFRESH
-            ===================================================== */
-
-            ScrollTrigger.refresh();
+            gsap.fromTo(
+                ".partner-row",
+                { opacity: 0, x: 55 },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.75,
+                    stagger: 0.1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".partners-list",
+                        start: "top 85%",
+                        once: true,
+                    },
+                }
+            );
         }, sectionRef);
 
-        return () => {
-            ctx.revert();
-        };
+        return () => ctx.revert();
     }, []);
 
     return (
         <section
             ref={sectionRef}
-            className="
-                relative
-                overflow-hidden
-                bg-[#eef1f4]/10
-                py-10
-                sm:py-12
-                lg:py-16
-            "
+            className="relative isolate overflow-x-clip bg-[#eef1f4]/10 py-10 sm:py-12 lg:py-16"
         >
-            {/* =====================================================
-                GOLD TOP BORDER
-            ===================================================== */}
-
+            {/* TOP ORANGE LINE */}
             <div
-                className="
-                    absolute
-                    left-0
-                    top-0
-                    h-[2px]
-                    w-full
-                    bg-[#efac39]
-                "
+                className="absolute inset-x-0 top-0 h-[2px]"
+                style={{ background: gradient }}
             />
 
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                {/* grid */}
-
-                <div
-                    className="
-                        absolute
-                        inset-0
-                        opacity-[0.45]
-                    "
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(
-                                rgba(7,26,61,0.045) 1px,
-                                transparent 1px
-                            ),
-                            linear-gradient(
-                                90deg,
-                                rgba(7,26,61,0.045) 1px,
-                                transparent 1px
-                            )
-                        `,
-                        backgroundSize: "70px 70px",
-                    }}
-                />
-
-                {/* architectural SVG */}
-
-                <div
-                    ref={architectureRef}
-                    className="
-                        absolute
-                        right-[-260px]
-                        top-[20px]
-                        h-[600px]
-                        w-[950px]
-                        opacity-[0.13]
-                        sm:right-[-190px]
-                        lg:right-[-120px]
-                    "
-                >
-                    <PartnerArchitecture />
-                </div>
-
-                {/* left vertical */}
-
-                <div
-                    className="
-                        absolute
-                        left-[5%]
-                        top-0
-                        h-full
-                        w-px
-                        bg-[#071a3d]/[0.035]
-                    "
-                />
-
-                {/* right vertical */}
-
-                <div
-                    className="
-                        absolute
-                        right-[5%]
-                        top-0
-                        h-full
-                        w-px
-                        bg-[#071a3d]/[0.035]
-                    "
-                />
-
-                {/* gold glow */}
-
-                <div
-                    className="
-                        absolute
-                        right-[-120px]
-                        top-1/2
-                        h-[320px]
-                        w-[320px]
-                        -translate-y-1/2
-                        rounded-full
-                        bg-[#c99618]/[0.045]
-                        blur-[100px]
-                    "
-                />
-            </div>
-
+            {/* SUBTLE BACKGROUND GRID */}
             <div
-                className="
-                    relative
-                    z-10
-                    mx-auto
-                    max-w-[1500px]
-                    px-5
-                    sm:px-8
-                    lg:px-12
-                "
-            >
+                className="pointer-events-none absolute inset-0 opacity-40"
+                style={{
+                    backgroundImage:
+                        "linear-gradient(rgba(7,26,61,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(7,26,61,0.035) 1px,transparent 1px)",
+                    backgroundSize: "80px 80px",
+                }}
+            />
 
-                <div
-                    className="
-                        partner-header
-                        mx-auto
-                        max-w-[900px]
-                        text-center
-                    "
-                >
-                    {/* eyebrow */}
+            {/* BACKGROUND GLOW */}
+            <div className="pointer-events-none absolute -left-40 top-1/3 h-[450px] w-[450px] rounded-full bg-[#EFAC39]/[0.07] blur-[110px]" />
 
-                    <div className="mb-5 flex items-center justify-center gap-3">
-                        <span className="h-px w-10 bg-[#efac39] sm:w-12" />
+            <div className="relative mx-auto grid max-w-[1500px] items-start gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch lg:gap-20 lg:px-12">
+                {/* LEFT CONTENT */}
+                <div className="relative self-stretch">
+                    <div className="lg:sticky lg:top-30">
+                        <div className="partner-left">
+                            {/* EYEBROW */}
+                            <div className="mb-6 flex items-center gap-3">
+                                {/* Left decorative lines */}
+                                <div className="flex flex-col items-end gap-[5px]">
+                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#EFAC39]" />
+                                    <span className="h-[4px] w-9 rounded-full bg-[#E58B3B]" />
+                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#DF7539]" />
+                                </div>
 
-                        <span
-                            className="
-                                text-[8px]
-                                font-semibold
-                                tracking-[0.35em]
-                                text-[#efac39]
-                                sm:text-[9px]
-                            "
-                        >
-                            OUR NETWORK
-                        </span>
-
-                        <span className="h-px w-10 bg-[#efac39] sm:w-12" />
-                    </div>
-
-                    {/* heading */}
-
-                    <h2 className="text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
-                        Authorised{" "}
-                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
-                            Channel Partners
-                        </span>
-                    </h2>
-
-                    {/* description */}
-
-                    <p
-                        className="
-                            mx-auto
-                            mt-2
-                            max-w-[620px]
-                            text-[11px]
-                            leading-[1.8]
-                            text-[#071a3d]/95
-                            sm:text-[13px]
-                        "
-                    >
-                        We are proud to work with leading brands and
-                        manufacturers, bringing trusted materials and
-                        premium solutions to every project.
-                    </p>
-                </div>
-
-                <div
-                    className="
-                        partner-grid
-                        mt-7
-                        grid
-                        grid-cols-2
-                        border-l
-                        border-t
-                        border-[#071a3d]/10
-                        sm:grid-cols-3
-                        lg:mt-10
-                        lg:grid-cols-6
-                    "
-                >
-                    {partners.map((partner, index) => (
-                        <div
-                            key={partner.name}
-                            className="
-                                partner-card
-                                group
-                                relative
-                                flex
-                                h-[145px]
-                                w-full
-                                items-center
-                                justify-center
-                                overflow-hidden
-                                border-b
-                                border-r
-                                border-[#071a3d]/10
-                                px-4
-                                transition-all
-                                duration-500
-                                bg-white
-                                sm:h-[165px]
-                                sm:px-5
-                                lg:h-[185px]
-                            "
-                        >
-                            {/* number */}
-
-                            <div
-                                className="
-                                    absolute
-                                    left-4
-                                    top-4
-                                    text-[8px]
-                                    font-medium
-                                    tracking-[0.2em]
-                                    text-[#071a3d]/25
-                                    transition-colors
-                                    duration-300
-                                    group-hover:text-[#efac39]
-                                "
-                            >
-                                {String(index + 1).padStart(2, "0")}
-                            </div>
-
-                            {/* gold corner */}
-
-                            <div
-                                className="
-                                    absolute
-                                    right-0
-                                    top-0
-                                    h-7
-                                    w-7
-                                    border-r
-                                    border-t
-                                    border-[#efac39]
-                                    opacity-40
-                                    transition-all
-                                    duration-500
-                                    group-hover:h-11
-                                    group-hover:w-11
-                                    group-hover:opacity-100
-                                "
-                            />
-
-                            {/* lower corner */}
-
-                            <div
-                                className="
-                                    absolute
-                                    bottom-0
-                                    left-0
-                                    h-5
-                                    w-5
-                                    border-b
-                                    border-l
-                                    border-[#071a3d]/10
-                                    transition-all
-                                    duration-500
-                                    group-hover:h-8
-                                    group-hover:w-8
-                                "
-                            />
-
-                            {/* logo */}
-
-                            <div
-                                className="
-                                    relative
-                                    h-[62px]
-                                    w-[140px]
-                                    transition-transform
-                                    duration-500
-                                    group-hover:scale-105
-                                    sm:h-[100px]
-                                    sm:w-[160px]
-                                "
-                            >
-                                <Image
-                                    src={partner.logo}
-                                    alt={`${partner.name} authorised channel partner`}
-                                    fill
-                                    sizes="160px"
-                                    className="
-                                        object-cover
-                                    "
-                                />
-                            </div>
-
-                            {/* name */}
-
-                            <div
-                                className="
-                                    absolute
-                                    bottom-4
-                                    left-0
-                                    right-0
-                                    text-center
-                                "
-                            >
-                                <span
-                                    className="
-                                        text-[9px]
-                                        font-medium
-                                        tracking-[0.22em]
-                                        text-[#071a3d]/55
-                                        transition-colors
-                                        duration-300
-                                        group-hover:text-[#efac39]
-                                        sm:text-[10px]
-                                    "
+                                {/* Main badge */}
+                                <div
+                                    className="rounded-[17px] px-6 py-4 shadow-[0_8px_25px_rgba(229,139,59,0.15)]"
+                                    style={{ background: gradient }}
                                 >
-                                    {partner.name}
-                                </span>
+                                    <span className="text-[13px] font-bold tracking-[-0.02em] text-[#121212] sm:text-[15px]">
+                                        Our Trusted Network
+                                    </span>
+                                </div>
+
+                                {/* Right decorative lines */}
+                                <div className="flex flex-col items-start gap-[5px]">
+                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#EFAC39]" />
+                                    <span className="h-[4px] w-9 rounded-full bg-[#E58B3B]" />
+                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#DF7539]" />
+                                </div>
                             </div>
 
-                            {/* bottom hover line */}
+                            {/* HEADING */}
+                            <h2 className="max-w-[650px] text-[42px] font-medium leading-[1] tracking-[-0.015em] text-[#071a3d] sm:text-[52px] lg:text-[66px]">
+                                Built on
+                                <br />
+                                <span
+                                    className="bg-clip-text text-transparent"
+                                    style={{ backgroundImage: gradient }}
+                                >
+                                    trusted
+                                </span>
+                                <br />
+                                partnerships.
+                            </h2>
 
-                            <div
-                                className="
-                                    absolute
-                                    bottom-0
-                                    left-0
-                                    h-[2px]
-                                    w-0
-                                    bg-[#efac39]
-                                    transition-all
-                                    duration-500
-                                    group-hover:w-full
-                                "
-                            />
+                            {/* DESCRIPTION */}
+                            <p className="mt-7 max-w-[470px] text-[14px] leading-[1.9] text-[#071a3d]/65 sm:text-[15px]">
+                                We collaborate with leading brands and manufacturers
+                                to deliver premium materials, dependable quality
+                                and innovative solutions for every project.
+                            </p>
+
+                            {/* CHECK POINTS */}
+                            <div className="mt-9 space-y-3">
+                                {[
+                                    "Trusted material sourcing",
+                                    "Premium quality standards",
+                                    "Reliable industry partnerships",
+                                ].map((item) => (
+                                    <div
+                                        key={item}
+                                        className="flex items-center gap-3"
+                                    >
+                                        <Check
+                                            size={17}
+                                            className="text-[#DF7539]"
+                                        />
+
+                                        <span className="text-[13px] text-[#071a3d]/80">
+                                            {item}
+                                        </span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
 
-                <div
-                    className="
-                        partner-bottom
-                        mt-6
-                        flex
-                        items-center
-                        justify-center
-                        gap-3
-                        sm:mt-8
-                        sm:gap-4
-                    "
-                >
-                    <div className="h-px w-8 bg-[#efac39] sm:w-16" />
+                {/* RIGHT PARTNER LIST */}
+                <div className="partners-list">
+                    <div className="divide-y divide-[#071a3d]/10">
+                        {partners.map((partner, index) => (
+                            <div
+                                key={partner.name}
+                                className="partner-row group relative grid grid-cols-[68px_minmax(0,1fr)_auto] items-center gap-3 py-5 transition-all duration-300 sm:grid-cols-[90px_minmax(0,1fr)_auto] sm:gap-5"
+                            >
+                                {/* HOVER BACKGROUND */}
+                                <div className="pointer-events-none absolute -inset-x-3 inset-y-1 rounded-2xl bg-white opacity-0 shadow-[0_10px_35px_rgba(7,26,61,0.05)] transition-opacity duration-300 group-hover:opacity-100" />
 
-                    <span
-                        className="
-                            text-center
-                            text-[8px]
-                            font-medium
-                            tracking-[0.25em]
-                            text-[#071a3d]/90
-                            sm:text-[10px]
-                            sm:tracking-[0.3em]
-                        "
-                    >
-                        TRUSTED MATERIAL • AUTHORISED PARTNERSHIP • QUALITY
-                    </span>
+                                {/* LOGO */}
+                                <div className="relative z-10 flex h-[66px] w-[66px] items-center justify-center overflow-hidden rounded-full border border-[#071a3d]/10 bg-white p-2 shadow-sm sm:h-[86px] sm:w-[86px]">
+                                    <div className="relative h-full w-full">
+                                        <Image
+                                            src={partner.logo}
+                                            alt={`${partner.name} logo`}
+                                            fill
+                                            sizes="86px"
+                                            className="object-contain transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                    </div>
+                                </div>
 
-                    <div className="h-px w-8 bg-[#efac39] sm:w-16" />
+                                {/* PARTNER NAME */}
+                                <div className="relative z-10 min-w-0">
+                                    <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[#071a3d]/35">
+                                        {String(index + 1).padStart(2, "0")}
+                                        {" / "}Partner
+                                    </p>
+
+                                    <h3 className="text-[19px] font-medium tracking-[-0.03em] text-[#071a3d] transition-colors duration-300 group-hover:text-[#DF7539] sm:text-[25px]">
+                                        {partner.name}
+                                    </h3>
+                                </div>
+
+                                {/* RIGHT INDICATOR */}
+                                <div className="relative z-10 flex items-center gap-3 sm:gap-5">
+                                    <span className="hidden text-[11px] font-medium text-[#071a3d]/50 md:block">
+                                        Trusted Brand
+                                    </span>
+
+                                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#071a3d]/15 bg-white text-[#071a3d] transition-all duration-300 group-hover:rotate-45 group-hover:border-transparent group-hover:bg-[#DF7539] group-hover:text-white sm:h-12 sm:w-12">
+                                        <ArrowUpRight size={19} />
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

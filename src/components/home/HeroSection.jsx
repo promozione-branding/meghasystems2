@@ -92,12 +92,6 @@ const stats = [
         suffix: "+",
         label: "Cubicles Installed",
     },
-    {
-        id: "04",
-        value: 100,
-        suffix: "%",
-        label: "Customer Support",
-    },
 ];
 
 function formatNumber(value, index) {
@@ -473,7 +467,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Statistics */}
-                        <div className="mt-12 grid max-w-[720px] grid-cols-2 gap-y-7 border-t border-white/10 pt-7 lg:grid-cols-4">
+                        <div className="mt-12 grid max-w-[650px] grid-cols-1 gap-y-7 border-t border-white/10 pt-7 lg:grid-cols-3">
                             {stats.map((item, index) => (
                                 <div
                                     key={item.id}
@@ -577,7 +571,7 @@ export default function HeroSection() {
                             ].map((item) => (
                                 <span
                                     key={item}
-                                    className="flex items-center gap-10 whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-white/45"
+                                    className="flex items-center gap-10 whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-white/90"
                                 >
                                     {item}
                                     <span className="h-1.5 w-1.5 rounded-full bg-[#E58B3B]" />

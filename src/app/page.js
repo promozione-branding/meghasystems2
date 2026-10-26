@@ -7,11 +7,13 @@ import CTASection from "@/components/home/CTASection";
 import CubicleDetails from "@/components/home/CubicleDetails";
 import FAQSection from "@/components/home/FAQSection";
 import FormSection from "@/components/home/FormSection";
+import Hardware from "@/components/home/Hardware";
 import HeroSection from "@/components/home/HeroSection";
 import HowWeWork from "@/components/home/HowWeWork";
 import IndustriesWeServe from "@/components/home/Industries";
 import ParallaxCTA from "@/components/home/ParallaxCTA";
 import Partners from "@/components/home/Partners";
+import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductsSection from "@/components/home/ProductsSection";
 import Projects from "@/components/home/Projects";
 import Testimonials from "@/components/home/Testimonials";
@@ -23,8 +25,10 @@ export default function Home() {
       <HeroSection />
       <Categories />
       <AboutSection />
+      <ProductShowcase />
       <Partners />
       <ProductsSection />
+      <Hardware />
       <FormSection />
       {/* <Certificates /> */}
       <HowWeWork />

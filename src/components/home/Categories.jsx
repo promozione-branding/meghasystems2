@@ -1,74 +1,79 @@
+
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { allProducts } from "@/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CATEGORIES = [
+const GRADIENT =
+  "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+
+const FILTERS = [
+  { label: "All", value: "all" },
+  { label: "Classic Range", value: "classic-range" },
+  { label: "Luxe Range", value: "luxe-range" },
+  { label: "Kids Range", value: "kids-range" },
   {
-    number: "01",
-    title: "Toilet Cubicles",
-    description:
-      "Premium modular toilet cubicle systems designed for modern commercial spaces.",
-    image: "/Duro-Toilet-Cubicles.webp",
-    href: "/categories/toilet-cubicles",
-  },
-  {
-    number: "02",
-    title: "Locker Systems",
-    description:
-      "Durable and elegant locker solutions for offices, factories and institutions.",
-    image: "/Luron.webp",
-    href: "/categories/locker-systems",
-  },
-  {
-    number: "03",
-    title: "Urinal Partitions",
-    description:
-      "Contemporary partition solutions combining privacy, durability and clean design.",
-    image: "/Duro-Toilet-Cubicles.webp",
-    href: "/categories/urinal-partitions",
-  },
-  {
-    number: "04",
-    title: "Washroom Solutions",
-    description:
-      "Complete washroom partition solutions built for high-performance environments.",
-    image: "/Luron.webp",
-    href: "/categories/washroom-solutions",
+    label: "Urinal Partitions",
+    value: "pd-doors-and-urinal-partitions",
   },
 ];
 
 export default function Categories() {
   const sectionRef = useRef(null);
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  // Show individual products, not only the four parent ranges.
+  const products = useMemo(() => {
+    return allProducts.flatMap((category) =>
+      (category.products || []).map((product) => ({
+        ...product,
+        categoryName: category.categoryName,
+        categorySlug: category.slug,
+        image: product.image || category.image,
+        href: `/products/${product.slug}`,
+      }))
+    );
+  }, []);
+
+  const filteredProducts = useMemo(() => {
+    if (activeFilter === "all") return products;
+
+    return products.filter(
+      (product) => product.categorySlug === activeFilter
+    );
+  }, [activeFilter, products]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(".category-heading", {
         y: 40,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.9,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
+          trigger: ".category-heading",
+          start: "top 85%",
+          once: true,
         },
       });
 
-      gsap.from(".category-card", {
-        y: 60,
+      gsap.from(".category-filter-bar", {
+        y: 30,
         opacity: 0,
         duration: 0.8,
-        stagger: 0.12,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".category-grid",
-          start: "top 80%",
+          trigger: ".category-filter-bar",
+          start: "top 90%",
+          once: true,
         },
       });
     }, sectionRef);
@@ -77,33 +82,13 @@ export default function Categories() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative overflow-hidden bg-[#f5f3ed] py-10 md:py-15"
-    >
-      {/* =====================================================
-          BACKGROUND DECORATION
-      ====================================================== */}
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#f5f3ed] py-10 sm:py-12 lg:py-15">
 
-      <div className="pointer-events-none absolute right-[-180px] top-[15%] h-[500px] w-[500px] rounded-full bg-[#d99a17]/[0.06] blur-[100px]" />
-
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-[1px] bg-[#d99a17]/20" />
-
-      {/* =====================================================
-          CONTAINER
-      ====================================================== */}
-
-      <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
-
-        {/* ===================================================
-            HEADER
-        ==================================================== */}
-
+      <div className="mx-auto max-w-[1900px] px-5 sm:px-8 lg:px-9">
+        {/* HEADING */}
         <div className="category-heading mb-5 flex flex-col justify-between gap-8 md:flex-row md:items-end lg:mb-8">
-
           <div>
             {/* Eyebrow */}
-
             <div className="mb-5 flex items-center gap-3">
               <span className="h-[2px] w-12 bg-[#efac39]" />
 
@@ -113,8 +98,7 @@ export default function Categories() {
             </div>
 
             {/* Heading */}
-
-            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px] text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
               Built for spaces
               <br />
 
@@ -125,140 +109,134 @@ export default function Categories() {
           </div>
 
           {/* Description */}
-
           <p className="max-w-[350px] text-[13px] leading-[1.8] text-[#071a3d]/95 md:pb-2">
             Explore our range of premium partition and washroom solutions,
             engineered for durability, privacy and modern commercial spaces.
           </p>
         </div>
 
-        {/* ===================================================
-            CATEGORY GRID
-        ==================================================== */}
+        {/* CATEGORY FILTERS */}
+        <div className="category-filter-bar mb-12 flex justify-center lg:mb-16">
+          <div
+            role="group"
+            aria-label="Filter products by category"
+            className="flex max-w-full items-center gap-2 overflow-x-auto rounded-[28px] p-2.5 sm:gap-3 sm:rounded-full sm:p-3"
+            style={{ background: GRADIENT }}
+          >
+            {FILTERS.map((filter) => {
+              const active = activeFilter === filter.value;
 
-        <div className="category-grid grid gap-5 sm:grid-cols-2">
-          {allProducts.map((category, idx) => (
-            <Link
-              href={category.slug}
-              key={idx}
-              className="category-card rounded-xl group relative block overflow-hidden bg-[#fff]"
-            >
-              {/* =============================================
-                  IMAGE
-              ============================================== */}
+              return (
+                <button
+                  key={filter.value}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => setActiveFilter(filter.value)}
+                  className={`relative shrink-0 whitespace-nowrap rounded-full border px-5 py-3 text-[12px] font-semibold transition-all duration-300 sm:px-7 sm:text-sm lg:px-8 ${active
+                    ? "border-[#121212] bg-[#121212] text-white shadow-lg"
+                    : "border-black/60 bg-transparent text-black hover:bg-black/10"
+                    }`}
+                >
+                  {filter.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-              <div className="relative h-[360px] overflow-hidden sm:h-[390px] lg:h-[440px]">
+        {/* PRODUCT GRID */}
+        <motion.div
+          layout
+          className="category-grid grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:gap-y-16"
+        >
+          <AnimatePresence mode="popLayout">
+            {filteredProducts.map((product, index) => (
+              <motion.div
+                layout
+                key={`${product.categorySlug}-${product.slug}`}
+                initial={{
+                  opacity: 0,
+                  y: 35,
+                  scale: 0.97,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                  y: 20,
+                  scale: 0.97,
+                }}
+                transition={{
+                  duration: 0.4,
+                  delay: Math.min(index * 0.035, 0.3),
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="min-w-0"
+              >
+                <Link
+                  href={product.href}
+                  className="group block"
+                >
+                  {/* IMAGE CARD */}
+                  <div className="relative aspect-[1.27/1] overflow-hidden rounded-[13px] border border-[#ECECEC] bg-[#F4F4F4]">
+                    {product.image ? (
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center text-sm text-gray-400">
+                        Image Coming Soon
+                      </div>
+                    )}
 
-                <Image
-                  src={category.image}
-                  alt={category.categoryName}
-                  fill
-                  sizes="
-                    (max-width: 639px) 100vw,
-                    (max-width: 1023px) 50vw,
-                    25vw
-                  "
-                  className="
-                    object-cover
-                    transition-transform
-                    duration-700
-                    ease-out
-                    group-hover:scale-110
-                  "
-                />
+                    {/* Subtle bottom gradient */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
 
-                {/* Dark overlay */}
+                    {/* TOP RIGHT BADGE */}
+                    <div className="absolute right-3 top-3 z-10 rounded-full bg-[#101010] px-4 py-2 text-[10px] font-bold text-[#EFAC39] shadow-[0_5px_20px_rgba(0,0,0,0.18)] sm:text-[11px]">
+                      CUBILOO
+                    </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d] via-[#071a3d]/20 to-transparent opacity-80" />
-
-                {/* Hover overlay */}
-
-                <div className="absolute inset-0 bg-[#071a3d]/0 transition-colors duration-500 group-hover:bg-[#071a3d]/25" />
-
-                {/* Number */}
-
-                <div className="absolute left-5 top-5 flex items-center gap-3">
-
-                  <span className="text-[11px] tracking-[0.2em] text-[#efac39]">
-                    {idx + 1}
-                  </span>
-
-                  <span className="h-[1px] w-8 bg-[#efac39]" />
-
-                </div>
-
-                {/* Gold corner */}
-
-                <div
-                  className="
-                    absolute
-                    right-0
-                    top-0
-                    h-14
-                    w-14
-                    border-r
-                    border-t
-                    border-[#efac39]
-                    opacity-70
-                    transition-all
-                    duration-500
-                    group-hover:h-20
-                    group-hover:w-20
-                  "
-                />
-
-                {/* Content */}
-
-                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
-
-                  <div className="mb-3 h-[2px] w-8 bg-[#efac39] transition-all duration-500 group-hover:w-14" />
-
-                  <h3 className="text-[21px] font-medium tracking-[-0.02em] text-white sm:text-[23px]">
-                    {category.categoryName}
-                  </h3>
-
-                  <p className="mt-3 max-w-[280px] text-[12px] leading-[1.7] text-white/55">
-                    {category.description}
-                  </p>
-
-                  {/* View */}
-
-                  <div className="mt-5 flex items-center gap-3 text-[9px] font-medium tracking-[0.22em] text-[#efac39]">
-                    <span>VIEW CATEGORY</span>
-
-                    <span className="transition-transform duration-300 group-hover:translate-x-2">
-                      →
-                    </span>
+                    {/* Hover Arrow */}
+                    <div
+                      className="absolute bottom-4 right-4 flex h-11 w-11 translate-y-3 items-center justify-center rounded-full text-black opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                      style={{ background: GRADIENT }}
+                    >
+                      <ArrowUpRight size={20} />
+                    </div>
                   </div>
 
-                </div>
-              </div>
+                  {/* TITLE BELOW IMAGE */}
+                  <div className="mt-5 text-center">
+                    <h3 className="text-[19px] font-medium tracking-[-0.035em] text-[#121212] transition-colors duration-300 group-hover:text-[#DF7539] sm:text-[21px]">
+                      {product.name}
+                    </h3>
 
-              {/* =================================================
-                  BOTTOM GOLD LINE
-              ================================================== */}
+                    <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[#888]">
+                      {product.categoryName}
+                    </p>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
 
-              <div className="h-[3px] w-0 bg-[#efac39] transition-all duration-500 group-hover:w-full" />
-            </Link>
-          ))}
-        </div>
-
-        {/* =====================================================
-            BOTTOM LINE
-        ====================================================== */}
-
-        <div className="mt-8 flex items-center justify-center gap-4">
-
-          <div className="h-[1px] w-12 bg-[#efac39]" />
-
-          <span className="text-[10px] tracking-[0.3em] text-[#efac39]/95">
-            PREMIUM PARTITION SOLUTIONS
-          </span>
-
-          <div className="h-[1px] w-12 bg-[#efac39]" />
-
-        </div>
-
+        {/* EMPTY STATE */}
+        {filteredProducts.length === 0 && (
+          <div className="py-20 text-center">
+            <p className="text-lg text-gray-500">
+              No products available in this category.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
