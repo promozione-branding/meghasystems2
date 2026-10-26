@@ -220,7 +220,7 @@ export default function AboutPage() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
               >
                 Talk to Our Team

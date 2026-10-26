@@ -7,7 +7,7 @@ import CTASection from "@/components/home/CTASection";
 import CubicleDetails from "@/components/home/CubicleDetails";
 import FAQSection from "@/components/home/FAQSection";
 import FormSection from "@/components/home/FormSection";
-import HeroSection from "@/components/home/Hero";
+import HeroSection from "@/components/home/HeroSection";
 import HowWeWork from "@/components/home/HowWeWork";
 import IndustriesWeServe from "@/components/home/Industries";
 import ParallaxCTA from "@/components/home/ParallaxCTA";

@@ -1,8 +1,10 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   Search,
@@ -10,68 +12,83 @@ import {
   X,
   ChevronDown,
   ArrowUpRight,
+  ArrowRight,
+  PhoneCall,
 } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedinIn,
   FaWhatsapp,
 } from "react-icons/fa";
 import { allProducts } from "@/data";
 
-const SOCIAL_LINKS = {
-  facebook: "https://www.facebook.com/p/Cubiloo-Cubicles-61593586059881/",
-  // linkedin: "https://in.linkedin.com/company/meghasystems",
-  instagram: "https://www.instagram.com/cubiloocubicles/",
-  whatsapp: "https://web.whatsapp.com/send?phone=917837830803&text=",
-};
+const GRADIENT =
+  "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
 
-const mobileProducts = [
+const SOCIAL_LINKS = [
   {
-    title: "Restroom Cubicles",
-    href: "/products#restroom-cubicles",
+    label: "Facebook",
+    href: "https://www.facebook.com/p/Cubiloo-Cubicles-61593586059881/",
+    icon: FaFacebookF,
   },
   {
-    title: "Office Partitions",
-    href: "/products#office-partitions",
+    label: "Instagram",
+    href: "https://www.instagram.com/cubiloocubicles/",
+    icon: FaInstagram,
   },
   {
-    title: "Workstations",
-    href: "/products#workstations",
-  },
-  {
-    title: "Toilet Partitions",
-    href: "/products#toilet-partitions",
+    label: "WhatsApp",
+    href: "https://wa.me/917837830803",
+    icon: FaWhatsapp,
   },
 ];
 
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Projects", href: "/projects" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact Us", href: "/contact-us" },
+];
+
 export default function Navbar() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
-  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] =
+    useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
-  const [scrolled, setScrolled] = useState(false);
 
+  const dropdownRef = useRef(null);
   const searchRef = useRef(null);
   const inputRef = useRef(null);
 
-  // Transparent at the top; white after scrolling.
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 35);
     };
 
-    handleScroll();
+    onScroll();
 
-    window.addEventListener("scroll", handleScroll, {
+    window.addEventListener("scroll", onScroll, {
       passive: true,
     });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setProductsOpen(false);
+    setMobileProductsOpen(false);
+    setSearchOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     if (!searchOpen) return;
@@ -84,7 +101,14 @@ export default function Navbar() {
   }, [searchOpen]);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target)
+      ) {
+        setProductsOpen(false);
+      }
+
       if (
         searchRef.current &&
         !searchRef.current.contains(event.target)
@@ -95,21 +119,28 @@ export default function Navbar() {
 
     const handleEscape = (event) => {
       if (event.key === "Escape") {
-        setSearchOpen(false);
         setProductsOpen(false);
+        setSearchOpen(false);
         setMobileOpen(false);
-        setMobileProductsOpen(false);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleOutside);
     document.addEventListener("keydown", handleEscape);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleOutside);
       document.removeEventListener("keydown", handleEscape);
     };
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const closeMobile = () => {
     setMobileOpen(false);
@@ -120,392 +151,602 @@ export default function Navbar() {
     event.preventDefault();
 
     const query = searchValue.trim();
-
     if (!query) return;
 
-    window.location.href = `/products?search=${encodeURIComponent(query)}`;
     setSearchOpen(false);
+    closeMobile();
+
+    router.push(
+      `/products?search=${encodeURIComponent(query)}`
+    );
   };
 
+  const isProductsActive = pathname.startsWith("/products");
+
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -25 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
-      }}
-      className={`fixed left-0 right-0 top-0 z-[100] px-2 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${scrolled
-        ? "bg-white/95 shadow-[0_8px_30px_rgba(7,26,61,0.10)] backdrop-blur-md"
-        : "bg-transparent shadow-none"
-        }`}
-    >
-      <div
-        className={`overflow-visible transition-colors duration-500 ${scrolled ? "bg-white/95" : "bg-transparent"
-          }`}
+    <>
+      <motion.header
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="fixed left-0 right-0 top-0 z-[100] px-3 pt-3 sm:px-5 lg:px-8 lg:pt-4"
       >
-        {/* DESKTOP HEADER */}
-        <div className="relative hidden h-[88px] items-center justify-between gap-4 overflow-visible px-3 lg:flex xl:px-5">
-          {/* Decorative background */}
+        <div
+          className={`relative mx-auto max-w-[1560px] rounded-[22px] border transition-all duration-500 lg:rounded-[24px] ${scrolled || mobileOpen
+              ? "border-white/15 bg-[#111114]/95 shadow-[0_20px_70px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+              : "border-white/10 bg-[#111114]/45 backdrop-blur-xl"
+            }`}
+        >
+          {/* Thin gradient line */}
           <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 overflow-hidden"
+            className="pointer-events-none absolute inset-x-10 top-0 h-px opacity-70"
+            style={{ background: GRADIENT }}
           />
 
-          {/* LOGO */}
-          <Link
-            href="/"
-            aria-label="Cubiloo Cubicles home"
-            className="relative z-30 shrink-0"
-          >
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.25 }}
+          {/* DESKTOP */}
+          <div className="hidden h-[80px] items-center justify-between gap-5 px-5 lg:flex xl:px-7">
+            {/* LOGO */}
+            <Link
+              href="/"
+              aria-label="Cubiloo Cubicles Home"
+              className="relative z-20 shrink-0"
             >
-              <Image
-                src="/cubilo.png"
-                alt="CUBILOO CUBICLES"
-                width={360}
-                height={105}
-                priority
-                className="h-auto w-[155px] object-contain xl:w-[190px] 2xl:w-[215px]"
-              />
-            </motion.div>
-          </Link>
-
-          {/* NAVIGATION */}
-          <nav className="relative z-30 flex h-full min-w-0 flex-1 items-center justify-center">
-            <NavLink href="/" label="Home" />
-
-            <NavLink href="/about-us" label="About Us" />
-
-            {/* PRODUCTS DROPDOWN */}
-            <div
-              className="relative flex h-full shrink-0 items-center"
-              onMouseEnter={() => setProductsOpen(true)}
-              onMouseLeave={() => setProductsOpen(false)}
-            >
-              <button
-                type="button"
-                aria-expanded={productsOpen}
-                onClick={() => setProductsOpen((prev) => !prev)}
-                className="group relative flex h-full items-center gap-1 px-3 text-[12px] font-semibold text-[#182640] transition-colors hover:text-[#e17e3a] xl:px-4 xl:text-[15px]"
+              <motion.div
+                whileHover={{ scale: 1.035 }}
+                transition={{ duration: 0.25 }}
               >
-                Products
-
-                <ChevronDown
-                  size={14}
-                  className={`transition-transform duration-300 ${productsOpen ? "rotate-180" : ""
-                    }`}
+                <Image
+                  src="/logo.png"
+                  alt="Cubiloo Cubicles"
+                  width={360}
+                  height={105}
+                  priority
+                  className="h-auto w-[150px] object-contain xl:w-[175px]"
                 />
+              </motion.div>
+            </Link>
 
-                <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#e17e3a] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
-              </button>
+            {/* NAV LINKS */}
+            <nav className="flex h-full min-w-0 flex-1 items-center justify-center gap-0.5 xl:gap-1">
+              <NavItem
+                href="/"
+                label="Home"
+                active={pathname === "/"}
+              />
 
-              <AnimatePresence>
-                {productsOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.22 }}
-                    className="absolute left-0 top-15 z-50 w-[310px] pt-3 xl:w-[330px]"
-                  >
-                    <div className="rounded-xl border border-gray-100 bg-white p-2 shadow-[0_25px_70px_rgba(7,26,61,0.16)]">
-                      {allProducts.map((product) => (
-                        <ProductItem
-                          key={product.categoryName}
-                          {...product}
-                        />
-                      ))}
+              <NavItem
+                href="/about-us"
+                label="About Us"
+                active={pathname.startsWith("/about-us")}
+              />
 
-                      <Link
-                        href="/products"
-                        onClick={() => setProductsOpen(false)}
-                        className="group mt-1 flex items-center justify-between rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-4 py-3.5 text-white"
-                      >
-                        <div>
-                          <p className="text-sm font-semibold">
-                            View All Products
-                          </p>
-                          <p className="mt-0.5 text-[10px] text-white/70">
-                            Explore our complete range
-                          </p>
-                        </div>
-
-                        <ArrowUpRight
-                          size={16}
-                          className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                        />
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <NavLink href="/projects" label="Projects" />
-            <NavLink href="/blog" label="Blog" />
-            <NavLink href="/contact-us" label="Contact Us" />
-          </nav>
-
-          {/* SOCIAL ICONS */}
-          <div className="relative z-30 flex shrink-0 items-center gap-1.5 xl:gap-2">
-            <SocialIcon
-              href={SOCIAL_LINKS.facebook}
-              label="Facebook"
-            >
-              <FaFacebookF />
-            </SocialIcon>
-
-            <SocialIcon
-              href={SOCIAL_LINKS.instagram}
-              label="Instagram"
-            >
-              <FaInstagram />
-            </SocialIcon>
-
-            {/* <SocialIcon
-              href={SOCIAL_LINKS.linkedin}
-              label="LinkedIn"
-            >
-              <FaLinkedinIn />
-            </SocialIcon> */}
-
-            <SocialIcon
-              href={SOCIAL_LINKS.whatsapp}
-              label="WhatsApp"
-            >
-              <FaWhatsapp />
-            </SocialIcon>
-          </div>
-        </div>
-
-        {/* MOBILE HEADER */}
-        <div className="flex h-[76px] items-center justify-between px-4 lg:hidden">
-          <Link
-            href="/"
-            onClick={closeMobile}
-            aria-label="Cubiloo Cubicles home"
-          >
-            <Image
-              src="/cubilo.png"
-              alt="CUBILOO CUBICLES"
-              width={300}
-              height={90}
-              priority
-              className="h-auto w-[170px] object-contain sm:w-[190px]"
-            />
-          </Link>
-
-          <button
-            type="button"
-            onClick={() => setMobileOpen((prev) => !prev)}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#d95538] text-white shadow-lg"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X size={21} /> : <Menu size={21} />}
-          </button>
-        </div>
-
-        {/* MOBILE MENU */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden border-t border-gray-100 bg-white lg:hidden"
-            >
-              <div className="px-5 py-5">
-                <MobileLink
-                  href="/"
-                  label="Home"
-                  onClick={closeMobile}
-                />
-
-                <MobileLink
-                  href="/about-us"
-                  label="About Us"
-                  onClick={closeMobile}
-                />
-
-                {/* MOBILE PRODUCTS */}
+              {/* PRODUCTS DROPDOWN */}
+              <div
+                ref={dropdownRef}
+                className="relative flex h-full items-center"
+                onMouseEnter={() => setProductsOpen(true)}
+                onMouseLeave={() => setProductsOpen(false)}
+              >
                 <button
                   type="button"
+                  aria-expanded={productsOpen}
+                  aria-haspopup="true"
                   onClick={() =>
-                    setMobileProductsOpen((prev) => !prev)
+                    setProductsOpen((prev) => !prev)
                   }
-                  aria-expanded={mobileProductsOpen}
-                  className="flex w-full items-center justify-between border-b border-gray-100 py-4 text-sm font-semibold text-[#182640]"
+                  className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${isProductsActive || productsOpen
+                      ? "text-[#EFAC39]"
+                      : "text-white/80 hover:text-white"
+                    }`}
                 >
                   Products
 
                   <ChevronDown
-                    size={17}
-                    className={`transition-transform ${mobileProductsOpen ? "rotate-180" : ""
+                    size={15}
+                    className={`transition-transform duration-300 ${productsOpen ? "rotate-180" : ""
                       }`}
+                  />
+
+                  <span
+                    className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${isProductsActive || productsOpen
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    style={{ background: GRADIENT }}
                   />
                 </button>
 
                 <AnimatePresence>
-                  {mobileProductsOpen && (
+                  {productsOpen && (
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
+                      initial={{
+                        opacity: 0,
+                        y: 12,
+                        scale: 0.97,
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                      }}
+                      exit={{
+                        opacity: 0,
+                        y: 8,
+                        scale: 0.97,
+                      }}
+                      transition={{ duration: 0.22 }}
+                      className="absolute left-1/2 top-full z-50 w-[360px] -translate-x-1/2 pt-3"
                     >
-                      {mobileProducts.map((product) => (
-                        <Link
-                          key={product.title}
-                          href={product.href}
-                          onClick={closeMobile}
-                          className="flex items-center justify-between py-3 pl-4 text-sm text-gray-500 transition-colors hover:text-[#c99618]"
-                        >
-                          {product.title}
-                          <ArrowUpRight size={14} />
-                        </Link>
-                      ))}
+                      <div className="overflow-hidden rounded-[20px] border border-white/15 bg-[#18181B] p-3 shadow-[0_25px_70px_rgba(0,0,0,0.5)] backdrop-blur-2xl">
+                        <div className="mb-2 border-b border-white/10 px-3 pb-3 pt-2">
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#EFAC39]">
+                            Our Collection
+                          </p>
+                          <h3 className="mt-1 text-lg font-semibold text-white">
+                            Explore Products
+                          </h3>
+                        </div>
 
-                      <Link
-                        href="/products"
-                        onClick={closeMobile}
-                        className="flex items-center justify-between py-3 pl-4 text-sm font-semibold text-[#d95538]"
-                      >
-                        View All Products
-                        <ArrowUpRight size={14} />
-                      </Link>
+                        <div className="max-h-[350px] overflow-y-auto">
+                          {allProducts.map((product, index) => (
+                            <Link
+                              key={
+                                product.slug ||
+                                product.categoryName ||
+                                index
+                              }
+                              href={`/products#${product.slug}`}
+                              onClick={() =>
+                                setProductsOpen(false)
+                              }
+                              className="group flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-white/[0.07]"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#E58B3B]/20 bg-[#E58B3B]/10 text-xs font-bold text-[#EFAC39]">
+                                  {String(index + 1).padStart(
+                                    2,
+                                    "0"
+                                  )}
+                                </div>
+
+                                <div>
+                                  <p className="text-sm font-semibold text-white">
+                                    {product.categoryName}
+                                  </p>
+
+                                  {product.description && (
+                                    <p className="mt-1 line-clamp-1 text-xs text-white/40">
+                                      {product.description}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+
+                              <ArrowUpRight
+                                size={17}
+                                className="shrink-0 text-white/40 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#EFAC39]"
+                              />
+                            </Link>
+                          ))}
+                        </div>
+
+                        <Link
+                          href="/products"
+                          onClick={() =>
+                            setProductsOpen(false)
+                          }
+                          className="mt-2 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-bold text-black"
+                          style={{ background: GRADIENT }}
+                        >
+                          View All Products
+                          <ArrowUpRight size={18} />
+                        </Link>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
 
-                <MobileLink
+              <NavItem
+                href="/projects"
+                label="Projects"
+                active={pathname.startsWith("/projects")}
+              />
+
+              <NavItem
+                href="/blog"
+                label="Blog"
+                active={pathname.startsWith("/blog")}
+              />
+
+              <NavItem
+                href="/contact-us"
+                label="Contact"
+                active={pathname.startsWith("/contact-us")}
+              />
+            </nav>
+
+            {/* RIGHT ACTIONS */}
+            <div className="flex shrink-0 items-center gap-3">
+              <div className="hidden items-center gap-2 2xl:flex">
+                {SOCIAL_LINKS.map((social) => (
+                  <SocialIcon
+                    key={social.label}
+                    {...social}
+                  />
+                ))}
+              </div>
+
+              <div className="hidden h-7 w-px bg-white/15 2xl:block" />
+
+              {/* Search */}
+              <div ref={searchRef} className="relative">
+                <button
+                  type="button"
+                  aria-label="Search products"
+                  aria-expanded={searchOpen}
+                  onClick={() =>
+                    setSearchOpen((prev) => !prev)
+                  }
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all hover:border-[#EFAC39] hover:text-[#EFAC39]"
+                >
+                  <Search size={19} />
+                </button>
+
+                <AnimatePresence>
+                  {searchOpen && (
+                    <motion.form
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      onSubmit={handleSearch}
+                      className="absolute right-0 top-[60px] z-50 w-[320px] rounded-2xl border border-white/15 bg-[#18181B] p-3 shadow-2xl"
+                    >
+                      <div className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3">
+                        <Search
+                          size={17}
+                          className="text-[#EFAC39]"
+                        />
+
+                        <input
+                          ref={inputRef}
+                          type="search"
+                          placeholder="Search products..."
+                          value={searchValue}
+                          onChange={(event) =>
+                            setSearchValue(event.target.value)
+                          }
+                          className="h-12 min-w-0 flex-1 bg-transparent text-sm text-white outline-none placeholder:text-white/40"
+                        />
+
+                        <button
+                          type="submit"
+                          aria-label="Submit search"
+                          className="text-[#EFAC39]"
+                        >
+                          <ArrowRight size={18} />
+                        </button>
+                      </div>
+                    </motion.form>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* CTA */}
+              <Link
+                href="/contact-us"
+                className="group flex items-center gap-3 rounded-full p-1.5 pl-5 text-[13px] font-bold text-black transition-shadow hover:shadow-[0_8px_30px_rgba(229,139,59,0.3)] xl:pl-6 xl:text-sm"
+                style={{ background: GRADIENT }}
+              >
+                Get a Quote
+
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:rotate-45">
+                  <ArrowUpRight size={18} />
+                </span>
+              </Link>
+            </div>
+          </div>
+
+          {/* MOBILE HEADER */}
+          <div className="flex h-[70px] items-center justify-between px-4 lg:hidden">
+            <Link
+              href="/"
+              onClick={closeMobile}
+              aria-label="Cubiloo Cubicles Home"
+            >
+              <Image
+                src="/cubilo.png"
+                alt="Cubiloo Cubicles"
+                width={300}
+                height={90}
+                priority
+                className="h-auto w-[155px] object-contain brightness-0 invert sm:w-[175px]"
+              />
+            </Link>
+
+            <div className="flex items-center gap-2">
+              <Link
+                href="/contact-us"
+                onClick={closeMobile}
+                className="hidden h-10 items-center rounded-full border border-[#E58B3B]/50 px-4 text-xs font-semibold text-[#EFAC39] sm:flex"
+              >
+                Get a Quote
+              </Link>
+
+              <button
+                type="button"
+                onClick={() =>
+                  setMobileOpen((prev) => !prev)
+                }
+                aria-label={
+                  mobileOpen ? "Close menu" : "Open menu"
+                }
+                aria-expanded={mobileOpen}
+                className="flex h-11 w-11 items-center justify-center rounded-xl text-black"
+                style={{ background: GRADIENT }}
+              >
+                {mobileOpen ? (
+                  <X size={22} />
+                ) : (
+                  <Menu size={22} />
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.header>
+
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeMobile}
+              className="fixed inset-0 z-[90] bg-black/75 backdrop-blur-sm lg:hidden"
+            />
+
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{
+                type: "spring",
+                stiffness: 280,
+                damping: 30,
+              }}
+              className="fixed bottom-0 right-0 top-0 z-[95] w-full max-w-[390px] overflow-y-auto border-l border-white/10 bg-[#111114] px-6 pb-8 pt-[110px] lg:hidden"
+            >
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#EFAC39]">
+                Navigation
+              </p>
+
+              <div className="space-y-1">
+                <MobileNavLink
+                  href="/"
+                  label="Home"
+                  onClick={closeMobile}
+                  active={pathname === "/"}
+                />
+
+                <MobileNavLink
+                  href="/about-us"
+                  label="About Us"
+                  onClick={closeMobile}
+                  active={pathname.startsWith("/about-us")}
+                />
+
+                {/* Products Accordion */}
+                <div className="border-b border-white/10">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setMobileProductsOpen((prev) => !prev)
+                    }
+                    aria-expanded={mobileProductsOpen}
+                    className="flex w-full items-center justify-between py-4 text-lg font-medium text-white"
+                  >
+                    Products
+
+                    <ChevronDown
+                      size={20}
+                      className={`text-[#EFAC39] transition-transform duration-300 ${mobileProductsOpen
+                          ? "rotate-180"
+                          : ""
+                        }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {mobileProductsOpen && (
+                      <motion.div
+                        initial={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        animate={{
+                          height: "auto",
+                          opacity: 1,
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                        }}
+                        className="overflow-hidden"
+                      >
+                        <div className="mb-3 rounded-xl bg-white/[0.04] p-3">
+                          {allProducts.map(
+                            (product, index) => (
+                              <Link
+                                key={
+                                  product.slug ||
+                                  product.categoryName ||
+                                  index
+                                }
+                                href={`/products#${product.slug}`}
+                                onClick={closeMobile}
+                                className="flex items-center justify-between gap-3 rounded-lg px-3 py-3 text-sm text-white/65 transition-colors hover:bg-white/5 hover:text-[#EFAC39]"
+                              >
+                                {product.categoryName}
+                                <ArrowUpRight size={15} />
+                              </Link>
+                            )
+                          )}
+
+                          <Link
+                            href="/products"
+                            onClick={closeMobile}
+                            className="mt-2 flex items-center justify-between rounded-lg px-3 py-3 text-sm font-semibold text-[#EFAC39]"
+                          >
+                            View All Products
+                            <ArrowRight size={16} />
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <MobileNavLink
                   href="/projects"
                   label="Projects"
                   onClick={closeMobile}
+                  active={pathname.startsWith("/projects")}
                 />
 
-                <MobileLink
+                <MobileNavLink
                   href="/blog"
                   label="Blog"
                   onClick={closeMobile}
+                  active={pathname.startsWith("/blog")}
                 />
 
-                <MobileLink
+                <MobileNavLink
                   href="/contact-us"
                   label="Contact Us"
                   onClick={closeMobile}
+                  active={pathname.startsWith("/contact-us")}
+                />
+              </div>
+
+              {/* Mobile Search */}
+              <form
+                onSubmit={handleSearch}
+                className="relative mt-8"
+              >
+                <Search
+                  size={19}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#EFAC39]"
                 />
 
-                {/* MOBILE SEARCH */}
-                <form onSubmit={handleSearch} className="relative mt-6">
-                  <Search
-                    size={18}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
+                <input
+                  type="search"
+                  placeholder="Search products..."
+                  value={searchValue}
+                  onChange={(event) =>
+                    setSearchValue(event.target.value)
+                  }
+                  className="h-14 w-full rounded-xl border border-white/15 bg-white/5 pl-12 pr-4 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#EFAC39]"
+                />
+              </form>
 
-                  <input
-                    type="search"
-                    value={searchValue}
-                    onChange={(event) =>
-                      setSearchValue(event.target.value)
-                    }
-                    placeholder="Search products..."
-                    className="h-12 w-full rounded-xl border border-gray-200 bg-gray-50 pl-11 pr-4 text-sm outline-none focus:border-[#c99618]"
-                  />
-                </form>
+              {/* Mobile CTA */}
+              <Link
+                href="/contact-us"
+                onClick={closeMobile}
+                className="mt-6 flex h-14 items-center justify-center gap-3 rounded-xl text-sm font-bold text-black"
+                style={{ background: GRADIENT }}
+              >
+                <PhoneCall size={18} />
+                Request a Quote
+                <ArrowUpRight size={18} />
+              </Link>
 
-                {/* MOBILE SOCIAL ICONS */}
-                <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-5">
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-gray-400">
-                    Follow us
-                  </span>
+              {/* Social Links */}
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <p className="mb-4 text-[11px] uppercase tracking-[0.2em] text-white/40">
+                  Follow Cubiloo
+                </p>
 
-                  <div className="flex gap-2">
+                <div className="flex items-center gap-3">
+                  {SOCIAL_LINKS.map((social) => (
                     <SocialIcon
-                      href={SOCIAL_LINKS.facebook}
-                      label="Facebook"
-                    >
-                      <FaFacebookF />
-                    </SocialIcon>
-
-                    <SocialIcon
-                      href={SOCIAL_LINKS.instagram}
-                      label="Instagram"
-                    >
-                      <FaInstagram />
-                    </SocialIcon>
-
-                    <SocialIcon
-                      href={SOCIAL_LINKS.linkedin}
-                      label="LinkedIn"
-                    >
-                      <FaLinkedinIn />
-                    </SocialIcon>
-
-                    <SocialIcon
-                      href={SOCIAL_LINKS.whatsapp}
-                      label="WhatsApp"
-                    >
-                      <FaWhatsapp />
-                    </SocialIcon>
-                  </div>
+                      key={social.label}
+                      {...social}
+                    />
+                  ))}
                 </div>
               </div>
+
+              <p className="mt-10 text-xs text-white/30">
+                © {new Date().getFullYear()} Cubiloo Cubicles.
+                All rights reserved.
+              </p>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </motion.header>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 
-function NavLink({ href, label, active = false }) {
+function NavItem({ href, label, active }) {
   return (
     <Link
       href={href}
-      className={`group relative flex h-full shrink-0 items-center px-3 text-[12px] font-semibold transition-all duration-300 xl:px-4 xl:text-[15px] ${active
-        ? "bg-[#e17e3a] text-white"
-        : "text-[#182640] hover:text-[#e17e3a]"
+      aria-current={active ? "page" : undefined}
+      className={`group relative flex h-full shrink-0 items-center px-3 text-[13px] font-medium transition-colors duration-300 xl:px-4 xl:text-sm ${active
+          ? "text-[#EFAC39]"
+          : "text-white/80 hover:text-white"
         }`}
     >
       {label}
 
-      {!active && (
-        <span className="absolute bottom-6 left-3 right-3 h-[3px] origin-left scale-x-0 bg-[#e17e3a] transition-transform duration-300 group-hover:scale-x-100 xl:left-4 xl:right-4" />
-      )}
-    </Link>
-  );
-}
-
-function ProductItem({ categoryName, description, slug }) {
-  return (
-    <Link
-      href={`/products#${slug}`}
-      className="group flex items-center justify-between rounded-lg px-4 py-3.5 transition-colors hover:bg-[#f8f6f1]"
-    >
-      <div>
-        <p className="text-sm font-semibold text-[#182640]">
-          {categoryName}
-        </p>
-
-        <p className="mt-0.5 text-[10px] text-gray-400">
-          {description}
-        </p>
-      </div>
-
-      <ArrowUpRight
-        size={15}
-        className="text-gray-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#e17e3a]"
+      <span
+        className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${active
+            ? "scale-x-100"
+            : "scale-x-0 group-hover:scale-x-100"
+          }`}
+        style={{ background: GRADIENT }}
       />
     </Link>
   );
 }
 
-function SocialIcon({ href, label, children }) {
+function MobileNavLink({
+  href,
+  label,
+  onClick,
+  active,
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={onClick}
+      aria-current={active ? "page" : undefined}
+      className={`flex items-center justify-between border-b border-white/10 py-4 text-lg font-medium transition-colors ${active
+          ? "text-[#EFAC39]"
+          : "text-white hover:text-[#EFAC39]"
+        }`}
+    >
+      {label}
+
+      <ArrowUpRight
+        size={19}
+        className={
+          active ? "text-[#EFAC39]" : "text-white/40"
+        }
+      />
+    </Link>
+  );
+}
+
+function SocialIcon({ href, label, icon: Icon }) {
   return (
     <motion.a
       href={href}
@@ -513,25 +754,14 @@ function SocialIcon({ href, label, children }) {
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
-      whileHover={{ y: -3, scale: 1.08 }}
-      whileTap={{ scale: 0.92 }}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-[#e17e3a] text-[14px] text-[#e17e3a] transition-all duration-300 border-[#e17e3a] bg-[#e17e3a] text-white xl:h-10 xl:w-10 xl:text-[15px]"
+      whileHover={{
+        y: -3,
+        scale: 1.07,
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm text-white transition-colors duration-300 hover:border-[#EFAC39] hover:bg-[#EFAC39] hover:text-black"
     >
-      {children}
+      <Icon />
     </motion.a>
-  );
-}
-
-function MobileLink({ href, label, onClick }) {
-  return (
-    <Link
-      href={href}
-      onClick={onClick}
-      className="flex items-center justify-between border-b border-gray-100 py-4 text-sm font-semibold text-[#182640] transition-colors hover:text-[#c99618]"
-    >
-      {label}
-
-      <ArrowUpRight size={15} className="text-[#e17e3a]" />
-    </Link>
   );
 }
