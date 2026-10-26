@@ -121,7 +121,7 @@ function ImageColumn({ images, index }) {
                                 key={`${copy}-${i}`}
                                 className="cubiloo-wall-card group"
                             >
-                                <Image
+                                <img
                                     src={item.image}
                                     alt={copy === 0 ? item.title : ""}
                                     fill
