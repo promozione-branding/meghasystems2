@@ -198,7 +198,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.035 }}
                 transition={{ duration: 0.25 }}
               >
-                <Image
+                <img
                   src="/logo.png"
                   alt="Cubiloo Cubicles"
                   width={360}
