@@ -211,7 +211,7 @@ export default function ProductSection() {
                                 >
                                     <div className="relative aspect-[4/3] overflow-hidden bg-[#06152f]">
 
-                                        <img
+                                        <Image
                                             src={product.image}
                                             alt={product.name}
                                             fill

@@ -127,7 +127,7 @@ export default function ParallaxCTA() {
                   key={`${colIndex}-${imageIndex}`}
                   className="relative min-h-[210px] flex-1 overflow-hidden bg-[#242424] md:min-h-[320px]"
                 >
-                  <img
+                  <Image
                     src={src}
                     alt=""
                     fill

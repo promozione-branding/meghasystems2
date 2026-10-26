@@ -183,7 +183,7 @@ export default function Categories() {
                   {/* IMAGE CARD */}
                   <div className="relative aspect-[1.27/1] overflow-hidden rounded-[13px] border border-[#ECECEC] bg-[#F4F4F4]">
                     {product.image ? (
-                      <img
+                      <Image
                         src={product.image}
                         alt={product.name}
                         fill

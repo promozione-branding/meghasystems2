@@ -209,7 +209,7 @@ function ShowcaseCard({ product }) {
             {/* IMAGE */}
             <div className="relative h-[195px] overflow-hidden rounded-[17px] border border-white/10 bg-[#151518] sm:h-[235px] lg:h-[260px]">
                 {product.image ? (
-                    <img
+                    <Image
                         src={product.image}
                         alt={product.name}
                         fill
