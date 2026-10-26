@@ -1,538 +1,272 @@
+
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FaStar } from "react-icons/fa";
-import {
-    FiArrowLeft,
-    FiArrowRight,
-    // FiQuote,
-} from "react-icons/fi";
-import { Quote } from "lucide-react";
+import { Star, Check } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const testimonials = [
+const reviews = [
     {
-        id: 1,
-        quote:
-            "The quality of execution and attention to detail from Cubiloo Cubicles was excellent. The entire installation was handled professionally and delivered as committed.",
-        name: "Project Management Team",
-        company: "Commercial Project",
-        location: "Mumbai",
-        logo: "/clients/Apple (2).webp",
+        title: "Design Quality",
+        text: "The finished cubicle partitions have a clean, modern appearance. The attention to detail throughout the project was excellent.",
+        author: "Project Management Team",
     },
     {
-        id: 2,
-        quote:
-            "Cubiloo Cubicles provided a reliable restroom solution with excellent finish quality. Their team was responsive throughout the manufacturing and installation process.",
-        name: "Facility Management Team",
-        company: "Industrial Project",
-        location: "Haryana",
-        logo: "/clients/maruti.webp",
+        title: "Installation Quality",
+        text: "The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
+        author: "Facility Management Team",
     },
     {
-        id: 3,
-        quote:
-            "From material selection to final installation, the team maintained a high standard of quality. The finished cubicles look premium and perform exactly as expected.",
-        name: "Project Operations Team",
-        company: "Corporate Project",
-        location: "India",
-        logo: "/clients/mag.webp",
+        title: "Premium Materials",
+        text: "The quality of materials and overall workmanship made a noticeable difference to our commercial washroom.",
+        author: "Commercial Project Team",
     },
     {
-        id: 4,
-        quote:
-            "The installation team understood the project requirements very well and completed the work with precision. We were impressed with the overall coordination and finish.",
-        name: "Site Management Team",
-        company: "Manufacturing Facility",
-        location: "India",
-        logo: "/clients/oppoLogo.webp",
+        title: "Professional Service",
+        text: "The team understood our requirements and delivered a solution that matched our expectations.",
+        author: "Operations Team",
+    },
+    {
+        title: "Excellent Finish",
+        text: "We are very satisfied with the finished restroom partitions. The product looks premium and is easy to maintain.",
+        author: "Facilities Team",
+    },
+    {
+        title: "Project Coordination",
+        text: "Communication was clear throughout the project and the installation was handled efficiently.",
+        author: "Construction Team",
+    },
+    {
+        title: "Design Quality",
+        text: "The range of finishes helped us choose a design that complemented the surrounding interior.",
+        author: "Interior Design Team",
+    },
+    {
+        title: "Reliable Solutions",
+        text: "A practical and durable solution for a high-traffic washroom environment.",
+        author: "Site Management Team",
+    },
+    {
+        title: "Great Experience",
+        text: "From the initial consultation to the final installation, the overall experience was smooth and professional.",
+        author: "Project Operations Team",
+    },
+    {
+        title: "Product Quality",
+        text: "The partition system feels solid and well manufactured. We appreciate the attention given to every detail.",
+        author: "Corporate Facilities Team",
+    },
+    {
+        title: "Excellent Support",
+        text: "The team guided us through the available materials and hardware options and helped us make the right choice.",
+        author: "Commercial Client Team",
+    },
+    {
+        title: "Clean Installation",
+        text: "The completed installation looks neat and consistent across the entire washroom area.",
+        author: "Maintenance Team",
+    },
+    {
+        title: "Quality Workmanship",
+        text: "The materials, hardware, and finishing were all handled with care. We are pleased with the result.",
+        author: "Industrial Project Team",
+    },
+    {
+        title: "Dependable Team",
+        text: "The Cubiloo team maintained good coordination during the project and delivered the required solution.",
+        author: "Infrastructure Team",
+    },
+    {
+        title: "Modern Appearance",
+        text: "The cubicle design has given our washroom a much more contemporary and refined appearance.",
+        author: "Office Management Team",
+    },
+    {
+        title: "Smooth Execution",
+        text: "The project was executed with attention to both quality and installation requirements.",
+        author: "Project Coordination Team",
     },
 ];
 
+const columns = [
+    [reviews[0], reviews[4], reviews[8], reviews[12]],
+    [reviews[1], reviews[5], reviews[9], reviews[13]],
+    [reviews[2], reviews[6], reviews[10], reviews[14]],
+    [reviews[3], reviews[7], reviews[11], reviews[15]],
+];
+
+function ReviewCard({ review }) {
+    return (
+        <article className="testimonial-card break-inside-avoid rounded-[8px] border border-[#eeeeef] bg-white px-5 py-6 transition-shadow duration-300 hover:shadow-[0_12px_35px_rgba(0,0,0,0.055)] sm:px-6">
+            <h3 className="text-[14px] font-semibold text-[#121212]">
+                {review.title}
+            </h3>
+
+            <div className="mt-2 flex gap-[2px]">
+                {Array.from({ length: 5 }).map((_, index) => (
+                    <Star
+                        key={index}
+                        size={11}
+                        fill="#F4B731"
+                        stroke="#F4B731"
+                    />
+                ))}
+            </div>
+
+            <p className="mt-4 text-[13px] leading-[1.8] text-[#666666]">
+                {review.text}
+            </p>
+
+            <div className="mt-5 flex items-center gap-2">
+                <span className="flex h-[17px] w-[17px] shrink-0 items-center justify-center rounded-full bg-[#86BD4B]">
+                    <Check size={11} strokeWidth={3} className="text-white" />
+                </span>
+
+                <span className="text-[11px] font-medium text-[#555555]">
+                    {review.author}
+                </span>
+            </div>
+        </article>
+    );
+}
+
 export default function Testimonials() {
     const sectionRef = useRef(null);
-    const [active, setActive] = useState(0);
-
-    const current = testimonials[active];
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.from(".testimonial-header", {
-                y: 35,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: sectionRef.current,
-                    start: "top 82%",
-                },
-            });
+            gsap.fromTo(
+                ".testimonial-heading",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".testimonial-heading",
+                        start: "top 85%",
+                        once: true,
+                    },
+                }
+            );
 
-            gsap.from(".testimonial-main", {
-                y: 40,
-                opacity: 0,
-                duration: 0.9,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".testimonial-main",
-                    start: "top 82%",
-                },
-            });
+            gsap.fromTo(
+                ".testimonial-card",
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    stagger: 0.035,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".testimonial-grid",
+                        start: "top 90%",
+                        once: true,
+                    },
+                }
+            );
+
+            gsap.fromTo(
+                ".testimonial-rating",
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.7,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: ".testimonial-rating",
+                        start: "top 90%",
+                        once: true,
+                    },
+                }
+            );
         }, sectionRef);
 
         return () => ctx.revert();
     }, []);
 
-    const changeTestimonial = (direction) => {
-        setActive((prev) => {
-            if (direction === "next") {
-                return (prev + 1) % testimonials.length;
-            }
-
-            return (
-                (prev - 1 + testimonials.length) %
-                testimonials.length
-            );
-        });
-    };
-
     return (
         <section
             ref={sectionRef}
-            className="
-                relative
-                overflow-hidden
-                bg-[#fff]
-                py-12
-                text-[#071a3d]
-                sm:py-14
-                lg:py-16
-            "
+            className="relative bg-[#f9f9fb] px-5 py-10 text-[#121212] sm:px-[30px] lg:py-15"
         >
-            {/* =====================================================
-                ARCHITECTURAL BACKGROUND
-            ====================================================== */}
+            <div className="mx-auto max-w-[1450px]">
+                {/* CENTER HEADING */}
+                <div className="testimonial-heading mx-auto mb-14 max-w-[680px] text-center sm:mb-16">
+                    <span className="mb-5 inline-block h-[2px] w-8 bg-[#EFAC39]" />
 
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-                {/* Technical grid */}
-                <div
-                    className="absolute inset-0 opacity-[0.45]"
-                    style={{
-                        backgroundImage: `
-                            linear-gradient(rgba(7,26,61,0.035) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(7,26,61,0.035) 1px, transparent 1px)
-                        `,
-                        backgroundSize: "70px 70px",
-                    }}
-                />
-
-                {/* Right architectural SVG */}
-                <svg
-                    className="
-                        absolute
-                        right-[-100px]
-                        top-1/2
-                        h-[600px]
-                        w-[600px]
-                        -translate-y-1/2
-                        opacity-[0.08]
-                    "
-                    viewBox="0 0 600 600"
-                    fill="none"
-                >
-                    <circle
-                        cx="300"
-                        cy="300"
-                        r="230"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <circle
-                        cx="300"
-                        cy="300"
-                        r="170"
-                        stroke="#c99618"
-                        strokeWidth="1"
-                    />
-
-                    <circle
-                        cx="300"
-                        cy="300"
-                        r="90"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <path
-                        d="M70 300H530"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <path
-                        d="M300 70V530"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <path
-                        d="M137 137L463 463"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <path
-                        d="M463 137L137 463"
-                        stroke="#c99618"
-                        strokeWidth="1"
-                    />
-                </svg>
-
-                {/* Left architectural lines */}
-                <svg
-                    className="
-                        absolute
-                        bottom-[-100px]
-                        left-[-120px]
-                        h-[350px]
-                        w-[550px]
-                        opacity-[0.08]
-                    "
-                    viewBox="0 0 550 350"
-                    fill="none"
-                >
-                    <path
-                        d="M0 300L130 170L260 300L550 20"
-                        stroke="#071a3d"
-                        strokeWidth="1"
-                    />
-
-                    <path
-                        d="M0 340L150 190L280 320L550 60"
-                        stroke="#c99618"
-                        strokeWidth="1"
-                    />
-                </svg>
-
-                {/* Gold glow */}
-                <div className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#c99618]/[0.035] blur-[100px]" />
-            </div>
-
-            {/* =====================================================
-                CONTENT
-            ====================================================== */}
-
-            <div className="relative mx-auto max-w-[1250px] px-5 sm:px-8 lg:px-10">
-
-                {/* =================================================
-                    HEADER
-                ================================================== */}
-
-                <div className="testimonial-header mx-auto max-w-[750px] text-center">
-                    <div className="mb-2 flex items-center justify-center gap-3">
-                        <span className="h-[1px] w-12 bg-[#efac39]" />
-
-                        <span className="text-[8px] font-semibold tracking-[0.35em] text-[#efac39] sm:text-[10px]">
-                            CLIENT VOICES
-                        </span>
-
-                        <span className="h-[1px] w-12 bg-[#efac39]" />
-                    </div>
-
-                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
-                        Trusted by
+                    <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.045em] text-[#121212] sm:text-[48px] lg:text-[58px]">
+                        We gained the positive
                         <br />
-
-                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
-                            Industry Leaders
-                        </span>
+                        vibes from them!
                     </h2>
 
-                    <p className="mx-auto mt-4 max-w-[700px] text-[12px] leading-[1.8] text-[#071a3d]/90 sm:text-[13px]">
-                        Our commitment to quality, precision and dependable
-                        execution is reflected in the experiences of our clients.
+                    <p className="mx-auto mt-5 max-w-[520px] text-[13px] leading-[1.9] text-[#777777] sm:text-[14px]">
+                        Our clients' experiences inspire us to keep delivering
+                        dependable cubicle solutions, quality workmanship,
+                        and thoughtful design.
                     </p>
                 </div>
 
-                {/* =================================================
-                    TESTIMONIAL
-                ================================================== */}
-
+                {/* SIMPLE FOUR COLUMN GRID */}
                 <div
-                    className="
-                        testimonial-main
-                        relative
-                        mx-auto
-                        mt-8
-                        max-w-[1050px]
-                        border
-                        border-[#071a3d]/10
-                        bg-white
-                    "
+                    className="testimonial-grid relative grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5"
+                    style={{
+                        maskImage:
+                            "linear-gradient(to bottom, black 0%, black 76%, transparent 100%)",
+                        WebkitMaskImage:
+                            "linear-gradient(to bottom, black 0%, black 76%, transparent 100%)",
+                    }}
                 >
-
-                    {/* Top gold line */}
-                    <div className="absolute left-0 right-0 top-0 h-[2px] bg-[#efac39]" />
-
-                    {/* Corner */}
-                    <div
-                        className="
-                            absolute
-                            right-0
-                            top-0
-                            h-12
-                            w-12
-                            border-r
-                            border-t
-                            border-[#efac39]
-                        "
-                    />
-
-                    <div className="grid lg:grid-cols-[1fr_300px]">
-
-                        {/* =================================================
-                            QUOTE AREA
-                        ================================================== */}
-
-                        <div className="relative px-6 py-8 sm:px-10 sm:py-10 lg:px-14 lg:py-12">
-
-                            {/* Quote icon */}
-                            <div
-                                className="
-                                    mb-6
-                                    flex
-                                    h-12
-                                    w-12
-                                    items-center
-                                    justify-center
-                                    border
-                                    border-[#efac39]/30
-                                    bg-[#efac39]/[0.06]
-                                    text-[#efac39]
-                                "
-                            >
-                                <Quote size={21} />
-                            </div>
-
-                            {/* Quote */}
-                            <blockquote
-                                key={current.id}
-                                className="
-                                    max-w-[700px]
-                                    text-[20px]
-                                    font-light
-                                    leading-[1.55]
-                                    tracking-[-0.02em]
-                                    text-[#071a3d]
-                                    sm:text-[25px]
-                                    lg:text-[29px]
-                                "
-                            >
-                                “{current.quote}”
-                            </blockquote>
-
-                            {/* Stars */}
-                            <div className="mt-7 flex items-center gap-1">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <FaStar
-                                        key={star}
-                                        className="text-[#efac39]"
-                                        size={11}
-                                    />
-                                ))}
-
-                                <span className="ml-3 mt-0.5 text-[10px] font-medium tracking-[0.2em] text-[#071a3d]/95">
-                                    PROJECT EXPERIENCE
-                                </span>
-                            </div>
-
-                            {/* Client information */}
-                            <div className="mt-7 flex items-center gap-4">
-
-                                <div className="h-[1px] w-8 bg-[#efac39]" />
-
-                                <div>
-                                    <p className="text-[10px] font-semibold tracking-[0.12em] text-[#071a3d]">
-                                        {current.name}
-                                    </p>
-
-                                    <p className="mt-1 text-[10px] tracking-[0.15em] text-[#071a3d]/40">
-                                        {current.company} • {current.location}
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        {/* =================================================
-                            CLIENT PANEL
-                        ================================================== */}
-
+                    {columns.map((column, columnIndex) => (
                         <div
-                            className="
-                                relative
-                                flex
-                                min-h-[230px]
-                                flex-col
-                                items-center
-                                justify-center
-                                border-t
-                                border-[#071a3d]/10
-                                bg-[#f7f8f9]
-                                px-6
-                                lg:border-l
-                                lg:border-t-0
-                            "
+                            key={columnIndex}
+                            className="flex flex-col gap-4 lg:gap-5"
                         >
-
-                            {/* Vertical label */}
-                            <div
-                                className="
-                                    absolute
-                                    right-4
-                                    top-5
-                                    text-[10px]
-                                    font-medium
-                                    tracking-[0.3em]
-                                    text-[#071a3d]/90
-                                "
-                            >
-                                CLIENT
-                            </div>
-
-                            {/* Logo */}
-                            <div className="relative h-[75px] w-[160px]">
-                                <Image
-                                    src={current.logo}
-                                    alt={`${current.company} client`}
-                                    fill
-                                    sizes="160px"
-                                    className="object-contain"
-                                />
-                            </div>
-
-                            <div className="mt-5 text-center">
-                                <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071a3d]/90">
-                                    {current.company}
-                                </p>
-
-                                <p className="mt-1 text-[10px] tracking-[0.2em] text-[#efac39]">
-                                    {current.location}
-                                </p>
-                            </div>
-
-                            {/* Number */}
-                            <div className="absolute bottom-5 left-6 text-[9px] font-medium tracking-[0.2em] text-[#071a3d]/90">
-                                {String(active + 1).padStart(2, "0")} /{" "}
-                                {String(testimonials.length).padStart(2, "0")}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* =================================================
-                        CONTROLS
-                    ================================================== */}
-
-                    <div
-                        className="
-                            flex
-                            items-center
-                            justify-between
-                            border-t
-                            border-[#071a3d]/10
-                            px-6
-                            py-4
-                            sm:px-10
-                        "
-                    >
-
-                        {/* Progress */}
-                        <div className="flex items-center gap-2">
-                            {testimonials.map((item, index) => (
-                                <button
-                                    key={item.id}
-                                    type="button"
-                                    onClick={() => setActive(index)}
-                                    aria-label={`View testimonial ${index + 1}`}
-                                    className={`
-                                        h-[2px]
-                                        transition-all
-                                        duration-300
-                                        ${active === index
-                                            ? "w-8 bg-[#efac39]"
-                                            : "w-4 bg-[#071a3d]/15 hover:bg-[#071a3d]/35"
-                                        }
-                                    `}
+                            {column.map((review, index) => (
+                                <ReviewCard
+                                    key={`${columnIndex}-${index}`}
+                                    review={review}
                                 />
                             ))}
                         </div>
-
-                        {/* Arrows */}
-                        <div className="flex items-center gap-2">
-                            <button
-                                type="button"
-                                onClick={() => changeTestimonial("prev")}
-                                aria-label="Previous testimonial"
-                                className="
-                                    flex
-                                    h-9
-                                    w-9
-                                    items-center
-                                    justify-center
-                                    border
-                                    border-[#071a3d]/10
-                                    text-[#071a3d]
-                                    transition-all
-                                    duration-300
-                                    hover:border-[#efac39]
-                                    hover:bg-[#efac39]
-                                    hover:text-white
-                                "
-                            >
-                                <FiArrowLeft size={15} />
-                            </button>
-
-                            <button
-                                type="button"
-                                onClick={() => changeTestimonial("next")}
-                                aria-label="Next testimonial"
-                                className="
-                                    flex
-                                    h-9
-                                    w-9
-                                    items-center
-                                    justify-center
-                                    border
-                                    border-[#071a3d]/10
-                                    text-[#071a3d]
-                                    transition-all
-                                    duration-300
-                                    hover:border-[#efac39]
-                                    hover:bg-[#efac39]
-                                    hover:text-white
-                                "
-                            >
-                                <FiArrowRight size={15} />
-                            </button>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
-                {/* Bottom statement */}
-                <div className="mt-6 flex items-center justify-center gap-4">
-                    <div className="h-[1px] w-10 bg-[#efac39] sm:w-16" />
-
-                    <span className="text-center text-[10px] font-medium tracking-[0.3em] text-[#071a3d]/90 sm:text-[10px]">
-                        QUALITY • PRECISION • TRUST
+                {/* CENTER RATING */}
+                <div className="testimonial-rating relative z-10 -mt-5 flex flex-col items-center text-center sm:-mt-8">
+                    <span className="mb-2 text-[11px] text-[#777777]">
+                        Customer experience
                     </span>
 
-                    <div className="h-[1px] w-10 bg-[#efac39] sm:w-16" />
+                    <div className="flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-4 py-2.5">
+                        <span className="text-[30px] font-semibold leading-none tracking-[-0.06em] text-[#fff]">
+                            5.0
+                        </span>
+
+                        <div className="text-left">
+                            <p className="text-[9px] font-medium text-[#fff]">
+                                Demo rating
+                            </p>
+
+                            <div className="mt-1 flex gap-[2px]">
+                                {Array.from({ length: 5 }).map((_, index) => (
+                                    <Star
+                                        key={index}
+                                        size={10}
+                                        fill="#EFAC39"
+                                        stroke="#EFAC39"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
