@@ -136,11 +136,11 @@ export default function Products() {
   return (
     <main
       ref={pageRef}
-      className="min-h-screen overflow-hidden bg-[#f3f5f7] text-[#071a3d]"
+      className="min-h-screen overflow-hidden bg-[#fff] text-[#071a3d]"
     >
       <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg- bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
         {/* Main Content */}
         <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
@@ -221,7 +221,7 @@ export default function Products() {
         </div>
       </section>
 
-      <div>
+      <div className="pb-50">
         {allProducts.map((category, categoryIndex) => (
           <CategorySection
             key={category.slug}
@@ -254,7 +254,7 @@ function CategorySection({ category, categoryIndex }) {
   return (
     <section
       id={category.slug}
-      className={`product-category relative overflow-hidden py-10 sm:py-12 lg:py-15 ${isLight ? "bg-[#f3f5f7]" : "bg-[#eef1f4]"
+      className={`product-category relative overflow-hidden py-10 sm:py-12 lg:py-15 ${isLight ? "bg-[#f5f3ed]" : "bg-[#fff]"
         }`}
     >
       <div className="pointer-events-none absolute inset-0">

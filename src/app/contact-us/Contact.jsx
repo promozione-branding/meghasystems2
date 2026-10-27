@@ -261,7 +261,7 @@ export default function ContactPage() {
         >
             <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
                 {/* Background Image */}
-                <div className="absolute inset-0 bg-cover bg- bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
+                <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
                 {/* Main Content */}
                 <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
@@ -808,7 +808,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="map-section bg-[#f5f3ed] py-16 sm:py-20 lg:py-24">
+            <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="map-reveal rounded-2xl overflow-hidden border border-[#071a3d]/10 bg-white">
                         {/* Map header */}

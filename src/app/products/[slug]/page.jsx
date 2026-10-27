@@ -120,7 +120,7 @@ export default async function ProductPage({ params }) {
 
     return (
         <main className="overflow-hidden bg-[#f5f3ee] text-[#071a3d]">
-            <section className="relative border-b border-[#071a3d]/10 bg-[#f5f3ee] pt-10 md:pt-25">
+            <section className="relative border-b border-[#071a3d]/10 bg-[#f5f3ee] pt-10 md:pt-30">
                 {/* Architectural background */}
                 <div className="pointer-events-none absolute inset-0 overflow-hidden">
                     <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full border border-[#c99618]/10" />
@@ -556,7 +556,7 @@ export default async function ProductPage({ params }) {
                 </section>
             )}
 
-            <section className="relative overflow-hidden bg-[#f5f3ee] py-12 md:py-15">
+            <section className="relative overflow-hidden bg-[#f5f3ee] pt-10 sm:pt-12 lg:pt-14 pb-70">
                 <div className="pointer-events-none absolute inset-0">
 
                     <div className="absolute -right-32 -top-32 h-[450px] w-[450px] rounded-full border border-[#071a3d]/10" />

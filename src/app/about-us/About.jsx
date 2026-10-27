@@ -656,7 +656,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative py-12 lg:py-15 overflow-hidden bg-white">
+      <section className="relative pt-10 sm:pt-12 lg:pt-14 pb-70 overflow-hidden bg-white">
         <div className="absolute inset-0 opacity-[0.035]">
           <div
             className="absolute inset-0"
