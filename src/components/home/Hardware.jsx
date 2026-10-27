@@ -24,73 +24,73 @@ const HARDWARE = [
         id: "01",
         name: "Indicator Lock",
         detail: "SS PVD Coated",
-        image: "/hardware/indicator-lock.webp",
+        image: "/hardware/1.png",
     },
     {
         id: "02",
         name: "SS Knob",
         detail: "SS PVD Coated",
-        image: "/hardware/ss-knob.webp",
+        image: "/hardware/2.png",
     },
     {
         id: "03",
         name: "Thumb Turn",
         detail: "SS PVD Coated",
-        image: "/hardware/thumb-turn.webp",
+        image: "/hardware/3.png",
     },
     {
         id: "04",
         name: "Coat Hanger",
         detail: "Cum Stopper",
-        image: "/hardware/coat-hanger.webp",
+        image: "/hardware/4.png",
     },
     {
         id: "05",
         name: "SS Spring Loaded Hinge",
         detail: "SS PVD Coated",
-        image: "/hardware/spring-hinge.webp",
+        image: "/hardware/5.png",
     },
     {
         id: "06",
         name: "SS Leg",
         detail: "SS PVD Coated",
-        image: "/hardware/ss-leg.webp",
+        image: "/hardware/6.png",
     },
     {
         id: "07",
         name: "SS PVD Coated Profile",
         detail: "Hardware Profile",
-        image: "/hardware/pvd-profile-1.webp",
+        image: "/hardware/7.png",
     },
     {
         id: "08",
         name: "SS PVD Coated Channel",
         detail: "Hardware Channel",
-        image: "/hardware/pvd-profile-2.webp",
+        image: "/hardware/8.png",
     },
     {
         id: "09",
         name: "SS PVD Coated Rail",
         detail: "Hardware Rail",
-        image: "/hardware/pvd-profile-3.webp",
+        image: "/hardware/9.png",
     },
     {
         id: "10",
         name: "Door Stopper",
         detail: "Aluminium",
-        image: "/hardware/door-stopper.webp",
+        image: "/hardware/10.png",
     },
     {
         id: "11",
         name: "U-Channel",
         detail: "Powder-Coated Aluminium",
-        image: "/hardware/u-channel.webp",
+        image: "/hardware/11.png",
     },
     {
         id: "12",
         name: "F-Channel",
         detail: "Powder-Coated Aluminium",
-        image: "/hardware/f-channel.webp",
+        image: "/hardware/12.png",
     },
 ];
 
@@ -159,10 +159,9 @@ export default function Hardware() {
 
         gsap.to(previewRef.current, {
             opacity: activeItem ? 1 : 0,
-            scale: activeItem ? 1 : 0.88,
-            y: activeItem ? 0 : 15,
-            duration: 0.3,
-            ease: "power3.out",
+            scale: activeItem ? 1 : 0.92,
+            duration: 0.25,
+            ease: "power2.out",
             overwrite: "auto",
         });
     }, [activeItem]);
@@ -170,15 +169,28 @@ export default function Hardware() {
     const handleMouseMove = (event) => {
         if (!previewRef.current) return;
 
-        const rect = sectionRef.current.getBoundingClientRect();
+        const previewWidth = 270;
+        const previewHeight = 280;
+        const gap = 20;
 
-        mouseX.current = event.clientX - rect.left;
-        mouseY.current = event.clientY - rect.top;
+        let x = event.clientX + gap;
+        let y = event.clientY - previewHeight / 2;
+
+        // Prevent image from overflowing the right edge
+        if (x + previewWidth > window.innerWidth - 16) {
+            x = event.clientX - previewWidth - gap;
+        }
+
+        // Prevent image from overflowing top and bottom
+        y = Math.max(
+            16,
+            Math.min(y, window.innerHeight - previewHeight - 16)
+        );
 
         gsap.to(previewRef.current, {
-            x: mouseX.current,
-            y: mouseY.current,
-            duration: 0.45,
+            x,
+            y,
+            duration: 0.35,
             ease: "power3.out",
             overwrite: "auto",
         });
@@ -199,7 +211,7 @@ export default function Hardware() {
             ref={sectionRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleLeave}
-            className="relative isolate overflow-hidden bg-[#111111] py-10 text-white sm:py-12 lg:py-15"
+            className="relative bg-[#111111] py-10 text-white sm:py-12 lg:py-16"
         >
             {/* BACKGROUND */}
             <div
@@ -219,9 +231,9 @@ export default function Hardware() {
                     {/* Giant background text */}
                     <span
                         aria-hidden="true"
-                        className="pointer-events-none uppercase absolute left-1/2 top-[-50px] -translate-x-1/2 select-none whitespace-nowrap text-[clamp(80px,10vw,130px)] font-black leading-none text-white/[0.045]"
+                        className="pointer-events-none uppercase absolute left-1/2 top-[-50px] -translate-x-1/2 select-none whitespace-nowrap text-[clamp(80px,10vw,130px)] font-black leading-none text-white/[0.060]"
                     >
-                       Cubiloo Cubicles
+                        Cubiloo Cubicles
                     </span>
 
                     <div className="relative z-10">
@@ -296,7 +308,24 @@ export default function Hardware() {
             {/* FLOATING HOVER IMAGE */}
             <div
                 ref={previewRef}
-                className="pointer-events-none absolute left-0 top-0 z-30 hidden w-[270px] -translate-x-1/2 -translate-y-[115%] overflow-hidden rounded-[20px] border border-white/15 bg-white p-3 opacity-0 shadow-[0_25px_80px_rgba(0,0,0,0.6)] lg:block"
+                className="
+        pointer-events-none
+        fixed
+        left-0
+        top-0
+        z-[9999]
+        hidden
+        w-[270px]
+        overflow-hidden
+        rounded-[20px]
+        border
+        border-white/15
+        bg-white
+        p-3
+        opacity-0
+        shadow-[0_25px_80px_rgba(0,0,0,0.6)]
+        lg:block
+    "
             >
                 {activeItem && (
                     <>
