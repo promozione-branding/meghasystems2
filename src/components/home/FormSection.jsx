@@ -214,7 +214,7 @@ export default function FormSection() {
         {/* Desktop image placeholder */}
         <div
           ref={bgRef}
-          className="absolute inset-y-0 right-0 hidden w-[62%] origin-center bg-[#D6C8B8] lg:block"
+          className="absolute inset-y-0 right-0 hidden w-[62%] origin-center bg-[#f5f3ed] lg:block"
         >
           {/* Add your restroom cubicle image here */}
         </div>
@@ -227,7 +227,7 @@ export default function FormSection() {
         {/* Curved left panel */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-0 hidden w-[64%] bg-[#f5f3ed] lg:block"
+          className="pointer-events-none absolute inset-y-0 left-0 z-0 hidden w-[64%] bg-[#fff] lg:block"
           style={{
             clipPath: "ellipse(86% 105% at 0% 50%)",
           }}
@@ -320,7 +320,7 @@ export default function FormSection() {
           <div
             ref={formRef}
             id="quote"
-            className="relative z-20 mx-auto w-full max-w-[480px] scroll-mt-24 rounded-[22px] border border-white/70 bg-[#FFFEFC] p-6 shadow-[0_20px_70px_rgba(36,27,20,0.15)] sm:p-8 lg:ml-auto lg:mr-0"
+            className="relative z-20 mx-auto w-full max-w-[480px] scroll-mt-24 rounded-[22px] border border-white/70 bg-[#fff] p-6 shadow-[0_20px_70px_rgba(36,27,20,0.15)] sm:p-8 lg:ml-auto lg:mr-0"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="mb-6 flex items-center gap-3">

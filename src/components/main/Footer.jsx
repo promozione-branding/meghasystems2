@@ -13,6 +13,7 @@ import {
     FaLinkedinIn,
     FaWhatsapp,
 } from "react-icons/fa";
+import FooterCTA from "./FooterCta";
 
 const LOGO_SRC = "/logo2.webp";
 
@@ -50,20 +51,16 @@ const SOCIAL_LINKS = [
         icon: FaWhatsapp,
     },
 
-    // {
-    //     label: "LinkedIn",
-    //     href: "https://in.linkedin.com/company/meghasystems",
-    //     icon: FaLinkedinIn,
-    // },
 ];
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden bg-[#071720] text-white">
-            {/* =====================================================
-                ARCHITECTURAL BACKGROUND
-            ====================================================== */}
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <footer className="relative overflow-visible bg-[#071720] text-white">
+            <div className="relative z-20 -mt-24 sm:-mt-32 lg:-mt-60">
+                <FooterCTA />
+            </div>
+
+            <div className="pointer-events-none absolute inset-0 mt-20 overflow-hidden">
                 {/* Grid */}
                 <div
                     className="absolute inset-0 opacity-[0.035]"
@@ -92,7 +89,7 @@ export default function Footer() {
                 <div className="absolute left-[18%] bottom-[-150px] h-[550px] w-px rotate-[32deg] bg-white/[0.035]" />
 
                 {/* Top gold line */}
-                <div className="absolute left-0 top-0 h-px w-full bg-[#efac39]/50" />
+                {/* <div className="absolute left-0 top-0 h-px w-full bg-[#efac39]/50" /> */}
 
                 {/* =================================================
                     TECHNICAL SVG
@@ -211,15 +208,12 @@ export default function Footer() {
                 </svg>
             </div>
 
-            {/* =====================================================
-                MAIN FOOTER CONTENT
-            ====================================================== */}
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
                 {/* =================================================
                     TOP BRAND SECTION
                 ================================================== */}
-                <div className="border-b border-white/10 py-10">
-                    <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+                <div className="border-b border-white/10 pt-15 pb-5">
+                    <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                         {/* Brand */}
                         <div>
                             <div className="relative inline-block">
@@ -234,20 +228,12 @@ export default function Footer() {
                                 <div className="absolute -bottom-3 -right-3 h-7 w-7 border-b border-r border-[#efac39]" />
                             </div>
 
-                            <p className="mt-8 max-w-xl text-sm leading-7 text-white/95 sm:text-[15px]">
+                            <p className="mt-5 max-w-xl text-sm leading-7 text-white/95 sm:text-[15px]">
                                 Premium toilet cubicle and restroom partition
                                 solutions designed, manufactured, and
                                 installed for modern commercial and
                                 institutional spaces.
                             </p>
-
-                            <div className="mt-7 flex items-center gap-3">
-                                <span className="h-px w-12 bg-[#efac39]" />
-
-                                <span className="text-[9px] font-semibold tracking-[0.28em] text-[#efac39]">
-                                    DESIGN • MANUFACTURE • INSTALL
-                                </span>
-                            </div>
                         </div>
 
                         {/* Right statement */}

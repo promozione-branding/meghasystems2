@@ -25,13 +25,13 @@ export default function Home() {
       <HeroSection />
       <Categories />
       <AboutSection />
+      <HowWeWork />
       <ProductShowcase />
       <Partners />
-      <ProductsSection />
+      {/* <ProductsSection /> */}
       <Hardware />
       <FormSection />
       {/* <Certificates /> */}
-      <HowWeWork />
       <ClientSlider />
       <ParallaxCTA />
       <IndustriesWeServe />

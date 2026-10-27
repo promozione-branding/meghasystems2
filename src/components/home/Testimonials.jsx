@@ -16,7 +16,7 @@ const reviews = [
     },
     {
         title: "Installation Quality",
-        text: "The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
+        text: "The installation process was well coordinated and the final finish was impressive. Everything was completed professionally. The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
         author: "Facility Management Team",
     },
     {
@@ -26,12 +26,12 @@ const reviews = [
     },
     {
         title: "Professional Service",
-        text: "The team understood our requirements and delivered a solution that matched our expectations.",
+        text: "The team understood our requirements and delivered a solution that matched our expectations. The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
         author: "Operations Team",
     },
     {
         title: "Excellent Finish",
-        text: "We are very satisfied with the finished restroom partitions. The product looks premium and is easy to maintain.",
+        text: "We are very satisfied with the finished restroom partitions. The product looks premium and is easy to maintain. The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
         author: "Facilities Team",
     },
     {
@@ -41,7 +41,7 @@ const reviews = [
     },
     {
         title: "Design Quality",
-        text: "The range of finishes helped us choose a design that complemented the surrounding interior.",
+        text: "The range of finishes helped us choose a design that complemented the surrounding interior. The installation process was well coordinated and the final finish was impressive. Everything was completed professionally.",
         author: "Interior Design Team",
     },
     {
@@ -199,7 +199,7 @@ export default function Testimonials() {
             <div className="mx-auto max-w-[1450px]">
                 {/* CENTER HEADING */}
                 <div className="testimonial-heading mx-auto mb-14 max-w-[680px] text-center sm:mb-16">
-                    <span className="mb-5 inline-block h-[2px] w-8 bg-[#EFAC39]" />
+                    <span className="mb-2 inline-block h-[2px] w-8 bg-[#EFAC39]" />
 
                     <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.045em] text-[#121212] sm:text-[48px] lg:text-[58px]">
                         We gained the positive
@@ -207,7 +207,7 @@ export default function Testimonials() {
                         vibes from them!
                     </h2>
 
-                    <p className="mx-auto mt-5 max-w-[520px] text-[13px] leading-[1.9] text-[#777777] sm:text-[14px]">
+                    <p className="mx-auto mt-2 max-w-[520px] text-[13px] leading-[1.9] text-[#777777] sm:text-[14px]">
                         Our clients' experiences inspire us to keep delivering
                         dependable cubicle solutions, quality workmanship,
                         and thoughtful design.
@@ -240,18 +240,18 @@ export default function Testimonials() {
                 </div>
 
                 {/* CENTER RATING */}
-                <div className="testimonial-rating relative z-10 -mt-5 flex flex-col items-center text-center sm:-mt-8">
-                    <span className="mb-2 text-[11px] text-[#777777]">
+                <div className="testimonial-rating pt-20 pb-10 relative z-10 -mt-5 flex flex-col items-center text-center sm:-mt-8">
+                    <span className="mb-2 text-[12px] text-[#777777]">
                         Customer experience
                     </span>
 
                     <div className="flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-4 py-2.5">
-                        <span className="text-[30px] font-semibold leading-none tracking-[-0.06em] text-[#fff]">
+                        <span className="text-[40px] font-semibold leading-none tracking-[-0.06em] text-[#fff]">
                             5.0
                         </span>
 
                         <div className="text-left">
-                            <p className="text-[9px] font-medium text-[#fff]">
+                            <p className="text-[10px] font-medium text-[#fff]">
                                 Demo rating
                             </p>
 
@@ -259,7 +259,7 @@ export default function Testimonials() {
                                 {Array.from({ length: 5 }).map((_, index) => (
                                     <Star
                                         key={index}
-                                        size={10}
+                                        size={15}
                                         fill="#EFAC39"
                                         stroke="#EFAC39"
                                     />

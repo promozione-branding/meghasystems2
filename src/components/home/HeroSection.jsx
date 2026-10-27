@@ -130,9 +130,9 @@ function ImageColumn({ images, index }) {
                                     priority={copy === 0 && i < 2}
                                 />
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" /> */}
 
-                                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between gap-2 p-4">
+                                {/* <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between gap-2 p-4">
                                     <span className="text-xs font-semibold text-white sm:text-sm">
                                         {item.title}
                                     </span>
@@ -141,7 +141,7 @@ function ImageColumn({ images, index }) {
                                         size={16}
                                         className="shrink-0 text-[#EFAC39]"
                                     />
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>
@@ -388,7 +388,7 @@ export default function HeroSection() {
                     <div className="relative z-20 pb-8 lg:pb-12">
 
                         {/* Announcement Badge */}
-                        <div className="cubiloo-badge mb-5 inline-flex max-w-full items-center gap-3 rounded-full border border-[#EFAC39]/40 bg-[#EFAC39]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-9">
+                        <div className="cubiloo-badge mb-2 inline-flex max-w-full items-center gap-3 rounded-full border border-[#EFAC39]/40 bg-[#EFAC39]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-5">
                             <span
                                 className="rounded-full px-4 py-2 text-xs font-bold uppercase text-black"
                                 style={{ background: GRADIENT }}
@@ -407,20 +407,20 @@ export default function HeroSection() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="max-w-[900px] text-[clamp(3rem,5vw,6rem)] font-semibold leading-[1.07] tracking-[-0.065em]">
-                            <span className="block overflow-hidden pb-2">
+                        <h1 className="max-w-[900px] text-[clamp(3rem,5vw,6rem)] font-semibold leading-[0.9] tracking-[-0.065em]">
+                            <span className="block overflow-hidden pb-1">
                                 <span className="cubiloo-title-line block">
                                     Complete
                                 </span>
                             </span>
 
-                            <span className="block overflow-hidden pb-2">
+                            <span className="block overflow-hidden pb-1">
                                 <span className="cubiloo-title-line block">
                                     restroom solutions,
                                 </span>
                             </span>
 
-                            <span className="block overflow-hidden pb-3">
+                            <span className="block overflow-hidden pb-1">
                                 <span
                                     className="cubiloo-title-line block bg-clip-text text-transparent"
                                     style={{ backgroundImage: GRADIENT }}
@@ -431,7 +431,7 @@ export default function HeroSection() {
                         </h1>
 
                         {/* Description */}
-                        <p className="cubiloo-description mt-5 max-w-[620px] text-[15px] leading-[1.85] text-white/60">
+                        <p className="cubiloo-description mt-2 max-w-[620px] text-[15px] leading-[1.85] text-white/60">
                             Established in 2012, Cubiloo Cubicles delivers
                             complete restroom solutions for modern commercial
                             and institutional spaces. From design and

@@ -59,7 +59,7 @@ export default function FAQSection() {
     const [activeFaq, setActiveFaq] = useState(0);
 
     return (
-        <section className="relative overflow-hidden bg-[#f5f3ed] py-9 sm:py-11 lg:py-14">
+        <section className="relative overflow-hidden bg-[#f5f3ed] pt-9 sm:pt-11 lg:pt-14 pb-70">
             {/* =====================================================
                 BACKGROUND
             ====================================================== */}
