@@ -196,7 +196,7 @@ export default function WhyChooseUs() {
                             <path
                                 d="M50 0H0V50"
                                 fill="none"
-                                stroke="#071a3d"
+                                stroke="#071720"
                                 strokeWidth="0.7"
                             />
                         </pattern>
@@ -220,7 +220,7 @@ export default function WhyChooseUs() {
                         cx="325"
                         cy="325"
                         r="275"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
@@ -236,13 +236,13 @@ export default function WhyChooseUs() {
                         cx="325"
                         cy="325"
                         r="140"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M325 20V630M20 325H630"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
                 </svg>
@@ -262,28 +262,28 @@ export default function WhyChooseUs() {
 
                     <path
                         d="M550 90L240 400"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M550 170L320 400"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M550 250L400 400"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
                 </svg>
 
                 {/* Guide Lines */}
 
-                <div className="absolute left-1/2 top-0 h-full w-px bg-[#071a3d]/[0.035]" />
+                <div className="absolute left-1/2 top-0 h-full w-px bg-[#071720]/[0.035]" />
 
-                <div className="absolute left-0 right-0 top-1/2 h-px bg-[#071a3d]/[0.035]" />
+                <div className="absolute left-0 right-0 top-1/2 h-px bg-[#071720]/[0.035]" />
 
                 {/* Gold Top Line */}
 
@@ -295,24 +295,24 @@ export default function WhyChooseUs() {
 
                     <div className="mb-5 flex items-center gap-3">
 
-                        <span className="h-px w-10 bg-[#efac39]" />
+                        <span className="h-px w-10 bg-[#dddf00]" />
 
-                        <span className="text-[10px] font-bold tracking-[0.35em] text-[#efac39]">
+                        <span className="text-[10px] font-bold tracking-[0.35em] text-[#dddf00]">
                             WHY CHOOSE US
                         </span>
 
                     </div>
 
-                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                    <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                         Built on experience.
                         <br />
 
-                        <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                        <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                             Engineered to last.
                         </span>
                     </h2>
 
-                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071a3d]/95 sm:text-base">
+                    <p className="mt-5 max-w-2xl text-sm leading-7 text-[#071720]/95 sm:text-base">
                         We combine technical expertise, premium materials and
                         disciplined execution to create restroom environments
                         that perform beautifully for years.
@@ -341,7 +341,7 @@ export default function WhyChooseUs() {
                                     cx="250"
                                     cy="250"
                                     r="220"
-                                    stroke="#071a3d"
+                                    stroke="#071720"
                                     strokeWidth="1"
                                     strokeDasharray="7 11"
                                 />
@@ -359,20 +359,20 @@ export default function WhyChooseUs() {
                                     cx="250"
                                     cy="250"
                                     r="155"
-                                    stroke="#071a3d"
+                                    stroke="#071720"
                                     strokeWidth="1"
                                     strokeDasharray="3 16"
                                 />
 
                                 <path
                                     d="M250 25V475M25 250H475"
-                                    stroke="#071a3d"
+                                    stroke="#071720"
                                     strokeWidth="1"
                                 />
 
                                 <path
                                     d="M92 92L408 408M408 92L92 408"
-                                    stroke="#071a3d"
+                                    stroke="#071720"
                                     strokeWidth="0.7"
                                 />
 
@@ -420,11 +420,11 @@ export default function WhyChooseUs() {
 
                                 {/* Right architectural line */}
 
-                                <div className="image-frame-line absolute -bottom-3 -right-3 top-[-12px] w-px bg-[#071a3d]/20 sm:-bottom-5 sm:-right-5 sm:top-[-20px]" />
+                                <div className="image-frame-line absolute -bottom-3 -right-3 top-[-12px] w-px bg-[#071720]/20 sm:-bottom-5 sm:-right-5 sm:top-[-20px]" />
 
                                 {/* Bottom architectural line */}
 
-                                <div className="image-frame-line absolute -bottom-3 -left-3 -right-3 h-px bg-[#071a3d]/20 sm:-bottom-5 sm:-left-5 sm:-right-5" />
+                                <div className="image-frame-line absolute -bottom-3 -left-3 -right-3 h-px bg-[#071720]/20 sm:-bottom-5 sm:-left-5 sm:-right-5" />
 
                                 {/* Left architectural line */}
 
@@ -446,11 +446,11 @@ export default function WhyChooseUs() {
 
                                     {/* Image Overlay */}
 
-                                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a3d]/20 via-transparent to-transparent" />
+                                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071720]/20 via-transparent to-transparent" />
 
                                     {/* Top Label */}
 
-                                    <div className="absolute left-0 top-0 bg-[#c99618] px-4 py-3 sm:px-5">
+                                    <div className="absolute left-0 top-0 bg-[#dddf00] px-4 py-3 sm:px-5">
 
                                         <p className="text-[8px] font-bold tracking-[0.28em] text-white sm:text-[9px]">
                                             CUBILOO CUBICLES
@@ -460,7 +460,7 @@ export default function WhyChooseUs() {
 
                                     {/* Product Label */}
 
-                                    <div className="absolute bottom-0 right-0 bg-[#c99618] px-4 py-3 sm:px-5">
+                                    <div className="absolute bottom-0 right-0 bg-[#dddf00] px-4 py-3 sm:px-5">
 
                                         <p className="text-[8px] font-bold tracking-[0.2em] text-white sm:text-[9px]">
                                             MAXI PRO
@@ -476,7 +476,7 @@ export default function WhyChooseUs() {
 
                                 <div className="absolute bottom-[-18px] left-1/2 z-30 -translate-x-1/2 border border-[#d99a17]/40 bg-white/95 px-4 py-2.5 shadow-[0_8px_25px_rgba(7,26,61,0.08)] backdrop-blur-md sm:bottom-[-20px] sm:px-5">
 
-                                    <p className="whitespace-nowrap text-[7px] font-bold tracking-[0.25em] text-[#071a3d] sm:text-[9px]">
+                                    <p className="whitespace-nowrap text-[7px] font-bold tracking-[0.25em] text-[#071720] sm:text-[9px]">
                                         QUALITY • PRECISION • DURABILITY
                                     </p>
 
@@ -496,7 +496,7 @@ export default function WhyChooseUs() {
                                 return (
                                     <div
                                         key={item.number}
-                                        className="why-card group relative border-b border-[#071a3d]/10 py-7 first:pt-0 last:border-b-0"
+                                        className="why-card group relative border-b border-[#071720]/10 py-7 first:pt-0 last:border-b-0"
                                     >
 
                                         <div className="flex gap-5">
@@ -505,7 +505,7 @@ export default function WhyChooseUs() {
 
                                             <div className="shrink-0 pt-1">
 
-                                                <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
+                                                <span className="text-[10px] font-bold tracking-[0.2em] text-[#dddf00]">
                                                     {item.number}
                                                 </span>
 
@@ -522,14 +522,14 @@ export default function WhyChooseUs() {
                                                     items-center
                                                     justify-center
                                                     border
-                                                    border-[#071a3d]/10
+                                                    border-[#071720]/10
                                                     bg-white
-                                                    text-[#efac39]
+                                                    text-[#dddf00]
                                                     shadow-sm
                                                     transition-all
                                                     duration-500
-                                                    group-hover:border-[#071a3d]
-                                                    group-hover:bg-[#071a3d]
+                                                    group-hover:border-[#071720]
+                                                    group-hover:bg-[#071720]
                                                 "
                                             >
 
@@ -558,7 +558,7 @@ export default function WhyChooseUs() {
 
                                                 </div>
 
-                                                <p className="mt-2 text-sm leading-6 text-[#071a3d]/50">
+                                                <p className="mt-2 text-sm leading-6 text-[#071720]/50">
                                                     {item.description}
                                                 </p>
 
@@ -579,25 +579,25 @@ export default function WhyChooseUs() {
                     BOTTOM TRUST BAR
                 ================================================= */}
 
-                <div className="mt-5 grid border-y border-[#071a3d]/10 sm:grid-cols-3 lg:mt-8">
+                <div className="mt-5 grid border-y border-[#071720]/10 sm:grid-cols-3 lg:mt-8">
 
                     {/* Experience */}
 
-                    <div className="flex items-center gap-3 border-b border-[#071a3d]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
+                    <div className="flex items-center gap-3 border-b border-[#071720]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
 
                         <CheckCircle2
                             size={17}
-                            className="text-[#c99618]"
+                            className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 EXPERIENCE
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071a3d]">
+                            <p className="mt-1 text-xs font-medium text-[#071720]">
                                 Proven Industry Expertise
                             </p>
 
@@ -607,21 +607,21 @@ export default function WhyChooseUs() {
 
                     {/* Quality */}
 
-                    <div className="flex items-center gap-3 border-b border-[#071a3d]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
+                    <div className="flex items-center gap-3 border-b border-[#071720]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
 
                         <ShieldCheck
                             size={17}
-                            className="text-[#c99618]"
+                            className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 QUALITY
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071a3d]">
+                            <p className="mt-1 text-xs font-medium text-[#071720]">
                                 Built for Long-Term Performance
                             </p>
 
@@ -635,17 +635,17 @@ export default function WhyChooseUs() {
 
                         <Target
                             size={17}
-                            className="text-[#c99618]"
+                            className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 EXECUTION
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071a3d]">
+                            <p className="mt-1 text-xs font-medium text-[#071720]">
                                 Complete Project Support
                             </p>
 

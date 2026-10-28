@@ -13,7 +13,7 @@ import { allProducts } from "@/data";
 gsap.registerPlugin(ScrollTrigger);
 
 const GRADIENT =
-  "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+  "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 const FILTERS = [
   { label: "All", value: "all" },
@@ -90,26 +90,26 @@ export default function Categories() {
           <div>
             {/* Eyebrow */}
             <div className="mb-5 flex items-center gap-3">
-              <span className="h-[2px] w-12 bg-[#efac39]" />
+              <span className="h-[2px] w-12 bg-[#dddf00]" />
 
-              <span className="text-[9px] font-medium tracking-[0.3em] text-[#efac39]">
+              <span className="text-[9px] font-medium tracking-[0.3em] text-[#dddf00]">
                 OUR SOLUTIONS
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="max-w-[700px] text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px] text-[38px] font-bold leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Built for spaces
               <br />
 
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 that demand more.
               </span>
             </h2>
           </div>
 
           {/* Description */}
-          <p className="max-w-[350px] text-[13px] leading-[1.8] text-[#071a3d]/95 md:pb-2">
+          <p className="max-w-[350px] text-[13px] leading-[1.8] text-[#071720]/95 md:pb-2">
             Explore our range of premium partition and washroom solutions,
             engineered for durability, privacy and modern commercial spaces.
           </p>
@@ -200,7 +200,7 @@ export default function Categories() {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent" />
 
                     {/* TOP RIGHT BADGE */}
-                    <div className="absolute right-3 top-3 z-10 rounded-full bg-[#101010] px-4 py-2 text-[10px] font-bold text-[#EFAC39] shadow-[0_5px_20px_rgba(0,0,0,0.18)] sm:text-[11px]">
+                    <div className="absolute right-3 top-3 z-10 rounded-full bg-[#101010] px-4 py-2 text-[10px] font-bold text-[#dddf00] shadow-[0_5px_20px_rgba(0,0,0,0.18)] sm:text-[11px]">
                       CUBILOO
                     </div>
 
@@ -215,7 +215,7 @@ export default function Categories() {
 
                   {/* TITLE BELOW IMAGE */}
                   <div className="mt-5 text-center">
-                    <h3 className="text-[19px] font-medium tracking-[-0.035em] text-[#121212] transition-colors duration-300 group-hover:text-[#DF7539] sm:text-[21px]">
+                    <h3 className="text-[19px] font-medium tracking-[-0.035em] text-[#121212] transition-colors duration-300 group-hover:text-[#dddf00] sm:text-[21px]">
                       {product.name}
                     </h3>
 

@@ -136,9 +136,9 @@ export default function Products() {
   return (
     <main
       ref={pageRef}
-      className="min-h-screen overflow-hidden bg-[#fff] text-[#071a3d]"
+      className="min-h-screen overflow-hidden bg-[#fff] text-[#071720]"
     >
-      <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
+      <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071720] text-white">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
@@ -156,7 +156,7 @@ export default function Products() {
             {/* Main Heading */}
             <h1 className="about-hero-item text-[#fff] text-5xl font-medium leading-[0.98] tracking-[-0.015em] sm:text-7xl">
               Our {" "}
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-[#fff]">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-[#fff]">
                 Products
               </span>
             </h1>
@@ -164,7 +164,7 @@ export default function Products() {
             <div className="about-hero-item mt-10 flex flex-wrap gap-4">
               <Link
                 href="/about-us"
-                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-6 py-4 text-sm font-semibold text-[#071a3d] transition-all duration-300 hover:bg-[#e5b53c]"
+                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-6 py-4 text-sm font-semibold text-[#071720] transition-all duration-300 hover:bg-[#dddf00]"
               >
                 Explore Cubiloo Cubicles
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -172,7 +172,7 @@ export default function Products() {
 
               <Link
                 href="/contact-us"
-                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
+                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071720] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071720]"
               >
                 Talk to Our Team
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -182,7 +182,7 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="sticky top-0 z-40 border-b border-[#071a3d]/30 bg-[#f3f5f7]/95 backdrop-blur-xl">
+      <section className="sticky top-0 z-40 border-b border-[#071720]/30 bg-[#f3f5f7]/95 backdrop-blur-xl">
         <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
           <div className="flex overflow-x-auto justify-center scrollbar-hide">
             {allProducts.map((category, index) => (
@@ -196,24 +196,24 @@ export default function Products() {
                                     items-center
                                     gap-2
                                     border-r
-                                    border-[#071a3d]/30
+                                    border-[#071720]/30
                                     px-4
                                     py-4
                                     first:border-l
                                     sm:px-5
                                 "
               >
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/60 transition-colors duration-300 group-hover:text-[#efac39]">
+                <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071720]/60 transition-colors duration-300 group-hover:text-[#dddf00]">
                   0{index + 1}
                 </span>
 
-                <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071a3d]/95 transition-colors duration-300 group-hover:text-[#071a3d] sm:text-[12px]">
+                <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071720]/95 transition-colors duration-300 group-hover:text-[#071720] sm:text-[12px]">
                   {category.categoryName}
                 </span>
 
                 <ChevronRight
                   size={12}
-                  className="text-[#efac39] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                  className="text-[#dddf00] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
                 />
               </a>
             ))}
@@ -236,12 +236,12 @@ export default function Products() {
 
 function Stat({ number, label }) {
   return (
-    <div className="products-stat border-l border-[#c99618]/40 pl-4">
+    <div className="products-stat border-l border-[#dddf00]/40 pl-4">
       <p className="text-[30px] font-semibold leading-none tracking-[-0.04em] text-white sm:text-[36px]">
         {number}+
       </p>
 
-      <p className="mt-2 text-[7px] font-semibold tracking-[0.24em] text-[#c99618] sm:text-[8px]">
+      <p className="mt-2 text-[7px] font-semibold tracking-[0.24em] text-[#dddf00] sm:text-[8px]">
         {label}
       </p>
     </div>
@@ -265,7 +265,7 @@ function CategorySection({ category, categoryIndex }) {
                         absolute
                         inset-0
                         opacity-[0.3]
-                        [background-image:linear-gradient(to_right,#071a3d_1px,transparent_1px),linear-gradient(to_bottom,#071a3d_1px,transparent_1px)]
+                        [background-image:linear-gradient(to_right,#071720_1px,transparent_1px),linear-gradient(to_bottom,#071720_1px,transparent_1px)]
                         [background-size:90px_90px]
                         opacity-[0.025]
                     "
@@ -291,7 +291,7 @@ function CategorySection({ category, categoryIndex }) {
             cx="250"
             cy="250"
             r="150"
-            stroke="#c99618"
+            stroke="#dddf00"
             strokeWidth="1"
           />
 
@@ -299,7 +299,7 @@ function CategorySection({ category, categoryIndex }) {
             cx="250"
             cy="250"
             r="195"
-            stroke="#071a3d"
+            stroke="#071720"
             strokeWidth="1"
             strokeDasharray="3 12"
           />
@@ -308,21 +308,21 @@ function CategorySection({ category, categoryIndex }) {
             cx="250"
             cy="250"
             r="225"
-            stroke="#c99618"
+            stroke="#dddf00"
             strokeWidth="1"
             strokeDasharray="1 15"
           />
 
           <path
             d="M250 20V480"
-            stroke="#071a3d"
+            stroke="#071720"
             strokeWidth="1"
             strokeDasharray="2 10"
           />
 
           <path
             d="M20 250H480"
-            stroke="#071a3d"
+            stroke="#071720"
             strokeWidth="1"
             strokeDasharray="2 10"
           />
@@ -330,9 +330,9 @@ function CategorySection({ category, categoryIndex }) {
 
         {/* Corner lines */}
 
-        <div className="absolute bottom-0 left-[8%] h-[180px] w-px rotate-[25deg] bg-[#c99618]/10" />
+        <div className="absolute bottom-0 left-[8%] h-[180px] w-px rotate-[25deg] bg-[#dddf00]/10" />
 
-        <div className="absolute right-[12%] top-0 h-[200px] w-px rotate-[25deg] bg-[#071a3d]/[0.04]" />
+        <div className="absolute right-[12%] top-0 h-[200px] w-px rotate-[25deg] bg-[#071720]/[0.04]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
@@ -344,9 +344,9 @@ function CategorySection({ category, categoryIndex }) {
           {/* Left */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="h-[2px] w-9 bg-[#efac39]" />
+              <span className="h-[2px] w-9 bg-[#dddf00]" />
 
-              <span className="text-[9px] font-semibold tracking-[0.3em] text-[#efac39] sm:text-[10px]">
+              <span className="text-[9px] font-semibold tracking-[0.3em] text-[#dddf00] sm:text-[10px]">
                 RANGE 0{categoryIndex + 1}
               </span>
             </div>
@@ -358,7 +358,7 @@ function CategorySection({ category, categoryIndex }) {
                                 font-semibold
                                 leading-[0.95]
                                 tracking-[-0.045em]
-                                text-[#071a3d]
+                                text-[#071720]
                                 sm:text-[46px]
                                 lg:text-[58px]
                             "
@@ -366,14 +366,14 @@ function CategorySection({ category, categoryIndex }) {
               {category.categoryName}
             </h2>
 
-            <p className="mt-3 max-w-[600px] text-[10px] font-medium tracking-[0.08em] text-[#071a3d]/80 sm:text-[11px]">
+            <p className="mt-3 max-w-[600px] text-[10px] font-medium tracking-[0.08em] text-[#071720]/80 sm:text-[11px]">
               {category.excerpt}
             </p>
           </div>
 
           {/* Right */}
           <div className="lg:text-right">
-            <p className="text-[10px] leading-[1.7] text-[#071a3d]/80 sm:text-[12px]">
+            <p className="text-[10px] leading-[1.7] text-[#071720]/80 sm:text-[12px]">
               {category.description}
             </p>
 
@@ -424,10 +424,10 @@ function CategoryFeature({ icon: Icon, text }) {
       <Icon
         size={14}
         strokeWidth={1.5}
-        className="text-[#efac39]"
+        className="text-[#dddf00]"
       />
 
-      <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071a3d]/80">
+      <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071720]/80">
         {text}
       </span>
     </div>
@@ -444,7 +444,7 @@ function ProductCard({ product, index, categoryIndex }) {
                 overflow-hidden
                 rounded-[8px]
                 border
-                border-[#071a3d]/10
+                border-[#071720]/10
                 bg-white
             "
       whileHover={{
@@ -482,11 +482,11 @@ function ProductCard({ product, index, categoryIndex }) {
 
         {/* Image overlay */}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d]/35 via-transparent to-transparent opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/35 via-transparent to-transparent opacity-70" />
 
         {/* Number */}
 
-        <div className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-[#071a3d]/90 backdrop-blur-md">
+        <div className="absolute left-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-[#071720]/90 backdrop-blur-md">
           <span className="text-[8px] font-semibold text-white">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -495,7 +495,7 @@ function ProductCard({ product, index, categoryIndex }) {
         {/* Range label */}
 
         <div className="absolute bottom-4 left-4">
-          <span className="rounded-[4px] border border-white/20 bg-[#071a3d]/90 px-2.5 py-1.5 text-[7px] font-semibold tracking-[0.16em] text-white backdrop-blur-md">
+          <span className="rounded-[4px] border border-white/20 bg-[#071720]/90 px-2.5 py-1.5 text-[7px] font-semibold tracking-[0.16em] text-white backdrop-blur-md">
             {categoryIndexLabel(categoryIndex)}
           </span>
         </div>
@@ -515,8 +515,8 @@ function ProductCard({ product, index, categoryIndex }) {
                         items-center
                         justify-center
                         rounded-full
-                        bg-[#efac39]
-                        text-[#071a3d]
+                        bg-[#dddf00]
+                        text-[#071720]
                         opacity-0
                         transition-all
                         duration-500
@@ -536,23 +536,23 @@ function ProductCard({ product, index, categoryIndex }) {
       <div className="relative p-5 sm:p-6">
         {/* Gold top line */}
 
-        <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#efac39] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
+        <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#dddf00] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
 
         {/* Product title */}
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#efac39]">
+            <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#dddf00]">
               TOILET CUBICLE SYSTEM
             </p>
 
-            <h3 className="text-[23px] font-semibold leading-none tracking-[-0.035em] text-[#071a3d] sm:text-[26px]">
+            <h3 className="text-[23px] font-semibold leading-none tracking-[-0.035em] text-[#071720] sm:text-[26px]">
               {product.name}
             </h3>
           </div>
         </div>
 
         {/* Description */}
-        <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071a3d]/90 sm:text-[12px]">
+        <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071720]/90 sm:text-[12px]">
           {product.shortDescription}
         </p>
 
@@ -566,20 +566,20 @@ function ProductCard({ product, index, categoryIndex }) {
                         items-center
                         justify-between
                         border-b
-                        border-[#071a3d]/15
+                        border-[#071720]/15
                         pb-2.5
                         text-[9px]
                         font-semibold
                         tracking-[0.16em]
-                        text-[#071a3d]
+                        text-[#071720]
                         transition-colors
                         duration-300
-                        hover:border-[#c99618]
+                        hover:border-[#dddf00]
                     "
         >
           <span>VIEW PRODUCT</span>
 
-          <span className="flex items-center gap-1.5 text-[#efac39]">
+          <span className="flex items-center gap-1.5 text-[#dddf00]">
             EXPLORE
 
             <ArrowUpRight
@@ -593,11 +593,11 @@ function ProductCard({ product, index, categoryIndex }) {
       {/* Bottom architectural corner */}
 
       <div className="pointer-events-none absolute bottom-0 right-0 h-16 w-16 overflow-hidden">
-        <div className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full border border-[#efac39]/20" />
+        <div className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full border border-[#dddf00]/20" />
 
-        <div className="absolute bottom-0 right-0 h-px w-10 bg-[#efac39]/40" />
+        <div className="absolute bottom-0 right-0 h-px w-10 bg-[#dddf00]/40" />
 
-        <div className="absolute bottom-0 right-0 h-10 w-px bg-[#efac39]/40" />
+        <div className="absolute bottom-0 right-0 h-10 w-px bg-[#dddf00]/40" />
       </div>
     </motion.article>
   );

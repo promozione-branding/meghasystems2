@@ -173,10 +173,10 @@ export default function IndustriesWeServe() {
         <div className="industries-blueprint absolute -right-24 top-0 h-[620px] w-[650px] opacity-[0.055]">
           <svg viewBox="0 0 650 620" className="h-full w-full" fill="none">
             <path d="M30 570V170L325 35L620 170V570M85 570V205L325 95L565 205V570M150 570V245H500V570M30 330H620M30 445H620M325 35V570" stroke="#12283a" strokeWidth="1" />
-            <path d="M85 205L150 245M565 205L500 245M150 330L500 445M500 330L150 445" stroke="#c99618" strokeWidth="1" />
+            <path d="M85 205L150 245M565 205L500 245M150 330L500 445M500 330L150 445" stroke="#dddf00" strokeWidth="1" />
           </svg>
         </div>
-        <div className="absolute inset-x-0 top-0 h-px bg-[#c99618]/70" />
+        <div className="absolute inset-x-0 top-0 h-px bg-[#dddf00]/70" />
         <div className="absolute -left-32 top-32 h-96 w-96 rounded-full bg-white/70 blur-3xl" />
       </div>
 
@@ -185,15 +185,15 @@ export default function IndustriesWeServe() {
           {/* Editorial introduction */}
           <div className="flex flex-col justify-center py-2 xl:py-6">
             <div className="industries-eyebrow mb-5 flex items-center gap-3">
-              <span className="h-[2px] w-14 bg-[#efac39]" />
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#efac39]">Industries we serve</span>
+              <span className="h-[2px] w-14 bg-[#dddf00]" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#dddf00]">Industries we serve</span>
             </div>
 
-            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Industries
               <br />
 
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 We Serve
               </span>
             </h2>
@@ -266,7 +266,7 @@ export default function IndustriesWeServe() {
                   className="absolute bottom-5 left-5 flex max-w-[calc(100%-140px)] items-center gap-3 rounded-xl bg-black/55 px-4 py-3 text-white backdrop-blur-md sm:bottom-2 sm:left-2 sm:px-5"
                 >
                   <FiMapPin
-                    className="shrink-0 text-[#efac39]"
+                    className="shrink-0 text-[#dddf00]"
                     size={21}
                   />
                   <div className="min-w-0">
@@ -286,7 +286,7 @@ export default function IndustriesWeServe() {
                   type="button"
                   aria-label="Previous industry"
                   onClick={() => changeIndustry(active - 1)}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#071720] transition hover:bg-[#efac39] sm:h-11 sm:w-11"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#071720] transition hover:bg-[#dddf00] sm:h-11 sm:w-11"
                 >
                   <FiChevronLeft size={21} />
                 </button>
@@ -295,7 +295,7 @@ export default function IndustriesWeServe() {
                   type="button"
                   aria-label="Next industry"
                   onClick={() => changeIndustry(active + 1)}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#071720] text-white ring-1 ring-white/20 transition hover:bg-[#efac39] sm:h-11 sm:w-11"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#071720] text-white ring-1 ring-white/20 transition hover:bg-[#dddf00] sm:h-11 sm:w-11"
                 >
                   <FiChevronRight size={21} />
                 </button>
@@ -364,7 +364,7 @@ export default function IndustriesWeServe() {
                         key={point}
                         className="flex items-center gap-2.5 text-xs text-white/85 sm:text-sm"
                       >
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#efc277] text-[#071720]">
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#dddf00] text-[#071720]">
                           ✓
                         </span>
                         {point}
@@ -376,7 +376,7 @@ export default function IndustriesWeServe() {
                   <div className="">
                     <Link
                       href="/contact"
-                      className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#efac39] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs"
+                      className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#dddf00] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs"
                     >
                       View project
                       <FiArrowUpRight
@@ -405,8 +405,8 @@ export default function IndustriesWeServe() {
                 className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[120px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
               >
                 <div className="flex flex-1 flex-col items-center px-2 pb-3 pt-3 text-center sm:px-3 sm:pt-4">
-                  <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#efc277]" : "text-[#4d5357]"}`}>{industry.number}</span>
-                  <Icon size={25} strokeWidth={1.35} className={`mt-2 ${isActive ? "text-[#efc277]" : "text-[#101820]"}`} />
+                  <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#dddf00]" : "text-[#4d5357]"}`}>{industry.number}</span>
+                  <Icon size={25} strokeWidth={1.35} className={`mt-2 ${isActive ? "text-[#dddf00]" : "text-[#101820]"}`} />
                   <span className="mt-3 text-xs font-semibold sm:text-sm">{industry.title}</span>
                   <span className={`mt-1 line-clamp-2 text-[8px] uppercase leading-4 tracking-[0.08em] sm:text-[9px] ${isActive ? "text-white/60" : "text-[#65696b]"}`}>{industry.subtitle}</span>
                 </div>

@@ -184,9 +184,9 @@ export default function AboutPage() {
   return (
     <main
       ref={pageRef}
-      className="bg-[#f7f6f2] text-[#071a3d] overflow-hidden"
+      className="bg-[#f7f6f2] text-[#071720] overflow-hidden"
     >
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-[#071a3d] text-white">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-[#071720] text-white">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/duro pro toilet cubicles.webp')", }} />
 
@@ -195,16 +195,16 @@ export default function AboutPage() {
           <div className="max-w-7xl flex flex-col items-center">
             {/* Small Heading */}
             <div className="about-hero-item mb-7 flex items-center gap-4">
-              <span className="h-px w-12 bg-[#071a3d]" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#071a3d]">
+              <span className="h-px w-12 bg-[#071720]" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#071720]">
                 About Cubiloo Cubicles
               </span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="about-hero-item text-[#071a3d] text-5xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-6xl">
+            <h1 className="about-hero-item text-[#071720] text-5xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-6xl">
               Trusted expertise. {" "}
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 Built to last.
               </span>
             </h1>
@@ -213,7 +213,7 @@ export default function AboutPage() {
             <div className="about-hero-item mt-10 flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-6 py-4 text-sm font-semibold text-[#071a3d] transition-all duration-300 hover:bg-[#e5b53c]"
+                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-6 py-4 text-sm font-semibold text-[#071720] transition-all duration-300 hover:bg-[#dddf00]"
               >
                 Explore Our Products
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -221,7 +221,7 @@ export default function AboutPage() {
 
               <Link
                 href="/contact-us"
-                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
+                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071720] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071720]"
               >
                 Talk to Our Team
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -239,10 +239,10 @@ export default function AboutPage() {
               <div className="relative">
 
                 {/* Decorative border */}
-                <div className="absolute -bottom-5 -left-5 hidden h-full w-full border border-[#efac39]/40 sm:block" />
+                <div className="absolute -bottom-5 -left-5 hidden h-full w-full border border-[#dddf00]/40 sm:block" />
 
                 {/* Video Container */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-[#071a3d] sm:aspect-[5/5] lg:aspect-[4/3]">
+                <div className="relative aspect-[4/5] overflow-hidden bg-[#071720] sm:aspect-[5/5] lg:aspect-[4/3]">
                   <video
                     src="/megha-systems-about-clean-v2.mp4"
                     autoPlay
@@ -255,12 +255,12 @@ export default function AboutPage() {
                   />
 
                   {/* Subtle Overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071a3d]/55 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071720]/55 via-transparent to-transparent" />
 
                   {/* Video Bottom Label */}
                   <div className="pointer-events-none absolute bottom-6 left-6 right-6 flex items-end justify-between sm:bottom-8 sm:left-8 sm:right-8">
                     <div>
-                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#efac39]">
+                      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#dddf00]">
                         Cubiloo Cubicles
                       </p>
                       <h3 className="text-xl font-light text-white sm:text-2xl">
@@ -269,13 +269,13 @@ export default function AboutPage() {
                     </div>
 
                     <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-md">
-                      <span className="h-2 w-2 animate-pulse rounded-full bg-[#efac39]" />
+                      <span className="h-2 w-2 animate-pulse rounded-full bg-[#dddf00]" />
                     </div>
                   </div>
                 </div>
 
                 {/* Decorative Gold Accent */}
-                <div className="absolute -right-3 -top-3 h-20 w-20 border-r-2 border-t-2 border-[#efac39] sm:-right-5 sm:-top-5" />
+                <div className="absolute -right-3 -top-3 h-20 w-20 border-r-2 border-t-2 border-[#dddf00] sm:-right-5 sm:-top-5" />
               </div>
             </div>
 
@@ -284,26 +284,26 @@ export default function AboutPage() {
 
               {/* Eyebrow */}
               <div className="mb-4 flex items-center gap-4">
-                <span className="text-xs font-bold tracking-[0.2em] text-[#efac39]">
+                <span className="text-xs font-bold tracking-[0.2em] text-[#dddf00]">
                   01
                 </span>
-                <span className="h-px w-10 bg-[#efac39]" />
-                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#071a3d]/90">
+                <span className="h-px w-10 bg-[#dddf00]" />
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#071720]/90">
                   Who We Are
                 </span>
               </div>
 
               {/* Heading */}
-              <h2 className="text-4xl font-light leading-[1.08] tracking-[-0.04em] text-[#071a3d] sm:text-5xl lg:text-6xl">
+              <h2 className="text-4xl font-light leading-[1.08] tracking-[-0.04em] text-[#071720] sm:text-5xl lg:text-6xl">
                 Washroom spaces
                 <br />
-                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   made better.
                 </span>
               </h2>
 
               {/* Description */}
-              <p className="mt-8 text-lg font-light leading-8 text-[#071a3d] sm:text-xl sm:leading-9">
+              <p className="mt-8 text-lg font-light leading-8 text-[#071720] sm:text-xl sm:leading-9">
                 <strong className="font-semibold">
                   Cubiloo Cubicles
                 </strong>{" "}
@@ -313,7 +313,7 @@ export default function AboutPage() {
                 washroom partition solutions.
               </p>
 
-              <p className="mt-6 leading-8 text-[#071a3d]/65">
+              <p className="mt-6 leading-8 text-[#071720]/65">
                 With years of industry experience, we serve clients
                 across major cities in India, delivering solutions that
                 combine durability, functionality, aesthetics, and
@@ -321,12 +321,12 @@ export default function AboutPage() {
               </p>
 
               {/* Bottom Highlight */}
-              <div className="mt-9 flex items-start gap-4 border-l-2 border-[#efac39] bg-[#f8f6f1] px-5 py-5">
+              <div className="mt-9 flex items-start gap-4 border-l-2 border-[#dddf00] bg-[#f8f6f1] px-5 py-5">
                 <div>
-                  <p className="text-sm font-semibold text-[#071a3d]">
+                  <p className="text-sm font-semibold text-[#071720]">
                     Quality. Innovation. Reliability.
                   </p>
-                  <p className="mt-1 text-sm leading-6 text-[#071a3d]/60">
+                  <p className="mt-1 text-sm leading-6 text-[#071720]/60">
                     Creating durable and thoughtfully designed
                     washroom environments for modern spaces.
                   </p>
@@ -343,27 +343,27 @@ export default function AboutPage() {
             {/* Text */}
             <div className="about-reveal">
               <div className="flex items-center gap-4 mb-4">
-                <span className="w-10 h-px bg-[#efac39]" />
-                <span className="text-[11px] tracking-[0.25em] uppercase text-[#efac39] font-semibold">
+                <span className="w-10 h-px bg-[#dddf00]" />
+                <span className="text-[11px] tracking-[0.25em] uppercase text-[#dddf00] font-semibold">
                   Our Approach
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1] tracking-[-0.02em] text-[#071a3d] sm:text-[42px]">
+              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1] tracking-[-0.02em] text-[#071720] sm:text-[42px]">
                 More than a partition.
                 <br />
-                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   A complete washroom solution.
                 </span>
               </h2>
 
-              <p className="mt-8 text-[#071a3d]/90 leading-8">
+              <p className="mt-8 text-[#071720]/90 leading-8">
                 We believe a washroom should perform as well as it looks.
                 Every element has a role — from the panel and hardware to the
                 layout, privacy and final installation.
               </p>
 
-              <p className="mt-2 text-[#071a3d]/90 leading-8">
+              <p className="mt-2 text-[#071720]/90 leading-8">
                 Our approach brings these details together into a coordinated
                 solution designed for the demands of real-world commercial and
                 institutional spaces.
@@ -371,15 +371,15 @@ export default function AboutPage() {
 
               <div className="mt-5 grid grid-cols-2 gap-6">
                 <div className="border-t border-white/10 pt-5">
-                  <p className="text-3xl font-light text-[#efac39]">01</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071a3d]/60">
+                  <p className="text-3xl font-light text-[#dddf00]">01</p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071720]/60">
                     Design Focus
                   </p>
                 </div>
 
                 <div className="border-t border-white/10 pt-5">
-                  <p className="text-3xl font-light text-[#efac39]">02</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071a3d]/60">
+                  <p className="text-3xl font-light text-[#dddf00]">02</p>
+                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071720]/60">
                     Built for Performance
                   </p>
                 </div>
@@ -398,11 +398,11 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 100vw, 70vw"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d]/45 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/45 via-transparent to-transparent" />
 
                 <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7">
-                  <div className="bg-[#071a3d]/90 backdrop-blur-sm px-5 py-4 border-l-2 border-[#c99618]">
-                    <p className="text-[10px] tracking-[0.2em] uppercase text-[#c99618]">
+                  <div className="bg-[#071720]/90 backdrop-blur-sm px-5 py-4 border-l-2 border-[#dddf00]">
+                    <p className="text-[10px] tracking-[0.2em] uppercase text-[#dddf00]">
                       Cubiloo Cubicles
                     </p>
                     <p className="mt-1 text-sm text-white/80">
@@ -413,7 +413,7 @@ export default function AboutPage() {
               </div>
 
               {/* Decorative frame */}
-              <div className="absolute -bottom-4 -right-4 w-28 h-28 border-r border-b border-[#c99618]/60 pointer-events-none" />
+              <div className="absolute -bottom-4 -right-4 w-28 h-28 border-r border-b border-[#dddf00]/60 pointer-events-none" />
             </div>
           </div>
         </div>
@@ -424,56 +424,56 @@ export default function AboutPage() {
           <div className="about-reveal flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-8">
             <div>
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-[#efac39] text-xs font-bold tracking-[0.2em]">
+                <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
                   02
                 </span>
-                <span className="w-10 h-px bg-[#efac39]" />
-                <span className="text-xs tracking-[0.22em] uppercase text-[#071a3d]/50 font-semibold">
+                <span className="w-10 h-px bg-[#dddf00]" />
+                <span className="text-xs tracking-[0.22em] uppercase text-[#071720]/50 font-semibold">
                   Our Expertise
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                 What we
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   specialize in.
                 </span>
               </h2>
             </div>
 
-            <p className="max-w-md text-[#071a3d]/90 leading-7">
+            <p className="max-w-md text-[#071720]/90 leading-7">
               From product selection to installation, Cubiloo Cubicles provides
               coordinated solutions for modern washroom environments.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#071a3d]/50">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-[#071720]/50">
             {expertise.map((item) => {
               const Icon = item.icon;
 
               return (
                 <div
                   key={item.number}
-                  className="about-reveal group relative border-r border-b border-[#071a3d]/50 p-7 lg:p-8 min-h-[300px] hover:bg-[#071a3d] hover:text-white transition-all duration-500"
+                  className="about-reveal group relative border-r border-b border-[#071720]/50 p-7 lg:p-8 min-h-[300px] hover:bg-[#071720] hover:text-white transition-all duration-500"
                 >
                   <div className="flex justify-between items-start">
-                    <span className="text-xs text-[#efac39] tracking-[0.2em]">
+                    <span className="text-xs text-[#dddf00] tracking-[0.2em]">
                       {item.number}
                     </span>
 
-                    <Icon className="text-2xl text-[#071a3d]/90 group-hover:text-[#efac39] transition-colors" />
+                    <Icon className="text-2xl text-[#071720]/90 group-hover:text-[#dddf00] transition-colors" />
                   </div>
 
                   <div className="absolute bottom-7 left-7 right-7 lg:left-8 lg:right-8">
                     <h3 className="text-2xl font-light">{item.title}</h3>
 
-                    <p className="mt-4 text-sm leading-6 text-[#071a3d]/55 group-hover:text-white/50 transition-colors">
+                    <p className="mt-4 text-sm leading-6 text-[#071720]/55 group-hover:text-white/50 transition-colors">
                       {item.description}
                     </p>
 
-                    <div className="mt-6 w-8 h-px bg-[#efac39] group-hover:w-16 transition-all duration-500" />
+                    <div className="mt-6 w-8 h-px bg-[#dddf00] group-hover:w-16 transition-all duration-500" />
                   </div>
                 </div>
               );
@@ -487,25 +487,25 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-16 lg:gap-24">
             <div className="about-reveal">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-[#efac39] text-xs font-bold tracking-[0.2em]">
+                <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
                   03
                 </span>
-                <span className="w-10 h-px bg-[#efac39]" />
-                <span className="text-xs tracking-[0.22em] uppercase text-[#071a3d]/80 font-semibold">
+                <span className="w-10 h-px bg-[#dddf00]" />
+                <span className="text-xs tracking-[0.22em] uppercase text-[#071720]/80 font-semibold">
                   Why Cubiloo Cubicles
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                 The details
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   matter.
                 </span>
               </h2>
 
-              <p className="mt-7 text-[#071a3d]/90 leading-7 max-w-md">
+              <p className="mt-7 text-[#071720]/90 leading-7 max-w-md">
                 Good washroom solutions are not only about appearance. They
                 need to work reliably, fit the project and continue performing
                 long after installation.
@@ -518,15 +518,15 @@ export default function AboutPage() {
 
                 return (
                   <div key={item.title} className="about-reveal">
-                    <div className="w-12 h-12 border border-[#efac39]/80 flex items-center justify-center">
-                      <Icon className="text-xl text-[#efac39]" />
+                    <div className="w-12 h-12 border border-[#dddf00]/80 flex items-center justify-center">
+                      <Icon className="text-xl text-[#dddf00]" />
                     </div>
 
                     <h3 className="mt-5 text-xl font-medium">
                       {item.title}
                     </h3>
 
-                    <p className="mt-3 text-sm leading-6 text-[#071a3d]/80">
+                    <p className="mt-3 text-sm leading-6 text-[#071720]/80">
                       {item.description}
                     </p>
                   </div>
@@ -541,36 +541,36 @@ export default function AboutPage() {
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="about-reveal text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-4 mb-2">
-              <span className="w-10 h-px bg-[#efac39]" />
-              <span className="text-[11px] tracking-[0.25em] uppercase text-[#efac39] font-semibold">
+              <span className="w-10 h-px bg-[#dddf00]" />
+              <span className="text-[11px] tracking-[0.25em] uppercase text-[#dddf00] font-semibold">
                 Where We Work
               </span>
-              <span className="w-10 h-px bg-[#efac39]" />
+              <span className="w-10 h-px bg-[#dddf00]" />
             </div>
 
-            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Solutions for
               <br />
 
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 every environment.
               </span>
             </h2>
 
-            <p className="mt-4 text-[#071a3d]/90 leading-7">
+            <p className="mt-4 text-[#071720]/90 leading-7">
               Our washroom solutions are designed to adapt to a wide range of
               commercial, institutional, hospitality and high-traffic
               environments.
             </p>
           </div>
 
-          <div className="about-reveal mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-l border-[#071a3d]/50">
+          <div className="about-reveal mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-l border-[#071720]/50">
             {industries.map((industry, index) => (
               <div
                 key={industry}
-                className="group border-r border-b border-[#071a3d]/50 p-6 sm:p-8 min-h-[130px] flex flex-col justify-between hover:bg-[#071a3d] transition-colors duration-400"
+                className="group border-r border-b border-[#071720]/50 p-6 sm:p-8 min-h-[130px] flex flex-col justify-between hover:bg-[#071720] transition-colors duration-400"
               >
-                <span className="text-[12px] text-[#efac39] tracking-[0.2em]">
+                <span className="text-[12px] text-[#dddf00] tracking-[0.2em]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
@@ -579,7 +579,7 @@ export default function AboutPage() {
                     {industry}
                   </span>
 
-                  <FiArrowUpRight className="text-[#071a3d]/60 group-hover:text-[#efac39] transition-colors shrink-0" />
+                  <FiArrowUpRight className="text-[#071720]/60 group-hover:text-[#dddf00] transition-colors shrink-0" />
                 </div>
               </div>
             ))}
@@ -592,25 +592,25 @@ export default function AboutPage() {
           <div className="about-reveal grid lg:grid-cols-[0.7fr_1.3fr] gap-14 lg:gap-24">
             <div>
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-[#efac39] text-xs font-bold tracking-[0.2em]">
+                <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
                   04
                 </span>
-                <span className="w-10 h-px bg-[#efac39]" />
+                <span className="w-10 h-px bg-[#dddf00]" />
                 <span className="text-xs tracking-[0.22em] uppercase text-white/40 font-semibold">
                   Our Process
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                 From idea
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   to installation.
                 </span>
               </h2>
 
-              <p className="mt-7 text-[#071a3d]/90 leading-7 max-w-md">
+              <p className="mt-7 text-[#071720]/90 leading-7 max-w-md">
                 A straightforward process designed to keep your project
                 moving from initial requirements through final installation.
               </p>
@@ -630,20 +630,20 @@ export default function AboutPage() {
                   key={item.number}
                   className="group border-t border-white/10 py-5 grid grid-cols-[60px_1fr] sm:grid-cols-[90px_1fr] gap-5"
                 >
-                  <span className="text-[#efac39] text-sm">
+                  <span className="text-[#dddf00] text-sm">
                     {item.number}
                   </span>
 
                   <div>
                     <div className="flex items-center justify-between gap-5">
-                      <h3 className="text-2xl sm:text-3xl font-light text-[#071a3d]">
+                      <h3 className="text-2xl sm:text-3xl font-light text-[#071720]">
                         {item.title}
                       </h3>
 
-                      <FiArrowUpRight className="text-[#071a3d]/50 group-hover:text-[#efac39] transition-colors" />
+                      <FiArrowUpRight className="text-[#071720]/50 group-hover:text-[#dddf00] transition-colors" />
                     </div>
 
-                    <p className="mt-4 max-w-xl text-sm leading-7 text-[#071a3d]/60">
+                    <p className="mt-4 max-w-xl text-sm leading-7 text-[#071720]/60">
                       {item.description}
                     </p>
                   </div>
@@ -662,7 +662,7 @@ export default function AboutPage() {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(#efac39 1px, transparent 1px), linear-gradient(90deg, #efac39 1px, transparent 1px)",
+                "linear-gradient(#dddf00 1px, transparent 1px), linear-gradient(90deg, #dddf00 1px, transparent 1px)",
               backgroundSize: "45px 45px",
             }}
           />
@@ -670,22 +670,22 @@ export default function AboutPage() {
 
         <div className="relative max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <div className="about-reveal">
-            <span className="inline-flex items-center gap-3 text-[#efac39] text-[11px] tracking-[0.25em] uppercase font-semibold">
-              <span className="w-8 h-px bg-[#efac39]" />
+            <span className="inline-flex items-center gap-3 text-[#dddf00] text-[11px] tracking-[0.25em] uppercase font-semibold">
+              <span className="w-8 h-px bg-[#dddf00]" />
               Performance & Design
-              <span className="w-8 h-px bg-[#efac39]" />
+              <span className="w-8 h-px bg-[#dddf00]" />
             </span>
 
-            <h2 className="mt-5 text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="mt-5 text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Practical performance.
               <br />
 
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 Architectural aesthetics.
               </span>
             </h2>
 
-            <p className="mt-8 max-w-2xl mx-auto text-[#071a3d]/90 leading-8">
+            <p className="mt-8 max-w-2xl mx-auto text-[#071720]/90 leading-8">
               We bring together practical functionality and contemporary
               design to create washroom spaces that feel considered,
               professional and built for everyday use.

@@ -14,10 +14,18 @@ import {
 } from "lucide-react";
 
 const GRADIENT =
-    "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+    "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 const columns = [
     [
+        {
+            image: "/Black Maxi.webp",
+            title: "Duro Pro Cubicles",
+        },
+        {
+            image: "/Cielo.webp",
+            title: "Duro Pro Cubicles",
+        },
         {
             image: "/duro pro toilet cubicles.webp",
             title: "Duro Pro Cubicles",
@@ -26,23 +34,39 @@ const columns = [
             image: "/Kiddiez.webp",
             title: "Kiddiez Cubicles",
         },
-        {
-            image: "/Maxi Pro.webp",
-            title: "Maxi Pro Cubicles",
-        },
-        {
-            image: "/Premia.webp",
-            title: "Premia Cubicles",
-        },
+        // {
+        //     image: "/Cubi Doorz.webp",
+        //     title: "Kiddiez Cubicles",
+        // },
+        // {
+        //     image: "/Maxi Pro.webp",
+        //     title: "Maxi Pro Cubicles",
+        // },
+        // {
+        //     image: "/Premia.webp",
+        //     title: "Premia Cubicles",
+        // },
     ],
     [
-        {
-            image: "/Premia.webp",
-            title: "Premium Partitions",
-        },
+        // {
+        //     image: "/Black Maxi.webp",
+        //     title: "Duro Pro Cubicles",
+        // },
+        // {
+        //     image: "/Cielo.webp",
+        //     title: "Duro Pro Cubicles",
+        // },
+        // {
+        //     image: "/Premia.webp",
+        //     title: "Premium Partitions",
+        // },
         {
             image: "/Maxi Pro.webp",
             title: "Commercial Cubicles",
+        },
+        {
+            image: "/Cubi Doorz.webp",
+            title: "Kiddiez Cubicles",
         },
         {
             image: "/duro pro toilet cubicles.webp",
@@ -55,21 +79,33 @@ const columns = [
     ],
     [
         {
-            image: "/Maxi Pro.webp",
+            image: "/Duro-Toilet-Cubicles.webp",
+            title: "Duro Pro Cubicles",
+        },
+        {
+            image: "/Kiddiez Pro.webp",
+            title: "Duro Pro Cubicles",
+        },
+        {
+            image: "/Luron.webp",
             title: "High Pressure Laminate",
         },
         {
-            image: "/Kiddiez.webp",
+            image: "/Rove.webp",
             title: "School Washrooms",
         },
-        {
-            image: "/Premia.webp",
-            title: "Architectural Cubicles",
-        },
-        {
-            image: "/duro pro toilet cubicles.webp",
-            title: "Durable Restroom Systems",
-        },
+        // {
+        //     image: "/Cubi Doorz.webp",
+        //     title: "Kiddiez Cubicles",
+        // },
+        // {
+        //     image: "/Premia.webp",
+        //     title: "Architectural Cubicles",
+        // },
+        // {
+        //     image: "/duro pro toilet cubicles.webp",
+        //     title: "Durable Restroom Systems",
+        // },
     ],
 ];
 
@@ -139,7 +175,7 @@ function ImageColumn({ images, index }) {
 
                                     <ArrowUpRight
                                         size={16}
-                                        className="shrink-0 text-[#EFAC39]"
+                                        className="shrink-0 text-[#dddf00]"
                                     />
                                 </div> */}
                             </div>
@@ -371,13 +407,13 @@ export default function HeroSection() {
             >
                 <div className="cubiloo-grid absolute inset-0" />
 
-                <div className="cubiloo-glow-orange absolute -right-[15%] top-[-20%] h-[800px] w-[800px] rounded-full bg-[#E58B3B]/15 blur-[150px]" />
+                <div className="cubiloo-glow-orange absolute -right-[15%] top-[-20%] h-[800px] w-[800px] rounded-full bg-[#dddf00]/15 blur-[150px]" />
 
-                <div className="absolute -bottom-[300px] left-[10%] h-[650px] w-[650px] rounded-full bg-[#D85538]/10 blur-[150px]" />
+                <div className="absolute -bottom-[300px] left-[10%] h-[650px] w-[650px] rounded-full bg-[#dddf00]/10 blur-[150px]" />
 
                 <div
                     ref={spotlightRef}
-                    className="absolute left-0 top-0 hidden h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#EFAC39]/[0.07] blur-[90px] lg:block"
+                    className="absolute left-0 top-0 hidden h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#dddf00]/[0.07] blur-[90px] lg:block"
                 />
             </div>
 
@@ -388,7 +424,7 @@ export default function HeroSection() {
                     <div className="relative z-20 pb-8 lg:pb-12">
 
                         {/* Announcement Badge */}
-                        <div className="cubiloo-badge mb-2 inline-flex max-w-full items-center gap-3 rounded-full border border-[#EFAC39]/40 bg-[#EFAC39]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-5">
+                        <div className="cubiloo-badge mb-2 inline-flex max-w-full items-center gap-3 rounded-full border border-[#dddf00]/40 bg-[#dddf00]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-5">
                             <span
                                 className="rounded-full px-4 py-2 text-xs font-bold uppercase text-black"
                                 style={{ background: GRADIENT }}
@@ -402,7 +438,7 @@ export default function HeroSection() {
 
                             <ArrowUpRight
                                 size={17}
-                                className="shrink-0 text-[#EFAC39]"
+                                className="shrink-0 text-[#dddf00]"
                             />
                         </div>
 
@@ -443,7 +479,7 @@ export default function HeroSection() {
                         <div className="cubiloo-actions mt-5 flex flex-wrap items-center gap-4">
                             <Link
                                 href="/products"
-                                className="group inline-flex items-center gap-7 rounded-full p-2 pl-7 text-sm font-bold text-black transition-shadow duration-300 hover:shadow-[0_10px_45px_rgba(229,139,59,0.3)] sm:text-base"
+                                className="group inline-flex items-center gap-7 rounded-full p-2 pl-7 text-sm font-bold text-black transition-shadow duration-300 hover:shadow-[0_10px_45px_rgba(221,223,0,0.3)] sm:text-base"
                                 style={{ background: GRADIENT }}
                             >
                                 Explore Solutions
@@ -455,7 +491,7 @@ export default function HeroSection() {
 
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex h-[64px] items-center gap-4 rounded-full border border-white/20 px-7 text-sm font-semibold transition-colors duration-300 hover:border-[#E58B3B] hover:text-[#E58B3B]"
+                                className="group inline-flex h-[64px] items-center gap-4 rounded-full border border-white/20 px-7 text-sm font-semibold transition-colors duration-300 hover:border-[#dddf00] hover:text-[#dddf00]"
                             >
                                 Get a Quote
 
@@ -517,7 +553,7 @@ export default function HeroSection() {
                             <Link
                                 href="/products"
                                 aria-label="Explore Cubiloo solutions"
-                                className="absolute bottom-[6%] left-[3%] z-30 flex h-[115px] w-[115px] items-center justify-center rounded-full shadow-[0_0_60px_rgba(229,139,59,0.25)] sm:h-[145px] sm:w-[145px]"
+                                className="absolute bottom-[28%] left-0 z-30 flex h-[100px] w-[100px] items-center justify-center rounded-full shadow-[0_0_60px_rgba(221,223,0,0.25)] sm:h-[120px] sm:w-[120px]"
                                 style={{ background: GRADIENT }}
                             >
                                 <svg
@@ -536,7 +572,7 @@ export default function HeroSection() {
                                         fill="#111"
                                         fontSize="9.4"
                                         fontWeight="800"
-                                        letterSpacing="2"
+                                        letterSpacing="3"
                                     >
                                         <textPath href="#cubiloo-orbit-path">
                                             PREMIUM CUBICLES • BUILT TO LAST •
@@ -574,7 +610,7 @@ export default function HeroSection() {
                                     className="flex items-center gap-10 whitespace-nowrap text-xs font-semibold tracking-[0.15em] text-white/90"
                                 >
                                     {item}
-                                    <span className="h-1.5 w-1.5 rounded-full bg-[#E58B3B]" />
+                                    <span className="h-1.5 w-1.5 rounded-full bg-[#dddf00]" />
                                 </span>
                             ))}
                         </div>
@@ -588,7 +624,7 @@ export default function HeroSection() {
           --hx-text: #f4f4ef;
           --hx-muted: rgba(244, 244, 239, 0.62);
           --hx-line: rgba(255, 255, 255, 0.09);
-          --hx-orange: #e58b3b;
+          --hx-orange: #dddf00;
         }
 
         .cubiloo-grid {

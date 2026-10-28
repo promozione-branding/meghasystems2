@@ -67,7 +67,7 @@ export default function ClientSlider() {
                         cx="300"
                         cy="300"
                         r="230"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
@@ -83,19 +83,19 @@ export default function ClientSlider() {
                         cx="300"
                         cy="300"
                         r="120"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M300 20V580M20 300H580"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M100 100L500 500M500 100L100 500"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
                 </svg>
@@ -108,19 +108,19 @@ export default function ClientSlider() {
                 >
                     <path
                         d="M0 400L400 0"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M0 460L460 0"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M40 500L500 40"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
@@ -139,7 +139,7 @@ export default function ClientSlider() {
                         y="155"
                         width="150"
                         height="150"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                         transform="rotate(45 230 230)"
                     />
@@ -154,7 +154,7 @@ export default function ClientSlider() {
                 >
                     <path
                         d="M0 90L120 90L180 30H420L480 90H720L780 30H1020L1080 90H1200"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
@@ -166,14 +166,14 @@ export default function ClientSlider() {
                 </svg>
 
                 {/* Center vertical architectural guides */}
-                <div className="absolute left-1/2 top-0 h-full w-px bg-[#071a3d]/[0.035]" />
+                <div className="absolute left-1/2 top-0 h-full w-px bg-[#071720]/[0.035]" />
 
-                <div className="absolute left-[48%] top-0 h-full w-px bg-[#071a3d]/[0.02]" />
+                <div className="absolute left-[48%] top-0 h-full w-px bg-[#071720]/[0.02]" />
 
-                <div className="absolute left-[52%] top-0 h-full w-px bg-[#071a3d]/[0.02]" />
+                <div className="absolute left-[52%] top-0 h-full w-px bg-[#071720]/[0.02]" />
 
                 {/* Horizontal guide */}
-                <div className="absolute left-0 right-0 top-1/2 h-px bg-[#071a3d]/[0.035]" />
+                <div className="absolute left-0 right-0 top-1/2 h-px bg-[#071720]/[0.035]" />
 
                 {/* Gold top border */}
                 <div className="absolute left-0 right-0 top-0 h-px bg-[#d99a17]/40" />
@@ -189,9 +189,9 @@ export default function ClientSlider() {
 
                     <div>
                         <div className="mb-4 flex items-center gap-3">
-                            <span className="h-px w-10 bg-[#efac39]" />
+                            <span className="h-px w-10 bg-[#dddf00]" />
 
-                            <span className="text-[10px] font-bold tracking-[0.32em] text-[#efac39]">
+                            <span className="text-[10px] font-bold tracking-[0.32em] text-[#dddf00]">
                                 OUR CLIENTS
                             </span>
                         </div>
@@ -199,7 +199,7 @@ export default function ClientSlider() {
                         <h2 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-[#000] sm:text-4xl lg:text-5xl">
                             Trusted by brands
                             <br />
-                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                 that demand more.
                             </span>
                         </h2>
@@ -208,16 +208,16 @@ export default function ClientSlider() {
                     <div className="flex items-center gap-3 text-right">
                         <Building2
                             size={19}
-                            className="text-[#efac39]"
+                            className="text-[#dddf00]"
                             strokeWidth={1.6}
                         />
 
                         <div>
-                            <p className="text-[10px] font-bold tracking-[0.22em] text-[#071a3d]/40">
+                            <p className="text-[10px] font-bold tracking-[0.22em] text-[#071720]/40">
                                 PROJECT PARTNERS
                             </p>
 
-                            <p className="mt-1 text-sm text-[#071a3d]/70">
+                            <p className="mt-1 text-sm text-[#071720]/70">
                                 Built for performance
                             </p>
                         </div>
@@ -230,9 +230,9 @@ export default function ClientSlider() {
                 <div className="relative">
 
                     {/* Side architectural accents */}
-                    <div className="pointer-events-none absolute -left-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#efac39]" />
+                    <div className="pointer-events-none absolute -left-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#dddf00]" />
 
-                    <div className="pointer-events-none absolute -right-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#efac39]" />
+                    <div className="pointer-events-none absolute -right-3 top-1/2 z-10 h-20 w-px -translate-y-1/2 bg-[#dddf00]" />
 
                     <Swiper
                         modules={[Autoplay]}
@@ -281,14 +281,14 @@ export default function ClientSlider() {
                                         justify-center
                                         overflow-hidden
                                         border
-                                        border-[#071a3d]/10
+                                        border-[#071720]/10
                                         bg-white/80
                                         px-6
                                         shadow-[0_10px_30px_rgba(7,26,61,0.04)]
                                         transition-all
                                         duration-500
                                         hover:-translate-y-1
-                                        hover:border-[#efac39]/60
+                                        hover:border-[#dddf00]/60
                                         hover:shadow-[0_18px_40px_rgba(7,26,61,0.10)]
                                         sm:h-[145px]
                                     "
@@ -301,7 +301,7 @@ export default function ClientSlider() {
                                             top-0
                                             h-[2px]
                                             w-0
-                                            bg-[#efac39]
+                                            bg-[#dddf00]
                                             transition-all
                                             duration-500
                                             group-hover:w-full
@@ -321,7 +321,7 @@ export default function ClientSlider() {
                                             border-[#d99a17]/0
                                             transition-all
                                             duration-500
-                                            group-hover:border-[#efac39]
+                                            group-hover:border-[#dddf00]
                                         "
                                     />
 
@@ -338,7 +338,7 @@ export default function ClientSlider() {
                                             border-[#d99a17]/0
                                             transition-all
                                             duration-500
-                                            group-hover:border-[#efac39]
+                                            group-hover:border-[#dddf00]
                                         "
                                     />
 
@@ -374,8 +374,8 @@ export default function ClientSlider() {
                                             items-center
                                             justify-center
                                             rounded-full
-                                            bg-[#efac39]
-                                            text-[#071a3d]
+                                            bg-[#dddf00]
+                                            text-[#071720]
                                             opacity-0
                                             transition-all
                                             duration-300
@@ -394,16 +394,16 @@ export default function ClientSlider() {
                 {/* =================================================
                     BOTTOM
                 ================================================== */}
-                <div className="mt-10 flex flex-col gap-4 border-t border-[#071a3d]/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-10 flex flex-col gap-4 border-t border-[#071720]/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
 
-                    <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071a3d]/40">
+                    <p className="text-[10px] font-semibold tracking-[0.25em] text-[#071720]/40">
                         BRANDS • INSTITUTIONS • ENTERPRISES
                     </p>
 
                     <div className="flex items-center gap-3">
-                        <span className="h-px w-8 bg-[#efac39]" />
+                        <span className="h-px w-8 bg-[#dddf00]" />
 
-                        <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
+                        <span className="text-[10px] font-bold tracking-[0.2em] text-[#dddf00]">
                             TRUSTED PARTNERS
                         </span>
                     </div>

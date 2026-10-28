@@ -149,7 +149,7 @@ export default function ParallaxCTA() {
         ref={contentRef}
         className="relative z-10 mx-auto flex w-full max-w-[1050px] flex-col items-center px-5 text-center sm:px-8"
       >
-        <p className="mb-4 bg-gradient-to-r from-[#EFAC39] via-[#E58B3B] to-[#D85538] bg-clip-text text-[14px] font-semibold text-transparent sm:text-[17px]">
+        <p className="mb-4 bg-gradient-to-r from-[#dddf00] via-[#dddf00] to-[#dddf00] bg-clip-text text-[14px] font-semibold text-transparent sm:text-[17px]">
           Let's Build Something Better
         </p>
 
@@ -163,7 +163,7 @@ export default function ParallaxCTA() {
 
         <Link
           href="/contact-us"
-          className="group mt-10 inline-flex items-center justify-center gap-3 rounded-full border border-white bg-transparent px-8 py-4 text-[14px] font-semibold text-white transition-all duration-300 hover:border-[#EFAC39] hover:bg-[#EFAC39] hover:text-black sm:px-10 sm:text-[16px]"
+          className="group mt-10 inline-flex items-center justify-center gap-3 rounded-full border border-white bg-transparent px-8 py-4 text-[14px] font-semibold text-white transition-all duration-300 hover:border-[#dddf00] hover:bg-[#dddf00] hover:text-black sm:px-10 sm:text-[16px]"
         >
           Book a Consultation
 

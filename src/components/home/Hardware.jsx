@@ -15,7 +15,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const GRADIENT =
-    "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+    "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 // Place each cropped hardware image in public/hardware/
 // See image preparation instructions below.
@@ -223,7 +223,7 @@ export default function Hardware() {
                 }}
             />
 
-            <div className="pointer-events-none absolute -left-[200px] top-[20%] h-[600px] w-[600px] rounded-full bg-[#E58B3B]/[0.045] blur-[130px]" />
+            <div className="pointer-events-none absolute -left-[200px] top-[20%] h-[600px] w-[600px] rounded-full bg-[#dddf00]/[0.045] blur-[130px]" />
 
             <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
                 {/* HEADING */}
@@ -238,13 +238,13 @@ export default function Hardware() {
 
                     <div className="relative z-10">
                         <div className="mb-6 flex items-center justify-center gap-3">
-                            <span className="h-px w-8 bg-[#EFAC39]" />
+                            <span className="h-px w-8 bg-[#dddf00]" />
 
-                            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#EFAC39]">
+                            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#dddf00]">
                                 Premium Cubicle Accessories
                             </span>
 
-                            <span className="h-px w-8 bg-[#EFAC39]" />
+                            <span className="h-px w-8 bg-[#dddf00]" />
                         </div>
 
                         <h2 className="text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1] tracking-[-0.015em]">
@@ -279,14 +279,14 @@ export default function Hardware() {
                             onBlur={handleLeave}
                             onClick={() => setMobileItem(item)}
                             className={`hardware-pill group inline-flex min-h-[65px] items-center gap-3 rounded-[16px] border px-5 py-3.5 text-left transition-all duration-300 sm:min-h-[74px] sm:px-7 ${activeItem?.id === item.id
-                                ? "border-[#E58B3B] bg-[#E58B3B]/15"
-                                : "border-white/[0.055] bg-[#202020] hover:border-[#E58B3B]/50 hover:bg-[#29231E]"
+                                ? "border-[#dddf00] bg-[#dddf00]/15"
+                                : "border-white/[0.055] bg-[#202020] hover:border-[#dddf00]/50 hover:bg-[#29231E]"
                                 }`}
                         >
                             <span
                                 className={`text-[11px] font-semibold transition-colors ${activeItem?.id === item.id
-                                    ? "text-[#EFAC39]"
-                                    : "text-white/25 group-hover:text-[#EFAC39]"
+                                    ? "text-[#dddf00]"
+                                    : "text-white/25 group-hover:text-[#dddf00]"
                                     }`}
                             >
                                 {item.id}
@@ -298,7 +298,7 @@ export default function Hardware() {
 
                             <ArrowUpRight
                                 size={17}
-                                className="text-white/25 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#EFAC39]"
+                                className="text-white/25 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#dddf00]"
                             />
                         </button>
                     ))}

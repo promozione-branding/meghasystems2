@@ -71,15 +71,15 @@ export default function CubicleDetails() {
                     className="absolute inset-0 opacity-[0.035]"
                     style={{
                         backgroundImage: `
-                            linear-gradient(#071a3d 1px, transparent 1px),
-                            linear-gradient(90deg, #071a3d 1px, transparent 1px)
+                            linear-gradient(#071720 1px, transparent 1px),
+                            linear-gradient(90deg, #071720 1px, transparent 1px)
                         `,
                         backgroundSize: "60px 60px",
                     }}
                 />
 
                 {/* Large technical circles */}
-                <div className="absolute -right-52 top-[-100px] h-[600px] w-[600px] rounded-full border border-[#071a3d]/[0.04]" />
+                <div className="absolute -right-52 top-[-100px] h-[600px] w-[600px] rounded-full border border-[#071720]/[0.04]" />
 
                 <div className="absolute -left-60 bottom-[-180px] h-[600px] w-[600px] rounded-full border border-[#d99a17]/[0.07]" />
 
@@ -94,24 +94,24 @@ export default function CubicleDetails() {
                 <div className="mb-6 flex flex-col gap-4 sm:mb-8 lg:flex-row lg:items-end lg:justify-between">
                     <div>
                         <div className="mb-2 flex items-center gap-3">
-                            <span className="h-px w-8 bg-[#efac39]" />
+                            <span className="h-px w-8 bg-[#dddf00]" />
 
-                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#efac39]">
+                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#dddf00]">
                                 SYSTEM DETAILS
                             </span>
                         </div>
 
-                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                             Designed around
                             <br />
 
-                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                 every detail.
                             </span>
                         </h2>
                     </div>
 
-                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/90 lg:text-right">
+                    <p className="max-w-md text-xs leading-5 text-[#071720]/90 lg:text-right">
                         Explore the key components of our cubicle system.
                         Hover or tap a marker to inspect each detail.
                     </p>
@@ -133,7 +133,7 @@ export default function CubicleDetails() {
                         {/* Outer architectural frame */}
                         <motion.path
                             d="M80 110H1120V540H80V110Z"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                             strokeDasharray="8 14"
                             initial={{ pathLength: 0, opacity: 0 }}
@@ -160,7 +160,7 @@ export default function CubicleDetails() {
                         {/* Perspective floor */}
                         <motion.path
                             d="M180 540L600 610L1020 540"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                             strokeDasharray="7 12"
                             initial={{ pathLength: 0 }}
@@ -187,7 +187,7 @@ export default function CubicleDetails() {
                         {/* Horizontal construction lines */}
                         <path
                             d="M80 205H1120M80 430H1120"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                             opacity="0.07"
                         />
@@ -228,7 +228,7 @@ export default function CubicleDetails() {
                     {/* =================================================
                         IMAGE FRAME
                     ================================================= */}
-                    <div className="relative z-10 overflow-hidden border border-[#071a3d]/10 bg-white p-1.5 shadow-[0_18px_55px_rgba(7,26,61,0.10)] sm:p-2">
+                    <div className="relative z-10 overflow-hidden border border-[#071720]/10 bg-white p-1.5 shadow-[0_18px_55px_rgba(7,26,61,0.10)] sm:p-2">
                         {/* Gold architectural corners */}
                         <span className="absolute left-0 top-0 z-40 h-12 w-12 border-l-2 border-t-2 border-[#d99a17]" />
 
@@ -249,7 +249,7 @@ export default function CubicleDetails() {
                             />
 
                             {/* Very subtle image treatment */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-[#071a3d]/[0.04] via-transparent to-[#071a3d]/[0.12]" />
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#071720]/[0.04] via-transparent to-[#071720]/[0.12]" />
 
                             {/* Inner frame */}
                             <div className="pointer-events-none absolute inset-4 border border-white/25" />
@@ -310,8 +310,8 @@ export default function CubicleDetails() {
                                                 shadow-[0_5px_18px_rgba(0,0,0,0.25)]
                                                 transition-all duration-300
                                                 ${isActive
-                                                    ? "border-white bg-[#071a3d] text-white"
-                                                    : "border-white bg-white/95 text-[#071a3d]"
+                                                    ? "border-white bg-[#071720] text-white"
+                                                    : "border-white bg-white/95 text-[#071720]"
                                                 }
                                             `}
                                         >
@@ -358,7 +358,7 @@ export default function CubicleDetails() {
                                             </div>
 
                                             <div className="min-w-0">
-                                                <p className="text-[8px] font-bold tracking-[0.22em] text-[#c99618]">
+                                                <p className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
                                                     COMPONENT / 0
                                                     {active.number}
                                                 </p>
@@ -374,7 +374,7 @@ export default function CubicleDetails() {
 
                                             <ArrowUpRight
                                                 size={14}
-                                                className="ml-auto shrink-0 text-[#c99618]"
+                                                className="ml-auto shrink-0 text-[#dddf00]"
                                             />
                                         </div>
                                     </div>
@@ -433,8 +433,8 @@ export default function CubicleDetails() {
                                     tracking-[0.08em]
                                     transition-all duration-300
                                     ${isActive
-                                        ? "border-[#071a3d] bg-[#000] text-white"
-                                        : "border-[#071a3d]/10 bg-white/60 text-[#071a3d]/60 hover:border-[#efac39]/50 hover:bg-white"
+                                        ? "border-[#071720] bg-[#000] text-white"
+                                        : "border-[#071720]/10 bg-white/60 text-[#071720]/60 hover:border-[#dddf00]/50 hover:bg-white"
                                     }
                                 `}
                             >
@@ -444,8 +444,8 @@ export default function CubicleDetails() {
                                         justify-center rounded-full
                                         text-[10px]
                                         ${isActive
-                                            ? "bg-[#efac39] text-[#071a3d]"
-                                            : "bg-[#071a3d]/5"
+                                            ? "bg-[#dddf00] text-[#071720]"
+                                            : "bg-[#071720]/5"
                                         }
                                     `}
                                 >
@@ -464,13 +464,13 @@ export default function CubicleDetails() {
                     BOTTOM MICRO LINE
                 ====================================================== */}
                 <div className="mt-5 flex items-center justify-center gap-3">
-                    <span className="h-px w-8 bg-[#efac39]" />
+                    <span className="h-px w-8 bg-[#dddf00]" />
 
-                    <span className="text-[10px] font-bold tracking-[0.25em] text-[#071a3d]/90">
+                    <span className="text-[10px] font-bold tracking-[0.25em] text-[#071720]/90">
                         PREMIUM HARDWARE • PRECISION INSTALLATION
                     </span>
 
-                    <span className="h-px w-8 bg-[#efac39]" />
+                    <span className="h-px w-8 bg-[#dddf00]" />
                 </div>
             </div>
         </section>

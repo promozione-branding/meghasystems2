@@ -24,7 +24,7 @@ const partners = [
 ];
 
 const gradient =
-    "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+    "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 export default function Partners() {
     const sectionRef = useRef(null);
@@ -90,7 +90,7 @@ export default function Partners() {
             />
 
             {/* BACKGROUND GLOW */}
-            <div className="pointer-events-none absolute -left-40 top-1/3 h-[450px] w-[450px] rounded-full bg-[#EFAC39]/[0.07] blur-[110px]" />
+            <div className="pointer-events-none absolute -left-40 top-1/3 h-[450px] w-[450px] rounded-full bg-[#dddf00]/[0.07] blur-[110px]" />
 
             <div className="relative mx-auto grid max-w-[1500px] items-start gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-stretch lg:gap-20 lg:px-12">
                 {/* LEFT CONTENT */}
@@ -101,14 +101,14 @@ export default function Partners() {
                             <div className="mb-6 flex items-center gap-3">
                                 {/* Left decorative lines */}
                                 <div className="flex flex-col items-end gap-[5px]">
-                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#EFAC39]" />
-                                    <span className="h-[4px] w-9 rounded-full bg-[#E58B3B]" />
-                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#DF7539]" />
+                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#dddf00]" />
+                                    <span className="h-[4px] w-9 rounded-full bg-[#dddf00]" />
+                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#dddf00]" />
                                 </div>
 
                                 {/* Main badge */}
                                 <div
-                                    className="rounded-[17px] px-6 py-4 shadow-[0_8px_25px_rgba(229,139,59,0.15)]"
+                                    className="rounded-[17px] px-6 py-4 shadow-[0_8px_25px_rgba(221,223,0,0.15)]"
                                     style={{ background: gradient }}
                                 >
                                     <span className="text-[13px] font-bold tracking-[-0.02em] text-[#121212] sm:text-[15px]">
@@ -118,14 +118,14 @@ export default function Partners() {
 
                                 {/* Right decorative lines */}
                                 <div className="flex flex-col items-start gap-[5px]">
-                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#EFAC39]" />
-                                    <span className="h-[4px] w-9 rounded-full bg-[#E58B3B]" />
-                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#DF7539]" />
+                                    <span className="h-[4px] w-6 -rotate-[28deg] rounded-full bg-[#dddf00]" />
+                                    <span className="h-[4px] w-9 rounded-full bg-[#dddf00]" />
+                                    <span className="h-[4px] w-6 rotate-[28deg] rounded-full bg-[#dddf00]" />
                                 </div>
                             </div>
 
                             {/* HEADING */}
-                            <h2 className="max-w-[650px] text-[42px] font-medium leading-[1] tracking-[-0.015em] text-[#071a3d] sm:text-[52px] lg:text-[66px]">
+                            <h2 className="max-w-[650px] text-[42px] font-medium leading-[1] tracking-[-0.015em] text-[#071720] sm:text-[52px] lg:text-[66px]">
                                 Built on
                                 <br />
                                 <span
@@ -139,7 +139,7 @@ export default function Partners() {
                             </h2>
 
                             {/* DESCRIPTION */}
-                            <p className="mt-7 max-w-[470px] text-[14px] leading-[1.9] text-[#071a3d]/65 sm:text-[15px]">
+                            <p className="mt-7 max-w-[470px] text-[14px] leading-[1.9] text-[#071720]/65 sm:text-[15px]">
                                 We collaborate with leading brands and manufacturers
                                 to deliver premium materials, dependable quality
                                 and innovative solutions for every project.
@@ -158,10 +158,10 @@ export default function Partners() {
                                     >
                                         <Check
                                             size={17}
-                                            className="text-[#DF7539]"
+                                            className="text-[#dddf00]"
                                         />
 
-                                        <span className="text-[13px] text-[#071a3d]/80">
+                                        <span className="text-[13px] text-[#071720]/80">
                                             {item}
                                         </span>
                                     </div>
@@ -173,7 +173,7 @@ export default function Partners() {
 
                 {/* RIGHT PARTNER LIST */}
                 <div className="partners-list">
-                    <div className="divide-y divide-[#071a3d]/10">
+                    <div className="divide-y divide-[#071720]/10">
                         {partners.map((partner, index) => (
                             <div
                                 key={partner.name}
@@ -183,7 +183,7 @@ export default function Partners() {
                                 <div className="pointer-events-none absolute -inset-x-3 inset-y-1 rounded-2xl bg-white opacity-0 shadow-[0_10px_35px_rgba(7,26,61,0.05)] transition-opacity duration-300 group-hover:opacity-100" />
 
                                 {/* LOGO */}
-                                <div className="relative z-10 flex h-[66px] w-[66px] items-center justify-center overflow-hidden rounded-full border border-[#071a3d]/10 bg-white p-2 shadow-sm sm:h-[86px] sm:w-[86px]">
+                                <div className="relative z-10 flex h-[66px] w-[66px] items-center justify-center overflow-hidden rounded-full border border-[#071720]/10 bg-white p-2 shadow-sm sm:h-[86px] sm:w-[86px]">
                                     <div className="relative h-full w-full">
                                         <Image
                                             src={partner.logo}
@@ -197,23 +197,23 @@ export default function Partners() {
 
                                 {/* PARTNER NAME */}
                                 <div className="relative z-10 min-w-0">
-                                    <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[#071a3d]/35">
+                                    <p className="mb-1 text-[10px] font-medium uppercase tracking-[0.16em] text-[#071720]/35">
                                         {String(index + 1).padStart(2, "0")}
                                         {" / "}Partner
                                     </p>
 
-                                    <h3 className="text-[19px] font-medium tracking-[-0.03em] text-[#071a3d] transition-colors duration-300 group-hover:text-[#DF7539] sm:text-[25px]">
+                                    <h3 className="text-[19px] font-medium tracking-[-0.03em] text-[#071720] transition-colors duration-300 group-hover:text-[#dddf00] sm:text-[25px]">
                                         {partner.name}
                                     </h3>
                                 </div>
 
                                 {/* RIGHT INDICATOR */}
                                 <div className="relative z-10 flex items-center gap-3 sm:gap-5">
-                                    <span className="hidden text-[11px] font-medium text-[#071a3d]/50 md:block">
+                                    <span className="hidden text-[11px] font-medium text-[#071720]/50 md:block">
                                         Trusted Brand
                                     </span>
 
-                                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#071a3d]/15 bg-white text-[#071a3d] transition-all duration-300 group-hover:rotate-45 group-hover:border-transparent group-hover:bg-[#DF7539] group-hover:text-white sm:h-12 sm:w-12">
+                                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#071720]/15 bg-white text-[#071720] transition-all duration-300 group-hover:rotate-45 group-hover:border-transparent group-hover:bg-[#dddf00] group-hover:text-white sm:h-12 sm:w-12">
                                         <ArrowUpRight size={19} />
                                     </span>
                                 </div>

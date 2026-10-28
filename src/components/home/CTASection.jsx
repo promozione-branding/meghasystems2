@@ -258,7 +258,7 @@ function CubicleIllustration() {
                         dx="0"
                         dy="7"
                         stdDeviation="7"
-                        floodColor="#071a3d"
+                        floodColor="#071720"
                         floodOpacity="0.16"
                     />
                 </filter>
@@ -516,7 +516,7 @@ function CubicleIllustration() {
                     M165 438
                     C400 455 760 465 1150 447
                 "
-                stroke="#071a3d"
+                stroke="#071720"
                 strokeWidth="2"
                 opacity="0.10"
             />
@@ -526,7 +526,7 @@ function CubicleIllustration() {
                     M180 450
                     C430 468 780 478 1130 460
                 "
-                stroke="#c99618"
+                stroke="#dddf00"
                 strokeWidth="1"
                 opacity="0.25"
                 strokeDasharray="3 8"
@@ -687,7 +687,7 @@ export default function CTASection() {
                         h-[120%]
                         w-px
                         rotate-[25deg]
-                        bg-[#071a3d]/[0.025]
+                        bg-[#071720]/[0.025]
                     "
                 />
 
@@ -699,7 +699,7 @@ export default function CTASection() {
                         h-[120%]
                         w-px
                         rotate-[25deg]
-                        bg-[#071a3d]/[0.02]
+                        bg-[#071720]/[0.02]
                     "
                 />
 
@@ -712,7 +712,7 @@ export default function CTASection() {
                         right-0
                         top-[43%]
                         h-px
-                        bg-[#071a3d]/[0.025]
+                        bg-[#071720]/[0.025]
                     "
                 />
 
@@ -739,7 +739,7 @@ export default function CTASection() {
                         cx="200"
                         cy="200"
                         r="120"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="1"
                     />
 
@@ -747,21 +747,21 @@ export default function CTASection() {
                         cx="200"
                         cy="200"
                         r="160"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="1"
                         strokeDasharray="2 9"
                     />
 
                     <path
                         d="M200 25V375"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="1"
                         strokeDasharray="2 10"
                     />
 
                     <path
                         d="M25 200H375"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="1"
                         strokeDasharray="2 10"
                     />
@@ -811,14 +811,14 @@ export default function CTASection() {
                                 gap-3 mb-2
                             "
                         >
-                            <span className="h-[2px] w-8 bg-[#efac39]" />
+                            <span className="h-[2px] w-8 bg-[#dddf00]" />
 
                             <span
                                 className="
                                     text-[7px]
                                     font-semibold
                                     tracking-[0.30em]
-                                    text-[#efac39]
+                                    text-[#dddf00]
                                     sm:text-[10px]
                                 "
                             >
@@ -826,11 +826,11 @@ export default function CTASection() {
                             </span>
                         </div>
 
-                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                             Stylish. Durable.
                             <br />
 
-                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                 Built for Every Space.
                             </span>
                         </h2>
@@ -842,7 +842,7 @@ export default function CTASection() {
                                 max-w-[430px]
                                 text-[10px]
                                 leading-[1.65]
-                                text-[#071a3d]/90
+                                text-[#071720]/90
                                 sm:text-[11px]
                                 lg:text-[12px]
                             "
@@ -893,8 +893,8 @@ export default function CTASection() {
                                             justify-center
                                             rounded-full
                                             border
-                                            border-[#efac39]
-                                            text-[#071a3d]
+                                            border-[#dddf00]
+                                            text-[#071720]
                                         "
                                     >
                                         <Icon
@@ -910,7 +910,7 @@ export default function CTASection() {
                                                 font-semibold
                                                 leading-tight
                                                 tracking-[0.24em]
-                                                text-[#071a3d]
+                                                text-[#071720]
                                             "
                                         >
                                             {feature.title}
@@ -923,7 +923,7 @@ export default function CTASection() {
                                                 font-semibold
                                                 leading-tight
                                                 tracking-[0.24em]
-                                                text-[#071a3d]
+                                                text-[#071720]
                                             "
                                         >
                                             {feature.subtitle}
@@ -973,43 +973,43 @@ export default function CTASection() {
                     >
                         <path
                             d="M15 260V105L150 48L285 105V260"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M42 260V120L92 101V260"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M92 260V101L150 82V260"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M150 260V82L208 101V260"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M208 260V101L258 120V260"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M48 128L86 113V235H48V128Z"
-                            stroke="#c99618"
+                            stroke="#dddf00"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M155 91L201 106V235H155V91Z"
-                            stroke="#c99618"
+                            stroke="#dddf00"
                             strokeWidth="1"
                         />
 
@@ -1017,7 +1017,7 @@ export default function CTASection() {
                             cx="79"
                             cy="175"
                             r="3"
-                            stroke="#c99618"
+                            stroke="#dddf00"
                             strokeWidth="1"
                         />
 
@@ -1025,13 +1025,13 @@ export default function CTASection() {
                             cx="194"
                             cy="178"
                             r="3"
-                            stroke="#c99618"
+                            stroke="#dddf00"
                             strokeWidth="1"
                         />
 
                         <path
                             d="M15 260H285"
-                            stroke="#071a3d"
+                            stroke="#071720"
                             strokeWidth="1"
                         />
                     </svg>
@@ -1088,14 +1088,14 @@ export default function CTASection() {
 
                         <div>
                             <div className="flex items-center gap-2">
-                                <span className="h-[2px] w-7 bg-[#efac39]" />
+                                <span className="h-[2px] w-7 bg-[#dddf00]" />
 
                                 <span
                                     className="
                                         text-[9px]
                                         font-semibold
                                         tracking-[0.27em]
-                                        text-[#efac39]
+                                        text-[#dddf00]
                                     "
                                 >
                                     TAKE THE NEXT STEP
@@ -1125,7 +1125,7 @@ export default function CTASection() {
                                     max-w-[200px]
                                     text-[10px]
                                     leading-[1.6]
-                                    text-[#071a3d]/90
+                                    text-[#071720]/90
                                 "
                             >
                                 Choose an option below and let our
@@ -1181,15 +1181,15 @@ export default function CTASection() {
 
                                                 ${action.primary
                                                     ? `
-                                                            border-[#071a3d]
-                                                            bg-[#071a3d]
+                                                            border-[#071720]
+                                                            bg-[#071720]
                                                             text-white
                                                             shadow-[0_8px_20px_rgba(7,26,61,0.12)]
                                                         `
                                                     : `
-                                                            border-[#efac39]
+                                                            border-[#dddf00]
                                                             bg-[#f9f8f3]
-                                                            text-[#071a3d]
+                                                            text-[#071720]
                                                         `
                                                 }
                                             `}
@@ -1206,7 +1206,7 @@ export default function CTASection() {
                                                     -translate-y-1/2
                                                     rounded-full
                                                     border
-                                                    border-[#efac39]/40
+                                                    border-[#dddf00]/40
                                                     transition-transform
                                                     duration-700
                                                     group-hover:scale-[1.35]
@@ -1223,7 +1223,7 @@ export default function CTASection() {
                                                     -translate-y-1/2
                                                     rounded-full
                                                     border
-                                                    border-[#efac39]/15
+                                                    border-[#dddf00]/15
                                                 "
                                             />
 
@@ -1248,8 +1248,8 @@ export default function CTASection() {
                                                         justify-center
                                                         rounded-[7px]
                                                         border
-                                                        border-[#efac39]
-                                                        text-[#efac39]
+                                                        border-[#dddf00]
+                                                        text-[#dddf00]
                                                         transition-transform
                                                         duration-500
                                                         group-hover:rotate-3
@@ -1278,7 +1278,7 @@ export default function CTASection() {
                                                 className="
                                                     relative
                                                     z-10
-                                                    text-[#efac39]
+                                                    text-[#dddf00]
                                                     transition-transform
                                                     duration-300
                                                     group-hover:translate-x-1
@@ -1298,7 +1298,7 @@ export default function CTASection() {
                                                     left-0
                                                     h-[2px]
                                                     w-0
-                                                    bg-[#efac39]
+                                                    bg-[#dddf00]
                                                     transition-all
                                                     duration-500
                                                     group-hover:w-full

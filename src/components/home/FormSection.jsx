@@ -240,7 +240,7 @@ export default function FormSection() {
             className="max-w-[650px] will-change-[clip-path]"
           >
             <div className="hero-eyebrow mb-6 flex items-center gap-3">
-              <span className="h-[2px] w-11 bg-[#efac39]" />
+              <span className="h-[2px] w-11 bg-[#dddf00]" />
 
               <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#77716D] sm:text-xs">
                 Modern <span className="mx-2">|</span> Durable
@@ -248,11 +248,11 @@ export default function FormSection() {
               </p>
             </div>
 
-            <h2 className="max-w-[700px] text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px] text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Premium
               <br />
 
-              <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparentbg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 Toilet Cubicle Systems
               </span>
             </h2>
@@ -266,7 +266,7 @@ export default function FormSection() {
             <div className="hero-actions mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#quote"
-                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
+                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
                 Get a Free Quote
                 <ArrowUpRight
@@ -277,7 +277,7 @@ export default function FormSection() {
 
               <a
                 href="#systems"
-                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg border border-[#efac39] bg-white/80 px-5 text-sm font-semibold text-[#efac39] transition-colors duration-300 hover:bg-white sm:text-base"
+                className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg border border-[#dddf00] bg-white/80 px-5 text-sm font-semibold text-[#dddf00] transition-colors duration-300 hover:bg-white sm:text-base"
               >
                 Explore Our Systems
                 <ArrowUpRight
@@ -297,12 +297,12 @@ export default function FormSection() {
                     key={stat.label}
                     className="hero-stat flex items-center gap-3 sm:flex-col sm:items-start sm:gap-3"
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f3e7dd] text-[#efac39] transition-transform duration-500 hover:rotate-12 sm:h-14 sm:w-14">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#f3e7dd] text-[#625B57] transition-transform duration-500 hover:rotate-12 sm:h-14 sm:w-14">
                       <Icon size={25} strokeWidth={1.6} />
                     </div>
 
                     <div>
-                      <p className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent sm:text-3xl lg:text-[34px]">
+                      <p className="text-2xl font-bold tracking-tight bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent sm:text-3xl lg:text-[34px]">
                         {stat.value}
                       </p>
 
@@ -324,7 +324,7 @@ export default function FormSection() {
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="mb-6 flex items-center gap-3">
-              <span className="h-[2px] w-8 bg-[#efac39]" />
+              <span className="h-[2px] w-8 bg-[#dddf00]" />
 
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#817771]">
                 Request a Quote
@@ -391,7 +391,7 @@ export default function FormSection() {
 
               <button
                 type="submit"
-                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
+                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
                 Request Free Quote
                 <ArrowUpRight
@@ -402,7 +402,7 @@ export default function FormSection() {
             </form>
 
             <div className="mt-6 flex items-center gap-2 border-t border-[#EEE6E0] pt-5 text-xs text-[#77716D]">
-              <Award size={18} className="shrink-0 text-[#efac39]" />
+              <Award size={18} className="shrink-0 text-[#dddf00]" />
               <span>
                 Designed for demanding commercial environments
               </span>

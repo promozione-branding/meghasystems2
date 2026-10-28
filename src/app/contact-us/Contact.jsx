@@ -257,9 +257,9 @@ export default function ContactPage() {
     return (
         <main
             ref={pageRef}
-            className="overflow-hidden bg-[#f3f5f7] text-[#071a3d]"
+            className="overflow-hidden bg-[#f3f5f7] text-[#071720]"
         >
-            <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071a3d] text-white">
+            <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-[#071720] text-white">
                 {/* Background Image */}
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
@@ -277,7 +277,7 @@ export default function ContactPage() {
                         {/* Main Heading */}
                         <h1 className="about-hero-item text-[#fff] text-5xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-7xl">
                             Let's build {" "}
-                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-[#fff]">
+                            <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-[#fff]">
                                 your space.
                             </span>
                         </h1>
@@ -286,7 +286,7 @@ export default function ContactPage() {
                         <div className="about-hero-item mt-10 flex flex-wrap gap-4">
                             <Link
                                 href="/products"
-                                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-6 py-4 text-sm font-semibold text-[#071a3d] transition-all duration-300 hover:bg-[#e5b53c]"
+                                className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-6 py-4 text-sm font-semibold text-[#071720] transition-all duration-300 hover:bg-[#dddf00]"
                             >
                                 Explore Our Products
                                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -294,7 +294,7 @@ export default function ContactPage() {
 
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071a3d] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071a3d]"
+                                className="group inline-flex items-center gap-3 border border-white/40 bg-[#071720] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071720]"
                             >
                                 Talk to Our Team
                                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -310,36 +310,36 @@ export default function ContactPage() {
                         {/* Intro */}
                         <div className="contact-form-reveal">
                             <div className="flex items-center gap-3 mb-4">
-                                <span className="h-[2px] w-8 bg-[#efac39]" />
+                                <span className="h-[2px] w-8 bg-[#dddf00]" />
 
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
+                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#dddf00]">
                                     PROJECT ENQUIRY
                                 </span>
                             </div>
 
-                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                 Tell us about
                                 <br />
 
-                                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                     your project.
                                 </span>
                             </h2>
 
-                            <p className="mt-6 max-w-[350px] text-[12px] leading-[1.8] text-[#071a3d]/90 sm:text-[13px]">
+                            <p className="mt-6 max-w-[350px] text-[12px] leading-[1.8] text-[#071720]/90 sm:text-[13px]">
                                 Share your requirements and our team will help
                                 you select the right restroom partition system
                                 for your space.
                             </p>
 
-                            <div className="mt-9 space-y-5 border-t border-[#071a3d]/10 pt-6">
+                            <div className="mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <FiSend size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             QUICK RESPONSE
                                         </p>
 
@@ -350,12 +350,12 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <FiClock size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             PROJECT SUPPORT
                                         </p>
 
@@ -366,14 +366,14 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="mt-9 space-y-5 border-t border-[#071a3d]/10 pt-6">
+                            <div className="mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <Mail size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             Mail
                                         </p>
 
@@ -384,12 +384,12 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex gap-4">
-                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071a3d] text-[#efac39]">
+                                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <PhoneCall size={14} />
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071a3d]/40">
+                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             Call
                                         </p>
 
@@ -409,7 +409,7 @@ export default function ContactPage() {
                                     relative
                                     overflow-hidden
                                     border
-                                    border-[#071a3d]/10
+                                    border-[#071720]/10
                                     bg-white
                                     p-5
                                     shadow-[0_20px_70px_rgba(7,26,61,0.07)]
@@ -418,11 +418,11 @@ export default function ContactPage() {
                                 "
                             >
                                 {/* Gold corner */}
-                                <div className="absolute right-0 top-0 h-14 w-14 border-b border-l border-[#efac39]/40" />
+                                <div className="absolute right-0 top-0 h-14 w-14 border-b border-l border-[#dddf00]/40" />
 
                                 {/* Form heading */}
                                 <div className="mb-6">
-                                    <span className="text-[9px] font-bold tracking-[0.25em] text-[#efac39]">
+                                    <span className="text-[9px] font-bold tracking-[0.25em] text-[#dddf00]">
                                         CONTACT FORM
                                     </span>
 
@@ -436,7 +436,7 @@ export default function ContactPage() {
                                     <div>
                                         <label
                                             htmlFor="contactPerson"
-                                            className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071a3d]/80"
+                                            className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071720]/80"
                                         >
                                             FULL NAME *
                                         </label>
@@ -455,15 +455,15 @@ export default function ContactPage() {
                                                 h-12
                                                 w-full
                                                 border
-                                                border-[#071a3d]/10
+                                                border-[#071720]/10
                                                 bg-[#f8f9fa]
                                                 px-4
                                                 text-[12px]
-                                                text-[#071a3d]
+                                                text-[#071720]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/60
-                                                focus:border-[#c99618]
+                                                placeholder:text-[#071720]/60
+                                                focus:border-[#dddf00]
                                                 focus:bg-white
                                             "
                                         />
@@ -473,7 +473,7 @@ export default function ContactPage() {
                                     <div>
                                         <label
                                             htmlFor="email"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071720]/80"
                                         >
                                             EMAIL ADDRESS *
                                         </label>
@@ -490,14 +490,14 @@ export default function ContactPage() {
                                                 h-12
                                                 w-full
                                                 border
-                                                border-[#071a3d]/10
+                                                border-[#071720]/10
                                                 bg-[#f8f9fa]
                                                 px-4
                                                 text-[12px]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/60
-                                                focus:border-[#c99618]
+                                                placeholder:text-[#071720]/60
+                                                focus:border-[#dddf00]
                                                 focus:bg-white
                                             "
                                         />
@@ -507,7 +507,7 @@ export default function ContactPage() {
                                     <div>
                                         <label
                                             htmlFor="phone"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071720]/80"
                                         >
                                             PHONE NUMBER *
                                         </label>
@@ -524,14 +524,14 @@ export default function ContactPage() {
                                                 h-12
                                                 w-full
                                                 border
-                                                border-[#071a3d]/10
+                                                border-[#071720]/10
                                                 bg-[#f8f9fa]
                                                 px-4
                                                 text-[12px]
                                                 outline-none
                                                 transition-all
-                                                placeholder:text-[#071a3d]/60
-                                                focus:border-[#c99618]
+                                                placeholder:text-[#071720]/60
+                                                focus:border-[#dddf00]
                                                 focus:bg-white
                                             "
                                         />
@@ -541,7 +541,7 @@ export default function ContactPage() {
                                     <div>
                                         <label
                                             htmlFor="product"
-                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071a3d]/80"
+                                            className="mb-2 block text-[9px] font-bold tracking-[0.18em] text-[#071720]/80"
                                         >
                                             PRODUCT / REQUIREMENT *
                                         </label>
@@ -556,14 +556,14 @@ export default function ContactPage() {
                                                 h-12
                                                 w-full
                                                 border
-                                                border-[#071a3d]/10
+                                                border-[#071720]/10
                                                 bg-[#f8f9fa]
                                                 px-4
                                                 text-[12px]
-                                                text-[#071a3d]
+                                                text-[#071720]
                                                 outline-none
                                                 transition-all
-                                                focus:border-[#c99618]
+                                                focus:border-[#dddf00]
                                                 focus:bg-white
                                             "
                                         >
@@ -587,7 +587,7 @@ export default function ContactPage() {
                                 <div className="mt-5">
                                     <label
                                         htmlFor="message"
-                                        className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071a3d]/80"
+                                        className="mb-2 block text-[10px] font-bold tracking-[0.18em] text-[#071720]/80"
                                     >
                                         PROJECT MESSAGE *
                                     </label>
@@ -604,7 +604,7 @@ export default function ContactPage() {
                                             w-full
                                             resize-none
                                             border
-                                            border-[#071a3d]/10
+                                            border-[#071720]/10
                                             bg-[#f8f9fa]
                                             px-4
                                             py-4
@@ -612,8 +612,8 @@ export default function ContactPage() {
                                             leading-[1.7]
                                             outline-none
                                             transition-all
-                                            placeholder:text-[#071a3d]/60
-                                            focus:border-[#c99618]
+                                            placeholder:text-[#071720]/60
+                                            focus:border-[#dddf00]
                                             focus:bg-white
                                         "
                                     />
@@ -658,7 +658,7 @@ export default function ContactPage() {
 
                                 {/* Submit */}
                                 <div className="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                                    <p className="max-w-[300px] text-[10px] leading-[1.6] text-[#071a3d]/80">
+                                    <p className="max-w-[300px] text-[10px] leading-[1.6] text-[#071720]/80">
                                         By submitting this form, you are
                                         requesting our team to contact you
                                         regarding your project enquiry.
@@ -681,7 +681,7 @@ export default function ContactPage() {
                                             items-center
                                             justify-center
                                             gap-3
-                                            bg-[#071a3d]
+                                            bg-[#071720]
                                             px-6
                                             text-[10px]
                                             font-bold
@@ -689,8 +689,8 @@ export default function ContactPage() {
                                             text-white
                                             transition-all
                                             duration-300
-                                            hover:bg-[#c99618]
-                                            hover:text-[#071a3d]
+                                            hover:bg-[#dddf00]
+                                            hover:text-[#071720]
                                             disabled:cursor-not-allowed
                                             disabled:opacity-60
                                         "
@@ -719,24 +719,24 @@ export default function ContactPage() {
                     <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:items-end">
                         <div>
                             <div className="flex items-center gap-3">
-                                <span className="h-[2px] w-8 bg-[#efac39]" />
+                                <span className="h-[2px] w-8 bg-[#dddf00]" />
 
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#efac39]">
+                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#dddf00]">
                                     OUR LOCATIONS
                                 </span>
                             </div>
 
-                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                 Find us
                                 <br />
 
-                                <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                     near you.
                                 </span>
                             </h2>
                         </div>
 
-                        <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071a3d]/80 sm:text-[13px]">
+                        <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071720]/80 sm:text-[13px]">
                             With offices across key locations, Cubiloo Cubicles
                             supports commercial, institutional and industrial
                             projects across India.
@@ -744,7 +744,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Office cards */}
-                    <div className="mt-8 grid gap-px overflow-hidden border border-[#071a3d]/10 bg-[#071a3d]/10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-8 grid gap-px overflow-hidden border border-[#071720]/10 bg-[#071720]/10 sm:grid-cols-2 lg:grid-cols-3">
                         {offices.map((office, index) => (
                             <motion.div
                                 key={office.title}
@@ -757,7 +757,7 @@ export default function ContactPage() {
                                     p-6
                                     transition-colors
                                     duration-300
-                                    hover:bg-[#071a3d]
+                                    hover:bg-[#071720]
                                     sm:p-7
                                     lg:p-8
                                 "
@@ -768,25 +768,25 @@ export default function ContactPage() {
                                 {/* Number */}
 
                                 <div className="flex items-start justify-between">
-                                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#efac39]">
+                                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#dddf00]">
                                         {String(index + 1).padStart(2, "0")}
                                     </span>
 
                                     <FiMapPin
                                         size={17}
-                                        className="text-[#071a3d]/80 transition-colors duration-300 group-hover:text-[#efac39]"
+                                        className="text-[#071720]/80 transition-colors duration-300 group-hover:text-[#dddf00]"
                                     />
                                 </div>
 
                                 {/* City */}
 
-                                <h3 className="mt-8 text-[24px] font-semibold tracking-[-0.03em] text-[#071a3d] transition-colors duration-300 group-hover:text-white">
+                                <h3 className="mt-8 text-[24px] font-semibold tracking-[-0.03em] text-[#071720] transition-colors duration-300 group-hover:text-white">
                                     {office.title}
                                 </h3>
 
                                 {/* Address */}
 
-                                <p className="mt-3 max-w-[310px] text-[11px] leading-[1.7] text-[#071a3d]/80 transition-colors duration-300 group-hover:text-white/80">
+                                <p className="mt-3 max-w-[310px] text-[11px] leading-[1.7] text-[#071720]/80 transition-colors duration-300 group-hover:text-white/80">
                                     {office.address}
                                 </p>
 
@@ -795,13 +795,13 @@ export default function ContactPage() {
                                 <div className="absolute bottom-5 right-6">
                                     <FiArrowUpRight
                                         size={17}
-                                        className="text-[#071a3d]/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#efac39]"
+                                        className="text-[#071720]/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#dddf00]"
                                     />
                                 </div>
 
                                 {/* Gold line */}
 
-                                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#efac39] transition-all duration-500 group-hover:w-full" />
+                                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#dddf00] transition-all duration-500 group-hover:w-full" />
                             </motion.div>
                         ))}
                     </div>
@@ -810,17 +810,17 @@ export default function ContactPage() {
 
             <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
-                    <div className="map-reveal rounded-2xl overflow-hidden border border-[#071a3d]/10 bg-white">
+                    <div className="map-reveal rounded-2xl overflow-hidden border border-[#071720]/10 bg-white">
                         {/* Map header */}
-                        <div className="flex flex-col gap-4 border-b border-[#071a3d]/10 p-5 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-col gap-4 border-b border-[#071720]/10 p-5 sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <div className="flex items-center gap-3">
                                     <FiMapPin
                                         size={15}
-                                        className="text-[#efac39]"
+                                        className="text-[#dddf00]"
                                     />
 
-                                    <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#efac39]">
+                                    <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-[#dddf00]">
                                         Cubiloo Cubicles
                                     </span>
                                 </div>
@@ -830,7 +830,7 @@ export default function ContactPage() {
                                 </h3>
                             </div>
 
-                            <p className="max-w-[400px] text-[10px] leading-[1.7] text-[#071a3d]/80">
+                            <p className="max-w-[400px] text-[10px] leading-[1.7] text-[#071720]/80">
                                 Visit one of our offices or contact our team to
                                 discuss your upcoming project.
                             </p>
@@ -849,8 +849,8 @@ export default function ContactPage() {
 
                             {/* Map overlay label */}
 
-                            <div className="pointer-events-none absolute bottom-5 left-5 bg-[#071a3d] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
-                                <span className="text-[8px] font-bold tracking-[0.22em] text-[#c99618]">
+                            <div className="pointer-events-none absolute bottom-5 left-5 bg-[#071720] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
+                                <span className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
                                     CUBILOO CUBICLES
                                 </span>
 

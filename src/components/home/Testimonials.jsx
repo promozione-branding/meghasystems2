@@ -199,7 +199,7 @@ export default function Testimonials() {
             <div className="mx-auto max-w-[1450px]">
                 {/* CENTER HEADING */}
                 <div className="testimonial-heading mx-auto mb-14 max-w-[680px] text-center sm:mb-16">
-                    <span className="mb-2 inline-block h-[2px] w-8 bg-[#EFAC39]" />
+                    <span className="mb-2 inline-block h-[2px] w-8 bg-[#dddf00]" />
 
                     <h2 className="text-[36px] font-semibold leading-[1.12] tracking-[-0.045em] text-[#121212] sm:text-[48px] lg:text-[58px]">
                         We gained the positive
@@ -245,14 +245,14 @@ export default function Testimonials() {
                         Customer experience
                     </span>
 
-                    <div className="flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-4 py-2.5">
-                        <span className="text-[40px] font-semibold leading-none tracking-[-0.06em] text-[#fff]">
+                    <div className="flex items-center gap-3 rounded-full bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-4 py-2.5">
+                        <span className="text-[40px] font-semibold leading-none tracking-[-0.06em] text-[#071720]">
                             5.0
                         </span>
 
                         <div className="text-left">
-                            <p className="text-[10px] font-medium text-[#fff]">
-                                Demo rating
+                            <p className="text-[10px] font-medium text-[#071720]">
+                                Client rating
                             </p>
 
                             <div className="mt-1 flex gap-[2px]">
@@ -260,8 +260,8 @@ export default function Testimonials() {
                                     <Star
                                         key={index}
                                         size={15}
-                                        fill="#EFAC39"
-                                        stroke="#EFAC39"
+                                        fill="#071720"
+                                        stroke="#071720"
                                     />
                                 ))}
                             </div>

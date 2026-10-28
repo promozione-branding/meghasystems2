@@ -138,23 +138,23 @@ export default function ProductSection() {
                     {/* Header */}
                     <div className="mb-5 lg:mb-8">
                         <div className="flex items-center gap-3 mb-2">
-                            <span className="h-px w-10 bg-[#efac39]" />
+                            <span className="h-px w-10 bg-[#dddf00]" />
 
-                            <span className="text-[10px] font-semibold tracking-[0.32em] text-[#efac39] sm:text-[11px]">
+                            <span className="text-[10px] font-semibold tracking-[0.32em] text-[#dddf00] sm:text-[11px]">
                                 OUR PRODUCTS
                             </span>
                         </div>
 
                         <div className="flex items-end justify-between gap-6">
                             <div>
-                                <h2 className="max-w-[800px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                                <h2 className="max-w-[800px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                     Engineered for {" "}
 
-                                    <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                         every space.
                                     </span>
                                 </h2>
-                                <p className="mt-4 max-w-xl text-sm leading-6 text-[#071a3d]/90 sm:text-base">
+                                <p className="mt-4 max-w-xl text-sm leading-6 text-[#071720]/90 sm:text-base">
                                     Explore our range of premium toilet
                                     cubicle and restroom partition systems.
                                 </p>
@@ -162,7 +162,7 @@ export default function ProductSection() {
 
                             {/* Counter */}
                             <div className="hidden shrink-0 text-right sm:block">
-                                <div className="text-4xl font-light text-[#071a3d]/90">
+                                <div className="text-4xl font-light text-[#071720]/90">
                                     {String(activeIndex + 1).padStart(2, "0")}
                                     <span className="text-white/20">
                                         {" "}
@@ -181,9 +181,9 @@ export default function ProductSection() {
                         <div className="relative mx-auto w-full max-w-[620px]">
 
                             {/* Gold frame */}
-                            <div className="absolute -bottom-3 -left-3 h-[85%] w-[70%] border-b border-l border-[#efac39]/70" />
+                            <div className="absolute -bottom-3 -left-3 h-[85%] w-[70%] border-b border-l border-[#dddf00]/70" />
 
-                            <div className="absolute -right-3 -top-3 h-16 w-16 border-r border-t border-[#efac39]/50" />
+                            <div className="absolute -right-3 -top-3 h-16 w-16 border-r border-t border-[#dddf00]/50" />
 
                             <AnimatePresence mode="wait">
                                 <motion.div
@@ -221,11 +221,11 @@ export default function ProductSection() {
                                         />
 
                                         {/* Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#071a3d]/70 via-transparent to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/70 via-transparent to-transparent" />
 
                                         {/* Category */}
                                         <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
-                                            <span className="border border-white/20 bg-[#071a3d]/80 px-3 py-2 text-[9px] font-semibold tracking-[0.25em] text-white backdrop-blur-sm">
+                                            <span className="border border-white/20 bg-[#071720]/80 px-3 py-2 text-[9px] font-semibold tracking-[0.25em] text-white backdrop-blur-sm">
                                                 {product.category}
                                             </span>
                                         </div>
@@ -262,18 +262,18 @@ export default function ProductSection() {
                                     }}
                                 >
                                     <div className="mb-4 flex items-center gap-3">
-                                        <span className="h-px w-8 bg-[#efac39]" />
+                                        <span className="h-px w-8 bg-[#dddf00]" />
 
-                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#efac39]">
+                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#dddf00]">
                                             {product.category}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-3xl font-semibold tracking-tight text-[#071a3d]/90 sm:text-4xl lg:text-5xl">
+                                    <h3 className="text-3xl font-semibold tracking-tight text-[#071720]/90 sm:text-4xl lg:text-5xl">
                                         {product.name}
                                     </h3>
 
-                                    <p className="mt-5 max-w-xl text-sm leading-7 text-[#071a3d]/60 sm:text-base">
+                                    <p className="mt-5 max-w-xl text-sm leading-7 text-[#071720]/60 sm:text-base">
                                         {product.description}
                                     </p>
 
@@ -289,9 +289,9 @@ export default function ProductSection() {
                                                 key={feature}
                                                 className="flex items-center gap-2"
                                             >
-                                                <span className="h-1.5 w-1.5 bg-[#efac39]" />
+                                                <span className="h-1.5 w-1.5 bg-[#dddf00]" />
 
-                                                <span className="text-xs text-[#071a3d]/60">
+                                                <span className="text-xs text-[#071720]/60">
                                                     {feature}
                                                 </span>
                                             </div>
@@ -302,7 +302,7 @@ export default function ProductSection() {
                                     <div className="mt-8">
                                         <Link
                                             href={`/products/${product.slug}`}
-                                            className="group inline-flex items-center gap-4 bg-[#efac39] px-6 py-3.5 text-xs font-bold tracking-[0.15em] text-[#071a3d] transition-all duration-300 hover:text-white hover:bg-[#071a3d]"
+                                            className="group inline-flex items-center gap-4 bg-[#dddf00] px-6 py-3.5 text-xs font-bold tracking-[0.15em] text-[#071720] transition-all duration-300 hover:text-white hover:bg-[#071720]"
                                         >
                                             EXPLORE PRODUCT
 
@@ -325,7 +325,7 @@ export default function ProductSection() {
                                         )
                                     }
                                     disabled={activeIndex === 0}
-                                    className="flex h-10 w-10 items-center justify-center transition-all border border-[#efac39] text-[#efac39] hover:text-white hover:bg-[#efac39] disabled:cursor-not-allowed disabled:opacity-30"
+                                    className="flex h-10 w-10 items-center justify-center transition-all border border-[#dddf00] text-[#dddf00] hover:text-white hover:bg-[#dddf00] disabled:cursor-not-allowed disabled:opacity-30"
                                     aria-label="Previous product"
                                 >
                                     <ChevronLeft size={18} />
@@ -344,7 +344,7 @@ export default function ProductSection() {
                                     disabled={
                                         activeIndex === PRODUCTS.length - 1
                                     }
-                                    className="flex h-10 w-10 items-center justify-center border border-[#efac39] text-[#efac39] transition-all hover:text-white hover:bg-[#efac39] disabled:cursor-not-allowed disabled:opacity-30"
+                                    className="flex h-10 w-10 items-center justify-center border border-[#dddf00] text-[#dddf00] transition-all hover:text-white hover:bg-[#dddf00] disabled:cursor-not-allowed disabled:opacity-30"
                                     aria-label="Next product"
                                 >
                                     <ChevronRight size={18} />
@@ -360,7 +360,7 @@ export default function ProductSection() {
                                                 setActiveIndex(index)
                                             }
                                             className={`h-1 transition-all duration-300 ${index === activeIndex
-                                                ? "w-8 bg-[#efac39]"
+                                                ? "w-8 bg-[#dddf00]"
                                                 : "w-3 bg-black/20"
                                                 }`}
                                             aria-label={`Show ${item.name}`}
@@ -375,7 +375,7 @@ export default function ProductSection() {
                         <div className="h-px w-full bg-white/10">
                             <div
                                 ref={progressRef}
-                                className="h-px w-0 bg-[#efac39]"
+                                className="h-px w-0 bg-[#dddf00]"
                             />
                         </div>
 

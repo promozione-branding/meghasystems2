@@ -69,15 +69,15 @@ export default function FAQSection() {
                     className="absolute inset-0 opacity-[0.035]"
                     style={{
                         backgroundImage: `
-                            linear-gradient(#c99618 1px, transparent 1px),
-                            linear-gradient(90deg, #071a3d 1px, transparent 1px)
+                            linear-gradient(#dddf00 1px, transparent 1px),
+                            linear-gradient(90deg, #071720 1px, transparent 1px)
                         `,
                         backgroundSize: "70px 70px",
                     }}
                 />
 
                 {/* Large technical circle */}
-                <div className="absolute -right-64 -top-56 h-[650px] w-[650px] rounded-full border border-[#071a3d]/[0.045]" />
+                <div className="absolute -right-64 -top-56 h-[650px] w-[650px] rounded-full border border-[#071720]/[0.045]" />
 
                 <div className="absolute -bottom-64 -left-64 h-[620px] w-[620px] rounded-full border border-[#d99a17]/[0.08]" />
 
@@ -88,7 +88,7 @@ export default function FAQSection() {
                 <div className="absolute left-0 top-0 h-px w-full bg-[#d99a17]/35" />
 
                 {/* Bottom technical line */}
-                <div className="absolute bottom-0 left-0 h-px w-full bg-[#071a3d]/10" />
+                <div className="absolute bottom-0 left-0 h-px w-full bg-[#071720]/10" />
 
                 {/* =================================================
                     TECHNICAL SVG
@@ -101,28 +101,28 @@ export default function FAQSection() {
                     {/* Cubicle outline */}
                     <path
                         d="M90 145L260 75L430 145V355L260 410L90 355V145Z"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     {/* Left partition */}
                     <path
                         d="M125 158V330L195 353V130L125 158Z"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1.5"
                     />
 
                     {/* Right partition */}
                     <path
                         d="M395 158V330L325 353V130L395 158Z"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1.5"
                     />
 
                     {/* Center door */}
                     <path
                         d="M210 125H310V350L260 370L210 350V125Z"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="2"
                     />
 
@@ -131,7 +131,7 @@ export default function FAQSection() {
                         cx="285"
                         cy="235"
                         r="7"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="2"
                     />
 
@@ -139,7 +139,7 @@ export default function FAQSection() {
                         cx="285"
                         cy="235"
                         r="2.5"
-                        fill="#c99618"
+                        fill="#dddf00"
                     />
 
                     {/* Technical ring */}
@@ -147,7 +147,7 @@ export default function FAQSection() {
                         cx="260"
                         cy="235"
                         r="130"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="1"
                         strokeDasharray="4 12"
                         animate={{
@@ -166,7 +166,7 @@ export default function FAQSection() {
                     {/* Center construction line */}
                     <path
                         d="M260 75V410"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                         strokeDasharray="4 8"
                     />
@@ -174,7 +174,7 @@ export default function FAQSection() {
                     {/* Top support */}
                     <path
                         d="M260 75V35"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="2"
                     />
 
@@ -182,20 +182,20 @@ export default function FAQSection() {
                         cx="260"
                         cy="28"
                         r="7"
-                        stroke="#c99618"
+                        stroke="#dddf00"
                         strokeWidth="2"
                     />
 
                     {/* Dimension line */}
                     <path
                         d="M125 385H395"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
                     <path
                         d="M125 378V392M395 378V392"
-                        stroke="#071a3d"
+                        stroke="#071720"
                         strokeWidth="1"
                     />
 
@@ -204,7 +204,7 @@ export default function FAQSection() {
                         cx="260"
                         cy="235"
                         r="4"
-                        fill="#c99618"
+                        fill="#dddf00"
                         animate={{
                             opacity: [0.25, 1, 0.25],
                             scale: [0.8, 1.4, 0.8],
@@ -228,24 +228,24 @@ export default function FAQSection() {
                 <div className="mb-7 grid gap-4 lg:mb-8 lg:grid-cols-[1fr_400px] lg:items-end">
                     <div>
                         <div className="mb-2.5 flex items-center gap-3">
-                            <span className="h-px w-9 bg-[#efac39]" />
+                            <span className="h-px w-9 bg-[#dddf00]" />
 
-                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#efac39]">
+                            <span className="text-[9px] font-bold tracking-[0.3em] text-[#dddf00]">
                                 FREQUENTLY ASKED QUESTIONS
                             </span>
                         </div>
 
-                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071a3d] sm:text-[48px] lg:text-[62px]">
+                        <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                             Questions,
                             <br />
 
-                            <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">
+                            <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                 clearly answered.
                             </span>
                         </h2>
                     </div>
 
-                    <p className="max-w-md text-xs leading-5 text-[#071a3d]/90 lg:text-right">
+                    <p className="max-w-md text-xs leading-5 text-[#071720]/90 lg:text-right">
                         Find answers about our toilet cubicles, materials,
                         customization, installation, and project execution.
                     </p>
@@ -265,8 +265,8 @@ export default function FAQSection() {
                             className="pointer-events-none absolute inset-0 opacity-[0.06]"
                             style={{
                                 backgroundImage: `
-        linear-gradient(#efc277 1px, transparent 1px),
-        linear-gradient(90deg, #efc277 1px, transparent 1px)
+        linear-gradient(#dddf00 1px, transparent 1px),
+        linear-gradient(90deg, #dddf00 1px, transparent 1px)
       `,
                                 backgroundSize: "38px 38px",
                             }}
@@ -280,8 +280,8 @@ export default function FAQSection() {
                             {/* Top branding */}
                             <div className="flex items-center justify-between gap-3">
                                 <div className="flex items-center gap-2.5">
-                                    <span className="h-[2px] w-6 bg-[#efac39]" />
-                                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#efac39]">
+                                    <span className="h-[2px] w-6 bg-[#dddf00]" />
+                                    <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#dddf00]">
                                         Cubiloo Cubicles
                                     </span>
                                 </div>
@@ -302,7 +302,7 @@ export default function FAQSection() {
                                 <h3 className="font-serif text-[34px] leading-[1.12] tracking-[-0.035em] text-white xl:text-[39px]">
                                     Built around
                                     <br />
-                                    your <span className="bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] bg-clip-text text-transparent">vision.</span>
+                                    your <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">vision.</span>
                                 </h3>
 
                                 <p className="mt-4 max-w-[290px] text-xs leading-6 text-white/80">
@@ -324,7 +324,7 @@ export default function FAQSection() {
                                         cx="160"
                                         cy="115"
                                         r="100"
-                                        stroke="#efc277"
+                                        stroke="#dddf00"
                                         strokeWidth="0.8"
                                         strokeDasharray="3 10"
                                         opacity="0.25"
@@ -339,7 +339,7 @@ export default function FAQSection() {
 
                                     {/* Main cubicle perspective */}
                                     <motion.g
-                                        stroke="#efc277"
+                                        stroke="#dddf00"
                                         strokeLinejoin="round"
                                         strokeLinecap="round"
                                         fill="none"
@@ -399,7 +399,7 @@ export default function FAQSection() {
                                             cx="222"
                                             cy="131"
                                             r="3.5"
-                                            fill="#efc277"
+                                            fill="#dddf00"
                                             stroke="none"
                                         />
 
@@ -423,7 +423,7 @@ export default function FAQSection() {
                                         cx="160"
                                         cy="115"
                                         r="3"
-                                        fill="#efc277"
+                                        fill="#dddf00"
                                         animate={{
                                             opacity: [0.3, 1, 0.3],
                                             scale: [0.8, 1.3, 0.8],
@@ -439,13 +439,13 @@ export default function FAQSection() {
                             </div>
 
                             {/* Bottom project support */}
-                            <div className="border-t border-[#efc277]/25 pt-5">
+                            <div className="border-t border-[#dddf00]/25 pt-5">
                                 <div className="flex items-center gap-3">
-                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#efc277]/25 bg-[#efc277]/10">
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#dddf00]/25 bg-[#dddf00]/10">
                                         <svg
                                             viewBox="0 0 24 24"
                                             fill="none"
-                                            className="h-5 w-5 text-[#efac39]"
+                                            className="h-5 w-5 text-[#dddf00]"
                                             stroke="currentColor"
                                             strokeWidth="1.5"
                                         >
@@ -466,7 +466,7 @@ export default function FAQSection() {
 
                                     <ArrowUpRight
                                         size={18}
-                                        className="shrink-0 text-[#efac39]"
+                                        className="shrink-0 text-[#dddf00]"
                                     />
                                 </div>
                             </div>
@@ -477,7 +477,7 @@ export default function FAQSection() {
                     {/* =================================================
                         FAQ ACCORDION
                     ================================================== */}
-                    <div className="border border-[#071a3d]/10 bg-white">
+                    <div className="border border-[#071720]/10 bg-white">
                         {FAQS.map((faq, index) => {
                             const isOpen = activeFaq === index;
 
@@ -485,7 +485,7 @@ export default function FAQSection() {
                                 <div
                                     key={faq.id}
                                     className={`
-                                        relative border-b border-[#071a3d]/10
+                                        relative border-b border-[#071720]/10
                                         last:border-b-0
                                         transition-colors duration-300
                                         ${isOpen
@@ -503,7 +503,7 @@ export default function FAQSection() {
                                         transition={{
                                             duration: 0.25,
                                         }}
-                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#efac39]"
+                                        className="absolute bottom-0 left-0 top-0 w-[3px] origin-top bg-[#dddf00]"
                                     />
 
                                     <button
@@ -525,7 +525,7 @@ export default function FAQSection() {
                                                 font-bold transition-all
                                                 ${isOpen
                                                     ? "bg-[#000] text-white"
-                                                    : "bg-[#071a3d]/[0.06] text-[#071a3d]/55"
+                                                    : "bg-[#071720]/[0.06] text-[#071720]/55"
                                                 }
                                             `}
                                         >
@@ -539,7 +539,7 @@ export default function FAQSection() {
                                                 leading-5 sm:text-sm
                                                 ${isOpen
                                                     ? "text-[#000]"
-                                                    : "text-[#071a3d]/70"
+                                                    : "text-[#071720]/70"
                                                 }
                                             `}
                                         >
@@ -559,8 +559,8 @@ export default function FAQSection() {
                                                 items-center justify-center
                                                 border transition-colors
                                                 ${isOpen
-                                                    ? "border-[#efac39] bg-[#efac39] text-[#fff]"
-                                                    : "border-[#071a3d]/10 text-[#071a3d]/40"
+                                                    ? "border-[#dddf00] bg-[#dddf00] text-[#fff]"
+                                                    : "border-[#071720]/10 text-[#071720]/40"
                                                 }
                                             `}
                                         >
@@ -591,8 +591,8 @@ export default function FAQSection() {
                                                 className="overflow-hidden"
                                             >
                                                 <div className="px-5 pb-5 pl-[60px] pr-8 sm:pl-[68px] sm:pr-12">
-                                                    <div className="border-l border-[#efac39]/40 pl-4">
-                                                        <p className="text-[11px] leading-5 text-[#071a3d]/55 sm:text-xs sm:leading-6">
+                                                    <div className="border-l border-[#dddf00]/40 pl-4">
+                                                        <p className="text-[11px] leading-5 text-[#071720]/55 sm:text-xs sm:leading-6">
                                                             {faq.answer}
                                                         </p>
                                                     </div>
@@ -606,20 +606,20 @@ export default function FAQSection() {
                     </div>
                 </div>
 
-                <div className="mt-5 flex flex-col gap-3 border-t border-[#071a3d]/30 pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-5 flex flex-col gap-3 border-t border-[#071720]/30 pt-5 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                        <p className="text-[8px] font-bold tracking-[0.25em] text-[#071a3d]/65">
+                        <p className="text-[8px] font-bold tracking-[0.25em] text-[#071720]/65">
                             STILL HAVE QUESTIONS?
                         </p>
 
-                        <p className="mt-1 text-xs text-[#071a3d]/95">
+                        <p className="mt-1 text-xs text-[#071720]/95">
                             Let's discuss your project requirements.
                         </p>
                     </div>
 
                     <button
                         type="button"
-                        className="group flex w-fit items-center gap-3 bg-[linear-gradient(90deg,rgba(239,172,57,1)_0%,rgba(229,139,59,1)_38%,rgba(223,117,57,1)_72%,rgba(216,85,56,1)_100%)] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#c99618]"
+                        className="group flex w-fit items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#dddf00]"
                     >
                         TALK TO OUR TEAM
 

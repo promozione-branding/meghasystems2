@@ -23,7 +23,7 @@ import {
 import { allProducts } from "@/data";
 
 const GRADIENT =
-  "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+  "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 const SOCIAL_LINKS = [
   {
@@ -238,7 +238,7 @@ export default function Navbar() {
                     setProductsOpen((prev) => !prev)
                   }
                   className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${isProductsActive || productsOpen
-                    ? "text-[#EFAC39]"
+                    ? "text-[#dddf00]"
                     : "text-white/80 hover:text-white"
                     }`}
                 >
@@ -282,7 +282,7 @@ export default function Navbar() {
                     >
                       <div className="overflow-hidden rounded-[20px] border border-white/15 bg-[#18181B] p-3 shadow-[0_25px_70px_rgba(0,0,0,0.5)] backdrop-blur-2xl">
                         {/* <div className="mb-2 border-b border-white/10 px-3 pb-3 pt-2">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#EFAC39]">
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#dddf00]">
                             Our Collection
                           </p>
                           <h3 className="mt-1 text-lg font-semibold text-white">
@@ -305,7 +305,7 @@ export default function Navbar() {
                               className="group flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-white/[0.07]"
                             >
                               <div className="flex items-center gap-3">
-                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#E58B3B]/20 bg-[#E58B3B]/10 text-xs font-bold text-[#EFAC39]">
+                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#dddf00]/20 bg-[#dddf00]/10 text-xs font-bold text-[#dddf00]">
                                   {String(index + 1).padStart(
                                     2,
                                     "0"
@@ -327,7 +327,7 @@ export default function Navbar() {
 
                               <ArrowUpRight
                                 size={17}
-                                className="shrink-0 text-white/40 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#EFAC39]"
+                                className="shrink-0 text-white/40 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#dddf00]"
                               />
                             </Link>
                           ))}
@@ -391,7 +391,7 @@ export default function Navbar() {
                   onClick={() =>
                     setSearchOpen((prev) => !prev)
                   }
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all hover:border-[#EFAC39] hover:text-[#EFAC39]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white transition-all hover:border-[#dddf00] hover:text-[#dddf00]"
                 >
                   <Search size={19} />
                 </button>
@@ -408,7 +408,7 @@ export default function Navbar() {
                       <div className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-3">
                         <Search
                           size={17}
-                          className="text-[#EFAC39]"
+                          className="text-[#dddf00]"
                         />
 
                         <input
@@ -425,7 +425,7 @@ export default function Navbar() {
                         <button
                           type="submit"
                           aria-label="Submit search"
-                          className="text-[#EFAC39]"
+                          className="text-[#dddf00]"
                         >
                           <ArrowRight size={18} />
                         </button>
@@ -438,7 +438,7 @@ export default function Navbar() {
               {/* CTA */}
               <Link
                 href="/contact-us"
-                className="group flex items-center gap-3 rounded-full p-1.5 pl-5 text-[13px] font-bold text-black transition-shadow hover:shadow-[0_8px_30px_rgba(229,139,59,0.3)] xl:pl-6 xl:text-sm"
+                className="group flex items-center gap-3 rounded-full p-1.5 pl-5 text-[13px] font-bold text-black transition-shadow hover:shadow-[0_8px_30px_rgba(221,223,0,0.3)] xl:pl-6 xl:text-sm"
                 style={{ background: GRADIENT }}
               >
                 Get a Quote
@@ -471,7 +471,7 @@ export default function Navbar() {
               <Link
                 href="/contact-us"
                 onClick={closeMobile}
-                className="hidden h-10 items-center rounded-full border border-[#E58B3B]/50 px-4 text-xs font-semibold text-[#EFAC39] sm:flex"
+                className="hidden h-10 items-center rounded-full border border-[#dddf00]/50 px-4 text-xs font-semibold text-[#dddf00] sm:flex"
               >
                 Get a Quote
               </Link>
@@ -522,7 +522,7 @@ export default function Navbar() {
               }}
               className="fixed bottom-0 right-0 top-0 z-[95] w-full max-w-[390px] overflow-y-auto border-l border-white/10 bg-[#111114] px-6 pb-8 pt-[110px] lg:hidden"
             >
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#EFAC39]">
+              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#dddf00]">
                 Navigation
               </p>
 
@@ -555,7 +555,7 @@ export default function Navbar() {
 
                     <ChevronDown
                       size={20}
-                      className={`text-[#EFAC39] transition-transform duration-300 ${mobileProductsOpen
+                      className={`text-[#dddf00] transition-transform duration-300 ${mobileProductsOpen
                         ? "rotate-180"
                         : ""
                         }`}
@@ -590,7 +590,7 @@ export default function Navbar() {
                                 }
                                 href={`/products#${product.slug}`}
                                 onClick={closeMobile}
-                                className="flex items-center justify-between gap-3 rounded-lg px-3 py-3 text-sm text-white/65 transition-colors hover:bg-white/5 hover:text-[#EFAC39]"
+                                className="flex items-center justify-between gap-3 rounded-lg px-3 py-3 text-sm text-white/65 transition-colors hover:bg-white/5 hover:text-[#dddf00]"
                               >
                                 {product.categoryName}
                                 <ArrowUpRight size={15} />
@@ -601,7 +601,7 @@ export default function Navbar() {
                           <Link
                             href="/products"
                             onClick={closeMobile}
-                            className="mt-2 flex items-center justify-between rounded-lg px-3 py-3 text-sm font-semibold text-[#EFAC39]"
+                            className="mt-2 flex items-center justify-between rounded-lg px-3 py-3 text-sm font-semibold text-[#dddf00]"
                           >
                             View All Products
                             <ArrowRight size={16} />
@@ -641,7 +641,7 @@ export default function Navbar() {
               >
                 <Search
                   size={19}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#EFAC39]"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-[#dddf00]"
                 />
 
                 <input
@@ -651,7 +651,7 @@ export default function Navbar() {
                   onChange={(event) =>
                     setSearchValue(event.target.value)
                   }
-                  className="h-14 w-full rounded-xl border border-white/15 bg-white/5 pl-12 pr-4 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#EFAC39]"
+                  className="h-14 w-full rounded-xl border border-white/15 bg-white/5 pl-12 pr-4 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#dddf00]"
                 />
               </form>
 
@@ -701,7 +701,7 @@ function NavItem({ href, label, active }) {
       href={href}
       aria-current={active ? "page" : undefined}
       className={`group relative flex h-full shrink-0 items-center px-3 text-[13px] font-medium transition-colors duration-300 xl:px-4 xl:text-sm ${active
-        ? "text-[#EFAC39]"
+        ? "text-[#dddf00]"
         : "text-white/80 hover:text-white"
         }`}
     >
@@ -730,8 +730,8 @@ function MobileNavLink({
       onClick={onClick}
       aria-current={active ? "page" : undefined}
       className={`flex items-center justify-between border-b border-white/10 py-4 text-lg font-medium transition-colors ${active
-        ? "text-[#EFAC39]"
-        : "text-white hover:text-[#EFAC39]"
+        ? "text-[#dddf00]"
+        : "text-white hover:text-[#dddf00]"
         }`}
     >
       {label}
@@ -739,7 +739,7 @@ function MobileNavLink({
       <ArrowUpRight
         size={19}
         className={
-          active ? "text-[#EFAC39]" : "text-white/40"
+          active ? "text-[#dddf00]" : "text-white/40"
         }
       />
     </Link>
@@ -759,7 +759,7 @@ function SocialIcon({ href, label, icon: Icon }) {
         scale: 1.07,
       }}
       whileTap={{ scale: 0.95 }}
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm text-white transition-colors duration-300 hover:border-[#EFAC39] hover:bg-[#EFAC39] hover:text-black"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm text-white transition-colors duration-300 hover:border-[#dddf00] hover:bg-[#dddf00] hover:text-black"
     >
       <Icon />
     </motion.a>

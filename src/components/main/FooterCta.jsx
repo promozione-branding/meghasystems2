@@ -21,7 +21,7 @@ const features = [
         icon: Award,
         title: "25+ Years",
         subtitle: "Industry Expertise",
-        color: "#E58B3B",
+        color: "#dddf00",
     },
     {
         icon: BadgeCheck,
@@ -119,15 +119,15 @@ export default function FooterCTA() {
                     />
 
                     {/* SOFT GLOW */}
-                    <div className="pointer-events-none absolute -right-24 -top-24 h-[450px] w-[450px] rounded-full bg-[#EFAC39]/10 blur-[110px]" />
+                    <div className="pointer-events-none absolute -right-24 -top-24 h-[450px] w-[450px] rounded-full bg-[#dddf00]/10 blur-[110px]" />
 
                     <div className="relative z-10 grid min-h-[400px] items-center gap-10 px-6 py-10 sm:min-h-[450px] sm:px-12 lg:min-h-[500px] lg:grid-cols-[0.95fr_1.05fr] lg:gap-4 lg:px-10 lg:py-12">
                         {/* LEFT CONTENT */}
                         <div className="relative z-20">
                             <div className="footer-cta-reveal mb-6 flex items-center gap-3">
-                                <span className="h-[2px] w-9 bg-[#EFAC39]" />
+                                <span className="h-[2px] w-9 bg-[#dddf00]" />
 
-                                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#EFAC39]">
+                                <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#dddf00]">
                                     Cubiloo Cubicles
                                 </span>
                             </div>
@@ -149,7 +149,7 @@ export default function FooterCTA() {
                             <div className="footer-cta-reveal mt-10">
                                 <Link
                                     href="/contact-us"
-                                    className="group inline-flex min-h-[68px] items-center justify-center gap-7 rounded-[12px] bg-[#121212] px-9 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#EFAC39] hover:text-[#121212]"
+                                    className="group inline-flex min-h-[68px] items-center justify-center gap-7 rounded-[12px] bg-[#121212] px-9 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#dddf00] hover:text-[#121212]"
                                 >
                                     Start Your Project
 
@@ -187,10 +187,10 @@ export default function FooterCTA() {
 
                             {/* FLOATING LABEL */}
                             <div className="footer-cta-image absolute left-[0%] top-[48%] z-20 flex items-center gap-3 rounded-[10px] border border-[#121212] bg-white px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.2)] sm:px-5">
-                                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#EFAC39]/15">
+                                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#dddf00]/15">
                                     <BadgeCheck
                                         size={20}
-                                        className="text-[#DF7539]"
+                                        className="text-[#dddf00]"
                                     />
                                 </div>
 

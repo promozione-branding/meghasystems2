@@ -27,7 +27,7 @@ import "swiper/css/pagination";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const GRADIENT = "linear-gradient(90deg,#EFAC39 0%,#E58B3B 38%,#DF7539 72%,#D85538 100%)";
+const GRADIENT = "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
 
 const STEPS = [
     {
@@ -82,7 +82,7 @@ function ConsultationVisual() {
         <div className="flex h-full items-center justify-center p-5">
             <div className="w-full max-w-[300px] rounded-2xl border border-white/10 bg-[#19191D] p-4 shadow-2xl">
                 <div className="mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
-                    <span className="h-2 w-2 rounded-full bg-[#E58B3B]" />
+                    <span className="h-2 w-2 rounded-full bg-[#dddf00]" />
                     <span className="h-2 w-2 rounded-full bg-white/20" />
                     <span className="h-2 w-2 rounded-full bg-white/20" />
 
@@ -103,7 +103,7 @@ function ConsultationVisual() {
                             <div
                                 key={item.label}
                                 className={`flex h-[80px] flex-col items-center justify-center gap-2 rounded-xl border ${index === 0
-                                    ? "border-[#E58B3B] bg-[#E58B3B]/10 text-[#EFAC39]"
+                                    ? "border-[#dddf00] bg-[#dddf00]/10 text-[#dddf00]"
                                     : "border-white/10 bg-white/[0.035] text-white/55"
                                     }`}
                             >
@@ -115,9 +115,9 @@ function ConsultationVisual() {
                 </div>
 
                 <div className="mt-3 flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] p-3">
-                    <div className="h-2 w-2 rounded-full bg-[#EFAC39]" />
+                    <div className="h-2 w-2 rounded-full bg-[#dddf00]" />
                     <div className="h-1.5 w-24 rounded-full bg-white/20" />
-                    <div className="ml-auto h-1.5 w-10 rounded-full bg-[#E58B3B]" />
+                    <div className="ml-auto h-1.5 w-10 rounded-full bg-[#dddf00]" />
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@ function DesignVisual() {
                         <span className="text-[10px] text-white/50">
                             Layout Planning
                         </span>
-                        <PenTool size={15} className="text-[#EFAC39]" />
+                        <PenTool size={15} className="text-[#dddf00]" />
                     </div>
 
                     <div className="relative h-[75px] overflow-hidden rounded-lg border border-white/10 bg-[#101013] p-3">
@@ -141,9 +141,9 @@ function DesignVisual() {
                             {[0, 1, 2, 3].map((item) => (
                                 <div
                                     key={item}
-                                    className="flex-1 rounded-t-md border border-[#E58B3B]/60 bg-[#E58B3B]/15"
+                                    className="flex-1 rounded-t-md border border-[#dddf00]/60 bg-[#dddf00]/15"
                                 >
-                                    <div className="mx-auto mt-3 h-1 w-5 rounded-full bg-[#EFAC39]/70" />
+                                    <div className="mx-auto mt-3 h-1 w-5 rounded-full bg-[#dddf00]/70" />
                                 </div>
                             ))}
                         </div>
@@ -155,7 +155,7 @@ function DesignVisual() {
                     <div className="mb-2 h-1.5 w-1/2 rounded-full bg-white/10" />
 
                     <div className="flex gap-2">
-                        {["#E58B3B", "#46464B", "#797979", "#D85538"].map(
+                        {["#dddf00", "#46464B", "#797979", "#dddf00"].map(
                             (color) => (
                                 <div
                                     key={color}
@@ -175,12 +175,12 @@ function ManufactureVisual() {
     return (
         <div className="flex h-full items-center justify-center p-5">
             <div className="relative flex h-[200px] w-full max-w-[300px] items-center justify-center">
-                <div className="absolute h-[160px] w-[160px] rounded-full border border-[#EFAC39]/25" />
-                <div className="absolute h-[130px] w-[130px] rounded-full border-[8px] border-[#E58B3B]/20" />
-                <div className="absolute h-[100px] w-[100px] rounded-full border-[6px] border-[#EFAC39]" />
+                <div className="absolute h-[160px] w-[160px] rounded-full border border-[#dddf00]/25" />
+                <div className="absolute h-[130px] w-[130px] rounded-full border-[8px] border-[#dddf00]/20" />
+                <div className="absolute h-[100px] w-[100px] rounded-full border-[6px] border-[#dddf00]" />
 
                 <div
-                    className="relative flex h-[65px] w-[65px] items-center justify-center rounded-full text-black shadow-[0_0_45px_rgba(229,139,59,0.25)]"
+                    className="relative flex h-[65px] w-[65px] items-center justify-center rounded-full text-black shadow-[0_0_45px_rgba(221,223,0,0.25)]"
                     style={{ background: GRADIENT }}
                 >
                     <Factory size={29} />
@@ -206,7 +206,7 @@ function InstallVisual() {
                     <span className="text-xs font-medium text-white/60">
                         Installation Progress
                     </span>
-                    <Wrench size={17} className="text-[#EFAC39]" />
+                    <Wrench size={17} className="text-[#dddf00]" />
                 </div>
 
                 {[
@@ -267,7 +267,7 @@ function QualityVisual() {
                         key={item}
                         className="flex items-center gap-3 border-t border-white/10 py-3"
                     >
-                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#E58B3B]/15 text-[#EFAC39]">
+                        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#dddf00]/15 text-[#dddf00]">
                             <Check size={13} />
                         </span>
 
@@ -343,7 +343,7 @@ export default function HowWeWork() {
             />
 
             {/* Background Glow */}
-            <div className="pointer-events-none absolute -top-[250px] left-[25%] h-[550px] w-[550px] rounded-full bg-[#E58B3B]/[0.07] blur-[130px]" />
+            <div className="pointer-events-none absolute -top-[250px] left-[25%] h-[550px] w-[550px] rounded-full bg-[#dddf00]/[0.07] blur-[130px]" />
 
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
                 {/* HEADER */}
@@ -389,7 +389,7 @@ export default function HowWeWork() {
                         <div className="mt-7 flex flex-wrap items-center gap-3">
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex items-center gap-5 rounded-full p-1.5 pl-6 text-xs font-bold text-black transition-shadow hover:shadow-[0_10px_35px_rgba(229,139,59,0.25)] sm:text-sm"
+                                className="group inline-flex items-center gap-5 rounded-full p-1.5 pl-6 text-xs font-bold text-black transition-shadow hover:shadow-[0_10px_35px_rgba(221,223,0,0.25)] sm:text-sm"
                                 style={{ background: GRADIENT }}
                             >
                                 Start Your Project
@@ -401,7 +401,7 @@ export default function HowWeWork() {
 
                             <Link
                                 href="/about-us"
-                                className="inline-flex h-[52px] items-center rounded-full border border-white/20 px-6 text-xs font-semibold text-white transition-colors hover:border-[#E58B3B] hover:text-[#EFAC39] sm:text-sm"
+                                className="inline-flex h-[52px] items-center rounded-full border border-white/20 px-6 text-xs font-semibold text-white transition-colors hover:border-[#dddf00] hover:text-[#dddf00] sm:text-sm"
                             >
                                 Learn More
                             </Link>
@@ -451,10 +451,10 @@ export default function HowWeWork() {
 
                             return (
                                 <SwiperSlide key={step.number} className="!h-auto">
-                                    <div className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-white/[0.10] bg-[#111114] p-3 transition-all duration-500 hover:border-[#E58B3B]/45 hover:bg-[#161619]">
+                                    <div className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-white/[0.10] bg-[#111114] p-3 transition-all duration-500 hover:border-[#dddf00]/45 hover:bg-[#161619]">
                                         {/* VISUAL */}
                                         <div className="relative flex h-[235px] items-center justify-center overflow-hidden rounded-[16px] border border-white/[0.07] bg-[#0C0C0F] sm:h-[245px]">
-                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(229,139,59,0.055),transparent_70%)]" />
+                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(221,223,0,0.055),transparent_70%)]" />
 
                                             {/* Number badge */}
                                             <span className="absolute left-4 top-4 z-10 rounded-full border border-white/15 bg-[#17171B] px-3 py-1.5 text-[10px] font-semibold text-white/65">
@@ -471,12 +471,12 @@ export default function HowWeWork() {
                                                     {step.title}
                                                 </h3>
 
-                                                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#EFAC39] transition-all duration-300 group-hover:border-[#E58B3B] group-hover:bg-[#E58B3B] group-hover:text-black">
+                                                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-[#dddf00] transition-all duration-300 group-hover:border-[#dddf00] group-hover:bg-[#dddf00] group-hover:text-black">
                                                     <Icon size={18} />
                                                 </span>
                                             </div>
 
-                                            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#EFAC39]">
+                                            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.13em] text-[#dddf00]">
                                                 {step.subtitle}
                                             </p>
 
@@ -499,7 +499,7 @@ export default function HowWeWork() {
                                 type="button"
                                 aria-label="Previous step"
                                 onClick={() => swiperRef.current?.slidePrev()}
-                                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all hover:border-[#E58B3B] hover:text-[#EFAC39]"
+                                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all hover:border-[#dddf00] hover:text-[#dddf00]"
                             >
                                 <ArrowLeft size={19} />
                             </button>
@@ -531,7 +531,7 @@ export default function HowWeWork() {
                             className="flex items-center gap-6"
                         >
                             {index > 0 && (
-                                <span className="h-1 w-1 rounded-full bg-[#E58B3B]" />
+                                <span className="h-1 w-1 rounded-full bg-[#dddf00]" />
                             )}
 
                             <span className="text-[10px] font-semibold tracking-[0.15em] text-white/40">
@@ -555,7 +555,7 @@ export default function HowWeWork() {
         .how-pagination .swiper-pagination-bullet-active {
           width: 28px;
           border-radius: 20px;
-          background: #e58b3b;
+          background: #dddf00;
         }
       `}</style>
         </section>
