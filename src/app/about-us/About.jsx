@@ -17,6 +17,7 @@ import {
   FiTarget,
   FiAward,
 } from "react-icons/fi";
+import ProductShowcase from "@/components/home/ProductShowcase";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -337,7 +338,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative bg-[#f5f3ed] text-white py-12 lg:py-15">
+      <section className="relative bg-[#0A0A0D] text-[#F4F4EF] py-12 lg:py-15">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Text */}
@@ -349,7 +350,7 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1] tracking-[-0.02em] text-[#071720] sm:text-[42px]">
+              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1] tracking-[-0.02em] text-[#F4F4EF] sm:text-[42px]">
                 More than a partition.
                 <br />
                 <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
@@ -357,13 +358,13 @@ export default function AboutPage() {
                 </span>
               </h2>
 
-              <p className="mt-8 text-[#071720]/90 leading-8">
+              <p className="mt-8 text-[#F4F4EF]/90 leading-8">
                 We believe a washroom should perform as well as it looks.
                 Every element has a role — from the panel and hardware to the
                 layout, privacy and final installation.
               </p>
 
-              <p className="mt-2 text-[#071720]/90 leading-8">
+              <p className="mt-2 text-[#F4F4EF]/90 leading-8">
                 Our approach brings these details together into a coordinated
                 solution designed for the demands of real-world commercial and
                 institutional spaces.
@@ -372,14 +373,14 @@ export default function AboutPage() {
               <div className="mt-5 grid grid-cols-2 gap-6">
                 <div className="border-t border-white/10 pt-5">
                   <p className="text-3xl font-light text-[#dddf00]">01</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071720]/60">
+                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#F4F4EF]/60">
                     Design Focus
                   </p>
                 </div>
 
                 <div className="border-t border-white/10 pt-5">
                   <p className="text-3xl font-light text-[#dddf00]">02</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#071720]/60">
+                  <p className="mt-2 text-xs uppercase tracking-[0.15em] text-[#F4F4EF]/60">
                     Built for Performance
                   </p>
                 </div>
@@ -418,6 +419,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+       <ProductShowcase />
 
       <section className="py-12 lg:py-15 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
