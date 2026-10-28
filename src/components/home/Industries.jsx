@@ -138,29 +138,78 @@ export default function IndustriesWeServe() {
   const [active, setActive] = useState(0);
   const current = INDUSTRIES[active];
 
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const entrance = gsap.timeline({
-        defaults: { ease: "power3.out" },
-        scrollTrigger: { trigger: sectionRef.current, start: "top 78%", once: true },
+        defaults: {
+          ease: "power3.out",
+          duration: 0.55,
+        },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 85%",
+          once: true,
+        },
       });
 
       entrance
-        .fromTo(".industries-eyebrow", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55 })
-        .fromTo(".industries-title", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.75 }, "-=0.3")
-        .fromTo(".industries-benefit", { x: -18, opacity: 0 }, { x: 0, opacity: 1, duration: 0.55, stagger: 0.12 }, "-=0.35")
-        .fromTo(".industries-showcase", { x: 28, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8 }, "-=0.45")
-        .fromTo(".industry-tile", { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.07 }, "-=0.35");
+        .fromTo(
+          ".industries-eyebrow",
+          { y: 15, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.4 },
+          0
+        )
+        .fromTo(
+          ".industries-title",
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6 },
+          0.1
+        )
+        .fromTo(
+          ".industries-benefit",
+          { y: 18, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.45,
+            stagger: 0.1,
+          },
+          0.25
+        )
+        .fromTo(
+          ".industries-showcase",
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6 },
+          0.2
+        )
+        .fromTo(
+          ".industry-tile",
+          { y: 15, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.4,
+            stagger: 0.045,
+          },
+          0.15
+        );
 
       gsap.to(".industries-blueprint", {
-        y: -24,
+        y: -20,
         ease: "none",
-        scrollTrigger: { trigger: sectionRef.current, start: "top bottom", end: "bottom top", scrub: 1.2 },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
       });
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
+
 
   const changeIndustry = (index) => {
     setActive((index + INDUSTRIES.length) % INDUSTRIES.length);

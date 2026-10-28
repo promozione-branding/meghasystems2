@@ -71,7 +71,7 @@ export default function Partners() {
     return (
         <section
             ref={sectionRef}
-            className="relative isolate overflow-x-clip bg-[#eef1f4]/10 py-10 sm:py-12 lg:py-16"
+            className="relative isolate border border-[#dddf00] overflow-x-clip bg-[#fff] py-10 sm:py-12 lg:py-16"
         >
             {/* TOP ORANGE LINE */}
             <div

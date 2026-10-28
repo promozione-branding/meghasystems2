@@ -29,8 +29,8 @@ export default function Home() {
       <HowWeWork />
       <ProductShowcase />
       {/* <ProductsSection /> */}
-      <Hardware />
       <FormSection />
+      <Hardware />
       {/* <Certificates /> */}
       <ClientSlider />
       <ParallaxCTA />
