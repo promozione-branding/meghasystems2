@@ -419,7 +419,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-       <ProductShowcase />
+      <ProductShowcase />
 
       <section className="py-12 lg:py-15 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
