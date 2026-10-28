@@ -181,6 +181,35 @@ export default function IndustriesWeServe() {
       </div>
 
       <div className="relative mx-auto max-w-[1600px] px-4 sm:px-7 lg:px-11">
+        {/* Industry selector strip */}
+        <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:grid-cols-8">
+          {INDUSTRIES.map((industry, index) => {
+            const Icon = industry.icon;
+            const isActive = active === index;
+            return (
+              <button
+                key={industry.id}
+                type="button"
+                onClick={() => changeIndustry(index)}
+                aria-pressed={isActive}
+                className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[120px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
+              >
+                <div className="flex flex-1 flex-col items-center px-2 pb-3 pt-3 text-center sm:px-3 sm:pt-4">
+                  <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#dddf00]" : "text-[#4d5357]"}`}>{industry.number}</span>
+                  <Icon size={25} strokeWidth={1.35} className={`mt-2 ${isActive ? "text-[#dddf00]" : "text-[#101820]"}`} />
+                  <span className="mt-3 text-xs font-semibold sm:text-sm">{industry.title}</span>
+                  <span className={`mt-1 line-clamp-2 text-[8px] uppercase leading-4 tracking-[0.08em] sm:text-[9px] ${isActive ? "text-white/60" : "text-[#65696b]"}`}>{industry.subtitle}</span>
+                </div>
+                {/* <div className="relative h-[76px] w-full overflow-hidden sm:h-[88px]">
+                  <Image src={industry.project.image} alt={`${industry.title} industry project`} fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 13vw" className={`object-cover transition duration-700 group-hover:scale-105 ${isActive ? "opacity-100" : "opacity-75 grayscale-[15%] group-hover:opacity-100"}`} />
+                  <div className={`absolute inset-0 ${isActive ? "bg-[#071720]/5" : "bg-[#f5f1e9]/10"}`} />
+                </div> */}
+                {isActive && <motion.span layoutId="industry-active-border" className="absolute inset-0 rounded-xl ring-1 ring-inset ring-[#d6a74f]" />}
+              </button>
+            );
+          })}
+        </div>
+
         <div className="grid gap-8 xl:grid-cols-[0.78fr_1.55fr] xl:items-stretch xl:gap-10">
           {/* Editorial introduction */}
           <div className="flex flex-col justify-center py-2 xl:py-6">
@@ -389,35 +418,6 @@ export default function IndustriesWeServe() {
               </AnimatePresence>
             </div>
           </div>
-        </div>
-
-        {/* Industry selector strip */}
-        <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3 xl:grid-cols-8">
-          {INDUSTRIES.map((industry, index) => {
-            const Icon = industry.icon;
-            const isActive = active === index;
-            return (
-              <button
-                key={industry.id}
-                type="button"
-                onClick={() => changeIndustry(index)}
-                aria-pressed={isActive}
-                className={`industry-tile group relative flex min-h-[190px] flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 sm:min-h-[120px] ${isActive ? "border-[#d6a74f] bg-[#071720] text-white shadow-[0_10px_30px_rgba(7,23,32,0.15)]" : "border-[#1a2730]/[0.08] bg-white/35 text-[#101820] hover:-translate-y-1 hover:border-[#d6a74f]/70 hover:bg-white/70"}`}
-              >
-                <div className="flex flex-1 flex-col items-center px-2 pb-3 pt-3 text-center sm:px-3 sm:pt-4">
-                  <span className={`self-start text-[10px] font-medium ${isActive ? "text-[#dddf00]" : "text-[#4d5357]"}`}>{industry.number}</span>
-                  <Icon size={25} strokeWidth={1.35} className={`mt-2 ${isActive ? "text-[#dddf00]" : "text-[#101820]"}`} />
-                  <span className="mt-3 text-xs font-semibold sm:text-sm">{industry.title}</span>
-                  <span className={`mt-1 line-clamp-2 text-[8px] uppercase leading-4 tracking-[0.08em] sm:text-[9px] ${isActive ? "text-white/60" : "text-[#65696b]"}`}>{industry.subtitle}</span>
-                </div>
-                {/* <div className="relative h-[76px] w-full overflow-hidden sm:h-[88px]">
-                  <Image src={industry.project.image} alt={`${industry.title} industry project`} fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 13vw" className={`object-cover transition duration-700 group-hover:scale-105 ${isActive ? "opacity-100" : "opacity-75 grayscale-[15%] group-hover:opacity-100"}`} />
-                  <div className={`absolute inset-0 ${isActive ? "bg-[#071720]/5" : "bg-[#f5f1e9]/10"}`} />
-                </div> */}
-                {isActive && <motion.span layoutId="industry-active-border" className="absolute inset-0 rounded-xl ring-1 ring-inset ring-[#d6a74f]" />}
-              </button>
-            );
-          })}
         </div>
       </div>
     </section>
