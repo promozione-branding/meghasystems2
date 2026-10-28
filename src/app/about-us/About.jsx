@@ -18,6 +18,8 @@ import {
   FiAward,
 } from "react-icons/fi";
 import ProductShowcase from "@/components/home/ProductShowcase";
+import ParallaxCTA from "@/components/home/ParallaxCTA";
+import Hardware from "@/components/home/Hardware";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -484,6 +486,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="py-12 lg:py-15 bg-white">
+        <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="about-reveal text-center max-w-3xl mx-auto">
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <span className="w-10 h-px bg-[#dddf00]" />
+              <span className="text-[11px] tracking-[0.25em] uppercase text-[#dddf00] font-semibold">
+                Where We Work
+              </span>
+              <span className="w-10 h-px bg-[#dddf00]" />
+            </div>
+
+            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+              Solutions for
+              <br />
+
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                every environment.
+              </span>
+            </h2>
+
+            <p className="mt-4 text-[#071720]/90 leading-7">
+              Our washroom solutions are designed to adapt to a wide range of
+              commercial, institutional, hospitality and high-traffic
+              environments.
+            </p>
+          </div>
+
+          <div className="about-reveal mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-l border-[#071720]/50">
+            {industries.map((industry, index) => (
+              <div
+                key={industry}
+                className="group border-r border-b border-[#071720]/50 p-6 sm:p-8 min-h-[130px] flex flex-col justify-between hover:bg-[#071720] transition-colors duration-400"
+              >
+                <span className="text-[12px] text-[#dddf00] tracking-[0.2em]">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <div className="flex items-end justify-between gap-4 mt-5">
+                  <span className="text-sm sm:text-base font-medium group-hover:text-white transition-colors">
+                    {industry}
+                  </span>
+
+                  <FiArrowUpRight className="text-[#071720]/60 group-hover:text-[#dddf00] transition-colors shrink-0" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <ParallaxCTA />
+
       <section className="py-12 lg:py-15 bg-[#f7f6f2]">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-16 lg:gap-24">
@@ -539,55 +592,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-15 bg-white">
-        <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="about-reveal text-center max-w-3xl mx-auto">
-            <div className="flex items-center justify-center gap-4 mb-2">
-              <span className="w-10 h-px bg-[#dddf00]" />
-              <span className="text-[11px] tracking-[0.25em] uppercase text-[#dddf00] font-semibold">
-                Where We Work
-              </span>
-              <span className="w-10 h-px bg-[#dddf00]" />
-            </div>
-
-            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
-              Solutions for
-              <br />
-
-              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
-                every environment.
-              </span>
-            </h2>
-
-            <p className="mt-4 text-[#071720]/90 leading-7">
-              Our washroom solutions are designed to adapt to a wide range of
-              commercial, institutional, hospitality and high-traffic
-              environments.
-            </p>
-          </div>
-
-          <div className="about-reveal mt-16 grid grid-cols-2 md:grid-cols-4 border-t border-l border-[#071720]/50">
-            {industries.map((industry, index) => (
-              <div
-                key={industry}
-                className="group border-r border-b border-[#071720]/50 p-6 sm:p-8 min-h-[130px] flex flex-col justify-between hover:bg-[#071720] transition-colors duration-400"
-              >
-                <span className="text-[12px] text-[#dddf00] tracking-[0.2em]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <div className="flex items-end justify-between gap-4 mt-5">
-                  <span className="text-sm sm:text-base font-medium group-hover:text-white transition-colors">
-                    {industry}
-                  </span>
-
-                  <FiArrowUpRight className="text-[#071720]/60 group-hover:text-[#dddf00] transition-colors shrink-0" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Hardware />
 
       <section className="py-12 lg:py-15 bg-[#f5f3ed] text-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
