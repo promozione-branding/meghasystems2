@@ -189,12 +189,12 @@ export default function FormSection() {
   const stats = [
     {
       icon: Building2,
-      value: "500+",
+      value: "5000+",
       label: "Projects Delivered",
     },
     {
       icon: Users,
-      value: "10+",
+      value: "25+",
       label: "Years of Expertise",
     },
     {
