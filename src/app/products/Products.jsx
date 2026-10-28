@@ -532,34 +532,35 @@ function ProductCard({ product, index, categoryIndex }) {
       {/* =================================================
                 CONTENT
             ================================================= */}
+      <Link href={`/products/${product.slug}`}>
+        <div
+          className="relative p-5 sm:p-6">
+          {/* Gold top line */}
 
-      <div className="relative p-5 sm:p-6">
-        {/* Gold top line */}
+          <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#dddf00] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
 
-        <div className="absolute left-5 right-5 top-0 h-[2px] -translate-y-1/2 scale-x-0 bg-[#dddf00] origin-left transition-transform duration-500 group-hover:scale-x-100 sm:left-6 sm:right-6" />
+          {/* Product title */}
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#dddf00]">
+                TOILET CUBICLE SYSTEM
+              </p>
 
-        {/* Product title */}
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="mb-2 text-[9px] font-semibold tracking-[0.25em] text-[#dddf00]">
-              TOILET CUBICLE SYSTEM
-            </p>
-
-            <h3 className="text-[23px] font-semibold leading-none tracking-[-0.035em] text-[#071720] sm:text-[26px]">
-              {product.name}
-            </h3>
+              <h3 className="text-[23px] font-semibold leading-none tracking-[-0.035em] text-[#071720] sm:text-[26px]">
+                {product.name}
+              </h3>
+            </div>
           </div>
-        </div>
 
-        {/* Description */}
-        <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071720]/90 sm:text-[12px]">
-          {product.shortDescription}
-        </p>
+          {/* Description */}
+          <p className="mt-2 line-clamp-3 min-h-[40px] text-[10px] leading-[1.65] text-[#071720]/90 sm:text-[12px]">
+            {product.shortDescription}
+          </p>
 
-        {/* Button */}
-        <Link
-          href={`/products/${product.slug}`}
-          className="
+          {/* Button */}
+          <Link
+            href={`/products/${product.slug}`}
+            className="
                         group/link
                         mt-5
                         flex
@@ -576,19 +577,20 @@ function ProductCard({ product, index, categoryIndex }) {
                         duration-300
                         hover:border-[#dddf00]
                     "
-        >
-          <span>VIEW PRODUCT</span>
+          >
+            <span>VIEW PRODUCT</span>
 
-          <span className="flex items-center gap-1.5 text-[#dddf00]">
-            EXPLORE
+            <span className="flex items-center gap-1.5 text-[#dddf00]">
+              EXPLORE
 
-            <ArrowUpRight
-              size={14}
-              className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
-            />
-          </span>
-        </Link>
-      </div>
+              <ArrowUpRight
+                size={14}
+                className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
+              />
+            </span>
+          </Link>
+        </div>
+      </Link>
 
       {/* Bottom architectural corner */}
 

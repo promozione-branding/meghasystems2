@@ -279,7 +279,7 @@ export default async function ProductPage({ params }) {
                                     fill
                                     priority
                                     sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-contain p-5 transition-transform duration-700 hover:scale-[1.03] md:p-10"
+                                    className="object-cover transition-transform duration-700 hover:scale-[1.03]"
                                 />
 
                                 <div className="absolute left-0 top-0 bg-[#071720] px-4 py-3 text-[9px] font-bold tracking-[0.2em] text-white">
