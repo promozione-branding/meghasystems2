@@ -24,10 +24,10 @@ export default function Home() {
     <div>
       <HeroSection />
       <Categories />
+      <Partners />
       <AboutSection />
       <HowWeWork />
       <ProductShowcase />
-      <Partners />
       {/* <ProductsSection /> */}
       <Hardware />
       <FormSection />
