@@ -134,7 +134,7 @@ export default function ProductShowcase() {
         <div className="flex items-center gap-3">
           <span className="h-px w-7 bg-[#dddf00]" />
 
-          <span className="text-[11px] font-semibold uppercase tracking-[0.17em] text-white/55">
+          <span className="text-[14px] font-semibold uppercase tracking-[0.17em] text-white/55">
             Cubiloo Product Collection
           </span>
         </div>

@@ -37,8 +37,8 @@ export default function Partners() {
                 {
                     opacity: 1,
                     y: 0,
-                    duration: 0.9,
-                    ease: "power3.out",
+                    duration: 0.4,
+                    ease: "power3.in",
                     scrollTrigger: {
                         trigger: sectionRef.current,
                         start: "top 80%",
@@ -157,11 +157,11 @@ export default function Partners() {
                                         className="flex items-center gap-3"
                                     >
                                         <Check
-                                            size={17}
+                                            size={20}
                                             className="text-[#dddf00]"
                                         />
 
-                                        <span className="text-[13px] text-[#071720]/80">
+                                        <span className="text-[16px] border px-2 py-1 rounded-2xl text-[#071720]/80">
                                             {item}
                                         </span>
                                     </div>

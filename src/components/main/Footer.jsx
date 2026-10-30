@@ -491,7 +491,7 @@ export default function Footer() {
                         href="/contact-us"
                         className="group flex w-fit items-center gap-4 border border-[#dddf00]/50 bg-[#dddf00] px-6 py-3.5 text-[10px] font-bold tracking-[0.2em] text-[#071720] transition-all duration-300 hover:bg-white hover:border-white"
                     >
-                        Get instant quote
+                        Get Quote
 
                         <span className="flex h-6 w-6 items-center justify-center bg-[#071720]/10 transition-transform duration-300 group-hover:translate-x-1">
                             <FiArrowUpRight size={13} />

@@ -411,40 +411,42 @@ export default function HowWeWork() {
 
                 {/* SWIPER CARDS */}
                 <div className="how-swiper-wrap mt-10">
-                    <Swiper
-                        modules={[Autoplay, Navigation, Pagination]}
-                        onSwiper={(swiper) => {
-                            swiperRef.current = swiper;
-                        }}
-                        slidesPerView={1.1}
-                        spaceBetween={16}
-                        loop={true}
-                        speed={800}
-                        autoplay={{
-                            delay: 3500,
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: true,
-                        }}
-                        pagination={{
-                            clickable: true,
-                            el: ".how-pagination",
-                        }}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1.6,
-                                spaceBetween: 18,
-                            },
-                            1024: {
-                                slidesPerView: 2.5,
-                                spaceBetween: 20,
-                            },
-                            1280: {
-                                slidesPerView: 3,
-                                spaceBetween: 22,
-                            },
-                        }}
-                        className="!overflow-visible"
-                    >
+                   <Swiper
+    modules={[Autoplay, Navigation, Pagination]}
+    onSwiper={(swiper) => {
+        swiperRef.current = swiper;
+    }}
+    slidesPerView={1.1}
+    spaceBetween={16}
+    speed={800}
+    loop={false}
+    rewind={false}
+    autoplay={{
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+        stopOnLastSlide: true,
+    }}
+    pagination={{
+        clickable: true,
+        el: ".how-pagination",
+    }}
+    breakpoints={{
+        640: {
+            slidesPerView: 1.6,
+            spaceBetween: 18,
+        },
+        1024: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+        },
+        1280: {
+            slidesPerView: 3,
+            spaceBetween: 22,
+        },
+    }}
+    className="!overflow-visible"
+>
                         {STEPS.map((step) => {
                             const Icon = step.icon;
                             const Visual = VISUALS[step.type];
@@ -504,15 +506,16 @@ export default function HowWeWork() {
                                 <ArrowLeft size={19} />
                             </button>
 
-                            <button
-                                type="button"
-                                aria-label="Next step"
-                                onClick={() => swiperRef.current?.slideNext()}
-                                className="flex h-12 w-12 items-center justify-center rounded-full text-black transition-transform hover:scale-105"
-                                style={{ background: GRADIENT }}
-                            >
-                                <ArrowRight size={19} />
-                            </button>
+                           <button
+    type="button"
+    aria-label="Next step"
+    onClick={() => swiperRef.current?.slideNext()}
+    disabled={swiperRef.current?.isEnd}
+    className="flex h-12 w-12 items-center justify-center rounded-full text-black transition-all hover:scale-105 disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:scale-100"
+    style={{ background: GRADIENT }}
+>
+    <ArrowRight size={19} />
+</button>
                         </div>
                     </div>
                 </div>
@@ -534,7 +537,7 @@ export default function HowWeWork() {
                                 <span className="h-1 w-1 rounded-full bg-[#dddf00]" />
                             )}
 
-                            <span className="text-[10px] font-semibold tracking-[0.15em] text-white/40">
+                            <span className="text-[13px] font-semibold tracking-[0.15em] text-white/40">
                                 {item}
                             </span>
                         </div>

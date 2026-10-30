@@ -586,18 +586,18 @@ export default function WhyChooseUs() {
                     <div className="flex items-center gap-3 border-b border-[#071720]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
 
                         <CheckCircle2
-                            size={17}
+                            size={25}
                             className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                            <p className="text-[11px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 EXPERIENCE
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071720]">
+                            <p className="mt-1 text-[14px] font-medium text-[#071720]">
                                 Proven Industry Expertise
                             </p>
 
@@ -610,18 +610,18 @@ export default function WhyChooseUs() {
                     <div className="flex items-center gap-3 border-b border-[#071720]/10 px-0 py-5 sm:border-b-0 sm:border-r sm:px-6">
 
                         <ShieldCheck
-                            size={17}
+                            size={25}
                             className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                            <p className="text-[11px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 QUALITY
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071720]">
+                            <p className="mt-1 text-[14px] font-medium text-[#071720]">
                                 Built for Long-Term Performance
                             </p>
 
@@ -634,18 +634,18 @@ export default function WhyChooseUs() {
                     <div className="flex items-center gap-3 px-0 py-5 sm:px-6">
 
                         <Target
-                            size={17}
+                            size={25}
                             className="text-[#dddf00]"
                             strokeWidth={1.5}
                         />
 
                         <div>
 
-                            <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                            <p className="text-[11px] font-bold tracking-[0.2em] text-[#071720]/40">
                                 EXECUTION
                             </p>
 
-                            <p className="mt-1 text-xs font-medium text-[#071720]">
+                            <p className="mt-1 text-[14px] font-medium text-[#071720]">
                                 Complete Project Support
                             </p>
 

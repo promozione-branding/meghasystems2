@@ -289,8 +289,8 @@ export default function IndustriesWeServe() {
                       <Icon size={21} strokeWidth={1.45} />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-[#101820]">{benefit.title}</h3>
-                      <p className="mt-1 text-xs leading-5 text-[#6b6d6d]">{benefit.detail}</p>
+                      <h3 className="text-base font-semibold text-[#101820]">{benefit.title}</h3>
+                      <p className="mt-1 text-sm leading-5 text-[#6b6d6d]">{benefit.detail}</p>
                     </div>
                   </div>
                 );

@@ -101,7 +101,7 @@ export default function FormSection() {
               bg,
               {
                 scale: 1,
-                duration: 1.8,
+                duration: 0.8,
                 ease: "power3.out",
               },
               0
@@ -126,7 +126,7 @@ export default function FormSection() {
               y: 0,
               opacity: 1,
               filter: "blur(0px)",
-              duration: 0.8,
+              duration: 0.4,
               stagger: 0.14,
               ease: "power3.out",
               clearProps: "filter",
@@ -141,7 +141,7 @@ export default function FormSection() {
               y: 0,
               opacity: 1,
               scale: 1,
-              duration: 0.7,
+              duration: 0.3,
               stagger: 0.12,
               ease: "back.out(1.4)",
             },
@@ -157,7 +157,7 @@ export default function FormSection() {
               rotationZ: 0,
               scale: 1,
               opacity: 1,
-              duration: 2,
+              duration: 0.5,
               ease: "power3.out",
               clearProps: "transform",
             },
@@ -268,7 +268,7 @@ export default function FormSection() {
                 href="#quote"
                 className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
-                Get a Free Quote
+                Get Quote
                 <ArrowUpRight
                   size={19}
                   className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"

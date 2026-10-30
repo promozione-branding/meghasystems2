@@ -326,7 +326,7 @@ export default function ContactPage() {
                                 </span>
                             </h2>
 
-                            <p className="mt-6 max-w-[350px] text-[12px] leading-[1.8] text-[#071720]/90 sm:text-[13px]">
+                            <p className="mt-6 max-w-[350px] text-[12px]  text-[#071720]/90 sm:text-[15px]">
                                 Share your requirements and our team will help
                                 you select the right restroom partition system
                                 for your space.
@@ -339,11 +339,11 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                                        <p className="text-[12px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             QUICK RESPONSE
                                         </p>
 
-                                        <p className="mt-1 text-[12px] font-medium">
+                                        <p className="mt-1 text-[15px] font-medium">
                                             Our team will contact you shortly.
                                         </p>
                                     </div>
@@ -355,11 +355,11 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                                        <p className="text-[12px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             PROJECT SUPPORT
                                         </p>
 
-                                        <p className="mt-1 text-[12px] font-medium">
+                                        <p className="mt-1 text-[15px] font-medium">
                                             Product selection & project guidance
                                         </p>
                                     </div>
@@ -373,11 +373,11 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                                        <p className="text-[11px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             Mail
                                         </p>
 
-                                        <p className="mt-1 text-[12px] font-medium">
+                                        <p className="mt-1 text-[15px] font-medium">
                                             cubiloocubicles@gmail.com
                                         </p>
                                     </div>
@@ -389,12 +389,16 @@ export default function ContactPage() {
                                     </div>
 
                                     <div>
-                                        <p className="text-[9px] font-bold tracking-[0.2em] text-[#071720]/40">
+                                        <p className="text-[11px] font-bold tracking-[0.2em] text-[#071720]/40">
                                             Call
                                         </p>
 
-                                        <p className="mt-1 text-[12px] font-medium">
-                                            783-783-0803
+                                        <p className="mt-1 text-[15px] font-medium">
+                                           +91 78378 30803
+                                        </p>
+                                        <p className="mt-1 text-[15px] font-medium">
+                                            +91 97979 77832
+
                                         </p>
                                     </div>
                                 </div>
@@ -713,100 +717,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="offices-section relative bg-white py-10 sm:py-12 lg:py-15">
-                <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
-                    {/* Header */}
-                    <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:items-end">
-                        <div>
-                            <div className="flex items-center gap-3">
-                                <span className="h-[2px] w-8 bg-[#dddf00]" />
-
-                                <span className="text-[9px] font-bold tracking-[0.28em] text-[#dddf00]">
-                                    OUR LOCATIONS
-                                </span>
-                            </div>
-
-                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
-                                Find us
-                                <br />
-
-                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
-                                    near you.
-                                </span>
-                            </h2>
-                        </div>
-
-                        <p className="max-w-[400px] text-[12px] leading-[1.8] text-[#071720]/80 sm:text-[13px]">
-                            With offices across key locations, Cubiloo Cubicles
-                            supports commercial, institutional and industrial
-                            projects across India.
-                        </p>
-                    </div>
-
-                    {/* Office cards */}
-                    <div className="mt-8 grid gap-px overflow-hidden border border-[#071720]/10 bg-[#071720]/10 sm:grid-cols-2 lg:grid-cols-3">
-                        {offices.map((office, index) => (
-                            <motion.div
-                                key={office.title}
-                                className="
-                                    office-card
-                                    group
-                                    relative
-                                    min-h-[190px]
-                                    bg-[#f8f9fa]
-                                    p-6
-                                    transition-colors
-                                    duration-300
-                                    hover:bg-[#071720]
-                                    sm:p-7
-                                    lg:p-8
-                                "
-                                whileHover={{
-                                    y: -3,
-                                }}
-                            >
-                                {/* Number */}
-
-                                <div className="flex items-start justify-between">
-                                    <span className="text-[10px] font-bold tracking-[0.2em] text-[#dddf00]">
-                                        {String(index + 1).padStart(2, "0")}
-                                    </span>
-
-                                    <FiMapPin
-                                        size={17}
-                                        className="text-[#071720]/80 transition-colors duration-300 group-hover:text-[#dddf00]"
-                                    />
-                                </div>
-
-                                {/* City */}
-
-                                <h3 className="mt-8 text-[24px] font-semibold tracking-[-0.03em] text-[#071720] transition-colors duration-300 group-hover:text-white">
-                                    {office.title}
-                                </h3>
-
-                                {/* Address */}
-
-                                <p className="mt-3 max-w-[310px] text-[11px] leading-[1.7] text-[#071720]/80 transition-colors duration-300 group-hover:text-white/80">
-                                    {office.address}
-                                </p>
-
-                                {/* Bottom */}
-
-                                <div className="absolute bottom-5 right-6">
-                                    <FiArrowUpRight
-                                        size={17}
-                                        className="text-[#071720]/20 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#dddf00]"
-                                    />
-                                </div>
-
-                                {/* Gold line */}
-
-                                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#dddf00] transition-all duration-500 group-hover:w-full" />
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+         
 
             <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
@@ -830,7 +741,7 @@ export default function ContactPage() {
                                 </h3>
                             </div>
 
-                            <p className="max-w-[400px] text-[10px] leading-[1.7] text-[#071720]/80">
+                            <p className="max-w-[400px] text-[13px] leading-[1.7] text-[#071720]/80">
                                 Visit one of our offices or contact our team to
                                 discuss your upcoming project.
                             </p>
@@ -838,27 +749,27 @@ export default function ContactPage() {
 
                         {/* Google map */}
 
-                        <div className="relative h-[350px] w-full sm:h-[450px] lg:h-[520px]">
-                            <iframe
-                                title="Cubiloo Cubicles Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.9068267438424!2d77.3600067!3d28.361666399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdbe0b5eed79f%3A0xb843b6cdf62d7ece!2sAdore%20Business%20City!5e0!3m2!1sen!2sin!4v1792833582418!5m2!1sen!2sin"
-                                className="h-full w-full border-0 grayscale-[20%]"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
+                        <div className="relative h-[350px] w-full overflow-hidden sm:h-[450px] lg:h-[520px]">
+    <iframe
+        title="Cubiloo Cubicles Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.9280860717054!2d77.3754128749523!3d28.51181128955354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce765804ceb17%3A0x128d121b26149f02!2sCUBILOO%20CUBICLES!5e0!3m2!1sen!2sin!4v1793361277159!5m2!1sen!2sin"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        allowFullScreen
+        className="absolute inset-0 h-full w-full border-0"
+    />
 
-                            {/* Map overlay label */}
+    {/* Map overlay label */}
+    <div className="pointer-events-none absolute bottom-5 left-5 z-10 bg-[#071720] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
+        <span className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
+            CUBILOO CUBICLES
+        </span>
 
-                            <div className="pointer-events-none absolute bottom-5 left-5 bg-[#071720] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
-                                <span className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
-                                    CUBILOO CUBICLES
-                                </span>
-
-                                <p className="mt-1 text-[11px] text-white/70">
-                                    Faridabad • Delhi NCR
-                                </p>
-                            </div>
-                        </div>
+        <p className="mt-1 text-[11px] text-white/70">
+            Faridabad • Delhi NCR
+        </p>
+    </div>
+</div>
                     </div>
                 </div>
             </section>
