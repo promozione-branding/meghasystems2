@@ -42,7 +42,7 @@ const STEPS = [
     {
         number: "02",
         title: "Design",
-        subtitle: "Planning & Customisation",
+        subtitle: "Preparation of Showing Drawings",
         description:
             "Thoughtful layouts, premium materials and precise detailing come together in every design.",
         icon: PenTool,
@@ -457,7 +457,7 @@ export default function HowWeWork() {
                                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(221,223,0,0.055),transparent_70%)]" />
 
                                             {/* Number badge */}
-                                            <span className="absolute left-4 top-4 z-10 rounded-full border border-white/15 bg-[#17171B] px-3 py-1.5 text-[10px] font-semibold text-white/65">
+                                            <span className="absolute left-4 top-4 z-10 rounded-full border border-white/15 bg-[#17171B] px-3 py-1.5 text-[13px] font-semibold text-white/65">
                                                 Step {step.number}
                                             </span>
 

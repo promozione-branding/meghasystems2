@@ -90,7 +90,7 @@ export default async function ProductPage({ params }) {
                         PRODUCT
                     </span>
 
-                    <h1 className="mt-4 text-4xl font-semibold text-[#071720] md:text-6xl">
+                    <h1 className="mt-4  dmsans text-4xl font-semibold text-[#071720] md:text-6xl">
                         Product Not Found
                     </h1>
 
@@ -160,7 +160,7 @@ export default async function ProductPage({ params }) {
                                 </span>
                             </div>
 
-                            <h1 className="max-w-3xl text-[clamp(2.8rem,6vw,6.5rem)] font-semibold leading-[0.9] tracking-[-0.055em] text-[#071720]">
+                            <h1 className="max-w-3xl  dmsans text-[clamp(2.8rem,6vw,6.5rem)] font-semibold leading-[0.9] tracking-[-0.055em] text-[#071720]">
                                 {product.name}
                             </h1>
 
@@ -307,7 +307,7 @@ export default async function ProductPage({ params }) {
                                     DIMENSIONS
                                 </span>
 
-                                <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+                                <h2 className="max-w-[700px]  dmsans text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                     Built to fit
                                     <br />
 
@@ -420,7 +420,7 @@ export default async function ProductPage({ params }) {
                                     KEY FEATURES
                                 </span>
 
-                                <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+                                <h2 className="max-w-[700px]  dmsans text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                     Designed around
                                     <br />
 
@@ -456,7 +456,7 @@ export default async function ProductPage({ params }) {
 
                                     </div>
 
-                                    <h3 className="mt-8 text-xl font-semibold tracking-[-0.02em] text-[#071720] transition group-hover:text-white">
+                                    <h3 className="mt-8 text-xl  dmsans font-semibold tracking-[-0.02em] text-[#071720] transition group-hover:text-white">
                                         {feature.name}
                                     </h3>
 
@@ -480,7 +480,7 @@ export default async function ProductPage({ params }) {
                                 PRODUCT DETAILS
                             </span>
 
-                            <h2 className="max-w-[700px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+                            <h2 className="max-w-[700px]  dmsans text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                 Details that define
                                 <br />
 
@@ -572,7 +572,7 @@ export default async function ProductPage({ params }) {
                         READY TO BUILD?
                     </span>
 
-                    <h2 className="mx-auto mt-2 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#071720] md:text-6xl">
+                    <h2 className="mx-auto  dmsans mt-2 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#071720] md:text-6xl">
                         Bring{" "}
                         <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                             {product.name}

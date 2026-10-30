@@ -14,13 +14,22 @@ import {
   ArrowUpRight,
   ArrowRight,
   PhoneCall,
+  Grid3X3,
+  ShieldCheck,
+  Palette,
+  Ruler,
+  PanelTop,
+  Headphones,
+  Settings,
 } from "lucide-react";
 import {
   FaFacebookF,
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
-import { allProducts } from "@/data";
+import { navabarProducts } from "@/data";
+// import { allProducts } from "@/data";
+
 
 const GRADIENT =
   "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
@@ -223,7 +232,7 @@ export default function Navbar() {
                 active={pathname.startsWith("/about-us")}
               />
 
-              {/* PRODUCTS DROPDOWN */}
+              {/* PRODUCTS MEGA DROPDOWN */}
               <div
                 ref={dropdownRef}
                 className="relative flex h-full items-center"
@@ -234,27 +243,26 @@ export default function Navbar() {
                   type="button"
                   aria-expanded={productsOpen}
                   aria-haspopup="true"
-                  onClick={() =>
-                    setProductsOpen((prev) => !prev)
-                  }
-                  className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${isProductsActive || productsOpen
-                    ? "text-[#dddf00]"
-                    : "text-white/80 hover:text-white"
-                    }`}
+                  onClick={() => setProductsOpen((prev) => !prev)}
+                  className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${
+                    isProductsActive || productsOpen
+                      ? "text-[#dddf00]"
+                      : "text-white/80 hover:text-white"
+                  }`}
                 >
                   Products
-
                   <ChevronDown
                     size={15}
-                    className={`transition-transform duration-300 ${productsOpen ? "rotate-180" : ""
-                      }`}
+                    className={`transition-transform duration-300 ${
+                      productsOpen ? "rotate-180" : ""
+                    }`}
                   />
-
                   <span
-                    className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${isProductsActive || productsOpen
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover:scale-x-100"
-                      }`}
+                    className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${
+                      isProductsActive || productsOpen
+                        ? "scale-x-100"
+                        : "scale-x-0 group-hover:scale-x-100"
+                    }`}
                     style={{ background: GRADIENT }}
                   />
                 </button>
@@ -262,88 +270,80 @@ export default function Navbar() {
                 <AnimatePresence>
                   {productsOpen && (
                     <motion.div
-                      initial={{
-                        opacity: 0,
-                        y: 12,
-                        scale: 0.97,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                      }}
-                      exit={{
-                        opacity: 0,
-                        y: 8,
-                        scale: 0.97,
-                      }}
-                      transition={{ duration: 0.22 }}
-                      className="absolute left-1/2 top-full z-50 w-[360px] -translate-x-1/2 pt-"
+                      initial={{ opacity: 0, y: 12, scale: 0.985 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.985 }}
+                      transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                      className="absolute left-1/2 top-full z-50 w-250 -translate-x-1/2 pt-3"
                     >
-                      <div className="overflow-hidden rounded-[20px] border border-white/15 bg-[#18181B] p-3 shadow-[0_25px_70px_rgba(0,0,0,0.5)] backdrop-blur-2xl">
-                        {/* <div className="mb-2 border-b border-white/10 px-3 pb-3 pt-2">
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#dddf00]">
-                            Our Collection
-                          </p>
-                          <h3 className="mt-1 text-lg font-semibold text-white">
-                            Explore Products
-                          </h3>
-                        </div> */}
+                      <div className="grid max-h-[min(650px,calc(100vh-125px))] grid-cols-1 gap-3 overflow-y-auto rounded-[22px] border border-black/5 bg-white p-3 shadow-[0_25px_80px_rgba(0,0,0,0.28)]  lg:overflow-visible lg:p-4">
+                       
 
-                        <div className="max-h-[350px] overflow-y-auto">
-                          {allProducts.map((product, index) => (
+                        {/* CENTER PRODUCT GRID */}
+                        <section className="min-w-0 px-1 py-1">
+                          <div className="mb-3 flex items-center justify-between gap-3 px-1">
+                            <div>
+                              <h3 className="text-[18px] font-bold tracking-tight text-[#111]">
+                                Explore Our Products
+                              </h3>
+                              <p className="mt-0.5 text-[11px] text-gray-500">
+                                Innovative restroom cubicle solutions for every space.
+                              </p>
+                            </div>
+
                             <Link
-                              key={
-                                product.slug ||
-                                product.categoryName ||
-                                index
-                              }
-                              href={`/products#${product.slug}`}
-                              onClick={() =>
-                                setProductsOpen(false)
-                              }
-                              className="group flex items-center justify-between gap-3 rounded-xl px-3 py-3 transition-colors hover:bg-white/[0.07]"
+                              href="/products"
+                              onClick={() => setProductsOpen(false)}
+                              className="flex shrink-0 items-center gap-1.5 rounded-full bg-[#f0f0f0] px-3 py-2 text-[10px] font-bold text-black transition hover:bg-[#dddf00] sm:text-[11px]"
                             >
-                              <div className="flex items-center gap-3">
-                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#dddf00]/20 bg-[#dddf00]/10 text-xs font-bold text-[#dddf00]">
-                                  {String(index + 1).padStart(
-                                    2,
-                                    "0"
-                                  )}
-                                </div>
-
-                                <div>
-                                  <p className="text-sm font-semibold text-white">
-                                    {product.categoryName}
-                                  </p>
-
-                                  {product.description && (
-                                    <p className="mt-1 line-clamp-1 text-xs text-white/40">
-                                      {product.description}
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-
-                              <ArrowUpRight
-                                size={17}
-                                className="shrink-0 text-white/40 transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#dddf00]"
-                              />
+                              View All Products
+                              <ArrowUpRight size={14} />
                             </Link>
-                          ))}
-                        </div>
+                          </div>
 
-                        <Link
-                          href="/products"
-                          onClick={() =>
-                            setProductsOpen(false)
-                          }
-                          className="mt-2 flex items-center justify-between rounded-xl px-4 py-3.5 text-sm font-bold text-black"
-                          style={{ background: GRADIENT }}
-                        >
-                          View All Products
-                          <ArrowUpRight size={18} />
-                        </Link>
+                          <div className="grid grid-cols-2 gap-2.5 md:grid-cols-4">
+                            {navabarProducts.map((product, index) => {
+                              const productImage =
+                                product.image ||
+                                product.imageUrl ||
+                                product.thumbnail ||
+                                (Array.isArray(product.images) ? product.images[0] : null) ||
+                                "/products/placeholder.jpg";
+
+                              return (
+                                <Link
+                                  key={product.slug || product.categoryName || product.label || index}
+                                  href={`/products/${product.slug}`}
+                                  onClick={() => setProductsOpen(false)}
+                                  className="group min-w-0 overflow-hidden rounded-[13px] bg-[#f5f5f5] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ededed] hover:shadow-md"
+                                >
+                                  <div className="relative h-[88px] overflow-hidden rounded-[12px] bg-[#e8e8e8] sm:h-[105px]">
+                                    <img
+                                      src={productImage}
+                                      alt={product.label || product.categoryName || "Restroom cubicle"}
+                                      className="h-[100px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
+                                  </div>
+
+                                  <div className="p-1.5">
+                                    <div className="flex items-center justify-between gap-1.5">
+                                      <h4 className="truncate text-[13px] font-bold text-[#111]">
+                                        {product.label || product.categoryName}
+                                      </h4>
+                                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white transition-colors group-hover:bg-[#dddf00]">
+                                        <ArrowUpRight size={13} />
+                                      </span>
+                                    </div>
+                                    <p className="mt-1 line-clamp-1 text-[10px] leading-4 text-gray-500">
+                                      {product.description || "Designed for modern commercial spaces."}
+                                    </p>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </section>
+
                       </div>
                     </motion.div>
                   )}
@@ -580,7 +580,7 @@ export default function Navbar() {
                         className="overflow-hidden"
                       >
                         <div className="mb-3 rounded-xl bg-white/[0.04] p-3">
-                          {allProducts.map(
+                          {navabarProducts.map(
                             (product, index) => (
                               <Link
                                 key={
@@ -592,7 +592,7 @@ export default function Navbar() {
                                 onClick={closeMobile}
                                 className="flex items-center justify-between gap-3 rounded-lg px-3 py-3 text-sm text-white/65 transition-colors hover:bg-white/5 hover:text-[#dddf00]"
                               >
-                                {product.categoryName}
+                                {product.categoryName || product.label}
                                 <ArrowUpRight size={15} />
                               </Link>
                             )

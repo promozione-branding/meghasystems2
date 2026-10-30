@@ -8,7 +8,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { allProducts } from "@/data";
+import { navabarProducts } from "@/data";
+// import { allProducts } from "@/data";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,25 +34,25 @@ export default function Categories() {
   const [activeFilter, setActiveFilter] = useState("all");
 
   // Show individual products, not only the four parent ranges.
-  const products = useMemo(() => {
-    return allProducts.flatMap((category) =>
-      (category.products || []).map((product) => ({
-        ...product,
-        categoryName: category.categoryName,
-        categorySlug: category.slug,
-        image: product.image || category.image,
-        href: `/products/${product.slug}`,
-      }))
-    );
-  }, []);
+  // const products = useMemo(() => {
+  //   return allProducts.flatMap((category) =>
+  //     (category.products || []).map((product) => ({
+  //       ...product,
+  //       categoryName: category.categoryName,
+  //       categorySlug: category.slug,
+  //       image: product.image || category.image,
+  //       href: `/products/${product.slug}`,
+  //     }))
+  //   );
+  // }, []);
 
-  const filteredProducts = useMemo(() => {
-    if (activeFilter === "all") return products;
+  // const filteredProducts = useMemo(() => {
+  //   if (activeFilter === "all") return products;
 
-    return products.filter(
-      (product) => product.categorySlug === activeFilter
-    );
-  }, [activeFilter, products]);
+  //   return products.filter(
+  //     (product) => product.categorySlug === activeFilter
+  //   );
+  // }, [activeFilter, products]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -116,33 +119,7 @@ export default function Categories() {
         </div>
 
         {/* CATEGORY FILTERS */}
-        <div className="category-filter-bar mb-12 flex justify-center lg:mb-16">
-          <div
-            role="group"
-            aria-label="Filter products by category"
-            className="flex max-w-full items-center gap-2 overflow-x-auto rounded-[28px] p-2.5 sm:gap-3 sm:rounded-full sm:p-3"
-            style={{ background: GRADIENT }}
-          >
-            {FILTERS.map((filter) => {
-              const active = activeFilter === filter.value;
-
-              return (
-                <button
-                  key={filter.value}
-                  type="button"
-                  aria-pressed={active}
-                  onClick={() => setActiveFilter(filter.value)}
-                  className={`relative shrink-0 whitespace-nowrap rounded-full border px-5 py-3 text-[12px] font-semibold transition-all duration-300 sm:px-7 sm:text-sm lg:px-8 ${active
-                    ? "border-[#121212] bg-[#121212] text-white shadow-lg"
-                    : "border-black/60 bg-transparent text-black hover:bg-black/10"
-                    }`}
-                >
-                  {filter.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        
 
         {/* PRODUCT GRID */}
         <motion.div
@@ -150,7 +127,7 @@ export default function Categories() {
           className="category-grid grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:gap-y-16"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProducts.map((product, index) => (
+            {navabarProducts.map((product, index) => (
               <motion.div
                 layout
                 key={`${product.categorySlug}-${product.slug}`}
@@ -177,7 +154,7 @@ export default function Categories() {
                 className="min-w-0"
               >
                 <Link
-                  href={product.href}
+                  href={`/products/${product.slug}`}
                   className="group block"
                 >
                   {/* IMAGE CARD */}
@@ -216,7 +193,7 @@ export default function Categories() {
                   {/* TITLE BELOW IMAGE */}
                   <div className="mt-5 text-center">
                     <h3 className="text-[19px] font-medium tracking-[-0.035em] text-[#121212] transition-colors duration-300 group-hover:text-[#dddf00] sm:text-[21px]">
-                      {product.name}
+                      {product.label}
                     </h3>
 
                     <p className="mt-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-[#888]">
@@ -230,13 +207,13 @@ export default function Categories() {
         </motion.div>
 
         {/* EMPTY STATE */}
-        {filteredProducts.length === 0 && (
+        {/* {filteredProducts.length === 0 && (
           <div className="py-20 text-center">
             <p className="text-lg text-gray-500">
               No products available in this category.
             </p>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

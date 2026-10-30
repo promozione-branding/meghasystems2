@@ -27,11 +27,48 @@ const FOOTER_LINKS = [
 ];
 
 const PRODUCT_LINKS = [
-    { label: "Toilet Cubicles", href: "/products/toilet-cubicles" },
-    { label: "Classic Range", href: "/products/classic-range" },
-    { label: "Luxe Range", href: "/products/luxe-range" },
-    { label: "Kids Range", href: "/products/kids-range" },
-    { label: "Urinal Partitions", href: "/products/urinal-partitions" },
+  {
+    label: "Neo",
+    href: "/products/neo",
+  },
+  {
+    label: "Maxi",
+    href: "/products/maxi",
+  },
+  {
+    label: "Maxi Pro",
+    href: "/products/maxi-pro",
+  },
+  {
+    label: "Duro",
+    href: "/products/duro",
+  },
+  {
+    label: "Duro Pro",
+    href: "/products/duro-pro",
+  },
+  {
+    label: "Luron",
+    href: "/products/luron",
+  },
+  {
+    label: "Cubi Doorz",
+    href: "/products/cubic-doorz",
+  },
+  {
+    label: "Kiddiez",
+    
+    href: "/products/kiddiez",
+    image: "/Kiddiez.webp",
+  },
+  {
+    label: "Kiddiez Pro",
+    href: "/products/kiddiez-pro",
+  },
+  {
+    label: "Urinal Modesty Panels",
+    href: "/products/urinal-modesty-panels",
+  },
 ];
 
 const SOCIAL_LINKS = [
@@ -292,7 +329,7 @@ export default function Footer() {
                             </p>
                         </div>
 
-                        <div className="space-y-3">
+                        <div className="space-y-3 grid grid-cols-2">
                             {PRODUCT_LINKS.map((link) => (
                                 <a
                                     key={link.label}
@@ -393,7 +430,7 @@ export default function Footer() {
                             <span className="hidden h-4 w-px bg-white/10 sm:block" />
 
                             <a
-                                href="tel:+919873735716"
+                                href="tel:+917837830803"
                                 className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#dddf00]"
                             >
                                 <FiPhone
@@ -401,11 +438,11 @@ export default function Footer() {
                                     className="text-[#dddf00]"
                                 />
 
-                                <span>+91 9873735716</span>
+                                <span>+91 78378 30803</span>
                             </a>
 
                             <a
-                                href="tel:+919873735713"
+                                href="tel:+919797977832"
                                 className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#dddf00]"
                             >
                                 <FiPhone
@@ -413,7 +450,7 @@ export default function Footer() {
                                     className="text-[#dddf00]"
                                 />
 
-                                <span>+91 9873735713</span>
+                                <span>+91 97979 77832</span>
                             </a>
                         </div>
                     </div>

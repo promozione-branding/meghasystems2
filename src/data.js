@@ -1,3 +1,17 @@
+export const navabarProducts=[
+{label:"Neo" ,slug:"neo",image: "/Neo.webp",    categoryName: "CLASSIC RANGE", },
+{label:"Maxi" ,slug:"maxi",image: "/Maxi.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Maxi Pro" ,slug:"maxi-pro",image: "/Maxi Pro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Duro" ,slug:"duro",image: "/Duro-Toilet-Cubicles.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Duro Pro" ,slug:"duro-pro",image: "/duro pro toilet cubicles.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Luron" ,slug:"luron", image: "/Luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
+{label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/Cubi Doorz.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Kiddiez" ,slug:"kiddiez", image: "/Kiddiez.webp",    categoryName: "KIDS RANGE",},
+{label:"Kiddiez Pro" ,slug:"kiddiez-pro", image: "/Kiddiez Pro.webp",categoryName: "KIDS RANGE",},
+{label:"Urinal Modesty Panels" ,slug:"urinal-modesty-panels",image: "/Commercial Urinal Partitions.webp",categoryName: "URINAL PARTITIONS",},
+]
+
+
 export const allProducts = [
   {
     categoryName: "CLASSIC RANGE",
