@@ -50,6 +50,9 @@ export default function Projects() {
                 </div>
             </section>
 
+            <section className="px-5 py-10 sm:px-8 lg:pt-15 pb-75">
+
+            </section>
         </main>
     )
 }

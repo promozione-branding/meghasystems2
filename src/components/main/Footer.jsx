@@ -14,6 +14,7 @@ import {
     FaWhatsapp,
 } from "react-icons/fa";
 import FooterCTA from "./FooterCta";
+import { usePathname } from "next/navigation";
 
 const LOGO_SRC = "/logo2.webp";
 
@@ -27,48 +28,48 @@ const FOOTER_LINKS = [
 ];
 
 const PRODUCT_LINKS = [
-  {
-    label: "Neo",
-    href: "/products/neo",
-  },
-  {
-    label: "Maxi",
-    href: "/products/maxi",
-  },
-  {
-    label: "Maxi Pro",
-    href: "/products/maxi-pro",
-  },
-  {
-    label: "Duro",
-    href: "/products/duro",
-  },
-  {
-    label: "Duro Pro",
-    href: "/products/duro-pro",
-  },
-  {
-    label: "Luron",
-    href: "/products/luron",
-  },
-  {
-    label: "Cubi Doorz",
-    href: "/products/cubic-doorz",
-  },
-  {
-    label: "Kiddiez",
-    
-    href: "/products/kiddiez",
-    image: "/Kiddiez.webp",
-  },
-  {
-    label: "Kiddiez Pro",
-    href: "/products/kiddiez-pro",
-  },
-  {
-    label: "Urinal Modesty Panels",
-    href: "/products/urinal-modesty-panels",
-  },
+    {
+        label: "Neo",
+        href: "/products/neo",
+    },
+    {
+        label: "Maxi",
+        href: "/products/maxi",
+    },
+    {
+        label: "Maxi Pro",
+        href: "/products/maxi-pro",
+    },
+    {
+        label: "Duro",
+        href: "/products/duro",
+    },
+    {
+        label: "Duro Pro",
+        href: "/products/duro-pro",
+    },
+    {
+        label: "Luron",
+        href: "/products/luron",
+    },
+    {
+        label: "Cubi Doorz",
+        href: "/products/cubic-doorz",
+    },
+    {
+        label: "Kiddiez",
+
+        href: "/products/kiddiez",
+        image: "/Kiddiez.webp",
+    },
+    {
+        label: "Kiddiez Pro",
+        href: "/products/kiddiez-pro",
+    },
+    {
+        label: "Urinal Modesty Panels",
+        href: "/products/urinal-modesty-panels",
+    },
 ];
 
 const SOCIAL_LINKS = [
@@ -91,6 +92,10 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
+    const pathname = usePathname();
+    if (pathname.startsWith("/admin")) {
+        return null; // Don't render the navbar on admin or dashboard pages
+    }
     return (
         <footer className="relative overflow-visible bg-[#071720] text-white">
             <div className="relative z-20 -mt-24 sm:-mt-32 lg:-mt-60">

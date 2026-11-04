@@ -47,6 +47,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const router = useRouter();
 
+  if (pathname.startsWith("/admin")) {
+    return null; // Don't render the navbar on admin or dashboard pages
+  }
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
@@ -181,11 +184,10 @@ export default function Navbar() {
         className="fixed left-0 right-0 top-0 z-[100] px-3 pt-3 sm:px-5 lg:px-8 lg:pt-4"
       >
         <div
-          className={`relative mx-auto max-w-[1560px] rounded-[22px] border transition-all duration-500 lg:rounded-[24px] ${
-            navbarScrolled
-              ? "border-white/15 bg-[#111114] shadow-[0_20px_70px_rgba(0,0,0,0.35)]"
-              : "border-white/10 bg-[#111114]/45 backdrop-blur-xl"
-          }`}
+          className={`relative mx-auto max-w-[1560px] rounded-[22px] border transition-all duration-500 lg:rounded-[24px] ${navbarScrolled
+            ? "border-white/15 bg-[#111114] shadow-[0_20px_70px_rgba(0,0,0,0.35)]"
+            : "border-white/10 bg-[#111114]/45 backdrop-blur-xl"
+            }`}
         >
           {/* Gradient line */}
           <div
@@ -244,27 +246,24 @@ export default function Navbar() {
                   onClick={() =>
                     setProductsOpen((prev) => !prev)
                   }
-                  className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${
-                    isProductsActive || productsOpen
-                      ? "text-[#dddf00]"
-                      : "text-white/80 hover:text-white"
-                  }`}
+                  className={`group relative flex h-full items-center gap-1.5 px-3 text-[13px] font-medium transition-colors xl:px-4 xl:text-sm ${isProductsActive || productsOpen
+                    ? "text-[#dddf00]"
+                    : "text-white/80 hover:text-white"
+                    }`}
                 >
                   Products
 
                   <ChevronDown
                     size={15}
-                    className={`transition-transform duration-300 ${
-                      productsOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transition-transform duration-300 ${productsOpen ? "rotate-180" : ""
+                      }`}
                   />
 
                   <span
-                    className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${
-                      isProductsActive || productsOpen
-                        ? "scale-x-100"
-                        : "scale-x-0 group-hover:scale-x-100"
-                    }`}
+                    className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${isProductsActive || productsOpen
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                      }`}
                     style={{ background: GRADIENT }}
                   />
                 </button>
@@ -393,9 +392,9 @@ export default function Navbar() {
               />
 
               <NavItem
-                href="/blog"
-                label="Blog"
-                active={pathname.startsWith("/blog")}
+                href="/blogs"
+                label="Blogs"
+                active={pathname.startsWith("/blogs")}
               />
 
               <NavItem
@@ -591,9 +590,8 @@ export default function Navbar() {
 
                     <ChevronDown
                       size={20}
-                      className={`text-[#dddf00] transition-transform duration-300 ${
-                        mobileProductsOpen ? "rotate-180" : ""
-                      }`}
+                      className={`text-[#dddf00] transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
@@ -736,20 +734,18 @@ function NavItem({ href, label, active }) {
     <Link
       href={href}
       aria-current={active ? "page" : undefined}
-      className={`group relative flex h-full shrink-0 items-center px-3 text-[13px] font-medium transition-colors duration-300 xl:px-4 xl:text-sm ${
-        active
-          ? "text-[#dddf00]"
-          : "text-white/80 hover:text-white"
-      }`}
+      className={`group relative flex h-full shrink-0 items-center px-3 text-[13px] font-medium transition-colors duration-300 xl:px-4 xl:text-sm ${active
+        ? "text-[#dddf00]"
+        : "text-white/80 hover:text-white"
+        }`}
     >
       {label}
 
       <span
-        className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${
-          active
-            ? "scale-x-100"
-            : "scale-x-0 group-hover:scale-x-100"
-        }`}
+        className={`absolute bottom-[20px] left-3 right-3 h-[2px] origin-left transition-transform duration-300 xl:left-4 xl:right-4 ${active
+          ? "scale-x-100"
+          : "scale-x-0 group-hover:scale-x-100"
+          }`}
         style={{ background: GRADIENT }}
       />
     </Link>
@@ -767,11 +763,10 @@ function MobileNavLink({
       href={href}
       onClick={onClick}
       aria-current={active ? "page" : undefined}
-      className={`flex items-center justify-between border-b border-white/10 py-4 text-lg font-medium transition-colors ${
-        active
-          ? "text-[#dddf00]"
-          : "text-white hover:text-[#dddf00]"
-      }`}
+      className={`flex items-center justify-between border-b border-white/10 py-4 text-lg font-medium transition-colors ${active
+        ? "text-[#dddf00]"
+        : "text-white hover:text-[#dddf00]"
+        }`}
     >
       {label}
 

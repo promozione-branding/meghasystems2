@@ -28,7 +28,7 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
-.castoro{
+.castoro {
   font-family: "Castoro", serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -50,4 +50,34 @@ h4,
 h5,
 h6 {
   font-family: Castoro;
+}
+
+.blog-article a {
+  color: #738000;
+  text-decoration: underline;
+  text-decoration-color: #dddf00;
+  text-underline-offset: 4px;
+}
+
+.blog-article a:hover {
+  color: #121212;
+}
+
+.blog-article li::marker {
+  color: #a9c000;
+}
+
+.blog-article blockquote {
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #dddf00;
+  background: #f8f9ed;
+  color: #333;
+  font-style: italic;
+  border-radius: 0 12px 12px 0;
+}
+
+.blog-article ::selection {
+  background: #dddf00;
+  color: #121212;
 }
