@@ -150,7 +150,7 @@ export default async function ProductPage({ params }) {
                     </div>
 
                     <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-                        <div className="order-2 lg:order-1">
+                        <div className="order-2 sm:order-0">
 
                             <div className="mb-5 flex items-center gap-3">
                                 <span className="h-px w-10 bg-[#dddf00]" />
