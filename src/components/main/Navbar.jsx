@@ -493,12 +493,12 @@ export default function Navbar() {
               aria-label="Cubiloo Cubicles Home"
             >
               <Image
-                src="/cubilo.png"
+                src="/logo.png"
                 alt="Cubiloo Cubicles"
                 width={300}
                 height={90}
                 priority
-                className="h-auto w-[155px] object-contain brightness-0 invert sm:w-[175px]"
+                className="h-auto w-[155px] object-contain sm:w-[175px]"
               />
             </Link>
 
@@ -654,10 +654,10 @@ export default function Navbar() {
                 />
 
                 <MobileNavLink
-                  href="/blog"
-                  label="Blog"
+                  href="/blogs"
+                  label="Blogs"
                   onClick={closeMobile}
-                  active={pathname.startsWith("/blog")}
+                  active={pathname.startsWith("/blogs")}
                 />
 
                 <MobileNavLink

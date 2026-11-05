@@ -233,7 +233,7 @@ export default function FormSection() {
           }}
         />
 
-        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-8 px-5 pb-6 pt-[335px] sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-12 lg:px-12 lg:pb-14 lg:pt-0">
+        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-8 px-5 pb-6 pt-[20px] sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:gap-12 lg:px-12 lg:pb-14 lg:pt-0">
           {/* LEFT CONTENT */}
           <div
             ref={leftRef}

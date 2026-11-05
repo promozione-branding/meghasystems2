@@ -168,7 +168,7 @@ export default async function BlogDetailPage({ params }) {
             )}
 
             {/* CONTENT */}
-            <section className="px-5 py-10 sm:px-8 pb-70">
+            <section className="px-5 py-10 sm:px-8 pb-30 sm:pb-70">
                 <div className="mx-auto max-w-[850px]">
                     <div className="mb-8 flex items-center gap-3 border-b border-gray-200 pb-5">
                         <div

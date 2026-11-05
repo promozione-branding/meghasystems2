@@ -221,7 +221,7 @@ export default function Products() {
         </div>
       </section>
 
-      <div className="pb-50">
+      <div className="pb-20 sm:pb-50">
         {allProducts.map((category, categoryIndex) => (
           <CategorySection
             key={category.slug}

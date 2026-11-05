@@ -119,7 +119,7 @@ export default function Blogs() {
             </section>
 
             {/* ARTICLES */}
-            <section className="px-5 pt-10 sm:px-8 lg:pt-15 pb-75">
+            <section className="px-5 pt-10 sm:px-8 lg:pt-15 pb-30 sm:pb-75">
                 <div className="mx-auto max-w-[1400px]">
                     <div className="mb-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
                         <div>

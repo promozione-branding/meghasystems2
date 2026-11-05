@@ -162,7 +162,7 @@ export default function FooterCTA() {
                         </div>
 
                         {/* RIGHT OVERLAPPING IMAGES */}
-                        <div className="relative mx-auto h-[290px] w-full max-w-[600px] sm:h-[380px] lg:h-[400px]">
+                        <div className="relative md:block hidden mx-auto h-[290px] w-full max-w-[600px] sm:h-[380px] lg:h-[400px]">
                             {/* BACK IMAGE */}
                             <div className="footer-cta-image absolute left-[13%] top-[2%] h-[70%] w-[67%] -rotate-[3deg] overflow-hidden rounded-[15px] border-[5px] border-[#111111] bg-[#121212] shadow-[0_25px_65px_rgba(0,0,0,0.35)]">
                                 <Image

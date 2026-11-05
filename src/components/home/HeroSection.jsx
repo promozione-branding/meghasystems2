@@ -418,15 +418,15 @@ export default function HeroSection() {
             </div>
 
             {/* MAIN HERO */}
-            <div className="relative z-10 mx-auto flex w-full max-w-[1600px] flex-1 items-center px-5 pt-[125px] sm:px-8 lg:px-12 lg:pt-[140px]">
+            <div className="relative z-10 mx-auto flex w-full max-w-[1600px] flex-1 items-center px-5 pt-25 sm:px-8 lg:px-12 lg:pt-30">
                 <div className="grid w-full items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-0">
                     {/* LEFT CONTENT */}
                     <div className="relative z-20 pb-8 lg:pb-12">
 
                         {/* Announcement Badge */}
-                        <div className="cubiloo-badge mb-2 inline-flex max-w-full items-center gap-3 rounded-full border border-[#dddf00]/40 bg-[#dddf00]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-5">
+                        <div className="cubiloo-badge mb-4 inline-flex max-w-full items-center gap-3 rounded-full border border-[#dddf00]/40 bg-[#dddf00]/[0.08] p-1.5 pr-3 shadow-[0_0_35px_rgba(239,172,57,0.08)] sm:mb-5">
                             <span
-                                className="rounded-full px-4 py-2 text-xs font-bold uppercase text-black"
+                                className="rounded-full px-2 sm:px-4 py-2 text-xs font-bold uppercase text-black"
                                 style={{ background: GRADIENT }}
                             >
                                 Since 2012
@@ -443,7 +443,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="max-w-[900px] text-[clamp(3rem,5vw,6rem)] font-semibold leading-[0.9] tracking-[-0.065em]">
+                        <h1 className="max-w-[900px] text-4xl md:text-7xl font-semibold leading-[0.9] tracking-[-0.015em]">
                             <span className="block overflow-hidden pb-1">
                                 <span className="cubiloo-title-line block">
                                     Complete
@@ -467,7 +467,7 @@ export default function HeroSection() {
                         </h1>
 
                         {/* Description */}
-                        <p className="cubiloo-description mt-2 max-w-[620px] text-[15px] leading-[1.85] text-white/60">
+                        <p className="cubiloo-description sm:block hidden mt-2 max-w-[620px] text-[15px] leading-[1.85] text-white/60">
                             Established in 2012, Cubiloo Cubicles delivers
                             complete restroom solutions for modern commercial
                             and institutional spaces. From design and
@@ -476,22 +476,22 @@ export default function HeroSection() {
                         </p>
 
                         {/* Actions */}
-                        <div className="cubiloo-actions mt-5 flex flex-wrap items-center gap-4">
+                        <div className="cubiloo-actions sm:mt-5 mt-2 flex flex-wrap items-center gap-2 sm:gap-4">
                             <Link
                                 href="/products"
-                                className="group inline-flex items-center gap-7 rounded-full p-2 pl-7 text-sm font-bold text-black transition-shadow duration-300 hover:shadow-[0_10px_45px_rgba(221,223,0,0.3)] sm:text-base"
+                                className="group inline-flex items-center sm:gap-7 gap-4 rounded-full p-2 sm:pl-7 pl-4 text-sm font-bold text-black transition-shadow duration-300 hover:shadow-[0_10px_45px_rgba(221,223,0,0.3)] sm:text-base"
                                 style={{ background: GRADIENT }}
                             >
                                 Explore Solutions
 
-                                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:rotate-45">
+                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 group-hover:rotate-45">
                                     <ArrowUpRight size={20} />
                                 </span>
                             </Link>
 
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex h-[64px] items-center gap-4 rounded-full border border-white/20 px-7 text-sm font-semibold transition-colors duration-300 hover:border-[#dddf00] hover:text-[#dddf00]"
+                                className="group inline-flex h-12 items-center sm:gap-4 gap-2 rounded-full border border-white/20 sm:px-7 px-3 text-xs sm:text-sm font-semibold transition-colors duration-300 hover:border-[#dddf00] hover:text-[#dddf00]"
                             >
                                 Get a Quote
 
@@ -503,7 +503,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Statistics */}
-                        <div className="mt-12 grid max-w-[650px] grid-cols-1 gap-y-7 border-t border-white/10 pt-7 lg:grid-cols-3">
+                        <div className="mt-8 sm:grid hidden max-w-[650px] grid-cols-1 gap-y-7 border-t border-white/10 pt-5 lg:grid-cols-3">
                             {stats.map((item, index) => (
                                 <div
                                     key={item.id}
@@ -512,7 +512,7 @@ export default function HeroSection() {
                                         : ""
                                         }`}
                                 >
-                                    <span className="mb-2 block text-[10px] font-bold tracking-widest text-[#EFAE39]">
+                                    <span className="block text-[10px] font-bold tracking-widest text-[#EFAE39]">
                                         {item.id}
                                     </span>
 
@@ -520,7 +520,7 @@ export default function HeroSection() {
                                         {formatNumber(item.value, index) + item.suffix}
                                     </div>
 
-                                    <p className="mt-2 text-[10px] uppercase leading-relaxed tracking-[0.07em] text-white/45">
+                                    <p className="text-[10px] uppercase leading-relaxed tracking-[0.07em] text-white/45">
                                         {item.label}
                                     </p>
                                 </div>
@@ -531,7 +531,7 @@ export default function HeroSection() {
                     {/* RIGHT SHOWCASE */}
                     <div
                         ref={showcaseRef}
-                        className="cubiloo-showcase relative h-[430px] w-full sm:h-[560px] lg:h-[750px]"
+                        className="cubiloo-showcase relative h-[430px] w-full sm:h-[560px] lg:h-[600px]"
                     >
                         <div className="cubiloo-stage absolute inset-0">
                             {/* Tilted image wall */}
@@ -553,7 +553,7 @@ export default function HeroSection() {
                             <Link
                                 href="/products"
                                 aria-label="Explore Cubiloo solutions"
-                                className="absolute bottom-[28%] left-0 z-30 flex h-[100px] w-[100px] items-center justify-center rounded-full shadow-[0_0_60px_rgba(221,223,0,0.25)] sm:h-[120px] sm:w-[120px]"
+                                className="absolute bottom-[10%] left-0 z-30 flex h-[100px] w-[100px] items-center justify-center rounded-full shadow-[0_0_60px_rgba(221,223,0,0.25)] sm:h-[120px] sm:w-[120px]"
                                 style={{ background: GRADIENT }}
                             >
                                 <svg

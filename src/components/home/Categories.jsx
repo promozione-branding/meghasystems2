@@ -124,7 +124,7 @@ export default function Categories() {
         {/* PRODUCT GRID */}
         <motion.div
           layout
-          className="category-grid grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:gap-y-16"
+          className="category-grid grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 xl:gap-y-16"
         >
           <AnimatePresence mode="popLayout">
             {navabarProducts.map((product, index) => (

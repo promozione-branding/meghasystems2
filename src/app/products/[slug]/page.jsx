@@ -120,7 +120,7 @@ export default async function ProductPage({ params }) {
 
     return (
         <main className="overflow-hidden bg-[#f5f3ee] text-[#071720]">
-            <section className="relative border-b border-[#071720]/10 bg-[#f5f3ee] pt-10 md:pt-30">
+            <section className="relative border-b border-[#071720]/10 bg-[#f5f3ee] pt-25 md:pt-30">
                 {/* Architectural background */}
                 <div className="pointer-events-none absolute inset-0 overflow-hidden">
                     <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full border border-[#dddf00]/10" />
@@ -150,7 +150,7 @@ export default async function ProductPage({ params }) {
                     </div>
 
                     <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
-                        <div>
+                        <div className="order-2 lg:order-1">
 
                             <div className="mb-5 flex items-center gap-3">
                                 <span className="h-px w-10 bg-[#dddf00]" />
@@ -556,7 +556,7 @@ export default async function ProductPage({ params }) {
                 </section>
             )}
 
-            <section className="relative overflow-hidden bg-[#f5f3ee] pt-10 sm:pt-12 lg:pt-14 pb-70">
+            <section className="relative overflow-hidden bg-[#f5f3ee] pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
                 <div className="pointer-events-none absolute inset-0">
 
                     <div className="absolute -right-32 -top-32 h-[450px] w-[450px] rounded-full border border-[#071720]/10" />

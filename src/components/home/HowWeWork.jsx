@@ -347,7 +347,7 @@ export default function HowWeWork() {
 
             <div className="relative mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-12">
                 {/* HEADER */}
-                <div className="grid items-end gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+                <div className="grid items-end gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
                     {/* Left Heading */}
                     <div className="how-reveal">
                         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.035] px-3 py-2">
@@ -521,7 +521,7 @@ export default function HowWeWork() {
                 </div>
 
                 {/* BOTTOM TRUST LINE */}
-                <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-5">
+                <div className="mt-5 sm:flex hidden flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-white/10 pt-5">
                     {[
                         "SITE STUDY",
                         "DESIGN",

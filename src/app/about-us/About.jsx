@@ -421,6 +421,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
       <ProductShowcase />
 
       <section className="py-12 lg:py-15 bg-white">
@@ -535,6 +536,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
       <ParallaxCTA />
 
       <section className="py-12 lg:py-15 bg-[#f7f6f2]">
@@ -663,7 +665,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative pt-10 sm:pt-12 lg:pt-14 pb-70 overflow-hidden bg-white">
+      <section className="relative pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70 overflow-hidden bg-white">
         <div className="absolute inset-0 opacity-[0.035]">
           <div
             className="absolute inset-0"

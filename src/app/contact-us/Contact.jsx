@@ -394,7 +394,7 @@ export default function ContactPage() {
                                         </p>
 
                                         <p className="mt-1 text-[15px] font-medium">
-                                           +91 78378 30803
+                                            +91 78378 30803
                                         </p>
                                         <p className="mt-1 text-[15px] font-medium">
                                             +91 97979 77832
@@ -717,9 +717,9 @@ export default function ContactPage() {
                 </div>
             </section>
 
-         
 
-            <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-70">
+
+            <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="map-reveal rounded-2xl overflow-hidden border border-[#071720]/10 bg-white">
                         {/* Map header */}
@@ -750,26 +750,26 @@ export default function ContactPage() {
                         {/* Google map */}
 
                         <div className="relative h-[350px] w-full overflow-hidden sm:h-[450px] lg:h-[520px]">
-    <iframe
-        title="Cubiloo Cubicles Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.9280860717054!2d77.3754128749523!3d28.51181128955354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce765804ceb17%3A0x128d121b26149f02!2sCUBILOO%20CUBICLES!5e0!3m2!1sen!2sin!4v1793361277159!5m2!1sen!2sin"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        allowFullScreen
-        className="absolute inset-0 h-full w-full border-0"
-    />
+                            <iframe
+                                title="Cubiloo Cubicles Location"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.9280860717054!2d77.3754128749523!3d28.51181128955354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce765804ceb17%3A0x128d121b26149f02!2sCUBILOO%20CUBICLES!5e0!3m2!1sen!2sin!4v1793361277159!5m2!1sen!2sin"
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                allowFullScreen
+                                className="absolute inset-0 h-full w-full border-0"
+                            />
 
-    {/* Map overlay label */}
-    <div className="pointer-events-none absolute bottom-5 left-5 z-10 bg-[#071720] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
-        <span className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
-            CUBILOO CUBICLES
-        </span>
+                            {/* Map overlay label */}
+                            <div className="pointer-events-none absolute bottom-5 left-5 z-10 bg-[#071720] px-5 py-4 text-white shadow-xl sm:bottom-7 sm:left-7">
+                                <span className="text-[8px] font-bold tracking-[0.22em] text-[#dddf00]">
+                                    CUBILOO CUBICLES
+                                </span>
 
-        <p className="mt-1 text-[11px] text-white/70">
-            Faridabad • Delhi NCR
-        </p>
-    </div>
-</div>
+                                <p className="mt-1 text-[11px] text-white/70">
+                                    Faridabad • Delhi NCR
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
