@@ -30,7 +30,7 @@ export default function Home() {
       <ProductShowcase />
       <ProductsSection />
       <FormSection />
-      {/* <Hardware /> */}
+      <Hardware />
       {/* <Certificates /> */}
       <ClientSlider />
       <ParallaxCTA />

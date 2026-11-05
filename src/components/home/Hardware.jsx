@@ -211,7 +211,7 @@ export default function Hardware() {
             ref={sectionRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleLeave}
-            className="relative bg-[#111111] py-10 text-white sm:py-12 lg:py-16"
+            className="relative bg-[#111111] py-10 text-white sm:py-12 lg:py-16 overflow-hidden"
         >
             {/* BACKGROUND */}
             <div
