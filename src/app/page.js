@@ -11,6 +11,7 @@ import Hardware from "@/components/home/Hardware";
 import HeroSection from "@/components/home/HeroSection";
 import HowWeWork from "@/components/home/HowWeWork";
 import IndustriesWeServe from "@/components/home/Industries";
+import MobileHeroBanner from "@/components/home/MobileBanner";
 import ParallaxCTA from "@/components/home/ParallaxCTA";
 import Partners from "@/components/home/Partners";
 import ProductShowcase from "@/components/home/ProductShowcase";
@@ -22,7 +23,11 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 export default function Home() {
   return (
     <div>
-      <HeroSection />
+      <div className="hidden sm:block">
+        <HeroSection />
+      </div>
+
+      <MobileHeroBanner />
       <Categories />
       <Partners />
       <AboutSection />
