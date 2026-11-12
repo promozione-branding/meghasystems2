@@ -12,15 +12,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Replace with your actual project image paths
 const images = [
-  "/duro pro toilet cubicles.webp",
-  "/Kiddiez.webp",
-  "/Maxi Pro.webp",
-  "/Premia.webp",
-  "/Neo.webp",
-  "/duro pro toilet cubicles.webp",
-  "/Maxi Pro.webp",
-  "/Kiddiez.webp",
-  "/Premia.webp",
+  "/new1.webp",
+  "/new2.webp",
+  "/new3.webp",
+  "/new4.webp",
+  "/new5.webp",
+  "/new6.webp",
+  "/new7.webp",
+  "/new8.webp",
+  "/new9.webp",
 ];
 
 const columns = [
