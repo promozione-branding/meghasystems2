@@ -5,7 +5,7 @@ export const navabarProducts=[
 {label:"Duro" ,slug:"duro",image: "/products/duro.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Duro Pro" ,slug:"duro-pro",image: "/products/duro-pro.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Luron" ,slug:"luron", image: "/products/luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
-{label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/products/cubic-doorz.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/products/cubic-doorz2.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Kiddiez" ,slug:"kiddiez", image: "/products/kiddiez.webp",    categoryName: "KIDS RANGE",},
 {label:"Kiddiez Pro" ,slug:"kiddiez-pro", image: "/products/kiddiez-pro.webp",categoryName: "KIDS RANGE",},
 {label:"Urinal Modesty Panels" ,slug:"urinal-modesty-panels",image: "/Commercial Urinal Partitions.webp",categoryName: "URINAL PARTITIONS",},
@@ -326,7 +326,7 @@ dimensions: [
       {
         name: "Cubic Doorz",
         slug: "cubic-doorz",
-        image: "/products/cubic-doorz.webp",
+        image: "/products/cubic-doorz2.webp",
         metaTitle: "Cubic Doorz | Compact Toilet Cubicle Door System",
         metaDescription:
           "Cubic Doorz offers slim, durable compact board doors with flexible hardware, privacy features, and easy installation for modern commercial spaces.",

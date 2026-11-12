@@ -15,7 +15,7 @@ const PRODUCTS = [
         name: "Maxi PRO",
         slug: "maxi-pro",
         category: "CLASSIC RANGE",
-        image: "/Maxi Pro.webp",
+        image: "/products/maxi-pro.webp",
         description:
             "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
     },
@@ -23,29 +23,16 @@ const PRODUCTS = [
         name: "Duro",
         slug: "duro",
         category: "CLASSIC RANGE",
-        image: "/Duro-Toilet-Cubicles.webp",
+        image: "/products/duro.webp",
         description:
             "Strong, durable and engineered for demanding commercial washrooms with Grade 316 stainless steel supports.",
     },
-    {
-        name: "Premia",
-        slug: "premia",
-        image: "/Premia.webp",
-        category: "LUXE RANGE",
-        description: "A premium ceiling-hung cubicle system creating a clean, floating aesthetic with effortless floor cleaning.",
-    },
-    {
-        name: "Rove",
-        slug: "rove",
-        category: "LUXE RANGE",
-        image: "/Rove.webp",
-        description:
-            "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment.",
-    },
+
+    
     {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
-        image: "/Kiddiez Pro.webp",
+        image: "/products/kiddiez-pro.webp",
         category: "KIDS RANGE",
         description:
             "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware.",

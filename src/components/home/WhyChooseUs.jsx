@@ -436,7 +436,7 @@ export default function WhyChooseUs() {
                                 <div className="relative aspect-[16/9] w-full overflow-hidden bg-white shadow-[0_25px_70px_rgba(7,26,61,0.14)]">
 
                                     <Image
-                                        src="/Maxi Pro.webp"
+                                        src="/products/maxi-pro.webp"
                                         alt="Maxi Pro Toilet Cubicle System"
                                         fill
                                         priority
