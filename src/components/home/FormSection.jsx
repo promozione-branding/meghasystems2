@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Award,
 } from "lucide-react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -275,8 +276,8 @@ export default function FormSection() {
                 />
               </a>
 
-              <a
-                href="#systems"
+            <Link
+                href="/products"
                 className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg border border-[#dddf00] bg-white/80 px-5 text-sm font-semibold text-[#dddf00] transition-colors duration-300 hover:bg-white sm:text-base"
               >
                 Explore Our Systems
@@ -284,7 +285,7 @@ export default function FormSection() {
                   size={19}
                   className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* Animated statistics */}

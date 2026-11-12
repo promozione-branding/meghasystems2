@@ -1,13 +1,13 @@
 export const navabarProducts=[
-{label:"Neo" ,slug:"neo",image: "/Neo.webp",    categoryName: "CLASSIC RANGE", },
-{label:"Maxi" ,slug:"maxi",image: "/Maxi.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Maxi Pro" ,slug:"maxi-pro",image: "/Maxi Pro.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Duro" ,slug:"duro",image: "/Duro-Toilet-Cubicles.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Duro Pro" ,slug:"duro-pro",image: "/duro pro toilet cubicles.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Luron" ,slug:"luron", image: "/Luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
-{label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/Cubi Doorz.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Kiddiez" ,slug:"kiddiez", image: "/Kiddiez.webp",    categoryName: "KIDS RANGE",},
-{label:"Kiddiez Pro" ,slug:"kiddiez-pro", image: "/Kiddiez Pro.webp",categoryName: "KIDS RANGE",},
+{label:"Neo" ,slug:"neo", image: "/products/neo.webp",   categoryName: "CLASSIC RANGE", },
+{label:"Maxi" ,slug:"maxi",image: "/products/maxi.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Maxi Pro" ,slug:"maxi-pro",image: "/products/maxi-pro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Duro" ,slug:"duro",image: "/products/duro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Duro Pro" ,slug:"duro-pro",image: "/products/duro-pro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Luron" ,slug:"luron", image: "/products/luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
+{label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/products/cubic-doorz.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Kiddiez" ,slug:"kiddiez", image: "/products/kiddiez.webp",    categoryName: "KIDS RANGE",},
+{label:"Kiddiez Pro" ,slug:"kiddiez-pro", image: "/products/kiddiez-pro.webp",categoryName: "KIDS RANGE",},
 {label:"Urinal Modesty Panels" ,slug:"urinal-modesty-panels",image: "/Commercial Urinal Partitions.webp",categoryName: "URINAL PARTITIONS",},
 ]
 
@@ -92,7 +92,7 @@ export const allProducts = [
       {
         name: "Maxi PRO",
         slug: "maxi-pro",
-        image: "/Maxi Pro.webp",
+        image: "/products/maxi-pro.webp",
         metaTitle: "Maxi PRO Toilet Cubicles | Modular Washroom Cubicles",
         metaDescription:
           "Maxi PRO modular toilet cubicles combine aluminium construction, stainless steel hardware, flexible door configuration, and reliable commercial performance.",
@@ -175,7 +175,7 @@ export const allProducts = [
       {
         name: "Duro",
         slug: "duro",
-        image: "/Duro-Toilet-Cubicles.webp",
+        image: "/products/duro.webp",
         metaTitle: "Duro Toilet Cubicles | Durable Stainless Steel Cubicles",
         metaDescription:
           "Duro toilet cubicles feature Grade 316 stainless steel supports, secure panel connections, and practical floor clearance for demanding washrooms.",
@@ -248,7 +248,7 @@ dimensions: [
       {
         name: "Duro Pro",
         slug: "duro-pro",
-        image: "/duro pro toilet cubicles.webp",
+        image: "/products/duro.webp",
         metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
         metaDescription:
           "Duro Pro toilet cubicles combine Grade 316 stainless steel supports, reinforced panels, and a stable top pipe system for commercial washrooms.",
@@ -326,7 +326,7 @@ dimensions: [
       {
         name: "Cubic Doorz",
         slug: "cubic-doorz",
-        image: "/Cubi Doorz.webp",
+        image: "/products/cubic-doorz.webp",
         metaTitle: "Cubic Doorz | Compact Toilet Cubicle Door System",
         metaDescription:
           "Cubic Doorz offers slim, durable compact board doors with flexible hardware, privacy features, and easy installation for modern commercial spaces.",
@@ -403,7 +403,7 @@ dimensions: [
       {
         name: "NEO",
         slug: "neo",
-        image: "/Neo.webp",
+        image: "/products/neo.webp",
         metaTitle: "NEO Modular Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
@@ -479,7 +479,7 @@ dimensions: [
       {
         name: "Maxi",
         slug: "maxi",
-        image: "/Maxi.webp",
+        image: "/products/maxi.webp",
         metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
         metaDescription:
           "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
@@ -558,7 +558,7 @@ dimensions: [
       {
         name: "Luron",
         slug: "luron",
-        image: "/Luron.webp",
+        image: "/products/luron.webp",
         metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
         metaDescription:
           "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
@@ -827,7 +827,7 @@ dimensions: [
       {
         name: "Kiddiez",
         slug: "kiddiez",
-        image: "/Kiddiez.webp",
+        image: "/products/kiddiez.webp",
         metaTitle: "Kiddiez",
         metaDescription:
           "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
@@ -913,7 +913,7 @@ dimensions: [
       {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
-        image: "/Kiddiez Pro.webp",
+        image: "/products/kiddiez-pro.webp",
         metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Cubiloo Cubicles",
         metaDescription:
           "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",

@@ -713,7 +713,7 @@ export default function AboutSection() {
                             </Link>
 
                             <Link
-                                href="/contact"
+                                href="/contact-us"
                                 className="
                                     inline-flex
                                     items-center
