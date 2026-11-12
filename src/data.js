@@ -103,31 +103,47 @@ export const allProducts = [
         rightImg: "/right/max-pro-2.webp",
 
         dimensions: [
-          {
-            name: "Height of the entire cubicle",
-            regular: "2025",
-            speciallyAbled: "2055",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1550",
-            speciallyAbled: "1550",
-          },
-          { name: "Pilaster height", regular: "1830", speciallyAbled: "1840" },
-          {
-            name: "Pilaster width",
-            regular: "150/300",
-            speciallyAbled: "150/300",
-          },
-          {
-            name: "Height of the door",
-            regular: "1815",
-            speciallyAbled: "1815",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
-          { name: "HPL thickness", regular: "12", speciallyAbled: "12" },
-        ],
+  {
+    name: "Height of the entire cubicle",
+    regular: "2025",
+    speciallyAbled: "2055",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1840",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "100",
+    speciallyAbled: "100",
+  },
+  {
+    name: "HPL Thickness",
+    regular: "12",
+    speciallyAbled: "12",
+  },
+],
         imgSpecs: {
           dimensions: "1550 X 2025",
           clearance: "100",
@@ -169,35 +185,38 @@ export const allProducts = [
 
         rightImg: "/right/duro2.webp",
 
-
-        dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Height of entire cubicle",
-            regular: "1900",
-            speciallyAbled: "1900",
-          },
-          {
-            name: "Depth of the cubicle",
-            regular: "1500",
-            speciallyAbled: "1750",
-          },
-          {
-            name: "Height of the door",
-            regular: "1830",
-            speciallyAbled: "1830",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          {
-            name: "Ground clearance",
-            regular: "150/50",
-            speciallyAbled: "150/50",
-          },
-        ],
+dimensions: [
+  {
+    name: "Width of the cubicle",
+    regular: "1000",
+    speciallyAbled: "1500",
+  },
+  {
+    name: "Height of entire cubicle",
+    regular: "1900",
+    speciallyAbled: "1900",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1500",
+    speciallyAbled: "1750",
+  },
+  {
+    name: "Height of the door",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "1000 X 1900",
           clearance: "150/50",
@@ -240,33 +259,42 @@ export const allProducts = [
         rightImg: "/right/duro-pro.jpeg",
 
         dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Hight of entire cubicle",
-            regular: "2000",
-            speciallyAbled: "2000",
-          },
-          {
-            name: "Depth of the cubicle",
-            regular: "1500",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Hight of the door",
-            regular: "1830",
-            speciallyAbled: "1830",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          {
-            name: "Ground clearance",
-            regular: "150/50",
-            speciallyAbled: "150/50",
-          },
-        ],
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "1000 X 2000",
           clearance: "150/50",
@@ -307,29 +335,43 @@ export const allProducts = [
 
         hardwareImg: "/hardware/cubidoorzs.png",
         rightImg: "/right/cubi.jpeg",
-
-        dimensions: [
-          {
-            name: "Height of entire door model",
-            regular: "1830",
-            speciallyAbled:
-              "The dimensions will be as per the intermediate brick wall setup.",
-          },
-          {
-            name: "Height of the door",
-            regular: "1830",
-            speciallyAbled:
-              "The dimensions will be as per the intermediate brick wall setup.",
-          },
-          {
-            name: "Width of the door",
-            regular: "700/900",
-            speciallyAbled:
-              "The dimensions will be as per the intermediate brick wall setup.",
-          },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
-          { name: "HPL thickness", regular: "12", speciallyAbled: "12" },
-        ],
+dimensions: [
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "900 X 1830",
           clearance: "150",
@@ -371,30 +413,42 @@ export const allProducts = [
         hardwareImg: "/hardware/Neo.webp",
         rightImg: "/right/neo.jpeg",
         dimensions: [
-          {
-            name: "Height of the cubicle",
-            regular: "1980–2000",
-            speciallyAbled: "1980–2000",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1550",
-            speciallyAbled: "1550",
-          },
-          { name: "Pilaster height", regular: "1830", speciallyAbled: "1830" },
-          {
-            name: "Pilaster width",
-            regular: "150/300",
-            speciallyAbled: "150/300",
-          },
-          {
-            name: "Height of the door",
-            regular: "1815",
-            speciallyAbled: "1815",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
-        ],
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "1550 X 2000",
           clearance: "150",
@@ -436,38 +490,42 @@ export const allProducts = [
         rightImg: "/right/maxi2.jpeg",
 
         dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Height of the entire cubicle",
-            regular: "1995",
-            speciallyAbled: "1995",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1500",
-            speciallyAbled: "1750",
-          },
-          {
-            name: "Height of the door",
-            regular: "1785",
-            speciallyAbled: "1785",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          {
-            name: "Ground clearance",
-            regular: "150/50 mm",
-            speciallyAbled: "150/50 mm",
-          },
-          {
-            name: "Height of the door",
-            regular: "1815",
-            speciallyAbled: "1815",
-          },
-        ],
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
 
         imgSpecs: {
           dimensions: "1000 X 1995",
@@ -513,35 +571,42 @@ export const allProducts = [
         imgSpecs: {},
 
         dimensions: [
-          {
-            name: "Height of the entire cubicle",
-            regular: "1915",
-            speciallyAbled: "1915",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1550",
-            speciallyAbled: "1550",
-          },
-          {
-            name: "Height of the Pilaster",
-            regular: "1830",
-            speciallyAbled: "1860",
-          },
-          {
-            name: "Width of the Pilaster",
-            regular: "150/300",
-            speciallyAbled: "150/300",
-          },
-          {
-            name: "Height of the door",
-            regular: "1760",
-            speciallyAbled: "1760",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
-          { name: "HPL thickness", regular: "12", speciallyAbled: "12" },
-        ],
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
 
         keyFeatures: [
           {
@@ -780,35 +845,43 @@ export const allProducts = [
           "/kids/kids8.webp",
         ],
 
-        dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1500",
-            speciallyAbled: "1700",
-          },
-          {
-            name: "Height of the divider",
-            regular: "1200",
-            speciallyAbled: "1200",
-          },
-          {
-            name: "Height of the entire cubicle",
-            regular: "1500",
-            speciallyAbled: "1500",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          {
-            name: "Height of the door",
-            regular: "1250",
-            speciallyAbled: "1250",
-          },
-          { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
-        ],
+       dimensions: [
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "1000 X 1500",
           clearance: "150",
@@ -856,25 +929,43 @@ export const allProducts = [
           "/kids/kids7.webp",
           "/kids/kids8.webp",
         ],
-        dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          { name: "Depth of cubicle", regular: "1500", speciallyAbled: "1700" },
-          {
-            name: "Height of the divider",
-            regular: "1200",
-            speciallyAbled: "1200",
-          },
-          {
-            name: "Height of the entire cubicle",
-            regular: "1500",
-            speciallyAbled: "1500",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-        ],
+    dimensions: [
+  {
+    name: "Height of the entire cubicle",
+    regular: "1980-2000",
+    speciallyAbled: "1980-2000",
+  },
+  {
+    name: "Depth of the cubicle",
+    regular: "1550",
+    speciallyAbled: "1550",
+  },
+  {
+    name: "Pilaster height",
+    regular: "1830",
+    speciallyAbled: "1830",
+  },
+  {
+    name: "Pilaster width",
+    regular: "150/300",
+    speciallyAbled: "150/300",
+  },
+  {
+    name: "Height of the door",
+    regular: "1815",
+    speciallyAbled: "1815",
+  },
+  {
+    name: "Width of the door",
+    regular: "600",
+    speciallyAbled: "900",
+  },
+  {
+    name: "Ground clearance",
+    regular: "150",
+    speciallyAbled: "150",
+  },
+],
         imgSpecs: {
           dimensions: "1000 X 1500",
           clearance: "150",

@@ -19,19 +19,19 @@ const GRADIENT =
 const columns = [
     [
         {
-            image: "/Black Maxi.webp",
+            image: "/new1.webp",
             title: "Duro Pro Cubicles",
         },
         {
-            image: "/Cielo.webp",
+            image: "/new2.webp",
             title: "Duro Pro Cubicles",
         },
         {
-            image: "/duro pro toilet cubicles.webp",
+            image: "/new3.webp",
             title: "Duro Pro Cubicles",
         },
         {
-            image: "/Kiddiez.webp",
+            image: "/new4.webp",
             title: "Kiddiez Cubicles",
         },
         // {
@@ -61,38 +61,38 @@ const columns = [
         //     title: "Premium Partitions",
         // },
         {
-            image: "/Maxi Pro.webp",
+            image: "/new5.webp",
             title: "Commercial Cubicles",
         },
         {
-            image: "/Cubi Doorz.webp",
+            image: "/new6.webp",
             title: "Kiddiez Cubicles",
         },
         {
-            image: "/duro pro toilet cubicles.webp",
+            image: "/new7.webp",
             title: "Modern Washrooms",
         },
         {
-            image: "/Kiddiez.webp",
+            image: "/new8.webp",
             title: "Kids Restroom Solutions",
         },
     ],
     [
         {
-            image: "/Duro-Toilet-Cubicles.webp",
+            image: "/new9.webp",
             title: "Duro Pro Cubicles",
         },
         {
-            image: "/Kiddiez Pro.webp",
+            image: "/new7.webp",
+            title: "Modern Washrooms",
+        },
+        {
+            image: "/new3.webp",
             title: "Duro Pro Cubicles",
         },
         {
-            image: "/Luron.webp",
-            title: "High Pressure Laminate",
-        },
-        {
-            image: "/Rove.webp",
-            title: "School Washrooms",
+            image: "/new4.webp",
+            title: "Kiddiez Cubicles",
         },
         // {
         //     image: "/Cubi Doorz.webp",
@@ -112,19 +112,19 @@ const columns = [
 const stats = [
     {
         id: "01",
-        value: 25,
+        value: 26,
         suffix: "+",
         label: "Years of Excellence",
     },
     {
         id: "02",
-        value: 5000,
+        value: 7500,
         suffix: "+",
         label: "Projects Completed",
     },
     {
         id: "03",
-        value: 100000,
+        value: 600000,
         suffix: "+",
         label: "Cubicles Installed",
     },
@@ -132,7 +132,7 @@ const stats = [
 
 function formatNumber(value, index) {
     if (index === 2 && value >= 100000) {
-        return "1 Lakh";
+        return "6 Lakh";
     }
 
     return Math.floor(value).toLocaleString("en-IN");
