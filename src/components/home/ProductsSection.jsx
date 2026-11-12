@@ -196,15 +196,15 @@ export default function ProductSection() {
                                     }}
                                     className="relative"
                                 >
-                                    <div className="relative aspect-[4/3] overflow-hidden bg-[#06152f]">
+                                    <div className="relative  overflow-hidden bg-[#06152f]">
 
-                                        <Image
+                                        <img
                                             src={product.image}
                                             alt={product.name}
                                             fill
                                             priority
                                             className="object-cover transition-transform duration-700"
-                                            sizes="(max-width: 1024px) 100vw, 55vw"
+                                            
                                         />
 
                                         {/* Overlay */}
