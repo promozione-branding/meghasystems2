@@ -60,6 +60,7 @@ export default function HeroSection() {
               {/* Desktop banner */}
               <div className="relative hidden w-full aspect-[1920/800] md:block">
                 <Image
+                unoptimized
                   src={slide.desktop}
                   alt={slide.alt}
                   fill
@@ -72,6 +73,7 @@ export default function HeroSection() {
               {/* Mobile banner */}
               <div className="relative block w-full aspect-[380/480] md:hidden">
                 <Image
+                unoptimized
                   src={slide.mobile}
                   alt={slide.alt}
                   fill

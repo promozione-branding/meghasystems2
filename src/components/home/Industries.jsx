@@ -315,6 +315,7 @@ export default function IndustriesWeServe() {
                   className="absolute inset-0 h-full"
                 >
                   <Image
+                  unoptimized
                     src={current.project.image}
                     alt={`${current.project.name} - ${current.project.location}`}
                     fill

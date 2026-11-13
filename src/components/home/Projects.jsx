@@ -101,6 +101,7 @@ function ProjectCard({ project, className = "" }) {
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <Image
+        unoptimized
           src={project.image}
           alt={project.title}
           fill

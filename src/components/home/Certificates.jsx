@@ -205,6 +205,7 @@ export default function Certificates() {
                                         <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f5f5]">
 
                                             <Image
+                                            unoptimized
                                                 src={certificate.image}
                                                 alt={certificate.alt}
                                                 fill

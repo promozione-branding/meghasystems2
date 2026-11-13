@@ -186,6 +186,7 @@ export default function Partners() {
                                 <div className="relative z-10 flex h-[66px] w-[66px] items-center justify-center overflow-hidden rounded-full border border-[#071720]/10 bg-white p-2 shadow-sm sm:h-[86px] sm:w-[86px]">
                                     <div className="relative h-full w-full">
                                         <Image
+                                        unoptimized
                                             src={partner.logo}
                                             alt={`${partner.name} logo`}
                                             fill

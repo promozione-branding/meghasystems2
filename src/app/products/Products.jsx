@@ -463,6 +463,7 @@ function ProductCard({ product, index, categoryIndex }) {
         {/* Image */}
 
         <Image
+        unoptimized
           src={product.image}
           alt={product.name}
           fill

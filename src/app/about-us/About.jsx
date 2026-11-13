@@ -396,6 +396,7 @@ export default function AboutPage() {
                   src="/Maxi Pro.webp"
                   alt="Cubiloo Cubicles premium toilet cubicle"
                   fill
+                  unoptimized
                   priority
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 70vw"

@@ -274,6 +274,7 @@ export default async function ProductPage({ params }) {
                             <div className="relative aspect-[4/3] overflow-hidden bg-white">
 
                                 <Image
+                                unoptimized
                                     src={product.image}
                                     alt={product.name}
                                     fill
@@ -499,6 +500,7 @@ export default async function ProductPage({ params }) {
                                     <div className="relative aspect-[4/3]">
 
                                         <Image
+                                        unoptimized
                                             src={product.hardwareImg}
                                             alt={`${product.name} hardware`}
                                             fill
@@ -529,6 +531,7 @@ export default async function ProductPage({ params }) {
                                     <div className="relative aspect-[4/3]">
 
                                         <Image
+                                        unoptimized
                                             src={product.rightImg}
                                             alt={`${product.name} product detail`}
                                             fill

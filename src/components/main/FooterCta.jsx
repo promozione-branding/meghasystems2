@@ -166,6 +166,7 @@ export default function FooterCTA() {
                             {/* BACK IMAGE */}
                             <div className="footer-cta-image absolute left-[13%] top-[2%] h-[70%] w-[67%] -rotate-[3deg] overflow-hidden rounded-[15px] border-[5px] border-[#111111] bg-[#121212] shadow-[0_25px_65px_rgba(0,0,0,0.35)]">
                                 <Image
+                                unoptimized
                                     src="/duro pro toilet cubicles.webp"
                                     alt="Cubiloo premium toilet cubicles"
                                     fill
@@ -177,6 +178,7 @@ export default function FooterCTA() {
                             {/* FRONT IMAGE */}
                             <div className="footer-cta-image absolute bottom-[1%] right-[1%] z-10 h-[64%] w-[75%] rotate-[3deg] overflow-hidden rounded-[15px] border-[5px] border-[#111111] bg-[#121212] shadow-[0_30px_75px_rgba(0,0,0,0.45)]">
                                 <Image
+                                unoptimized
                                     src="/Neo.webp"
                                     alt="Cubiloo modern restroom installation"
                                     fill

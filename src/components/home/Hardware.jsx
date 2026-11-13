@@ -331,6 +331,7 @@ export default function Hardware() {
                     <>
                         <div className="relative h-[190px] w-full overflow-hidden rounded-xl bg-[#F5F5F5]">
                             <Image
+                            unoptimized
                                 src={activeItem.image}
                                 alt={activeItem.name}
                                 fill
@@ -376,6 +377,7 @@ export default function Hardware() {
 
                         <div className="relative mt-7 h-[260px] w-full">
                             <Image
+                            unoptimized
                                 src={mobileItem.image}
                                 alt={mobileItem.name}
                                 fill

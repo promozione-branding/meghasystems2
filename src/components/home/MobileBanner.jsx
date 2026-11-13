@@ -50,6 +50,7 @@ function MovingColumn({ images, index }) {
                                 className="relative h-[175px] w-full shrink-0 overflow-hidden rounded-[11px] border border-white/20 bg-[#14242a]"
                             >
                                 <Image
+                                unoptimized
                                     src={item.image}
                                     alt={copy === 0 ? item.title : ""}
                                     fill

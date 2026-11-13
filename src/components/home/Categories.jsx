@@ -161,6 +161,7 @@ export default function Categories() {
                   <div className="relative aspect-[1.27/1] overflow-hidden rounded-[13px] border border-[#ECECEC] bg-[#F4F4F4]">
                     {product.image ? (
                       <Image
+                      unoptimized
                         src={product.image}
                         alt={product.name}
                         fill

@@ -128,6 +128,7 @@ export default function ParallaxCTA() {
                   className="relative min-h-[210px] flex-1 overflow-hidden bg-[#242424] md:min-h-[320px]"
                 >
                   <Image
+                  unoptimized
                     src={src}
                     alt=""
                     fill
