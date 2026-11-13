@@ -164,6 +164,7 @@ function ImageColumn({ images, index }) {
                                     sizes="(max-width: 768px) 180px, 350px"
                                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                                     priority={copy === 0 && i < 2}
+                                    unoptimized
                                 />
 
                                 {/* <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" /> */}
