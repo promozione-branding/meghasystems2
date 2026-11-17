@@ -1,411 +1,267 @@
 
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-    ArrowUpRight,
-    ArrowRight,
-    X,
-    MoveUpRight,
-} from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 
 const GRADIENT =
-    "linear-gradient(90deg, #b8c900 0%, #dddf00 35%, #f0f542 65%, #a9c000 100%)";
+  "linear-gradient(90deg, #b8c900 0%, #dddf00 45%, #a9c000 100%)";
 
-// Place each cropped hardware image in public/hardware/
-// See image preparation instructions below.
-const HARDWARE = [
-    {
-        id: "01",
-        name: "Indicator Lock",
-        detail: "SS PVD Coated",
-        image: "/hardware/1.png",
-    },
-    {
-        id: "02",
-        name: "SS Knob",
-        detail: "SS PVD Coated",
-        image: "/hardware/2.png",
-    },
-    {
-        id: "03",
-        name: "Thumb Turn",
-        detail: "SS PVD Coated",
-        image: "/hardware/3.png",
-    },
-    {
-        id: "04",
-        name: "Coat Hanger",
-        detail: "Cum Stopper",
-        image: "/hardware/4.png",
-    },
-    {
-        id: "05",
-        name: "SS Spring Loaded Hinge",
-        detail: "SS PVD Coated",
-        image: "/hardware/5.png",
-    },
-    {
-        id: "06",
-        name: "SS Leg",
-        detail: "SS PVD Coated",
-        image: "/hardware/6.png",
-    },
-    {
-        id: "07",
-        name: "SS PVD Coated Profile",
-        detail: "Hardware Profile",
-        image: "/hardware/7.png",
-    },
-    {
-        id: "08",
-        name: "SS PVD Coated Channel",
-        detail: "Hardware Channel",
-        image: "/hardware/8.png",
-    },
-    {
-        id: "09",
-        name: "SS PVD Coated Rail",
-        detail: "Hardware Rail",
-        image: "/hardware/9.png",
-    },
-    {
-        id: "10",
-        name: "Door Stopper",
-        detail: "Aluminium",
-        image: "/hardware/10.png",
-    },
-    {
-        id: "11",
-        name: "U-Channel",
-        detail: "Powder-Coated Aluminium",
-        image: "/hardware/11.png",
-    },
-    {
-        id: "12",
-        name: "F-Channel",
-        detail: "Powder-Coated Aluminium",
-        image: "/hardware/12.png",
-    },
+// Add your actual product images and names in these arrays.
+const HARDWARE_CATEGORIES = [
+  {
+    id: "nylon",
+    name: "Nylon Hardware",
+    number: "01",
+    description: "Lightweight, durable and functional hardware accessories.",
+    products: [
+      { name: "Nylon Hardware Set Black", detail: "Set black", image: "/hardware1/1.jpeg" },
+      { name: "Nylon Hardware Set Grey Color", detail: "Set black", image: "/hardware1/2.jpeg" },
+      { name: "Nylon Hardware Set Black Color", detail: "Set black", image: "/hardware1/5.jpeg" },
+      { name: "Nylon Hardware Set White Color", detail: "Set black", image: "/hardware1/3.jpeg" },
+    ],
+  },
+  {
+    id: "pvd",
+    name: "SS PVD Coated",
+    number: "02",
+    description: "Premium PVD coated hardware with an elegant finish.",
+    products: [
+      { name: "SS PVD Coated Rose Gold Hardware Set", detail: "SS PVD Coated", image: "/hardware1/6.webp" },
+      { name: "SS PVD Coated Rose Gold Hardware Set", detail: "SS PVD Coated", image: "/hardware1/7.webp" },
+    ],
+  },
+  {
+    id: "ss",
+    name: "SS Hardware",
+    number: "03",
+    description: "Reliable stainless steel hardware for everyday performance.",
+    products: [
+      { name: "SS Hardware Set Grade 316", detail: "Stainless Steel", image: "/hardware1/4.jpeg" },
+    ],
+  },
 ];
 
 export default function Hardware() {
-    const sectionRef = useRef(null);
-    const previewRef = useRef(null);
-    const imageRef = useRef(null);
+  const [activeCategory, setActiveCategory] = useState("pvd");
 
-    const [activeItem, setActiveItem] = useState(null);
-    const [mobileItem, setMobileItem] = useState(null);
+  const activeData = HARDWARE_CATEGORIES.find(
+    (category) => category.id === activeCategory
+  );
 
-    const mouseX = useRef(0);
-    const mouseY = useRef(0);
+  return (
+    <section className="relative overflow-hidden bg-[#111111] py-20 text-white sm:py-24 lg:py-28">
 
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.fromTo(
-                ".hardware-reveal",
-                {
-                    y: 45,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.9,
-                    stagger: 0.1,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 80%",
-                        once: true,
-                    },
-                }
-            );
+      {/* Background */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px)",
+          backgroundSize: "90px 90px",
+        }}
+      />
 
-            gsap.fromTo(
-                ".hardware-pill",
-                {
-                    y: 30,
-                    opacity: 0,
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.65,
-                    stagger: {
-                        each: 0.055,
-                        from: "start",
-                    },
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: ".hardware-list",
-                        start: "top 85%",
-                        once: true,
-                    },
-                }
-            );
-        }, sectionRef);
+      <div className="pointer-events-none absolute -left-40 top-40 h-[500px] w-[500px] rounded-full bg-[#dddf00]/[0.06] blur-[130px]" />
 
-        return () => ctx.revert();
-    }, []);
+      <div className="relative mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12">
 
-    useEffect(() => {
-        if (!previewRef.current) return;
+        {/* Heading */}
+        <div className="mb-14 text-center">
+          <div className="mb-6 flex items-center justify-center gap-3">
+            <span className="h-px w-9 bg-[#dddf00]" />
+            <span className="text-[11px] font-semibold uppercase tracking-[.25em] text-[#dddf00]">
+              Premium Cubicle Accessories
+            </span>
+            <span className="h-px w-9 bg-[#dddf00]" />
+          </div>
 
-        gsap.to(previewRef.current, {
-            opacity: activeItem ? 1 : 0,
-            scale: activeItem ? 1 : 0.92,
-            duration: 0.25,
-            ease: "power2.out",
-            overwrite: "auto",
-        });
-    }, [activeItem]);
-
-    const handleMouseMove = (event) => {
-        if (!previewRef.current) return;
-
-        const previewWidth = 270;
-        const previewHeight = 280;
-        const gap = 20;
-
-        let x = event.clientX + gap;
-        let y = event.clientY - previewHeight / 2;
-
-        // Prevent image from overflowing the right edge
-        if (x + previewWidth > window.innerWidth - 16) {
-            x = event.clientX - previewWidth - gap;
-        }
-
-        // Prevent image from overflowing top and bottom
-        y = Math.max(
-            16,
-            Math.min(y, window.innerHeight - previewHeight - 16)
-        );
-
-        gsap.to(previewRef.current, {
-            x,
-            y,
-            duration: 0.35,
-            ease: "power3.out",
-            overwrite: "auto",
-        });
-    };
-
-    const handleEnter = (item) => {
-        if (window.matchMedia("(hover: none)").matches) return;
-
-        setActiveItem(item);
-    };
-
-    const handleLeave = () => {
-        setActiveItem(null);
-    };
-
-    return (
-        <section
-            ref={sectionRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleLeave}
-            className="relative bg-[#111111] py-10 text-white sm:py-12 lg:py-16 overflow-hidden"
-        >
-            {/* BACKGROUND */}
-            <div
-                className="pointer-events-none absolute inset-0 opacity-30"
-                style={{
-                    backgroundImage:
-                        "linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px)",
-                    backgroundSize: "100px 100px",
-                }}
-            />
-
-            <div className="pointer-events-none absolute -left-[200px] top-[20%] h-[600px] w-[600px] rounded-full bg-[#dddf00]/[0.045] blur-[130px]" />
-
-            <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
-                {/* HEADING */}
-                <div className="hardware-reveal relative mb-8 text-center">
-                    {/* Giant background text */}
-                    <span
-                        aria-hidden="true"
-                        className="pointer-events-none uppercase absolute left-1/2 top-[-50px] -translate-x-1/2 select-none whitespace-nowrap text-[clamp(80px,10vw,130px)] font-black leading-none text-white/[0.060]"
-                    >
-                        Cubiloo Cubicles
-                    </span>
-
-                    <div className="relative z-10">
-                        <div className="mb-6 flex items-center justify-center gap-3">
-                            <span className="h-px w-8 bg-[#dddf00]" />
-
-                            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#dddf00]">
-                                Premium Cubicle Accessories
-                            </span>
-
-                            <span className="h-px w-8 bg-[#dddf00]" />
-                        </div>
-
-                        <h2 className="text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1] tracking-[-0.015em]">
-                            Hardware that
-                            <br />
-                            <span
-                                className="bg-clip-text text-transparent"
-                                style={{ backgroundImage: GRADIENT }}
-                            >
-                                completes every detail.
-                            </span>
-                        </h2>
-
-                        <p className="mx-auto mt-6 max-w-[650px] text-sm leading-[1.9] text-white/45 sm:text-base">
-                            Discover our selection of durable cubicle hardware
-                            and premium accessories, designed for smooth
-                            functionality, precision and long-lasting
-                            performance.
-                        </p>
-                    </div>
-                </div>
-
-                {/* HARDWARE PILLS */}
-                <div className="hardware-list relative z-10 mx-auto flex max-w-[1450px] flex-wrap items-center justify-center gap-3 sm:gap-4">
-                    {HARDWARE.map((item) => (
-                        <button
-                            key={item.id}
-                            type="button"
-                            onMouseEnter={() => handleEnter(item)}
-                            onMouseLeave={handleLeave}
-                            onFocus={() => handleEnter(item)}
-                            onBlur={handleLeave}
-                            onClick={() => setMobileItem(item)}
-                            className={`hardware-pill group inline-flex min-h-[65px] items-center gap-3 rounded-[16px] border px-5 py-3.5 text-left transition-all duration-300 sm:min-h-[74px] sm:px-7 ${activeItem?.id === item.id
-                                ? "border-[#dddf00] bg-[#dddf00]/15"
-                                : "border-white/[0.055] bg-[#202020] hover:border-[#dddf00]/50 hover:bg-[#29231E]"
-                                }`}
-                        >
-                            <span
-                                className={`text-[11px] font-semibold transition-colors ${activeItem?.id === item.id
-                                    ? "text-[#dddf00]"
-                                    : "text-white/25 group-hover:text-[#dddf00]"
-                                    }`}
-                            >
-                                {item.id}
-                            </span>
-
-                            <span className="text-[13px] font-medium text-white/65 transition-colors group-hover:text-white sm:text-[17px]">
-                                {item.name}
-                            </span>
-
-                            <ArrowUpRight
-                                size={17}
-                                className="text-white/25 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#dddf00]"
-                            />
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* FLOATING HOVER IMAGE */}
-            <div
-                ref={previewRef}
-                className="
-        pointer-events-none
-        fixed
-        left-0
-        top-0
-        z-[9999]
-        hidden
-        w-[270px]
-        overflow-hidden
-        rounded-[20px]
-        border
-        border-white/15
-        bg-white
-        p-3
-        opacity-0
-        shadow-[0_25px_80px_rgba(0,0,0,0.6)]
-        lg:block
-    "
+          <h2 className="text-[clamp(2.7rem,5vw,5rem)] font-semibold leading-[1.05] tracking-tight">
+            Hardware that
+            <br />
+            <span
+              className="bg-clip-text text-transparent"
+              style={{ backgroundImage: GRADIENT }}
             >
-                {activeItem && (
-                    <>
-                        <div className="relative h-[190px] w-full overflow-hidden rounded-xl bg-[#F5F5F5]">
-                            <Image
-                            unoptimized
-                                src={activeItem.image}
-                                alt={activeItem.name}
-                                fill
-                                sizes="270px"
-                                className="object-contain p-3"
-                            />
-                        </div>
+              completes every detail.
+            </span>
+          </h2>
 
-                        <div className="px-2 pb-1 pt-3">
-                            <p className="text-[15px] font-semibold text-[#121212]">
-                                {activeItem.name}
-                            </p>
+          <p className="mx-auto mt-6 max-w-[620px] text-sm leading-8 text-white/45 sm:text-base">
+            Explore our carefully selected hardware collections, crafted
+            to deliver durability, precision and a refined finish.
+          </p>
+        </div>
 
-                            <p className="mt-1 text-xs text-[#777]">
-                                {activeItem.detail}
-                            </p>
-                        </div>
-                    </>
+        {/* Category Selection */}
+        <div className="mx-auto mb-14 grid max-w-[950px] grid-cols-1 gap-3 sm:grid-cols-3">
+
+          {HARDWARE_CATEGORIES.map((category) => {
+            const isActive = activeCategory === category.id;
+
+            return (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`group relative overflow-hidden rounded-2xl border px-5 py-3 text-left transition-all duration-300 sm:px-6 sm:py-3 ${
+                  isActive
+                    ? "border-[#dddf00] bg-[#dddf00]/[0.10]"
+                    : "border-white/10 bg-[#1b1b1b] hover:border-white/30"
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="hardware-active"
+                    className="absolute bottom-0 left-0 h-[3px] w-full"
+                    style={{ background: GRADIENT }}
+                  />
                 )}
+
+                <div className="mb-3 flex items-center justify-between">
+                  <span
+                    className={`text-xs font-semibold ${
+                      isActive ? "text-[#dddf00]" : "text-white/30"
+                    }`}
+                  >
+                    {category.number} / 03
+                  </span>
+
+                  <ArrowUpRight
+                    size={19}
+                    className={`transition-all duration-300 ${
+                      isActive
+                        ? "translate-x-0.5 -translate-y-0.5 text-[#dddf00]"
+                        : "text-white/30 group-hover:text-white"
+                    }`}
+                  />
+                </div>
+
+                <h3
+                  className={`text-lg font-semibold capitalize sm:text-xl ${
+                    isActive ? "text-white" : "text-white/65"
+                  }`}
+                >
+                  {category.name}
+                </h3>
+
+                {/* <p className="mt-2 text-xs leading-6 text-white/35">
+                  {category.description}
+                </p> */}
+
+                <div
+                  className={`mt-3 h-1 w-10 rounded-full transition-all duration-300 ${
+                    isActive ? "w-16 bg-[#dddf00]" : "bg-white/15"
+                  }`}
+                />
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Product Cards */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+          >
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <span className="mb-2 block text-[10px] font-semibold uppercase tracking-[.25em] text-[#dddf00]">
+                  Hardware Collection / {activeData.number}
+                </span>
+
+                <h3 className="text-2xl font-semibold sm:text-3xl">
+                  {activeData.name}
+                </h3>
+              </div>
+
+              <span className="text-xs text-white/40">
+                {activeData.products.length} Products
+              </span>
             </div>
 
-            {/* MOBILE IMAGE MODAL */}
-            {mobileItem && (
-                <div
-                    className="fixed inset-0 z-[200] flex items-center justify-center bg-black/80 p-5 backdrop-blur-md"
-                    onClick={() => setMobileItem(null)}
-                >
-                    <div
-                        role="dialog"
-                        aria-modal="true"
-                        aria-label={mobileItem.name}
-                        className="relative w-full max-w-[400px] overflow-hidden rounded-[24px] bg-white p-5 text-black"
-                        onClick={(event) => event.stopPropagation()}
-                    >
-                        <button
-                            type="button"
-                            aria-label="Close preview"
-                            onClick={() => setMobileItem(null)}
-                            className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black text-white"
-                        >
-                            <X size={18} />
-                        </button>
+            {activeData.products.length > 0 ? (
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
 
-                        <div className="relative mt-7 h-[260px] w-full">
-                            <Image
-                            unoptimized
-                                src={mobileItem.image}
-                                alt={mobileItem.name}
-                                fill
-                                sizes="400px"
-                                className="object-contain"
-                            />
-                        </div>
+                {activeData.products.map((product, index) => (
+                <motion.div
+  key={product.name}
+  initial={{ opacity: 0, y: 25 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{
+    duration: 0.45,
+    delay: index * 0.06,
+  }}
+  className="group w-full min-w-0 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1b1b1b] transition-all duration-300 hover:-translate-y-1 hover:border-[#dddf00]/40"
+>
+  {/* Product Image */}
+  <div className="relative w-full overflow-hidden bg-[#f5f5f3]">
+    <div className="relative w-full aspect-[4/3]">
+      <Image
+        src={product.image}
+        alt={product.name}
+        fill
+        sizes="(max-width: 640px) 50vw, 25vw"
+        className="object-cover  transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
 
-                        <h3 className="mt-5 text-2xl font-semibold">
-                            {mobileItem.name}
-                        </h3>
+    <span className="absolute left-3 top-3 rounded-full bg-white px-3 py-1 text-[9px] font-semibold uppercase tracking-wider text-black">
+      {String(index + 1).padStart(2, "0")}
+    </span>
 
-                        <p className="mt-2 text-sm text-gray-500">
-                            {mobileItem.detail}
-                        </p>
+    <div className="absolute bottom-3 right-3 flex h-9 w-9 items-center justify-center rounded-full bg-[#dddf00] text-black opacity-0 transition-all duration-300 group-hover:opacity-100">
+      <ArrowUpRight size={17} />
+    </div>
+  </div>
 
-                        <button
-                            type="button"
-                            onClick={() => setMobileItem(null)}
-                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl py-4 text-sm font-bold text-black"
-                            style={{ background: GRADIENT }}
-                        >
-                            Close Preview
-                            <ArrowRight size={17} />
-                        </button>
-                    </div>
-                </div>
+  {/* Product Information */}
+  <div className="px-4 pb-5 pt-4 sm:px-5">
+    <h4 className="text-sm font-semibold leading-6 text-white sm:text-base">
+      {product.name}
+    </h4>
+
+    {/* <p className="mt-1 text-[11px] text-white/40">
+      {product.detail}
+    </p> */}
+
+    <div className="mt-4 h-px w-full bg-white/[0.08]" />
+
+    <div className="mt-3 flex items-center justify-between">
+      <span className="text-[9px] uppercase tracking-[.18em] text-white/35">
+        Cubicle Hardware
+      </span>
+      <ArrowRight
+        size={15}
+        className="text-[#dddf00] transition-transform group-hover:translate-x-1"
+      />
+    </div>
+  </div>
+</motion.div>
+                ))}
+
+              </div>
+            ) : (
+              <div className="flex min-h-[260px] flex-col items-center justify-center rounded-2xl border border-dashed border-white/15 bg-[#1b1b1b] px-5 text-center">
+                <span className="mb-4 text-3xl text-[#dddf00]">+</span>
+                <h4 className="text-lg font-semibold">
+                  {activeData.name}
+                </h4>
+                <p className="mt-2 max-w-sm text-sm leading-7 text-white/40">
+                  Add your hardware product images and details to this
+                  collection to display them here.
+                </p>
+              </div>
             )}
-        </section>
-    );
+          </motion.div>
+        </AnimatePresence>
+
+      </div>
+    </section>
+  );
 }

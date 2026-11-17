@@ -371,7 +371,7 @@ export default function AboutSection() {
                                     "
                                 >
                                     <source
-                                        src="/megha-systems-about-clean-v2.mp4"
+                                        src="/vid.mp4"
                                         type="video/mp4"
                                     />
 
