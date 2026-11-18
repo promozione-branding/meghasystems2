@@ -47,7 +47,7 @@ const projects = [
     title: "Executive Workstations & Collaborative Office Layouts",
     description:
       "Thoughtfully planned office furniture solutions that balance privacy, functionality and contemporary design.",
-    image: "/Duro-Toilet-Cubicles.webp",
+    image: "/Black Maxi.webp",
     href: "/projects/custom-office-solutions",
     layout: "large",
     number: "04",

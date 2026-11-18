@@ -15,7 +15,7 @@ const PRODUCTS = [
         name: "Maxi PRO",
         slug: "maxi-pro",
         category: "CLASSIC RANGE",
-        image: "/products/maxi-pro.webp",
+        image: "/maxi-pro-2.webp",
         description:
             "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
     },

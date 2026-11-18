@@ -534,7 +534,7 @@ export default function AboutSection() {
                             <p>
                                 Led by{" "}
                                 <span className="font-semibold text-[#071720]">
-                                    Mr. Rakesh Talwar
+                                    Mr. Ramesh Manchanda
                                 </span>
                                 , with over 25 years of industry
                                 experience, our approach combines

@@ -1,9 +1,9 @@
 export const navabarProducts=[
 {label:"Neo" ,slug:"neo", image: "/products/neo.webp",   categoryName: "CLASSIC RANGE", },
 {label:"Maxi" ,slug:"maxi",image: "/products/maxi.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Maxi Pro" ,slug:"maxi-pro",image: "/products/maxi-pro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Maxi Pro" ,slug:"maxi-pro",image: "/maxi-pro-2.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Duro" ,slug:"duro",image: "/products/duro.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Duro Pro" ,slug:"duro-pro",image: "/products/duro-pro.webp",    categoryName: "CLASSIC RANGE",},
+{label:"Duro Pro" ,slug:"duro-pro",image: "/duropro22.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Luron" ,slug:"luron", image: "/products/luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
 {label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/products/cubic-doorz2.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Kiddiez" ,slug:"kiddiez", image: "/products/kiddiez.webp",    categoryName: "KIDS RANGE",},
@@ -92,7 +92,7 @@ export const allProducts = [
       {
         name: "Maxi PRO",
         slug: "maxi-pro",
-        image: "/products/maxi-pro.webp",
+        image: "/maxi-pro-2.webp",
         metaTitle: "Maxi PRO Toilet Cubicles | Modular Washroom Cubicles",
         metaDescription:
           "Maxi PRO modular toilet cubicles combine aluminium construction, stainless steel hardware, flexible door configuration, and reliable commercial performance.",
