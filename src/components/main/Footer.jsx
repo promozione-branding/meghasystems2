@@ -359,57 +359,25 @@ export default function Footer() {
                             </p>
                         </div>
 
-                        <div className="grid gap-7 sm:grid-cols-2">
-                            {/* Head Office */}
+                        <div className="mb-7 flex items-start gap-3">
+                            <FiMapPin
+                                size={16}
+                                className="mt-1 shrink-0 text-[#dddf00]"
+                                strokeWidth={1.6}
+                            />
+
                             <div>
-                                <div className="mb-3 flex items-center gap-2">
-                                    <FiMapPin
-                                        size={14}
-                                        className="text-[#dddf00]"
-                                        strokeWidth={1.6}
-                                    />
-
-                                    <p className="text-[9px] font-bold tracking-[0.2em] text-white">
-                                        HEAD OFFICE
-                                    </p>
-                                </div>
-
-                                <p className="text-sm leading-6 text-white/95">
-                                    Plot Number-P10/J-3,
-                                    <br />
-                                    Adore Business City,
-                                    <br />
-                                    Sector 72-73,
-                                    <br />
-                                    Faridabad, Haryana,
-                                    <br />
-                                    121004
+                                <p className="mb-2 text-[9px] font-bold tracking-[0.2em] text-white">
+                                    OFFICE ADDRESS
                                 </p>
-                            </div>
 
-                            {/* Branch */}
-                            <div>
-                                <div className="mb-3 flex items-center gap-2">
-                                    <FiMapPin
-                                        size={14}
-                                        className="text-[#dddf00]"
-                                        strokeWidth={1.6}
-                                    />
-
-                                    <p className="text-[9px] font-bold tracking-[0.2em] text-white">
-                                        BRANCH OFFICE
-                                    </p>
-                                </div>
-
-                                <p className="text-sm leading-6 text-white/95">
-                                    Plot No.341/1,2,3 & 4,
+                                <address className="max-w-md not-italic text-sm leading-6 text-white/95">
+                                    11th Floor, Urbtech Trade Centre, Block B,
                                     <br />
-                                    Safdar Nagar,
+                                    Sector 132, Noida,
                                     <br />
-                                    Borabanda,
-                                    <br />
-                                    Hyderabad - 500018
-                                </p>
+                                    Uttar Pradesh 201304
+                                </address>
                             </div>
                         </div>
 

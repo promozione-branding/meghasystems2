@@ -410,8 +410,8 @@ dimensions: [
         shortDescription:
           "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
 
-        hardwareImg: "/hardware/Neo.webp",
-        rightImg: "/right/neo.jpeg",
+        hardwareImg: "/hardware1/neo1.webp",
+        rightImg: "/hardware1/neo2.webp",
         dimensions: [
   {
     name: "Height of the entire cubicle",

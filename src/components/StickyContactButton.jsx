@@ -3,6 +3,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
+import { BookOpen } from "lucide-react";
+import { RiFileDownloadLine } from "react-icons/ri";
+
 
 export default function StickyContactButton() {
   const pathname = usePathname();
@@ -23,19 +26,29 @@ export default function StickyContactButton() {
         <span className="absolute -right-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rotate-45 bg-white" />
       </Link>
 
-      {/* WhatsApp Button */}
-      <Link
-        href="https://wa.me/917837830803"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-        className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_5px_20px_rgba(37,211,102,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#20bd5a]"
-      >
-        <FaWhatsapp className="text-[26px]" />
+      <div className="flex flex-col items-center gap-3">
+        {/* Download Catalog */}
+        <a
+          href="/Brochure.pdf"
+          download
+          aria-label="Download catalog"
+          title="Download catalog"
+          className="flex h-[48px] w-[48px] items-center justify-center rounded-full bg-white text-[#071720] shadow-[0_4px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#dddf00]"
+        >
+          <RiFileDownloadLine  size={29} />
+        </a>
 
-        {/* Pulse animation */}
-
-      </Link>
+        {/* WhatsApp Button */}
+        <Link
+          href="https://wa.me/917837830803"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_5px_20px_rgba(37,211,102,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#20bd5a]"
+        >
+          <FaWhatsapp className="text-[26px]" />
+        </Link>
+      </div>
     </div>
   );
 }

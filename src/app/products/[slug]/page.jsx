@@ -21,7 +21,7 @@ import { allProducts } from "@/data";
 ========================================================= */
 
 // Replace these with your actual business numbers.
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "917837830803";
 const PHONE_NUMBER = "+91XXXXXXXXXX";
 
 
@@ -476,7 +476,7 @@ export default async function ProductPage({ params }) {
             )}
 
             {(product.hardwareImg || product.rightImg) && (
-                <section className="bg-[#fff] py-6 md:py-16">
+                <section className="bg-[#fff]  py-6 md:py-16">
                     <div className="mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
                         <div className="mb-6 md:mb-8">
                             <span className="text-[12px] mb-8 md:mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
@@ -493,32 +493,25 @@ export default async function ProductPage({ params }) {
                             </h2>
                         </div>
 
-                        <div className="grid gap-6 md:grid-cols-2">
+                        <div className="grid   gap-6 md:grid-cols-2">
 
                             {/* Hardware */}
                             {product.hardwareImg && (
                                 <div className="group border border-[#071720]/20 relative overflow-hidden bg-white">
 
-                                    <div className="relative aspect-[4/3]">
+                                    <div className="relative ">
 
                                         <Image
                                         unoptimized
                                             src={product.hardwareImg}
                                             alt={`${product.name} hardware`}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-contain p-8 transition duration-700 group-hover:scale-[1.04] md:p-12"
+                                       width={100}
+                                            height={100}
+                                            
+                                            className="object-cover h-full w-full transition duration-700 "
                                         />
 
-                                        <div className="absolute left-0 top-0 border-r border-b border-[#dddf00]/30 bg-white/90 px-5 py-4 backdrop-blur">
-                                            <p className="text-[9px] font-bold tracking-[0.25em] text-[#dddf00]">
-                                                HARDWARE
-                                            </p>
-
-                                            <p className="mt-1 text-sm font-semibold text-[#071720]">
-                                                Premium Hardware
-                                            </p>
-                                        </div>
+                                      
 
                                     </div>
 
@@ -530,26 +523,25 @@ export default async function ProductPage({ params }) {
                             {product.rightImg && (
                                 <div className="group border border-[#071720]/20 relative overflow-hidden bg-white">
 
-                                    <div className="relative aspect-[4/3]">
+                                    <div className="relative ">
 
                                         <Image
                                         unoptimized
                                             src={product.rightImg}
                                             alt={`${product.name} product detail`}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object- transition duration-700 group-hover:scale-[1.04]"
+                                            width={100}
+                                            height={100}
+                                            
+                                            className="object-cover h-full w-full transition duration-700 "
                                         />
 
-                                        <div className="absolute bottom-0 left-0 bg-[#071720]/95 px-5 py-4">
-                                            <p className="text-[9px] font-bold tracking-[0.25em] text-[#dddf00]">
-                                                DETAIL VIEW
-                                            </p>
+                                        {/* <div className="absolute bottom-0 left-0 bg-[#071720]/95 px-5 py-4">
+                                          
 
                                             <p className="mt-1 text-sm font-semibold text-white">
                                                 {product.name}
                                             </p>
-                                        </div>
+                                        </div> */}
 
                                     </div>
 
