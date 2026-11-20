@@ -430,7 +430,7 @@ export default function HeroSection() {
                                 className="rounded-full px-2 sm:px-4 py-2 text-xs font-bold uppercase text-black"
                                 style={{ background: GRADIENT }}
                             >
-                                Since 2012
+                                Since 2000
                             </span>
 
                             <span className="text-xs font-medium text-white/80 sm:text-sm">
@@ -469,7 +469,7 @@ export default function HeroSection() {
 
                         {/* Description */}
                         <p className="cubiloo-description sm:block hidden mt-2 max-w-[620px] text-[15px] leading-[1.85] text-white/60">
-                            Established in 2012, Cubiloo Cubicles delivers
+                            Established in 2000, Cubiloo Cubicles delivers
                             complete restroom solutions for modern commercial
                             and institutional spaces. From design and
                             manufacturing to installation, every project

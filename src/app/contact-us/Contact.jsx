@@ -207,9 +207,10 @@ export default function ContactPage() {
         }
 
         setLoading(true);
+        const webisteUrl = window.location.hostname + window.location.pathname;
 
         const data = {
-            platform: "Megha System Contact Form",
+            platform: webisteUrl || "Cubiloo Cubicles Contact Form",
             supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
             platformEmail: "contact@meghasystems.com",
 
@@ -520,6 +521,8 @@ export default function ContactPage() {
                                             id="phone"
                                             type="tel"
                                             value={phone}
+                                            maxLength={10}
+                                            minLength={10}
                                             onChange={(e) =>
                                                 setPhone(e.target.value)
                                             }

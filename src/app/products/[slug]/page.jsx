@@ -227,7 +227,9 @@ export default async function ProductPage({ params }) {
                                     href={`/contact-us?type=inquiry&product=${encodeURIComponent(
                                         product.name
                                     )}`}
-                                    className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-[#dddf00] px-6 text-xs font-bold tracking-[0.12em] text-black transition duration-300 hover:bg-[#071720]"
+                                    data-open-enquiry
+                                    data-product-name={product.name}
+                                    className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-[#dddf00] px-6 text-xs font-bold tracking-[0.12em] text-black transition duration-300 hover:bg-[#fff]"
                                 >
                                     <Mail size={17} />
 

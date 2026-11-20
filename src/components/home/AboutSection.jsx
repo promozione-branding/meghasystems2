@@ -462,7 +462,7 @@ export default function AboutSection() {
                                     text-white
                                 "
                             >
-                                2012
+                                2000
                             </p>
                         </div>
                     </div>
@@ -521,7 +521,7 @@ export default function AboutSection() {
                             "
                         >
                             <p>
-                                Established in 2012, Cubiloo Cubicles has
+                                Established in 2000, Cubiloo Cubicles has
                                 grown into a trusted name in toilet
                                 cubicle and restroom partition
                                 solutions. With expertise spanning

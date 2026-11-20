@@ -253,7 +253,7 @@ export default function MobileHeroBanner() {
                 <div className="mobile-wall-bottom flex items-end justify-between gap-4">
                     <div>
                         <span className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#dddf00]">
-                            Since 2012
+                            Since 2000
                         </span>
 
                         <p className="mt-2 max-w-[210px] text-[12px] leading-[1.6] text-white/75">

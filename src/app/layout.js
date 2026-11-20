@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import StickyContactButton from "@/components/StickyContactButton";
+import EnquiryPopupProvider from "@/components/EnquiryPopupProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <EnquiryPopupProvider />
       </body>
     </html>
   );
