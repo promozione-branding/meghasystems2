@@ -25,9 +25,10 @@ export const allProducts = [
         name: "Black Maxi",
         slug: "black-maxi",
         image: "/Black Maxi.webp",
-        metaTitle: "Black Maxi Toilet Cubicles | Toilet Cubicle System",
+        metaTitle:
+          "Black Maxi Toilet Cubicles | Matte Black PVD Hardware | Cubiloo",
         metaDescription:
-          "Black Maxi toilet cubicles combine premium PVD stainless steel hardware, modern design, durability, and corrosion resistance for high-traffic spaces.",
+          "Black Maxi toilet cubicles with matte black PVD stainless steel hardware, Grade 316 adjustable feet and a black top rail. Built for high-traffic washrooms.",
         shortDescription:
           "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
         hardwareImg: "/Blackmaxi.webp",
@@ -93,9 +94,9 @@ export const allProducts = [
         name: "Maxi PRO",
         slug: "maxi-pro",
         image: "/maxi-pro-2.webp",
-        metaTitle: "Maxi PRO Toilet Cubicles | Modular Washroom Cubicles",
+        metaTitle: "Maxi PRO HPL Toilet Cubicles | 12 mm Panels | Cubiloo",
         metaDescription:
-          "Maxi PRO modular toilet cubicles combine aluminium construction, stainless steel hardware, flexible door configuration, and reliable commercial performance.",
+          "Maxi PRO modular toilet cubicles with 12 mm HPL panels, an aluminium frame, stainless steel hardware and flexible door layouts. Regular and accessible sizes.",
         shortDescription:
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
@@ -176,9 +177,9 @@ export const allProducts = [
         name: "Duro",
         slug: "duro",
         image: "/products/duro.webp",
-        metaTitle: "Duro Toilet Cubicles | Durable Stainless Steel Cubicles",
+        metaTitle: "Duro Toilet Cubicles | Grade 316 Stainless Steel | Cubiloo",
         metaDescription:
-          "Duro toilet cubicles feature Grade 316 stainless steel supports, secure panel connections, and practical floor clearance for demanding washrooms.",
+          "Duro toilet cubicles feature Grade 316 SS adjustable feet, SS U-channels and secure floor anchoring, with raised floor clearance for easy cleaning.",
         shortDescription:
           "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
         hardwareImg: "/hardware1/duro1.webp",
@@ -249,9 +250,9 @@ dimensions: [
         name: "Duro Pro",
         slug: "duro-pro",
         image: "/products/duro.webp",
-        metaTitle: "Duro Pro Toilet Cubicles | Stainless Steel Washroom System",
+        metaTitle: "Duro Pro Toilet Cubicles | SS 316 Top Pipe System | Cubiloo",
         metaDescription:
-          "Duro Pro toilet cubicles combine Grade 316 stainless steel supports, reinforced panels, and a stable top pipe system for commercial washrooms.",
+          "Duro Pro toilet cubicles combine Grade 316 stainless steel feet, reinforced SS U-channels and a stable top pipe system for demanding commercial washrooms.",
         shortDescription:
           "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
 
@@ -327,9 +328,10 @@ dimensions: [
         name: "Cubic Doorz",
         slug: "cubic-doorz",
         image: "/products/cubic-doorz2.webp",
-        metaTitle: "Cubic Doorz | Compact Toilet Cubicle Door System",
+        metaTitle:
+          "Cubic Doorz | 12 mm Compact Toilet Cubicle Doors | Cubiloo",
         metaDescription:
-          "Cubic Doorz offers slim, durable compact board doors with flexible hardware, privacy features, and easy installation for modern commercial spaces.",
+          "Slim 12 mm compact board toilet cubicle doors on D-pole supports, with three rubber-lined hinges and SS or nylon hardware for modern office washrooms.",
         shortDescription:
           "The CUBI DOORZ Series is a slim, durable door system designed to provide privacy and functionality across modern office and commercial spaces. With 12 mm compact board doors, strong D-pole supports, and flexible hardware options, it delivers a clean appearance with reliable everyday performance.",
 
@@ -404,9 +406,9 @@ dimensions: [
         name: "NEO",
         slug: "neo",
         image: "/products/neo.webp",
-        metaTitle: "NEO Modular Toilet Cubicles | Cubiloo Cubicles",
+        metaTitle: "NEO Modular Toilet Cubicles | Compact Laminate | Cubiloo",
         metaDescription:
-          "NEO modular toilet cubicles combine compact laminate panels, aluminium components, adjustable nylon hardware, and contemporary design for commercial washrooms.",
+          "NEO modular toilet cubicles combine compact laminate panels, aluminium supports and adjustable nylon legs. Quick to install and built for high-use washrooms.",
         shortDescription:
           "The NEO Series is a modular toilet cubicle system designed for modern commercial and institutional washrooms. Combining durable compact laminate panels with aluminium supports, adjustable nylon legs, and practical hardware, NEO delivers a stable, stylish, and easy-to-install toilet cubicle for high-use spaces.",
 
@@ -480,9 +482,9 @@ dimensions: [
         name: "Maxi",
         slug: "maxi",
         image: "/products/maxi.webp",
-        metaTitle: "Maxi Toilet Cubicles | Stainless Steel Washroom Cubicles",
+        metaTitle: "Maxi Toilet Cubicles | Stainless Steel & Aluminium | Cubiloo",
         metaDescription:
-          "Maxi toilet cubicles combine stainless steel hardware, anodized aluminium profiles, adjustable supports, and durable construction for high-traffic washrooms.",
+          "Maxi toilet cubicles pair stainless steel hardware with anodized aluminium profiles, adjustable feet and an acoustic top rail for busy commercial washrooms.",
         shortDescription:
           "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
@@ -559,9 +561,9 @@ dimensions: [
         name: "Luron",
         slug: "luron",
         image: "/products/luron.webp",
-        metaTitle: "Luron Toilet Cubicles | Stainless Steel Cubicle System",
+        metaTitle: "Luron Toilet Cubicles | Concealed SS Fixing | Cubiloo",
         metaDescription:
-          "Luron toilet cubicles combine Grade 316 stainless steel supports, concealed fixing, flexible door configuration, and durable hardware for modern washrooms.",
+          "Luron toilet cubicles use a concealed SS fixing system, Grade 316 SS shoe box and SS 304 top rail for a clean, seamless look. Custom dimensions available.",
         shortDescription:
           "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
@@ -647,9 +649,10 @@ dimensions: [
         name: "Cielo",
         slug: "cielo",
         image: "/Cielo.webp",
-        metaTitle: "Cielo Ceiling-Hung Toilet Cubicles | Cubiloo Cubicles",
+        metaTitle:
+          "Cielo Ceiling Hung Toilet Cubicles | Floor-Free | Cubiloo",
         metaDescription:
-          "Cielo ceiling-hung toilet cubicles create a clean, floor-free washroom with easy cleaning, modern aesthetics, moisture resistance, and premium finishes.",
+          "Cielo ceiling hung toilet cubicles keep the floor clear for fast cleaning, with a moisture-resistant build and premium hardware for modern, hygienic washrooms.",
         shortDescription:
           "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
 
@@ -705,9 +708,9 @@ dimensions: [
         name: "Premia",
         slug: "premia",
         image: "/Premia.webp",
-        metaTitle: "Premia Luxury Toilet Cubicles | Premium Washroom Solutions",
+        metaTitle: "Premia Luxury Toilet Cubicles | Gold PVD Hardware | Cubiloo",
         metaDescription:
-          "Premia luxury toilet cubicles combine premium finishes, Gold PVD hardware, Grade 316 stainless steel components, privacy, and lasting performance.",
+          "Premia luxury toilet cubicles with gold PVD hardware, a Grade 316 SS shoe box and custom colours and finishes for premium commercial and home washrooms.",
         shortDescription:
           "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
         hardwareImg: "/hardware/prema2.webp",
@@ -768,9 +771,9 @@ dimensions: [
         name: "Rove",
         slug: "rove",
         image: "/Rove.webp",
-        metaTitle: "Rove Wall-Hung Toilet Cubicles | Cubiloo Cubicles",
+        metaTitle: "Rove Wall-Hung Toilet Cubicles | Floor-Free | Cubiloo",
         metaDescription:
-          "Rove wall-hung toilet cubicles offer a modern floor-free design with durable panels, corrosion-resistant hardware, easy cleaning, and multiple finish options.",
+          "Rove wall-hung toilet cubicles mount on heavy-duty brackets for a floor-free, easy-clean washroom. Moisture-resistant panels, corrosion-resistant hardware.",
         shortDescription:
           "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
         hardwareImg: "/hardware/rove.webp",
@@ -828,9 +831,9 @@ dimensions: [
         name: "Kiddiez",
         slug: "kiddiez",
         image: "/products/kiddiez.webp",
-        metaTitle: "Kiddiez",
+        metaTitle: "Kiddiez Kids Toilet Cubicles | School Washrooms | Cubiloo",
         metaDescription:
-          "Kiddiez Kids Toilet Cubicles | Modular Washroom SystemKiddiez modular toilet cubicles are designed for children’s washrooms, combining durable construction, practical hardware, easy maintenance, and clean design.",
+          "Kiddiez modular toilet cubicles for children, with child-friendly stainless steel hardware, adjustable legs and a sturdy aluminium frame for school washrooms.",
         shortDescription:
           "The KIDDIEZ Series is a thoughtfully designed modular toilet cubicle partition created for children’s washrooms. It combines durable construction, safe and practical hardware, easy maintenance, and a clean, friendly design for schools and other high-use spaces.",
 
@@ -914,9 +917,10 @@ dimensions: [
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
         image: "/products/kiddiez-pro.webp",
-        metaTitle: "Kiddiez Pro Kids Toilet Cubicles | Cubiloo Cubicles",
+        metaTitle:
+          "Kiddiez Pro Kids Toilet Cubicles | Stainless Steel | Cubiloo",
         metaDescription:
-          "Kiddiez Pro kids toilet cubicles combine reinforced stainless steel construction, secure anchoring, child-friendly hardware, and durable washroom design.",
+          "Kiddiez Pro kids' toilet cubicles in Grade 304 or 316 stainless steel, with concealed anchoring and child-friendly hardware. Regular and accessible layouts.",
         shortDescription:
           "The KIDDIEZ PRO Series is a secure and durable modular washroom partition designed specifically for children’s washrooms. With reinforced stainless steel construction, concealed anchoring, and child-friendly hardware, it provides a safe, stable, and comfortable washroom environment.",
         slider: [
@@ -1001,7 +1005,7 @@ dimensions: [
         metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Cubiloo Cubicles",
 
         metaDescription:
-          "Nylon Kiddiez child-friendly toilet cubicles feature durable nylon components, modular construction, easy maintenance, multiple colour options, and secure washroom design for kids' facilities.",
+          "Nylon Kiddiez kids' toilet cubicles with durable nylon fittings in white, grey or black, quick modular installation and child-sized design for schools.",
 
         shortDescription:
           "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
@@ -1145,9 +1149,10 @@ dimensions: [
         name: "Urinal Modesty Panels",
         slug: "urinal-modesty-panels",
         image: "/Commercial Urinal Partitions.webp",
-        metaTitle: "Urinal Modesty Panels | Cubiloo Cubicles",
+        metaTitle:
+          "Urinal Modesty Panels | 12 mm Compact Laminate | Cubiloo",
         metaDescription:
-          "Stylish and durable urinal modesty panels made from high-quality compact-grade laminates with a strong phenolic core, ideal for high-traffic public restrooms.",
+          "Urinal modesty panels in 12 mm compact laminate with a phenolic core, optional anti-scratch and anti-fungal coating, many colours, sizes from 450 × 900 mm.",
         shortDescription:
           "Our Urinal Modesty Panels provide a stylish, durable, and hygienic privacy solution for modern public restrooms. Manufactured from high-quality compact-grade laminates with a strong phenolic core and a minimum thickness of 12 mm, these panels are designed for high-traffic environments. Available in multiple colours, finishes, and standard sizes, they offer excellent privacy, strength, easy maintenance, and long-lasting performance.",
 

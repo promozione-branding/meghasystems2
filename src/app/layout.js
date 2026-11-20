@@ -23,8 +23,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Cubiloo Cubicles",
-  description: "Your website description",
+  title: "Cubiloo Cubicles | Toilet Cubicles & Restroom Partitions",
+  description:
+    "Explore toilet cubicles, restroom partitions, and washroom solutions by Cubiloo Cubicles.",
 };
 
 export default function RootLayout({ children }) {

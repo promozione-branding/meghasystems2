@@ -2,9 +2,9 @@
 import Blogs from "./Blogs";
 
 export const metadata = {
-    title: "Our Blogs | Cubiloo Cubicles",
+    title: "Blog | Toilet Cubicle & Washroom Design Guides | Cubiloo",
     description:
-        "Explore articles about toilet cubicles, restroom partitions, commercial washroom design, and modern restroom solutions.",
+        "Practical guides on toilet cubicles, restroom partitions, panel materials and commercial washroom design from the Cubiloo Cubicles team.",
 };
 
 export default function BlogsPage() {

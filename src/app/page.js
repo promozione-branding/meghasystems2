@@ -1,4 +1,3 @@
-"use client"
 import AboutSection from "@/components/home/AboutSection";
 import Categories from "@/components/home/Categories";
 import Certificates from "@/components/home/Certificates";
@@ -19,6 +18,12 @@ import ProductsSection from "@/components/home/ProductsSection";
 import Projects from "@/components/home/Projects";
 import Testimonials from "@/components/home/Testimonials";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+
+export const metadata = {
+  title: "Toilet Cubicle Manufacturer in India | Cubiloo Cubicles",
+  description:
+    "Since 2000, Cubiloo Cubicles has designed, made and installed toilet cubicles, restroom partitions and urinal panels for offices, malls, schools and airports.",
+};
 
 export default function Home() {
   return (
