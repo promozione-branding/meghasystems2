@@ -213,7 +213,7 @@ export default function Navbar() {
                   alt="Cubiloo Cubicles"
                   width={360}
                   height={105}
-                  className="h-auto w-[150px] object-contain xl:w-[175px]"
+                  className="h-auto w-[150px] object-contain xl:w-[185px]"
                 />
               </motion.div>
             </Link>
