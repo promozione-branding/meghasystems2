@@ -99,8 +99,8 @@ export const allProducts = [
         shortDescription:
           "The MAXI PRO Series is a practical and durable toilet cubicle partition designed for modern commercial washrooms. With a stable aluminium structure, precision-fitted panels, flexible door configuration, and reliable stainless steel hardware, MAXI PRO delivers privacy, comfort, and dependable everyday performance.",
 
-        hardwareImg: "/hardware/Maxipro.webp",
-        rightImg: "/right/max-pro-2.webp",
+        hardwareImg: "/hardware1/maxipro1.webp",
+        rightImg: "/hardware1/maxipro2.webp",
 
         dimensions: [
   {
@@ -181,9 +181,9 @@ export const allProducts = [
           "Duro toilet cubicles feature Grade 316 stainless steel supports, secure panel connections, and practical floor clearance for demanding washrooms.",
         shortDescription:
           "The DURO Series is engineered for strength, stability, and long-term performance. With Grade 316 stainless steel supports, secure floor anchoring, and reinforced panel connections, DURO provides a robust restroom partition for demanding commercial washrooms.",
-        hardwareImg: "/hardware/duronew.webp",
+        hardwareImg: "/hardware1/duro1.webp",
 
-        rightImg: "/right/duro2.webp",
+        rightImg: "/hardware1/duro2.webp",
 
 dimensions: [
   {
@@ -255,8 +255,8 @@ dimensions: [
         shortDescription:
           "The DURO PRO Series is engineered for strength, stability, and lasting performance in demanding washroom environments. Its stainless steel construction and reinforced panel support create a reliable toilet cubicle designed for everyday commercial use.",
 
-        hardwareImg: "/hardware/dur-pro-2.webp",
-        rightImg: "/right/duro-pro.jpeg",
+        hardwareImg: "/hardware1/duropro1.webp",
+        rightImg: "/hardware1/duropro2.webp",
 
         dimensions: [
   {
@@ -333,8 +333,8 @@ dimensions: [
         shortDescription:
           "The CUBI DOORZ Series is a slim, durable door system designed to provide privacy and functionality across modern office and commercial spaces. With 12 mm compact board doors, strong D-pole supports, and flexible hardware options, it delivers a clean appearance with reliable everyday performance.",
 
-        hardwareImg: "/hardware/cubidoorzs.png",
-        rightImg: "/right/cubi.jpeg",
+        hardwareImg: "/hardware1/cubic-doorz1.webp",
+        rightImg: "/hardware1/cubic-doorz2.webp",
 dimensions: [
   {
     name: "Height of the entire cubicle",
@@ -486,8 +486,8 @@ dimensions: [
         shortDescription:
           "The MAXI Series is a luxury toilet cubicle partition designed for commercial and high-traffic washrooms. Combining stainless steel hardware, anodized aluminium profiles, adjustable feet, and refined detailing, MAXI delivers exceptional stability, durability, and easy maintenance.",
 
-        hardwareImg: "/hardware/maxiiiii.webp",
-        rightImg: "/right/maxi2.jpeg",
+        hardwareImg: "/hardware1/maxi1.webp",
+        rightImg: "/hardware1/maxi2.webp",
 
         dimensions: [
   {
@@ -565,8 +565,8 @@ dimensions: [
         shortDescription:
           "The LURON Series combines luxury stainless steel construction with thoughtful functionality for modern commercial washrooms. Its concealed support system, precise panel alignment, and flexible door configuration create a clean, stable, and durable toilet cubicle system.",
 
-        hardwareImg: "/hardware/luron2.webp",
-        rightImg: "/right/luron2.jpeg",
+        hardwareImg: "/hardware1/luron1.webp",
+        rightImg: "/hardware1/luron2.webp",
 
         imgSpecs: {},
 
@@ -1151,8 +1151,8 @@ dimensions: [
         shortDescription:
           "Our Urinal Modesty Panels provide a stylish, durable, and hygienic privacy solution for modern public restrooms. Manufactured from high-quality compact-grade laminates with a strong phenolic core and a minimum thickness of 12 mm, these panels are designed for high-traffic environments. Available in multiple colours, finishes, and standard sizes, they offer excellent privacy, strength, easy maintenance, and long-lasting performance.",
 
-        hardwareImg: "/hardware/box.webp",
-        shapes: "/hardware/door.webp",
+        hardwareImg: "/hardware1/urnial1.webp",
+        rightImg: "/hardware1/urnial2.webp",
 
         imgSpecs: {},
         dimensions: [
