@@ -19,19 +19,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const STATS = [
     {
-        value: 25,
+        value: 26,
         suffix: "+",
         label: "Years of Excellence",
         icon: Award,
     },
     {
-        value: 5000,
+        value: 7500,
         suffix: "+",
         label: "Projects Completed",
         icon: Building2,
     },
     {
-        value: 100000,
+        value: 600000,
         suffix: "+",
         label: "Cubicles Installed",
         icon: Layers3,
