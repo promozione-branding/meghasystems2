@@ -6,7 +6,7 @@ export const navabarProducts=[
 {label:"Duro Pro" ,slug:"duro-pro",image: "/duropro22.webp",    categoryName: "CLASSIC RANGE",},
 {label:"Luron" ,slug:"luron", image: "/products/luron.webp",    categoryName: "CLASSIC RANGE",    categoryName: "CLASSIC RANGE",},
 {label:"Cubi Doorz" ,slug:"cubic-doorz", image: "/products/cubic-doorz2.webp",    categoryName: "CLASSIC RANGE",},
-{label:"Kiddiez" ,slug:"kiddiez", image: "/products/kiddiez.webp",    categoryName: "KIDS RANGE",},
+{label:"Kiddiez" ,slug:"kiddiez", image: "/products/kids2.webp",    categoryName: "KIDS RANGE",},
 {label:"Kiddiez Pro" ,slug:"kiddiez-pro", image: "/products/kiddiez-pro.webp",categoryName: "KIDS RANGE",},
 {label:"Urinal Modesty Panels" ,slug:"urinal-modesty-panels",image: "/Commercial Urinal Partitions.webp",categoryName: "URINAL PARTITIONS",},
 ]
@@ -21,75 +21,75 @@ export const allProducts = [
     description: "Cost-Effective Solutions with the Strength You Can Trust.",
     image: "/Black Maxi.webp",
     products: [
-      {
-        name: "Black Maxi",
-        slug: "black-maxi",
-        image: "/Black Maxi.webp",
-        metaTitle:
-          "Black Maxi Toilet Cubicles | Matte Black PVD Hardware | Cubiloo",
-        metaDescription:
-          "Black Maxi toilet cubicles with matte black PVD stainless steel hardware, Grade 316 adjustable feet and a black top rail. Built for high-traffic washrooms.",
-        shortDescription:
-          "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
-        hardwareImg: "/Blackmaxi.webp",
-        rightImg: "/backmaxi.jpeg",
-        dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Height of the entire cubicle",
-            regular: "1995",
-            speciallyAbled: "1995",
-          },
-          {
-            name: "Depth of the cubicles",
-            regular: "1500",
-            speciallyAbled: "1750",
-          },
-          {
-            name: "Height of the door",
-            regular: "1785",
-            speciallyAbled: "1785",
-          },
-          { name: "Width of the door", regular: "600", speciallyAbled: "900" },
-          { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
-          {
-            name: "Height of the door",
-            regular: "1815",
-            speciallyAbled: "1815",
-          },
-        ],
-        imgSpecs: {
-          dimensions: "1000 X 1950",
-          clearance: "100",
-        },
+      // {
+      //   name: "Black Maxi",
+      //   slug: "black-maxi",
+      //   image: "/Black Maxi.webp",
+      //   metaTitle:
+      //     "Black Maxi Toilet Cubicles | Matte Black PVD Hardware | Cubiloo",
+      //   metaDescription:
+      //     "Black Maxi toilet cubicles with matte black PVD stainless steel hardware, Grade 316 adjustable feet and a black top rail. Built for high-traffic washrooms.",
+      //   shortDescription:
+      //     "The BLACK MAXI Series brings a bold, sophisticated look to modern washrooms with premium PVD-coated stainless steel hardware and a refined matte black finish. Engineered for high-traffic environments, it combines luxury aesthetics with strength, corrosion resistance, and lasting performance.",
+      //   hardwareImg: "/Blackmaxi.webp",
+      //   rightImg: "/backmaxi.jpeg",
+      //   dimensions: [
+      //     {
+      //       name: "Width of the cubicle",
+      //       regular: "1000",
+      //       speciallyAbled: "1500",
+      //     },
+      //     {
+      //       name: "Height of the entire cubicle",
+      //       regular: "1995",
+      //       speciallyAbled: "1995",
+      //     },
+      //     {
+      //       name: "Depth of the cubicles",
+      //       regular: "1500",
+      //       speciallyAbled: "1750",
+      //     },
+      //     {
+      //       name: "Height of the door",
+      //       regular: "1785",
+      //       speciallyAbled: "1785",
+      //     },
+      //     { name: "Width of the door", regular: "600", speciallyAbled: "900" },
+      //     { name: "Ground clearance", regular: "100", speciallyAbled: "100" },
+      //     {
+      //       name: "Height of the door",
+      //       regular: "1815",
+      //       speciallyAbled: "1815",
+      //     },
+      //   ],
+      //   imgSpecs: {
+      //     dimensions: "1000 X 1950",
+      //     clearance: "100",
+      //   },
 
-        keyFeatures: [
-          {
-            name: "Premium Black PVD Hardware",
-            description:
-              "High-grade stainless steel fittings with a matte Black PVD finish offer a distinctive appearance, enhanced durability, and excellent corrosion resistance.",
-          },
-          {
-            name: "Exclusive Gold & Rose Gold Finishes",
-            description:
-              "Available in Gold and Rose Gold PVD, offering versatile options for luxury interiors and high-end architectural spaces.",
-          },
-          {
-            name: "Grade 316 Stainless Steel Feet",
-            description:
-              "Adjustable Grade 316 stainless steel feet provide strong support, precise leveling, and 150 mm ground clearance for convenient cleaning.",
-          },
-          {
-            name: "Strong Aluminium Profiles",
-            description:
-              "Durable aluminium profiles and a matching black top rail provide secure panel support, stability, and a refined visual finish.",
-          },
-        ],
-      },
+      //   keyFeatures: [
+      //     {
+      //       name: "Premium Black PVD Hardware",
+      //       description:
+      //         "High-grade stainless steel fittings with a matte Black PVD finish offer a distinctive appearance, enhanced durability, and excellent corrosion resistance.",
+      //     },
+      //     {
+      //       name: "Exclusive Gold & Rose Gold Finishes",
+      //       description:
+      //         "Available in Gold and Rose Gold PVD, offering versatile options for luxury interiors and high-end architectural spaces.",
+      //     },
+      //     {
+      //       name: "Grade 316 Stainless Steel Feet",
+      //       description:
+      //         "Adjustable Grade 316 stainless steel feet provide strong support, precise leveling, and 150 mm ground clearance for convenient cleaning.",
+      //     },
+      //     {
+      //       name: "Strong Aluminium Profiles",
+      //       description:
+      //         "Durable aluminium profiles and a matching black top rail provide secure panel support, stability, and a refined visual finish.",
+      //     },
+      //   ],
+      // },
       {
         name: "Maxi PRO",
         slug: "maxi-pro",
@@ -249,7 +249,7 @@ dimensions: [
       {
         name: "Duro Pro",
         slug: "duro-pro",
-        image: "/products/duro.webp",
+        image: "/duropro22.webp",
         metaTitle: "Duro Pro Toilet Cubicles | SS 316 Top Pipe System | Cubiloo",
         metaDescription:
           "Duro Pro toilet cubicles combine Grade 316 stainless steel feet, reinforced SS U-channels and a stable top pipe system for demanding commercial washrooms.",
@@ -636,188 +636,188 @@ dimensions: [
     ],
   },
 
-  {
-    categoryName: "LUXE RANGE",
-    slug: "luxe-range",
-    image: "",
-    title: "Luxe Cubicle System",
-    excerpt: "Premium Looks. Elevated Spaces.",
-    description: "Designed to Impress. Crafted for Premium Spaces.",
-    image: "/Cielo.webp",
-    products: [
-      {
-        name: "Cielo",
-        slug: "cielo",
-        image: "/Cielo.webp",
-        metaTitle:
-          "Cielo Ceiling Hung Toilet Cubicles | Floor-Free | Cubiloo",
-        metaDescription:
-          "Cielo ceiling hung toilet cubicles keep the floor clear for fast cleaning, with a moisture-resistant build and premium hardware for modern, hygienic washrooms.",
-        shortDescription:
-          "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
+  // {
+  //   categoryName: "LUXE RANGE",
+  //   slug: "luxe-range",
+  //   image: "",
+  //   title: "Luxe Cubicle System",
+  //   excerpt: "Premium Looks. Elevated Spaces.",
+  //   description: "Designed to Impress. Crafted for Premium Spaces.",
+  //   image: "/Cielo.webp",
+  //   products: [
+  //     {
+  //       name: "Cielo",
+  //       slug: "cielo",
+  //       image: "/Cielo.webp",
+  //       metaTitle:
+  //         "Cielo Ceiling Hung Toilet Cubicles | Floor-Free | Cubiloo",
+  //       metaDescription:
+  //         "Cielo ceiling hung toilet cubicles keep the floor clear for fast cleaning, with a moisture-resistant build and premium hardware for modern, hygienic washrooms.",
+  //       shortDescription:
+  //         "The CIELO Series brings a clean, floating aesthetic to modern washrooms with its innovative ceiling-hung design. With no floor contact, the system creates a seamless visual appearance while making floor cleaning easier, improving hygiene, and reducing maintenance.",
 
-        hardwareImg: "/hardware/Cielo.webp",
-        rightImg: "/right/ceilo.jpeg",
+  //       hardwareImg: "/hardware/Cielo.webp",
+  //       rightImg: "/right/ceilo.jpeg",
 
-        dimensions: [
-          { name: "Width", regular: "900", speciallyAbled: "-" },
-          { name: "Width (Disabled)", regular: "1500", speciallyAbled: "-" },
-          { name: "Door Width", regular: "610", speciallyAbled: "-" },
-          {
-            name: "Door Width (Disabled)",
-            regular: "900",
-            speciallyAbled: "-",
-          },
-          { name: "Depth", regular: "1500–1800", speciallyAbled: "-" },
-          {
-            name: "Total height from ground",
-            regular: "1840 or 2100",
-            speciallyAbled: "-",
-          },
-          { name: "Bottom Gap", regular: "100", speciallyAbled: "-" },
-        ],
-        imgSpecs: {
-          dimensions: "900 X 1840",
-          clearance: "150",
-        },
+  //       dimensions: [
+  //         { name: "Width", regular: "900", speciallyAbled: "-" },
+  //         { name: "Width (Disabled)", regular: "1500", speciallyAbled: "-" },
+  //         { name: "Door Width", regular: "610", speciallyAbled: "-" },
+  //         {
+  //           name: "Door Width (Disabled)",
+  //           regular: "900",
+  //           speciallyAbled: "-",
+  //         },
+  //         { name: "Depth", regular: "1500–1800", speciallyAbled: "-" },
+  //         {
+  //           name: "Total height from ground",
+  //           regular: "1840 or 2100",
+  //           speciallyAbled: "-",
+  //         },
+  //         { name: "Bottom Gap", regular: "100", speciallyAbled: "-" },
+  //       ],
+  //       imgSpecs: {
+  //         dimensions: "900 X 1840",
+  //         clearance: "150",
+  //       },
 
-        keyFeatures: [
-          {
-            name: "Floor-Free Design",
-            description:
-              "Ceiling-supported cubicles create a clean, floating appearance while eliminating floor contact and reducing areas where dirt can accumulate.",
-          },
-          {
-            name: "Ceiling-Supported Structure",
-            description:
-              "A strong box-up ceiling fixture provides secure structural support while maintaining the lightweight, seamless look of the cubicle system.",
-          },
-          {
-            name: "Easy Floor Cleaning",
-            description:
-              "The floor-free construction allows uninterrupted cleaning beneath and around the cubicles, supporting better washroom hygiene.",
-          },
-          {
-            name: "Moisture-Resistant Construction",
-            description:
-              "Designed for humid washroom environments, the system offers reliable performance with minimal maintenance.",
-          },
-        ],
-      },
-      {
-        name: "Premia",
-        slug: "premia",
-        image: "/Premia.webp",
-        metaTitle: "Premia Luxury Toilet Cubicles | Gold PVD Hardware | Cubiloo",
-        metaDescription:
-          "Premia luxury toilet cubicles with gold PVD hardware, a Grade 316 SS shoe box and custom colours and finishes for premium commercial and home washrooms.",
-        shortDescription:
-          "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
-        hardwareImg: "/hardware/prema2.webp",
+  //       keyFeatures: [
+  //         {
+  //           name: "Floor-Free Design",
+  //           description:
+  //             "Ceiling-supported cubicles create a clean, floating appearance while eliminating floor contact and reducing areas where dirt can accumulate.",
+  //         },
+  //         {
+  //           name: "Ceiling-Supported Structure",
+  //           description:
+  //             "A strong box-up ceiling fixture provides secure structural support while maintaining the lightweight, seamless look of the cubicle system.",
+  //         },
+  //         {
+  //           name: "Easy Floor Cleaning",
+  //           description:
+  //             "The floor-free construction allows uninterrupted cleaning beneath and around the cubicles, supporting better washroom hygiene.",
+  //         },
+  //         {
+  //           name: "Moisture-Resistant Construction",
+  //           description:
+  //             "Designed for humid washroom environments, the system offers reliable performance with minimal maintenance.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       name: "Premia",
+  //       slug: "premia",
+  //       image: "/Premia.webp",
+  //       metaTitle: "Premia Luxury Toilet Cubicles | Gold PVD Hardware | Cubiloo",
+  //       metaDescription:
+  //         "Premia luxury toilet cubicles with gold PVD hardware, a Grade 316 SS shoe box and custom colours and finishes for premium commercial and home washrooms.",
+  //       shortDescription:
+  //         "The PREMIA Series is a luxury toilet cubicle created for premium commercial and residential washrooms. Combining refined finishes with robust construction, premium PVD hardware, and Grade 316 stainless steel components, PREMIA brings together elegance, privacy, and dependable everyday performance.",
+  //       hardwareImg: "/hardware/prema2.webp",
 
-        dimensions: [
-          {
-            name: "Width of the cubicle",
-            regular: "1000",
-            speciallyAbled: "1500",
-          },
-          {
-            name: "Depth of the cubicle",
-            regular: "1500",
-            speciallyAbled: "1750",
-          },
-          {
-            name: "Height of entire cubicle",
-            regular: "1980",
-            speciallyAbled: "1980",
-          },
-          { name: "Height of the door", regular: "600", speciallyAbled: "900" },
-          {
-            name: "Width of the door",
-            regular: "1765",
-            speciallyAbled: "1765",
-          },
-          { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
-        ],
-        imgSpecs: {
-          dimensions: "1000 X 1980",
-          clearance: "150",
-        },
+  //       dimensions: [
+  //         {
+  //           name: "Width of the cubicle",
+  //           regular: "1000",
+  //           speciallyAbled: "1500",
+  //         },
+  //         {
+  //           name: "Depth of the cubicle",
+  //           regular: "1500",
+  //           speciallyAbled: "1750",
+  //         },
+  //         {
+  //           name: "Height of entire cubicle",
+  //           regular: "1980",
+  //           speciallyAbled: "1980",
+  //         },
+  //         { name: "Height of the door", regular: "600", speciallyAbled: "900" },
+  //         {
+  //           name: "Width of the door",
+  //           regular: "1765",
+  //           speciallyAbled: "1765",
+  //         },
+  //         { name: "Ground clearance", regular: "150", speciallyAbled: "150" },
+  //       ],
+  //       imgSpecs: {
+  //         dimensions: "1000 X 1980",
+  //         clearance: "150",
+  //       },
 
-        keyFeatures: [
-          {
-            name: "Gold PVD Stainless Steel Hardware",
-            description:
-              "Premium Gold PVD-coated hardware adds a sophisticated finish while providing excellent durability and corrosion resistance for demanding environments.",
-          },
-          {
-            name: "Grade 316 Stainless Steel Shoe Box",
-            description:
-              "Grade 316 stainless steel components provide enhanced strength and resistance, supporting long-term performance in high-use washrooms.",
-          },
-          {
-            name: "Premium Custom Finishes",
-            description:
-              "Choose from a range of colours and finishes to complement modern, classic, and luxury interior concepts.",
-          },
-          {
-            name: "Built for High-Traffic Spaces",
-            description:
-              "Strong construction and premium components make PREMIA suitable for environments where durability and aesthetics need to work together.",
-          },
-        ],
-      },
-      {
-        name: "Rove",
-        slug: "rove",
-        image: "/Rove.webp",
-        metaTitle: "Rove Wall-Hung Toilet Cubicles | Floor-Free | Cubiloo",
-        metaDescription:
-          "Rove wall-hung toilet cubicles mount on heavy-duty brackets for a floor-free, easy-clean washroom. Moisture-resistant panels, corrosion-resistant hardware.",
-        shortDescription:
-          "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
-        hardwareImg: "/hardware/rove.webp",
-        rightImg: "/right/rove.jpeg",
+  //       keyFeatures: [
+  //         {
+  //           name: "Gold PVD Stainless Steel Hardware",
+  //           description:
+  //             "Premium Gold PVD-coated hardware adds a sophisticated finish while providing excellent durability and corrosion resistance for demanding environments.",
+  //         },
+  //         {
+  //           name: "Grade 316 Stainless Steel Shoe Box",
+  //           description:
+  //             "Grade 316 stainless steel components provide enhanced strength and resistance, supporting long-term performance in high-use washrooms.",
+  //         },
+  //         {
+  //           name: "Premium Custom Finishes",
+  //           description:
+  //             "Choose from a range of colours and finishes to complement modern, classic, and luxury interior concepts.",
+  //         },
+  //         {
+  //           name: "Built for High-Traffic Spaces",
+  //           description:
+  //             "Strong construction and premium components make PREMIA suitable for environments where durability and aesthetics need to work together.",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       name: "Rove",
+  //       slug: "rove",
+  //       image: "/Rove.webp",
+  //       metaTitle: "Rove Wall-Hung Toilet Cubicles | Floor-Free | Cubiloo",
+  //       metaDescription:
+  //         "Rove wall-hung toilet cubicles mount on heavy-duty brackets for a floor-free, easy-clean washroom. Moisture-resistant panels, corrosion-resistant hardware.",
+  //       shortDescription:
+  //         "The ROVE Series is a modern wall-hung Restroom Partition Cubicle designed to create a clean, open, and floor-free washroom environment. Supported by heavy-duty wall brackets, ROVE combines lightweight construction with durable materials, making cleaning easier while enhancing hygiene and visual appeal.",
+  //       hardwareImg: "/hardware/rove.webp",
+  //       rightImg: "/right/rove.jpeg",
 
-        dimensions: [
-          { name: "Width", regular: "900" },
-          { name: "Width (Disabled)", regular: "1500" },
-          { name: "Door Width", regular: "610" },
-          { name: "Door Width (Disabled)", regular: "900" },
-          { name: "Depth", regular: "1500–1800" },
-          { name: "Total height from ground", regular: "1840 or 2100" },
-          { name: "Bottom Gap", regular: "100" },
-        ],
-        imgSpecs: {
-          dimensions: "900 X 1840",
-          clearance: "150",
-        },
+  //       dimensions: [
+  //         { name: "Width", regular: "900" },
+  //         { name: "Width (Disabled)", regular: "1500" },
+  //         { name: "Door Width", regular: "610" },
+  //         { name: "Door Width (Disabled)", regular: "900" },
+  //         { name: "Depth", regular: "1500–1800" },
+  //         { name: "Total height from ground", regular: "1840 or 2100" },
+  //         { name: "Bottom Gap", regular: "100" },
+  //       ],
+  //       imgSpecs: {
+  //         dimensions: "900 X 1840",
+  //         clearance: "150",
+  //       },
 
-        keyFeatures: [
-          {
-            name: "Floor-Free Design",
-            description:
-              "With no floor contact, the wall-hung construction creates a clean floating appearance and allows easy access for floor cleaning.",
-          },
-          {
-            name: "Heavy-Duty Wall Support",
-            description:
-              "Strong wall-mounted brackets provide secure and stable support for reliable everyday performance.",
-          },
-          {
-            name: "Moisture-Resistant Panels",
-            description:
-              "Compact laminate and moisture-resistant panels are designed to withstand humid washroom conditions while maintaining their finish.",
-          },
-          {
-            name: "Premium Hardware",
-            description:
-              "Corrosion-resistant fittings provide dependable performance and complement the clean, modern design.",
-          },
-        ],
-      },
-    ],
-  },
+  //       keyFeatures: [
+  //         {
+  //           name: "Floor-Free Design",
+  //           description:
+  //             "With no floor contact, the wall-hung construction creates a clean floating appearance and allows easy access for floor cleaning.",
+  //         },
+  //         {
+  //           name: "Heavy-Duty Wall Support",
+  //           description:
+  //             "Strong wall-mounted brackets provide secure and stable support for reliable everyday performance.",
+  //         },
+  //         {
+  //           name: "Moisture-Resistant Panels",
+  //           description:
+  //             "Compact laminate and moisture-resistant panels are designed to withstand humid washroom conditions while maintaining their finish.",
+  //         },
+  //         {
+  //           name: "Premium Hardware",
+  //           description:
+  //             "Corrosion-resistant fittings provide dependable performance and complement the clean, modern design.",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 
   {
     categoryName: "KIDS RANGE",
@@ -830,7 +830,7 @@ dimensions: [
       {
         name: "Kiddiez",
         slug: "kiddiez",
-        image: "/products/kiddiez.webp",
+        image: "/products/kids2.webp",
         metaTitle: "Kiddiez Kids Toilet Cubicles | School Washrooms | Cubiloo",
         metaDescription:
           "Kiddiez modular toilet cubicles for children, with child-friendly stainless steel hardware, adjustable legs and a sturdy aluminium frame for school washrooms.",
@@ -998,142 +998,142 @@ dimensions: [
           },
         ],
       },
-      {
-        name: "Nylon Kiddiez",
-        slug: "nylon-kiddiez",
+      // {
+      //   name: "Nylon Kiddiez",
+      //   slug: "nylon-kiddiez",
 
-        metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Cubiloo Cubicles",
+      //   metaTitle: "Nylon Kiddiez Kids Toilet Cubicles | Cubiloo Cubicles",
 
-        metaDescription:
-          "Nylon Kiddiez kids' toilet cubicles with durable nylon fittings in white, grey or black, quick modular installation and child-sized design for schools.",
+      //   metaDescription:
+      //     "Nylon Kiddiez kids' toilet cubicles with durable nylon fittings in white, grey or black, quick modular installation and child-sized design for schools.",
 
-        shortDescription:
-          "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
+      //   shortDescription:
+      //     "The KIDDIEZ Series is a child-friendly modular toilet cubicle system designed for safe, comfortable, and hygienic washroom spaces. With durable nylon components, secure construction, easy installation, and practical maintenance features, it is ideal for schools, childcare centres, and other children's facilities.",
 
-        image: "/kids2.webp",
+      //   image: "/kids2.webp",
 
-        slider: [
-          "/kids/kids1.webp",
-          "/kids/kids2.webp",
-          "/kids/kids3.webp",
-          "/kids/kids4.webp",
-          "/kids/kids5.webp",
-          "/kids/kids6.webp",
-          "/kids/kids7.webp",
-          "/kids/kids8.webp",
-        ],
+      //   slider: [
+      //     "/kids/kids1.webp",
+      //     "/kids/kids2.webp",
+      //     "/kids/kids3.webp",
+      //     "/kids/kids4.webp",
+      //     "/kids/kids5.webp",
+      //     "/kids/kids6.webp",
+      //     "/kids/kids7.webp",
+      //     "/kids/kids8.webp",
+      //   ],
 
-        dimensions: [
-          {
-            name: "Floor Clearance",
-            regular: "150",
-            speciallyAbled: "150",
-          },
-          {
-            name: "Top Rail Powder",
-            regular: "Coated Aluminium",
-            speciallyAbled: "Coated Aluminium",
-          },
-          {
-            name: "Top Rail Grade",
-            regular: "Aluminium Grade 6063-T5 Alloy",
-            speciallyAbled: "6063-T5 Alloy",
-          },
-          {
-            name: "Panel Support",
-            regular: "Aluminium U-Channels",
-            speciallyAbled: "Aluminium U-Channels",
-          },
-          {
-            name: "Panel Fixing",
-            regular: "Rear Wall & Mid-Pilaster",
-            speciallyAbled: "Rear Wall & Mid-Pilaster",
-          },
-          {
-            name: "Door Hinges",
-            regular: "3 Hinges per Door",
-            speciallyAbled: "3 Hinges per Door",
-          },
-        ],
+      //   dimensions: [
+      //     {
+      //       name: "Floor Clearance",
+      //       regular: "150",
+      //       speciallyAbled: "150",
+      //     },
+      //     {
+      //       name: "Top Rail Powder",
+      //       regular: "Coated Aluminium",
+      //       speciallyAbled: "Coated Aluminium",
+      //     },
+      //     {
+      //       name: "Top Rail Grade",
+      //       regular: "Aluminium Grade 6063-T5 Alloy",
+      //       speciallyAbled: "6063-T5 Alloy",
+      //     },
+      //     {
+      //       name: "Panel Support",
+      //       regular: "Aluminium U-Channels",
+      //       speciallyAbled: "Aluminium U-Channels",
+      //     },
+      //     {
+      //       name: "Panel Fixing",
+      //       regular: "Rear Wall & Mid-Pilaster",
+      //       speciallyAbled: "Rear Wall & Mid-Pilaster",
+      //     },
+      //     {
+      //       name: "Door Hinges",
+      //       regular: "3 Hinges per Door",
+      //       speciallyAbled: "3 Hinges per Door",
+      //     },
+      //   ],
 
-        imgSpecs: {
-          clearance: "150",
-        },
+      //   imgSpecs: {
+      //     clearance: "150",
+      //   },
 
-        keyFeatures: [
-          {
-            name: "Child-Friendly Design",
-            description:
-              "Thoughtfully designed dimensions and features create a comfortable, private, and user-friendly washroom experience for children.",
-          },
-          {
-            name: "Durable Nylon Components",
-            description:
-              "Strong and lightweight nylon accessories provide reliable performance while offering flexibility in design and colour selection.",
-          },
-          {
-            name: "Easy Installation",
-            description:
-              "Practical modular construction allows quick and efficient installation across different washroom layouts.",
-          },
-          {
-            name: "Easy to Clean",
-            description:
-              "Practical floor clearance and easy-to-maintain surfaces support everyday washroom hygiene and maintenance.",
-          },
-          {
-            name: "Multiple Colour Options",
-            description:
-              "Nylon accessories are available in White, Grey, and Black to complement different washroom interiors.",
-          },
-          {
-            name: "Aluminium Top Rail",
-            description:
-              "The cubicle system features a powder-coated aluminium top rail manufactured using Grade 6063-T5 aluminium alloy for reliable structural performance.",
-          },
-          {
-            name: "Secure Panel Support",
-            description:
-              "Aluminium U-channels provide reliable panel support, while rear-wall and mid-pilaster fixing ensure secure panel installation.",
-          },
-          {
-            name: "Three-Hinge Door Support",
-            description:
-              "Each door is supported by three hinges for stable and reliable everyday operation.",
-          },
-        ],
+      //   keyFeatures: [
+      //     {
+      //       name: "Child-Friendly Design",
+      //       description:
+      //         "Thoughtfully designed dimensions and features create a comfortable, private, and user-friendly washroom experience for children.",
+      //     },
+      //     {
+      //       name: "Durable Nylon Components",
+      //       description:
+      //         "Strong and lightweight nylon accessories provide reliable performance while offering flexibility in design and colour selection.",
+      //     },
+      //     {
+      //       name: "Easy Installation",
+      //       description:
+      //         "Practical modular construction allows quick and efficient installation across different washroom layouts.",
+      //     },
+      //     {
+      //       name: "Easy to Clean",
+      //       description:
+      //         "Practical floor clearance and easy-to-maintain surfaces support everyday washroom hygiene and maintenance.",
+      //     },
+      //     {
+      //       name: "Multiple Colour Options",
+      //       description:
+      //         "Nylon accessories are available in White, Grey, and Black to complement different washroom interiors.",
+      //     },
+      //     {
+      //       name: "Aluminium Top Rail",
+      //       description:
+      //         "The cubicle system features a powder-coated aluminium top rail manufactured using Grade 6063-T5 aluminium alloy for reliable structural performance.",
+      //     },
+      //     {
+      //       name: "Secure Panel Support",
+      //       description:
+      //         "Aluminium U-channels provide reliable panel support, while rear-wall and mid-pilaster fixing ensure secure panel installation.",
+      //     },
+      //     {
+      //       name: "Three-Hinge Door Support",
+      //       description:
+      //         "Each door is supported by three hinges for stable and reliable everyday operation.",
+      //     },
+      //   ],
 
-        technicalSpecifications: [
-          {
-            name: "Coating",
-            value: "Powder Coated / Natural Anodized / Stainless Steel",
-          },
-          {
-            name: "Top Rail",
-            value: "Powder-Coated Aluminium",
-          },
-          {
-            name: "Top Rail Grade",
-            value: "Aluminium Grade 6063-T5 Alloy",
-          },
-          {
-            name: "Panel Support",
-            value: "Aluminium U-Channels",
-          },
-          {
-            name: "Panel Fixing",
-            value: "Rear Wall & Mid-Pilaster",
-          },
-          {
-            name: "Door Hinges",
-            value: "3 Hinges per Door",
-          },
-          {
-            name: "Floor Clearance",
-            value: "150 mm",
-          },
-        ],
-      },
+      //   technicalSpecifications: [
+      //     {
+      //       name: "Coating",
+      //       value: "Powder Coated / Natural Anodized / Stainless Steel",
+      //     },
+      //     {
+      //       name: "Top Rail",
+      //       value: "Powder-Coated Aluminium",
+      //     },
+      //     {
+      //       name: "Top Rail Grade",
+      //       value: "Aluminium Grade 6063-T5 Alloy",
+      //     },
+      //     {
+      //       name: "Panel Support",
+      //       value: "Aluminium U-Channels",
+      //     },
+      //     {
+      //       name: "Panel Fixing",
+      //       value: "Rear Wall & Mid-Pilaster",
+      //     },
+      //     {
+      //       name: "Door Hinges",
+      //       value: "3 Hinges per Door",
+      //     },
+      //     {
+      //       name: "Floor Clearance",
+      //       value: "150 mm",
+      //     },
+      //   ],
+      // },
     ],
   },
 

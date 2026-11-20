@@ -617,8 +617,8 @@ export default function FAQSection() {
                         </p>
                     </div>
 
-                    <button
-                        type="button"
+                    <a
+                        href="tel:+917837830803"
                         className="group flex w-fit items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#dddf00]"
                     >
                         TALK TO OUR TEAM
@@ -626,7 +626,7 @@ export default function FAQSection() {
                         <span className="flex h-6 w-6 items-center justify-center bg-white/10 transition-transform duration-300 group-hover:translate-x-1">
                             <ArrowUpRight size={13} />
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

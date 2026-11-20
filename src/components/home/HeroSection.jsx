@@ -490,8 +490,8 @@ export default function HeroSection() {
                                 </span>
                             </Link>
 
-                            <Link
-                                href="/contact-us"
+                            <button
+                               
                                 className="group inline-flex h-12 items-center sm:gap-4 gap-2 rounded-full border border-white/20 sm:px-7 px-3 text-xs sm:text-sm font-semibold transition-colors duration-300 hover:border-[#dddf00] hover:text-[#dddf00]"
                             >
                                 Get a Quote
@@ -500,7 +500,7 @@ export default function HeroSection() {
                                     size={18}
                                     className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                                 />
-                            </Link>
+                            </button>
                         </div>
 
                         {/* Statistics */}

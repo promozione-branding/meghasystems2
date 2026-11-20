@@ -5,13 +5,11 @@ import { useEffect, useRef, useState } from "react";
 import { X, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { allProducts } from "@/data";
+import { navabarProducts } from "@/data";
 
 const productOptions = Array.from(
     new Set(
-        allProducts
-            .flatMap((category) => category.products || [])
-            .map((product) => product.name)
+        navabarProducts.map((product) => product.label)
             .filter(Boolean)
     )
 );
