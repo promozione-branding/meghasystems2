@@ -304,9 +304,9 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="contact-form-section relative bg-[#f5f3ed] py-16 sm:py-20 lg:py-24">
+            <section className="contact-form-section relative bg-[#f5f3ed] py-6 sm:py-20 lg:py-24">
                 <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
-                    <div className="grid gap-10 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)] xl:gap-20">
+                    <div className="grid gap-7 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)] xl:gap-20">
                         {/* Intro */}
                         <div className="contact-form-reveal">
                             <div className="flex items-center gap-3 mb-4">
@@ -321,18 +321,18 @@ export default function ContactPage() {
                                 Tell us about
                                 <br />
 
-                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                     your project.
                                 </span>
                             </h2>
 
-                            <p className="mt-6 max-w-[350px] text-[12px]  text-[#071720]/90 sm:text-[15px]">
+                            <p className="mt-3 md:mt-6 max-w-[350px] text-[15px]  text-[#071720]/90 sm:text-[15px]">
                                 Share your requirements and our team will help
                                 you select the right restroom partition system
                                 for your space.
                             </p>
 
-                            <div className="mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
+                            <div className="mt-6 md:mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
                                 <div className="flex gap-4">
                                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <FiSend size={14} />
@@ -366,7 +366,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            <div className="mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
+                            <div className="mt-5 md:mt-9 space-y-5 border-t border-[#071720]/10 pt-6">
                                 <div className="flex gap-4">
                                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#071720] text-[#dddf00]">
                                         <Mail size={14} />
@@ -425,7 +425,7 @@ export default function ContactPage() {
                                 <div className="absolute right-0 top-0 h-14 w-14 border-b border-l border-[#dddf00]/40" />
 
                                 {/* Form heading */}
-                                <div className="mb-6">
+                                <div className="mb-3 md:mb-6">
                                     <span className="text-[9px] font-bold tracking-[0.25em] text-[#dddf00]">
                                         CONTACT FORM
                                     </span>
@@ -719,7 +719,7 @@ export default function ContactPage() {
 
 
 
-            <section className="map-section bg-[#f5f3ed] pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
+            <section className="map-section bg-[#f5f3ed] pt-6 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="map-reveal rounded-2xl overflow-hidden border border-[#071720]/10 bg-white">
                         {/* Map header */}

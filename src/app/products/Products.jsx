@@ -254,7 +254,7 @@ function CategorySection({ category, categoryIndex }) {
   return (
     <section
       id={category.slug}
-      className={`product-category relative overflow-hidden py-10 sm:py-12 lg:py-15 ${isLight ? "bg-[#f5f3ed]" : "bg-[#fff]"
+      className={`product-category relative overflow-hidden py-6 sm:py-12 lg:py-15 ${isLight ? "bg-[#f5f3ed]" : "bg-[#fff]"
         }`}
     >
       <div className="pointer-events-none absolute inset-0">
@@ -340,7 +340,7 @@ function CategorySection({ category, categoryIndex }) {
                     CATEGORY HEADER
                 ================================================= */}
 
-        <div className="product-category-header mb-9 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-end lg:gap-12">
+        <div className="product-category-header mb-6 md:mb-9 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-end lg:gap-12">
           {/* Left */}
           <div>
             <div className="flex items-center gap-3">

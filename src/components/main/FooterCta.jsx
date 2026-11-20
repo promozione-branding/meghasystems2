@@ -98,7 +98,7 @@ export default function FooterCTA() {
         >
             <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12">
                 {/* MAIN CTA */}
-                <div className="relative isolate min-h-[540px] overflow-hidden rounded-[16px] bg-[#005153] sm:min-h-[500px]">
+                <div className="relative isolate min-h-[400px] overflow-hidden rounded-[16px] bg-[#005153] sm:min-h-[500px]">
                     {/* GRID BACKGROUND */}
                     <div
                         className="pointer-events-none absolute inset-0 z-0"
@@ -132,7 +132,7 @@ export default function FooterCTA() {
                                 </span>
                             </div>
 
-                            <h2 className="footer-cta-reveal max-w-[620px] text-[clamp(38px,4vw,50px)] font-semibold leading-[1.05] tracking-[-0.015em] text-white">
+                            <h2 className="footer-cta-reveal max-w-[620px] text-[clamp(35px,4vw,50px)] font-semibold leading-[1.05] tracking-[-0.015em] text-white">
                                 Create better
                                 <br />
                                 washroom spaces
@@ -140,13 +140,13 @@ export default function FooterCTA() {
                                 today!
                             </h2>
 
-                            <p className="footer-cta-reveal mt-7 max-w-[470px] text-[15px] leading-[1.85] text-white/85 sm:text-[17px]">
+                            <p className="footer-cta-reveal mt-4 md:mt-7 max-w-[470px] text-[15px] leading-[1.85] text-white/85 sm:text-[17px]">
                                 Premium toilet cubicles and restroom partition
                                 solutions, designed for modern spaces and
                                 engineered for lasting performance.
                             </p>
 
-                            <div className="footer-cta-reveal mt-10">
+                            <div className="footer-cta-reveal mt-5 md:mt-10">
                                 <Link
                                     href="/contact-us"
                                     className="group inline-flex min-h-[68px] items-center justify-center gap-7 rounded-[12px] bg-[#121212] px-9 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#dddf00] hover:text-[#121212]"

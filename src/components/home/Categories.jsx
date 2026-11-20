@@ -85,7 +85,7 @@ export default function Categories() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[#f5f3ed] py-10 sm:py-12 lg:py-15">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#f5f3ed] py-6 sm:py-12 lg:py-15">
 
       <div className="mx-auto max-w-[1900px] px-5 sm:px-8 lg:px-9">
         {/* HEADING */}
@@ -105,7 +105,7 @@ export default function Categories() {
               Built for spaces
               <br />
 
-              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+              <span className=" bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 that demand more.
               </span>
             </h2>

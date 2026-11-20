@@ -101,7 +101,7 @@ export default function ProductSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative bg-[#f5f3ed] py-10"
+            className="relative bg-[#f5f3ed] py-6 md:py-10"
             style={{
                 height: `${PRODUCTS.length * 100}vh`,
             }}
@@ -134,10 +134,10 @@ export default function ProductSection() {
 
                         <div className="flex items-end justify-between gap-6">
                             <div>
-                                <h2 className="max-w-[800px] text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+                                <h2 className="max-w-[800px] mt-15 text-[28px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
                                     Engineered for {" "}
 
-                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                         every space.
                                     </span>
                                 </h2>

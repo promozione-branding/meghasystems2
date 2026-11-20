@@ -189,13 +189,13 @@ export default function AboutPage() {
       ref={pageRef}
       className="bg-[#f7f6f2] text-[#071720] overflow-hidden"
     >
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-[#071720] text-white">
+      <section className="relative flex h-[70vh] md:min-h-[85vh] items-center overflow-hidden bg-[#071720] text-white">
         {/* Background Image */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/duro pro toilet cubicles.webp')", }} />
 
         {/* Main Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
-          <div className="max-w-7xl flex flex-col items-center">
+        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-16 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
+          <div className="max-w-7xl mt-3 md:mt-0 flex flex-col items-center">
             {/* Small Heading */}
             <div className="about-hero-item mb-7 flex items-center gap-4">
               <span className="h-px w-12 bg-[#071720]" />
@@ -205,9 +205,10 @@ export default function AboutPage() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="about-hero-item text-[#071720] text-5xl font-medium leading-[0.98] tracking-[-0.045em] sm:text-6xl">
+            <h1 className="about-hero-item text-[#071720] text-5xl font-medium leading-[1.05] tracking-[-0.045em] sm:text-6xl">
               Trusted expertise. {" "}
-              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+              <br className=" h-10 md:hidden" />
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)]  bg-clip-text text-transparent">
                 Built to last.
               </span>
             </h1>
@@ -234,9 +235,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+      <section className="relative overflow-hidden bg-white py-6 lg:py-24">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
-          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
             {/* Left - Video */}
             <div className="about-reveal relative">
               <div className="relative">
@@ -300,13 +301,13 @@ export default function AboutPage() {
               <h2 className="text-4xl font-light leading-[1.08] tracking-[-0.04em] text-[#071720] sm:text-5xl lg:text-6xl">
                 Washroom spaces
                 <br />
-                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   made better.
                 </span>
               </h2>
 
               {/* Description */}
-              <p className="mt-8 text-lg font-light leading-8 text-[#071720] sm:text-xl sm:leading-9">
+              <p className="mt-4 md:mt-8 text-lg font-light leading-8 text-[#071720] sm:text-xl sm:leading-9">
                 <strong className="font-semibold">
                   Cubiloo Cubicles
                 </strong>{" "}
@@ -316,7 +317,7 @@ export default function AboutPage() {
                 washroom partition solutions.
               </p>
 
-              <p className="mt-6 leading-8 text-[#071720]/65">
+              <p className="mt-3 md:mt-6 leading-8 text-[#071720]/65">
                 With years of industry experience, we serve clients
                 across major cities in India, delivering solutions that
                 combine durability, functionality, aesthetics, and
@@ -324,7 +325,7 @@ export default function AboutPage() {
               </p>
 
               {/* Bottom Highlight */}
-              <div className="mt-9 flex items-start gap-4 border-l-2 border-[#dddf00] bg-[#f8f6f1] px-5 py-5">
+              <div className="mt-4 md:mt-9 flex items-start gap-4 border-l-2 border-[#dddf00] bg-[#f8f6f1] px-5 py-5">
                 <div>
                   <p className="text-sm font-semibold text-[#071720]">
                     Quality. Innovation. Reliability.
@@ -340,7 +341,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative bg-[#0A0A0D] text-[#F4F4EF] py-12 lg:py-15">
+      <section className="relative bg-[#0A0A0D] text-[#F4F4EF] py-6 lg:py-15">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
             {/* Text */}
@@ -352,7 +353,7 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              <h2 className="max-w-[700px] text-[38px] font-medium leading-[1] tracking-[-0.02em] text-[#F4F4EF] sm:text-[42px]">
+              <h2 className="max-w-[700px] text-[35px] font-medium leading-[1] tracking-[-0.02em] text-[#F4F4EF] sm:text-[42px]">
                 More than a partition.
                 <br />
                 <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
@@ -360,7 +361,7 @@ export default function AboutPage() {
                 </span>
               </h2>
 
-              <p className="mt-8 text-[#F4F4EF]/90 leading-8">
+              <p className="mt-4 md:mt-8 text-[#F4F4EF]/90 leading-8">
                 We believe a washroom should perform as well as it looks.
                 Every element has a role — from the panel and hardware to the
                 layout, privacy and final installation.
@@ -425,9 +426,9 @@ export default function AboutPage() {
 
       <ProductShowcase />
 
-      <section className="py-12 lg:py-15 bg-white">
+      <section className="py-6 lg:py-15 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="about-reveal flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-8">
+          <div className="about-reveal flex flex-col lg:flex-row lg:items-end justify-between gap-4 md:gap-8 mb-6 md:mb-8">
             <div>
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
@@ -443,7 +444,7 @@ export default function AboutPage() {
                 What we
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   specialize in.
                 </span>
               </h2>
@@ -462,7 +463,7 @@ export default function AboutPage() {
               return (
                 <div
                   key={item.number}
-                  className="about-reveal group relative border-r border-b border-[#071720]/50 p-7 lg:p-8 min-h-[300px] hover:bg-[#071720] hover:text-white transition-all duration-500"
+                  className="about-reveal group relative border-r border-b border-[#071720]/50 p-5 md:p-8 min-h-[250px] md:min-h-[300px] hover:bg-[#071720] hover:text-white transition-all duration-500"
                 >
                   <div className="flex justify-between items-start">
                     <span className="text-xs text-[#dddf00] tracking-[0.2em]">
@@ -488,7 +489,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-12 lg:py-15 bg-white">
+      <section className="py-6 lg:py-15 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="about-reveal text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-4 mb-2">
@@ -503,12 +504,12 @@ export default function AboutPage() {
               Solutions for
               <br />
 
-              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+              <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                 every environment.
               </span>
             </h2>
 
-            <p className="mt-4 text-[#071720]/90 leading-7">
+            <p className="mt-2 md:mt-4 text-[#071720]/90 leading-7">
               Our washroom solutions are designed to adapt to a wide range of
               commercial, institutional, hospitality and high-traffic
               environments.
@@ -519,7 +520,7 @@ export default function AboutPage() {
             {industries.map((industry, index) => (
               <div
                 key={industry}
-                className="group border-r border-b border-[#071720]/50 p-6 sm:p-8 min-h-[130px] flex flex-col justify-between hover:bg-[#071720] transition-colors duration-400"
+                className="group border-r border-b border-[#071720]/50 p-4 sm:p-8 h-[110px] md:min-h-[130px] flex flex-col justify-between hover:bg-[#071720] transition-colors duration-400"
               >
                 <span className="text-[12px] text-[#dddf00] tracking-[0.2em]">
                   {String(index + 1).padStart(2, "0")}
@@ -540,9 +541,9 @@ export default function AboutPage() {
 
       <ParallaxCTA />
 
-      <section className="py-12 lg:py-15 bg-[#f7f6f2]">
+      <section className="py-8 lg:py-15 bg-[#f7f6f2]">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-16 lg:gap-24">
+          <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 md:gap-24">
             <div className="about-reveal">
               <div className="flex items-center gap-4 mb-6">
                 <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
@@ -558,19 +559,19 @@ export default function AboutPage() {
                 The details
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   matter.
                 </span>
               </h2>
 
-              <p className="mt-7 text-[#071720]/90 leading-7 max-w-md">
+              <p className="mt-4 md:mt-7 text-[#071720]/90 leading-7 max-w-md">
                 Good washroom solutions are not only about appearance. They
                 need to work reliably, fit the project and continue performing
                 long after installation.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-12">
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-12">
               {values.map((item) => {
                 const Icon = item.icon;
 
@@ -597,9 +598,9 @@ export default function AboutPage() {
 
       <Hardware />
 
-      <section className="py-12 lg:py-15 bg-[#f5f3ed] text-white">
+      <section className="py-6 lg:py-15 bg-[#f5f3ed] text-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="about-reveal grid lg:grid-cols-[0.7fr_1.3fr] gap-14 lg:gap-24">
+          <div className="about-reveal grid lg:grid-cols-[0.7fr_1.3fr] gap-10 lg:gap-24">
             <div>
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-[#dddf00] text-xs font-bold tracking-[0.2em]">
@@ -615,12 +616,12 @@ export default function AboutPage() {
                 From idea
                 <br />
 
-                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                   to installation.
                 </span>
               </h2>
 
-              <p className="mt-7 text-[#071720]/90 leading-7 max-w-md">
+              <p className="mt-3 md:mt-7 text-[#071720]/90 leading-7 max-w-md">
                 A straightforward process designed to keep your project
                 moving from initial requirements through final installation.
               </p>
@@ -653,7 +654,7 @@ export default function AboutPage() {
                       <FiArrowUpRight className="text-[#071720]/50 group-hover:text-[#dddf00] transition-colors" />
                     </div>
 
-                    <p className="mt-4 max-w-xl text-sm leading-7 text-[#071720]/60">
+                    <p className="md:mt-4 max-w-xl text-sm md:leading-7 text-[#071720]/60">
                       {item.description}
                     </p>
                   </div>
@@ -666,7 +667,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70 overflow-hidden bg-white">
+      <section className="relative pt-6 sm:pt-12 lg:pt-14 pb-30 sm:pb-70 overflow-hidden bg-white">
         <div className="absolute inset-0 opacity-[0.035]">
           <div
             className="absolute inset-0"
@@ -686,7 +687,7 @@ export default function AboutPage() {
               <span className="w-8 h-px bg-[#dddf00]" />
             </span>
 
-            <h2 className="mt-5 text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+            <h2 className="mt-5 text-[35px] font-medium leading-10 md:leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Practical performance.
               <br />
 
@@ -695,7 +696,7 @@ export default function AboutPage() {
               </span>
             </h2>
 
-            <p className="mt-8 max-w-2xl mx-auto text-[#071720]/90 leading-8">
+            <p className="mt-4 md:mt-8 max-w-2xl mx-auto text-[#071720]/90 leading-8">
               We bring together practical functionality and contemporary
               design to create washroom spaces that feel considered,
               professional and built for everyday use.

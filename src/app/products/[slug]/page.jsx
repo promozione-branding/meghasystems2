@@ -130,7 +130,7 @@ export default async function ProductPage({ params }) {
                     <div className="absolute left-[8%] top-32 h-[500px] w-px bg-[#071720]/5" />
                 </div>
 
-                <div className="relative mx-auto max-w-[1500px] px-5 pb-16 sm:px-8 md:px-12 lg:pb-24">
+                <div className="relative mx-auto max-w-[1500px] px-5 pb-10 sm:px-8 md:px-12 lg:pb-24">
                     {/* Breadcrumb */}
                     <div className="mb-8 flex flex-wrap items-center gap-2 text-[10px] font-semibold tracking-[0.2em] text-[#071720]/70">
                         <Link
@@ -149,7 +149,7 @@ export default async function ProductPage({ params }) {
                         <span className="text-[#071720]">{product.name}</span>
                     </div>
 
-                    <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+                    <div className="grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
                         <div className="order-2 sm:order-0">
 
                             <div className="mb-5 flex items-center gap-3">
@@ -171,7 +171,7 @@ export default async function ProductPage({ params }) {
                             {/* Product quick information */}
                             <div className="mt-8 grid max-w-xl grid-cols-2 gap-px border border-[#071720]/10 bg-[#071720]/10 sm:grid-cols-3">
 
-                                <div className="bg-[#fff] p-4">
+                                <div className="bg-[#fff] p-3 md:p-4">
                                     <Ruler
                                         size={18}
                                         strokeWidth={1.5}
@@ -227,7 +227,7 @@ export default async function ProductPage({ params }) {
                                     href={`/contact-us?type=inquiry&product=${encodeURIComponent(
                                         product.name
                                     )}`}
-                                    className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-[#dddf00] px-6 text-xs font-bold tracking-[0.12em] text-white transition duration-300 hover:bg-[#071720]"
+                                    className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-[#dddf00] px-6 text-xs font-bold tracking-[0.12em] text-black transition duration-300 hover:bg-[#071720]"
                                 >
                                     <Mail size={17} />
 
@@ -287,7 +287,7 @@ export default async function ProductPage({ params }) {
                                     CUBILOO CUBICLES
                                 </div>
 
-                                <div className="absolute bottom-0 right-0 bg-[#dddf00] px-5 py-3 text-[9px] font-bold tracking-[0.2em] text-white">
+                                <div className="absolute bottom-0 right-0 bg-[#dddf00] px-5 py-3 text-[9px] font-bold tracking-[0.2em] text-black">
                                     {category.categoryName}
                                 </div>
 
@@ -299,9 +299,9 @@ export default async function ProductPage({ params }) {
             </section>
 
             {product.dimensions?.length > 0 && (
-                <section className="border-y border-[#071720]/10 bg-white py-12 md:py-15">
+                <section className="border-y border-[#071720]/10 bg-white py-6 md:py-15">
                     <div className="mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
-                        <div className="grid gap-12 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
+                        <div className="grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
                             {/* Heading */}
                             <div>
                                 <span className="text-[12px] mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
@@ -312,12 +312,12 @@ export default async function ProductPage({ params }) {
                                     Built to fit
                                     <br />
 
-                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                         your space.
                                     </span>
                                 </h2>
 
-                                <p className="mt-6 max-w-md text-sm leading-7 text-[#071720]/80">
+                                <p className="mt-6 max-w-md text-sm leading-6 md:leading-7 text-[#071720]/80">
                                     Standard dimensions are shown below. Custom configurations
                                     can be discussed with our team according to your project
                                     requirements.
@@ -404,7 +404,7 @@ export default async function ProductPage({ params }) {
             )}
 
             {product.keyFeatures?.length > 0 && (
-                <section className="relative overflow-hidden bg-[#f5f3ee] py-12 md:py-16">
+                <section className="relative overflow-hidden bg-[#f5f3ee] py-6 md:py-16">
                     {/* Background architectural lines */}
                     <div className="pointer-events-none absolute inset-0 opacity-40">
                         <div className="absolute left-[10%] top-0 h-full w-px bg-[#071720]/10" />
@@ -415,7 +415,7 @@ export default async function ProductPage({ params }) {
                     </div>
 
                     <div className="relative mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
-                        <div className="mb-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+                        <div className="mb-4 md:mb-8 flex flex-col justify-between gap-6 md:flex-row md:items-end">
                             <div>
                                 <span className="text-[12px] mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
                                     KEY FEATURES
@@ -425,13 +425,13 @@ export default async function ProductPage({ params }) {
                                     Designed around
                                     <br />
 
-                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                                    <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)]   bg-clip-text text-transparent">
                                         performance.
                                     </span>
                                 </h2>
                             </div>
 
-                            <p className="max-w-md text-sm leading-7 text-[#071720]/80">
+                            <p className="max-w-md text-sm md:leading-7 text-[#071720]/80">
                                 Every element is selected to provide durability, functionality
                                 and a refined architectural finish.
                             </p>
@@ -441,7 +441,7 @@ export default async function ProductPage({ params }) {
                             {product.keyFeatures.map((feature, index) => (
                                 <article
                                     key={`${feature.name}-${index}`}
-                                    className="group bg-white p-7 transition duration-300 hover:bg-[#071720] md:p-9"
+                                    className="group bg-white p-5 transition duration-300 hover:bg-[#071720] md:p-9"
                                 >
 
                                     <div className="flex items-start justify-between gap-5">
@@ -461,7 +461,7 @@ export default async function ProductPage({ params }) {
                                         {feature.name}
                                     </h3>
 
-                                    <p className="mt-4 text-sm leading-7 text-[#071720]/80 transition group-hover:text-white/60">
+                                    <p className="mt-4 text-sm md:leading-7 text-[#071720]/80 transition group-hover:text-white/60">
                                         {feature.description}
                                     </p>
 
@@ -474,10 +474,10 @@ export default async function ProductPage({ params }) {
             )}
 
             {(product.hardwareImg || product.rightImg) && (
-                <section className="bg-[#fff] py-12 md:py-16">
+                <section className="bg-[#fff] py-6 md:py-16">
                     <div className="mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
-                        <div className="mb-8">
-                            <span className="text-[12px] mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
+                        <div className="mb-6 md:mb-8">
+                            <span className="text-[12px] mb-8 md:mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
                                 PRODUCT DETAILS
                             </span>
 
@@ -485,7 +485,7 @@ export default async function ProductPage({ params }) {
                                 Details that define
                                 <br />
 
-                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                                <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)]  bg-clip-text text-transparent">
                                     the system.
                                 </span>
                             </h2>
@@ -577,7 +577,7 @@ export default async function ProductPage({ params }) {
 
                     <h2 className="mx-auto  dmsans mt-2 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] text-[#071720] md:text-6xl">
                         Bring{" "}
-                        <span className="bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
+                        <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)]  bg-clip-text text-transparent">
                             {product.name}
                         </span>{" "}
                         into your next project.
@@ -594,7 +594,7 @@ export default async function ProductPage({ params }) {
                             href={`/contact?type=inquiry&product=${encodeURIComponent(
                                 product.name
                             )}`}
-                            className="inline-flex min-h-[54px] items-center justify-center gap-3 bg-[#dddf00] px-8 text-xs font-bold tracking-[0.15em] text-white transition hover:bg-[#071720] hover:text-[#fff]"
+                            className="inline-flex min-h-[54px] items-center justify-center gap-3 bg-[#dddf00] px-8 text-xs font-bold tracking-[0.15em] text-black transition hover:bg-[#071720] hover:text-[#fff]"
                         >
                             <Mail size={17} />
                             SEND AN INQUIRY

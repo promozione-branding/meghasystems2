@@ -52,7 +52,7 @@ export default function Hardware() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#111111] py-20 text-white sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#111111] py-8 text-white sm:py-24 lg:py-28">
 
       {/* Background */}
       <div
@@ -69,7 +69,7 @@ export default function Hardware() {
       <div className="relative mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12">
 
         {/* Heading */}
-        <div className="mb-14 text-center">
+        <div className="mb-7 md:mb-14 text-center">
           <div className="mb-6 flex items-center justify-center gap-3">
             <span className="h-px w-9 bg-[#dddf00]" />
             <span className="text-[11px] font-semibold uppercase tracking-[.25em] text-[#dddf00]">
