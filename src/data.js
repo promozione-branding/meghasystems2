@@ -146,7 +146,7 @@ export const allProducts = [
   },
 ],
         imgSpecs: {
-          dimensions: "1550 X 2025",
+          dimensions: "600 X 1815",
           clearance: "100",
         },
 
@@ -219,7 +219,7 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "1000 X 1900",
+          dimensions: "600 X 1830",
           clearance: "150/50",
         },
 
@@ -297,8 +297,8 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "1000 X 2000",
-          clearance: "150/50",
+          dimensions: "600 X 1815",
+          clearance: "150",
         },
 
         keyFeatures: [
@@ -375,7 +375,7 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "900 X 1830",
+          dimensions: "600 X 1815",
           clearance: "150",
         },
 
@@ -452,7 +452,7 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "1550 X 2000",
+          dimensions: "600 X 1815",
           clearance: "150",
         },
         keyFeatures: [
@@ -530,8 +530,8 @@ dimensions: [
 ],
 
         imgSpecs: {
-          dimensions: "1000 X 1995",
-          clearance: "150/50",
+          dimensions: "600 X 1815",
+          clearance: "150",
         },
 
         keyFeatures: [
@@ -570,7 +570,11 @@ dimensions: [
         hardwareImg: "/hardware1/luron1.webp",
         rightImg: "/hardware1/luron2.webp",
 
-        imgSpecs: {},
+        
+        imgSpecs: {
+          dimensions: "600 X 1815",
+          clearance: "150",
+        },
 
         dimensions: [
   {
@@ -886,7 +890,7 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "1000 X 1500",
+          dimensions: "600 X 1815",
           clearance: "150",
         },
 
@@ -971,7 +975,7 @@ dimensions: [
   },
 ],
         imgSpecs: {
-          dimensions: "1000 X 1500",
+          dimensions: "600 X 1815",
           clearance: "150",
         },
 
