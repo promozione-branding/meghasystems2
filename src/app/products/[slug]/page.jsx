@@ -21,7 +21,7 @@ import { allProducts } from "@/data";
 ========================================================= */
 
 // Replace these with your actual business numbers.
-const WHATSAPP_NUMBER = "919797977832";
+const WHATSAPP_NUMBER = "917837830803";
 const PHONE_NUMBER = "+919797977832";
 
 
@@ -585,9 +585,7 @@ export default async function ProductPage({ params }) {
                     <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
 
                         <Link
-                            href={`/contact?type=inquiry&product=${encodeURIComponent(
-                                product.name
-                            )}`}
+                            href="/contact-us"
                             className="inline-flex min-h-[54px] items-center justify-center gap-3 bg-[#dddf00] px-8 text-xs font-bold tracking-[0.15em] text-black transition hover:bg-[#071720] hover:text-[#fff]"
                         >
                             <Mail size={17} />

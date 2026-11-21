@@ -397,6 +397,12 @@ export default function ContactPage() {
                                         >
                                             +91 97979 77832
                                         </a>
+                                        <a
+                                            href="tel:+917837830803"
+                                            className="mt-1 block text-[15px] font-medium transition-colors hover:text-[#738000] hover:underline"
+                                        >
+                                            +91 78378 30803
+                                        </a>
                                     </div>
                                 </div>
                             </div>

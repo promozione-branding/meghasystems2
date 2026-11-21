@@ -1,11 +1,12 @@
 
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
-import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import EnquiryPopup from "../EnquiryPopup";
 import {
     ArrowUpRight,
     Award,
@@ -44,6 +45,7 @@ const features = [
 ];
 
 export default function FooterCTA() {
+    const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
     const sectionRef = useRef(null);
 
     useEffect(() => {
@@ -147,8 +149,9 @@ export default function FooterCTA() {
                             </p>
 
                             <div className="footer-cta-reveal mt-5 md:mt-10">
-                                <Link
-                                    href="/contact-us"
+                                <button
+                                    type="button"
+                                    onClick={() => setIsEnquiryOpen(true)}
                                     className="group inline-flex min-h-[68px] items-center justify-center gap-7 rounded-[12px] bg-[#121212] px-9 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-[#dddf00] hover:text-[#121212]"
                                 >
                                     Start Your Project
@@ -157,7 +160,7 @@ export default function FooterCTA() {
                                         size={19}
                                         className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                                     />
-                                </Link>
+                                </button>
                             </div>
                         </div>
 
@@ -210,6 +213,12 @@ export default function FooterCTA() {
                     </div>
                 </div>
             </div>
+            {isEnquiryOpen && (
+                createPortal(
+                    <EnquiryPopup onClose={() => setIsEnquiryOpen(false)} />,
+                    document.body
+                )
+            )}
         </div>
     );
 }
