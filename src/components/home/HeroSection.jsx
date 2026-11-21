@@ -124,7 +124,7 @@ const stats = [
     },
     {
         id: "03",
-        value: 600000,
+        value: 300000,
         suffix: "+",
         label: "Cubicles Installed",
     },
@@ -132,7 +132,7 @@ const stats = [
 
 function formatNumber(value, index) {
     if (index === 2 && value >= 100000) {
-        return "6 Lakh";
+        return "3 Lakh";
     }
 
     return Math.floor(value).toLocaleString("en-IN");

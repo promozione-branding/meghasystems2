@@ -54,7 +54,7 @@ const actions = [
     {
         title: "Contact Us",
         icon: FiPhone,
-        href: "/contact",
+        href: "/contact-us",
         primary: false,
     },
     {

@@ -31,7 +31,7 @@ const STATS = [
         icon: Building2,
     },
     {
-        value: 600000,
+        value: 300000,
         suffix: "+",
         label: "Cubicles Installed",
         icon: Layers3,
@@ -536,7 +536,7 @@ export default function AboutSection() {
                                 <span className="font-semibold text-[#071720]">
                                     Mr. Ramesh Manchanda
                                 </span>
-                                , with over 25 years of industry
+                                , with over 26 years of industry
                                 experience, our approach combines
                                 technical expertise, premium materials,
                                 innovative design, and meticulous
@@ -673,7 +673,7 @@ export default function AboutSection() {
                                         text-slate-500
                                     "
                                 >
-                                    25+ years experience
+                                    26+ years experience
                                 </p>
                             </div>
                         </div>
@@ -688,7 +688,7 @@ export default function AboutSection() {
                             "
                         >
                             <Link
-                                href="/about"
+                                href="/about-us"
                                 className="
                                     group
                                     inline-flex

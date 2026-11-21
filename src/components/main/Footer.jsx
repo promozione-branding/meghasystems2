@@ -24,7 +24,7 @@ const FOOTER_LINKS = [
     { label: "Products", href: "/products" },
     { label: "Projects", href: "/projects" },
     { label: "Certificates", href: "/certificates" },
-    { label: "Contact Us", href: "/contact" },
+    { label: "Contact Us", href: "/contact-us" },
 ];
 
 const PRODUCT_LINKS = [

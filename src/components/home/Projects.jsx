@@ -295,7 +295,7 @@ export default function Projects() {
 
           <Link
             href="/contact"
-            className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-4 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-white transition-colors duration-300 hover:bg-[#17202A] sm:text-sm"
+            className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-4 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-black transition-colors duration-300 hover:bg-[#17202A] sm:text-sm"
           >
             Discuss Your Project
             <ArrowUpRight

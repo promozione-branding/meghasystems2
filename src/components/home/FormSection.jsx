@@ -12,6 +12,7 @@ import {
   Award,
 } from "lucide-react";
 import Link from "next/link";
+import axios from "axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,8 @@ export default function FormSection() {
     projectType: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const heroRef = useRef(null);
   const leftRef = useRef(null);
@@ -180,22 +183,76 @@ export default function FormSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
 
-    // Connect your API or form service here.
-    console.log("Quote request:", formData);
+    setLoading(true);
+    setStatus({ type: "", message: "" });
+
+    const webisteUrl =
+      window.location.hostname + window.location.pathname;
+
+    const payload = {
+      platform: webisteUrl || "Megha Systems Quote Form",
+      supplierToken: "6a9fb2bdd936bdc2bb1d6df7",
+      platformEmail: "contact@meghasystems.com",
+      name: formData.name || "N/A",
+      email: formData.email || "N/A",
+      company: "N/A",
+      phone: formData.phone || "N/A",
+      product: formData.projectType || "N/A",
+      place: "N/A",
+      message: formData.message || "N/A",
+    };
+
+    try {
+      const { data } = await axios.post(
+        "https://brandbnalo.com/api/form/add",
+        payload
+      );
+
+      if (data?.success) {
+        setStatus({
+          type: "success",
+          message:
+            "Thank you. Your enquiry has been submitted successfully.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          projectType: "",
+          message: "",
+        });
+      } else {
+        setStatus({
+          type: "error",
+          message: data?.message || "Submission failed. Please try again.",
+        });
+      }
+    } catch (submitError) {
+      console.error("Quote form submission error:", submitError);
+      setStatus({
+        type: "error",
+        message:
+          submitError?.response?.data?.message ||
+          "Something went wrong. Please try again.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const stats = [
     {
       icon: Building2,
-      value: "5000+",
+      value: "7500+",
       label: "Projects Delivered",
     },
     {
       icon: Users,
-      value: "25+",
+      value: "26+",
       label: "Years of Expertise",
     },
     {
@@ -327,7 +384,7 @@ export default function FormSection() {
             <div className="mb-6 flex items-center gap-3">
               <span className="h-[2px] w-8 bg-[#dddf00]" />
 
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#817771]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#000]">
                 Request a Quote
               </p>
             </div>
@@ -392,14 +449,28 @@ export default function FormSection() {
 
               <button
                 type="submit"
-                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
+                disabled={loading}
+                className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-black transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
-                Request Free Quote
+                {loading ? "Submitting..." : "Request Free Quote"}
                 <ArrowUpRight
                   size={19}
                   className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
                 />
               </button>
+
+              {status.message && (
+                <p
+                  role="status"
+                  className={`text-sm ${
+                    status.type === "success"
+                      ? "text-green-700"
+                      : "text-red-600"
+                  }`}
+                >
+                  {status.message}
+                </p>
+              )}
             </form>
 
             <div className="mt-6 flex items-center gap-2 border-t border-[#EEE6E0] pt-5 text-xs text-[#77716D]">

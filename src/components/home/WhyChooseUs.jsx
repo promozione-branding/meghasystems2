@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const WHY_CHOOSE_US = [
     {
         number: "01",
-        title: "25+ Years of Experience",
+        title: "26+ Years of Experience",
         description:
             "Industry experience backed by proven expertise in restroom partition and toilet cubicle solutions.",
         icon: Award,
