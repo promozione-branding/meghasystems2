@@ -618,7 +618,7 @@ export default function FAQSection() {
                     </div>
 
                     <a
-                        href="tel:+917837830803"
+                        href="tel:+919797977832"
                         className="group flex w-fit items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 py-3 text-[9px] font-bold tracking-[0.18em] text-white transition-all duration-300 hover:bg-[#dddf00]"
                     >
                         TALK TO OUR TEAM

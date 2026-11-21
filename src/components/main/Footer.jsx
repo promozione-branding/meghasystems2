@@ -84,7 +84,7 @@ const SOCIAL_LINKS = [
     },
     {
         label: "Whatapp",
-        href: "https://web.whatsapp.com/send?phone=917837830803&text=",
+        href: "https://web.whatsapp.com/send?phone=919797977832&text=",
         icon: FaWhatsapp,
     },
 
@@ -409,18 +409,6 @@ export default function Footer() {
                             <span className="hidden h-4 w-px bg-white/10 sm:block" />
 
                             <a
-                                href="tel:+917837830803"
-                                className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#dddf00]"
-                            >
-                                <FiPhone
-                                    size={14}
-                                    className="text-[#dddf00]"
-                                />
-
-                                <span>+91 78378 30803</span>
-                            </a>
-
-                            <a
                                 href="tel:+919797977832"
                                 className="flex items-center gap-2 text-sm text-white/95 transition-colors hover:text-[#dddf00]"
                             >
@@ -431,6 +419,7 @@ export default function Footer() {
 
                                 <span>+91 97979 77832</span>
                             </a>
+
                         </div>
                     </div>
                 </div>

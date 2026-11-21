@@ -224,17 +224,11 @@ export default function ShippingPolicyPage() {
                 />
               </a>
               <a
-                href="tel:+918595776029"
+                href="tel:+919797977832"
                 className="flex items-center gap-3 text-sm text-[#716a67] transition-colors hover:text-[#252329]"
               >
                 <Phone size={17} className="text-[#a9c000]" />
-                +91 85957 76029
-              </a>
-              <a
-                href="tel:+919315556737"
-                className="flex items-center gap-3 pl-8 text-sm text-[#716a67] transition-colors hover:text-[#252329]"
-              >
-                +91 93155 56737
+                +91 97979 77832
               </a>
             </div>
           </div>

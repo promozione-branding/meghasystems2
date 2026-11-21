@@ -224,7 +224,7 @@ export default function AboutPage() {
               </Link>
 
               <a
-                href="tel:+917837830803"
+                href="tel:+919797977832"
                 className="group inline-flex items-center gap-3 border border-white/40 bg-[#071720] px-6 py-4 text-sm font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-[#071720]"
               >
                 Talk to Our Team

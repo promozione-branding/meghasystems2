@@ -31,7 +31,7 @@ export default function StickyContactButton() {
 
         </a>
       <Link
-          href="tel:+917837830803"
+          href="tel:+919797977832"
         className="group relative flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-[#222] shadow-[0_4px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
       >
         <FiPhoneCall size={17} className="text-red-500" />  Call us
@@ -47,7 +47,7 @@ export default function StickyContactButton() {
 
         {/* WhatsApp Button */}
         <Link
-          href="https://wa.me/917837830803"
+          href="https://wa.me/919797977832"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"

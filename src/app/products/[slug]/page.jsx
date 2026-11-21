@@ -21,8 +21,8 @@ import { allProducts } from "@/data";
 ========================================================= */
 
 // Replace these with your actual business numbers.
-const WHATSAPP_NUMBER = "917837830803";
-const PHONE_NUMBER = "+91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "919797977832";
+const PHONE_NUMBER = "+919797977832";
 
 
 /* =========================================================
