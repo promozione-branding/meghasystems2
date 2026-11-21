@@ -52,7 +52,7 @@ export default function Hardware() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-[#111111] py-8 text-white sm:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-[#111111] py-8 text-white sm:py-12">
 
       {/* Background */}
       <div

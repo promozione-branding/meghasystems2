@@ -166,7 +166,7 @@ export default function Products() {
                 href="/about-us"
                 className="group inline-flex items-center gap-3 bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-6 py-4 text-sm font-semibold text-[#071720] transition-all duration-300 hover:bg-[#dddf00]"
               >
-                Explore Cubiloo Cubicles
+                Know About Us
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </Link>
 

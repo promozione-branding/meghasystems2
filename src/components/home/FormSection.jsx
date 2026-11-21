@@ -323,7 +323,7 @@ export default function FormSection() {
 
             <div className="hero-actions mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href="#quote"
+                
                 className="group inline-flex min-h-[54px] items-center justify-center gap-3 rounded-lg bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] px-5 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#984426] sm:text-base"
               >
                 Get Quote

@@ -127,9 +127,6 @@ export default function ProductSection() {
                         <div className="flex items-center gap-3 mb-2">
                             <span className="h-px w-10 bg-[#dddf00]" />
 
-                            <span className="text-[10px] font-semibold tracking-[0.32em] text-[#dddf00] sm:text-[11px]">
-                                OUR PRODUCTS
-                            </span>
                         </div>
 
                         <div className="flex items-end justify-between gap-6">
