@@ -1,61 +1,59 @@
+
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { RiFileDownloadLine } from "react-icons/ri";
 
-
 export default function StickyContactButton() {
   const pathname = usePathname();
-  if (pathname.startsWith("/admin")) {
-    return null; // Don't render the navbar on admin or dashboard pages
-  }
+
+  if (pathname.startsWith("/admin")) return null;
+
+  const buttonStyle =
+    "group flex h-12 w-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-white text-[#222] shadow-lg transition-all duration-300 ease-in-out hover:w-36 hover:rounded-full hover:justify-start hover:px-4";
+
   return (
-    <div className="fixed bottom-6 right-5 z-[999] flex items-center gap-3 sm:bottom-8 sm:right-8">
+    <div className="fixed bottom-6 right-4 z-[999] flex flex-col items-end gap-3 sm:bottom-8 sm:right-8">
 
-      <div className="flex flex-col gap-2">
-
-      {/* Contact Us Button */}
-       {/* Download Catalog */}
-        <a
-          href="/Brochure.pdf"
-          download
-          aria-label="Download brochure"
-          title="Download brochure"
-        className="group relative flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-[#222] shadow-[0_4px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          <RiFileDownloadLine size={17} className="text-red-500" />
-          Brochure
-                  <span className="absolute -right-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rotate-45 bg-white" />
-
-        </a>
-      <Link
-          href="tel:+919797977832"
-        className="group relative flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-semibold text-[#222] shadow-[0_4px_20px_rgba(0,0,0,0.16)] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      <a
+        href="/Brochure.pdf"
+        download
+        aria-label="Download brochure"
+        className={buttonStyle}
       >
-        <FiPhoneCall size={17} className="text-red-500" />  Call us
+        <RiFileDownloadLine size={20} className="shrink-0 text-red-500" />
+        <span className="hidden whitespace-nowrap text-sm font-semibold group-hover:block">
+          Brochure
+        </span>
+      </a>
 
-        {/* Arrow */}
-        <span className="absolute -right-[7px] top-1/2 h-3.5 w-3.5 -translate-y-1/2 rotate-45 bg-white" />
+      <Link
+        href="tel:+919797977832"
+        aria-label="Call us"
+        className={buttonStyle}
+      >
+        <FiPhoneCall size={20} className="shrink-0 text-red-500" />
+        <span className="hidden whitespace-nowrap text-sm font-semibold group-hover:block">
+          Call us
+        </span>
       </Link>
 
-      </div>
+      <Link
+        href="https://wa.me/919797977832"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className="group flex h-12 w-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-300 ease-in-out hover:w-36 hover:justify-start hover:rounded-full hover:bg-[#20bd5a] hover:px-4"
+      >
+        <FaWhatsapp size={25} className="shrink-0" />
+        <span className="hidden whitespace-nowrap text-sm font-semibold group-hover:block">
+          WhatsApp
+        </span>
+      </Link>
 
-      <div className="flex flex-col items-center gap-3">
-       
-
-        {/* WhatsApp Button */}
-        <Link
-          href="https://wa.me/917837830803"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat with us on WhatsApp"
-          className="relative flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_5px_20px_rgba(37,211,102,0.35)] transition-all duration-300 hover:scale-110 hover:bg-[#20bd5a]"
-        >
-          <FaWhatsapp className="text-[26px]" />
-        </Link>
-      </div>
     </div>
   );
 }
