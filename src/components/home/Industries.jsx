@@ -454,10 +454,10 @@ export default function IndustriesWeServe() {
                   {/* CTA */}
                   <div className="">
                     <Link
-                      href="/contact"
+                     href="tel:+917837830803"
                       className="group inline-flex min-h-12 items-center justify-between gap-8 bg-[#dddf00] px-5 text-[10px] font-bold uppercase tracking-[0.13em] text-[#101820] transition hover:bg-white sm:text-xs"
                     >
-                      View project
+                      Contact Now
                       <FiArrowUpRight
                         size={17}
                         className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"

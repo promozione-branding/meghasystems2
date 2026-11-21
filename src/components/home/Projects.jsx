@@ -18,7 +18,7 @@ const projects = [
     description:
       "Space-efficient workstation layouts designed for focused work and seamless team collaboration.",
     image: "/Kiddiez.webp",
-    href: "/projects/smart-office-workstations",
+    href: "/projects",
     layout: "large",
     number: "01",
   },
@@ -28,7 +28,7 @@ const projects = [
     description:
       "Integrated storage and clean workstation designs that keep everyday office essentials organized.",
     image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
-    href: "/projects/office-cubicles",
+    href: "/projects",
     layout: "small",
     number: "02",
   },
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Practical workstation configurations for comfortable, organized and efficient workplaces.",
     image: "/Commercial Urinal Partitions.webp",
-    href: "/projects/employee-workstations",
+   href: "/projects",
     layout: "small",
     number: "03",
   },
@@ -48,7 +48,7 @@ const projects = [
     description:
       "Thoughtfully planned office furniture solutions that balance privacy, functionality and contemporary design.",
     image: "/Black Maxi.webp",
-    href: "/projects/custom-office-solutions",
+    href: "/projects",
     layout: "large",
     number: "04",
   },
