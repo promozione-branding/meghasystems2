@@ -371,11 +371,18 @@ export default function Footer() {
                                 </p>
 
                                 <address className="max-w-md not-italic text-sm leading-6 text-white/95">
-                                    11th Floor, Urbtech Trade Centre, Block B,
-                                    <br />
-                                    Sector 132, Noida,
-                                    <br />
-                                    Uttar Pradesh 201304
+                                    <a
+                                        href="https://www.google.com/maps?cid=1336744572211207938&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="transition-colors hover:text-[#dddf00]"
+                                    >
+                                        11th Floor, Urbtech Trade Centre, Block B,
+                                        <br />
+                                        Sector 132, Noida,
+                                        <br />
+                                        Uttar Pradesh 201304
+                                    </a>
                                 </address>
                             </div>
                         </div>
