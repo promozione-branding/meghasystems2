@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
+import EnquiryPopup from "../EnquiryPopup";
 
 import {
     FiArrowUpRight,
@@ -540,6 +541,7 @@ function CubicleIllustration() {
 ========================================================= */
 
 export default function CTASection() {
+    const [isQuoteOpen, setIsQuoteOpen] = useState(false);
     const sectionRef = useRef(null);
     const productRef = useRef(null);
     const svgRef = useRef(null);
@@ -661,6 +663,7 @@ export default function CTASection() {
     }, []);
 
     return (
+        <>
         <section
             ref={sectionRef}
             className="
@@ -1164,6 +1167,12 @@ export default function CTASection() {
                                         <Link
                                             href={action.href}
                                             download={action.download}
+                                            onClick={(event) => {
+                                                if (action.primary) {
+                                                    event.preventDefault();
+                                                    setIsQuoteOpen(true);
+                                                }
+                                            }}
                                             className={`
                                                 group
                                                 relative
@@ -1313,5 +1322,9 @@ export default function CTASection() {
                 </div>
             </div>
         </section>
+        {isQuoteOpen && (
+            <EnquiryPopup onClose={() => setIsQuoteOpen(false)} />
+        )}
+        </>
     );
 }
