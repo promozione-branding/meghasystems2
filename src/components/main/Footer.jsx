@@ -487,11 +487,25 @@ export default function Footer() {
                         >
                             PRIVACY POLICY
                         </a>
+                         <span className="h-3 w-px bg-white/10" />
+                        <a
+                            href="/shipping-policy"
+                            className="transition-colors hover:text-[#dddf00]"
+                        >
+                            SHIPPING POLICY
+                        </a>
+                         <span className="h-3 w-px bg-white/10" />
+                        <a
+                            href="/return-refund"
+                            className="transition-colors hover:text-[#dddf00]"
+                        >
+                            RETURN REFUND
+                        </a>
 
                         <span className="h-3 w-px bg-white/10" />
 
                         <a
-                            href="/terms"
+                            href="/terms-conditions"
                             className="transition-colors hover:text-[#dddf00]"
                         >
                             TERMS & CONDITIONS
