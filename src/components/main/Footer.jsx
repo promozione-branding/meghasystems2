@@ -20,10 +20,9 @@ const LOGO_SRC = "/logo2.webp";
 
 const FOOTER_LINKS = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
+    { label: "About Us", href: "/about-us" },
     { label: "Products", href: "/products" },
     { label: "Projects", href: "/projects" },
-    { label: "Certificates", href: "/certificates" },
     { label: "Contact Us", href: "/contact-us" },
 ];
 
