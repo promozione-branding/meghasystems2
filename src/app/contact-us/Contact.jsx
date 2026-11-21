@@ -372,9 +372,12 @@ export default function ContactPage() {
                                             Mail
                                         </p>
 
-                                        <p className="mt-1 text-[15px] font-medium">
+                                        <a
+                                            href="mailto:cubiloocubicles@gmail.com"
+                                            className="mt-1 inline-block text-[15px] font-medium transition-colors hover:text-[#738000] hover:underline"
+                                        >
                                             cubiloocubicles@gmail.com
-                                        </p>
+                                        </a>
                                     </div>
                                 </div>
 
@@ -388,13 +391,18 @@ export default function ContactPage() {
                                             Call
                                         </p>
 
-                                        <p className="mt-1 text-[15px] font-medium">
+                                        <a
+                                            href="tel:+917837830803"
+                                            className="mt-1 block text-[15px] font-medium transition-colors hover:text-[#738000] hover:underline"
+                                        >
                                             +91 78378 30803
-                                        </p>
-                                        <p className="mt-1 text-[15px] font-medium">
+                                        </a>
+                                        <a
+                                            href="tel:+919797977832"
+                                            className="mt-1 block text-[15px] font-medium transition-colors hover:text-[#738000] hover:underline"
+                                        >
                                             +91 97979 77832
-
-                                        </p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
