@@ -248,7 +248,7 @@ export default function AboutPage() {
                 {/* Video Container */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#071720] sm:aspect-[5/5] lg:aspect-[4/3]">
                   <video
-                    src="/megha-systems-about-clean-v2.mp4"
+                    src="/vid.mp4"
                     autoPlay
                     muted
                     loop
@@ -596,7 +596,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Hardware />
+      {/* <Hardware /> */}
 
       <section className="py-6 lg:py-15 bg-[#f5f3ed] text-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
