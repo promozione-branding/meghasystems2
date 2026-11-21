@@ -25,8 +25,9 @@ gsap.registerPlugin(ScrollTrigger);
    PRODUCT PAGE
 ========================================================= */
 
-export default function Products() {
+export default function Products({ searchQuery = "" }) {
   const pageRef = useRef(null);
+  const normalizedSearch = searchQuery.trim().toLowerCase();
 
   const totalProducts = useMemo(() => {
     return allProducts.reduce(
@@ -34,6 +35,16 @@ export default function Products() {
       0
     );
   }, []);
+
+  const searchResults = useMemo(() => {
+    if (!normalizedSearch) return [];
+
+    return allProducts
+      .flatMap((category) => category.products || [])
+      .filter((product) =>
+        product.name?.toLowerCase().includes(normalizedSearch)
+      );
+  }, [normalizedSearch]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -182,14 +193,48 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="sticky top-0 z-40 border-b border-[#071720]/30 bg-[#f3f5f7]/95 backdrop-blur-xl">
-        <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
-          <div className="flex overflow-x-auto justify-center scrollbar-hide">
-            {allProducts.map((category, index) => (
-              <a
-                key={category.slug}
-                href={`#${category.slug}`}
-                className="
+      {normalizedSearch ? (
+        <section className="bg-[#f5f3ed] px-5 py-12 sm:px-8 sm:py-16 lg:px-12">
+          <div className="mx-auto max-w-4xl">
+            <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#8f9e00]">
+              Product Search
+            </p>
+            <h2 className="mb-8 text-3xl font-semibold tracking-[-0.035em] text-[#252329] sm:text-4xl">
+              Search Results
+            </h2>
+            {searchResults.length ? (
+              <div className="divide-y divide-[#e6e2dc] border-y border-[#e6e2dc] bg-white">
+                {searchResults.map((product) => (
+                  <Link
+                    key={product.slug}
+                    href={`/products/${product.slug}`}
+                    className="group flex items-center justify-between gap-4 px-5 py-5 text-lg font-semibold text-[#252329] transition-colors hover:bg-[#faf9f6] hover:text-[#819000] sm:px-7"
+                  >
+                    {product.name}
+                    <ArrowUpRight
+                      size={19}
+                      className="shrink-0 text-[#a9c000] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                    />
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <p className="border-y border-[#e6e2dc] bg-white px-5 py-6 text-sm text-[#716a67] sm:px-7">
+                No products found matching that name.
+              </p>
+            )}
+          </div>
+        </section>
+      ) : (
+        <>
+          <section className="sticky top-0 z-40 border-b border-[#071720]/30 bg-[#f3f5f7]/95 backdrop-blur-xl">
+            <div className="mx-auto max-w-[1380px] px-5 sm:px-8 lg:px-12">
+              <div className="flex overflow-x-auto justify-center scrollbar-hide">
+                {allProducts.map((category, index) => (
+                  <a
+                    key={category.slug}
+                    href={`#${category.slug}`}
+                    className="
                                     group
                                     flex
                                     min-w-max
@@ -202,34 +247,36 @@ export default function Products() {
                                     first:border-l
                                     sm:px-5
                                 "
-              >
-                <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071720]/60 transition-colors duration-300 group-hover:text-[#dddf00]">
-                  0{index + 1}
-                </span>
+                  >
+                    <span className="text-[10px] font-semibold tracking-[0.18em] text-[#071720]/60 transition-colors duration-300 group-hover:text-[#dddf00]">
+                      0{index + 1}
+                    </span>
 
-                <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071720]/95 transition-colors duration-300 group-hover:text-[#071720] sm:text-[12px]">
-                  {category.categoryName}
-                </span>
+                    <span className="text-[9px] font-semibold tracking-[0.12em] text-[#071720]/95 transition-colors duration-300 group-hover:text-[#071720] sm:text-[12px]">
+                      {category.categoryName}
+                    </span>
 
-                <ChevronRight
-                  size={12}
-                  className="text-[#dddf00] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
-                />
-              </a>
+                    <ChevronRight
+                      size={12}
+                      className="text-[#dddf00] opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <div className="pb-20 sm:pb-50">
+            {allProducts.map((category, categoryIndex) => (
+              <CategorySection
+                key={category.slug}
+                category={category}
+                categoryIndex={categoryIndex}
+              />
             ))}
           </div>
-        </div>
-      </section>
-
-      <div className="pb-20 sm:pb-50">
-        {allProducts.map((category, categoryIndex) => (
-          <CategorySection
-            key={category.slug}
-            category={category}
-            categoryIndex={categoryIndex}
-          />
-        ))}
-      </div>
+        </>
+      )}
     </main>
   );
 }

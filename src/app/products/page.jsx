@@ -7,8 +7,11 @@ export const metadata = {
         "Explore toilet cubicle systems in Classic, Luxe and Kids ranges, plus urinal modesty panels. HPL, compact laminate and stainless steel options in custom sizes.",
 };
 
-export default function page() {
+export default async function page({ searchParams }) {
+    const params = await searchParams;
+    const search = params?.search;
+
     return (
-        <Products />
+        <Products searchQuery={Array.isArray(search) ? search[0] || "" : search || ""} />
     )
 }

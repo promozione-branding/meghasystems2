@@ -158,6 +158,14 @@ export default function Navbar() {
     setMobileProductsOpen(false);
   };
 
+  const searchResults = searchValue.trim()
+    ? navabarProducts.filter((product) =>
+        product.label
+          .toLowerCase()
+          .includes(searchValue.trim().toLowerCase())
+      )
+    : [];
+
   const handleSearch = (event) => {
     event.preventDefault();
 
@@ -166,6 +174,7 @@ export default function Navbar() {
 
     setSearchOpen(false);
     closeMobile();
+    setSearchValue("");
 
     router.push(
       `/products?search=${encodeURIComponent(query)}`
@@ -465,6 +474,29 @@ export default function Navbar() {
                           <ArrowRight size={18} />
                         </button>
                       </div>
+                      {searchValue.trim() && (
+                        <div className="mt-2 overflow-hidden rounded-xl border border-white/10">
+                          {searchResults.length ? (
+                            searchResults.map((product) => (
+                              <Link
+                                key={product.slug}
+                                href={`/products/${product.slug}`}
+                                onClick={() => {
+                                  setSearchOpen(false);
+                                  setSearchValue("");
+                                }}
+                                className="block px-4 py-3 text-sm text-white/85 transition-colors hover:bg-white/10 hover:text-[#dddf00]"
+                              >
+                                {product.label}
+                              </Link>
+                            ))
+                          ) : (
+                            <p className="px-4 py-3 text-sm text-white/50">
+                              No matching products
+                            </p>
+                          )}
+                        </div>
+                      )}
                     </motion.form>
                   )}
                 </AnimatePresence>
@@ -688,6 +720,29 @@ export default function Navbar() {
                   className="h-14 w-full rounded-xl border border-white/15 bg-white/5 pl-12 pr-4 text-sm text-white outline-none placeholder:text-white/40 focus:border-[#dddf00]"
                 />
               </form>
+              {searchValue.trim() && (
+                <div className="mt-2 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+                  {searchResults.length ? (
+                    searchResults.map((product) => (
+                      <Link
+                        key={product.slug}
+                        href={`/products/${product.slug}`}
+                        onClick={() => {
+                          closeMobile();
+                          setSearchValue("");
+                        }}
+                        className="block px-4 py-3 text-sm text-white/85 transition-colors hover:bg-white/10 hover:text-[#dddf00]"
+                      >
+                        {product.label}
+                      </Link>
+                    ))
+                  ) : (
+                    <p className="px-4 py-3 text-sm text-white/50">
+                      No matching products
+                    </p>
+                  )}
+                </div>
+              )}
 
               {/* MOBILE CTA */}
               <Link
