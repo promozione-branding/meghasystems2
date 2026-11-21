@@ -14,7 +14,7 @@ import {
     Sparkles,
 } from "lucide-react";
 
-import { allProducts } from "@/data";
+import { allProducts, navabarProducts } from "@/data";
 
 /* =========================================================
    CONFIG
@@ -111,7 +111,9 @@ export default async function ProductPage({ params }) {
     }
 
     const { product, category } = result;
-
+    const enquiryProductName =
+        navabarProducts.find((item) => item.slug === product.slug)?.label ||
+        product.name;
     const whatsappMessage = encodeURIComponent(
         `Hello Cubiloo Cubicles,\n\nI am interested in the ${product.name} toilet cubicle system.\n\nPlease share pricing, specifications and quotation details.`
     );
@@ -228,7 +230,7 @@ export default async function ProductPage({ params }) {
                                         product.name
                                     )}`}
                                     data-open-enquiry
-                                    data-product-name={product.name}
+                                    data-product-name={enquiryProductName}
                                     className="group inline-flex min-h-[52px] items-center justify-center gap-3 bg-[#dddf00] px-6 text-xs font-bold tracking-[0.12em] text-black transition duration-300 hover:bg-[#fff]"
                                 >
                                     <Mail size={17} />
