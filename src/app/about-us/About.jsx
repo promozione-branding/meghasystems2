@@ -317,7 +317,7 @@ export default function AboutPage() {
                 washroom partition solutions.
               </p>
 
-              <p className="mt-3 md:mt-6 leading-8 text-[#071720]/65">
+              <p className="mt-3 md:hidden xl:block md:mt-6 leading-8 text-[#071720]/65">
                 With years of industry experience, we serve clients
                 across major cities in India, delivering solutions that
                 combine durability, functionality, aesthetics, and
