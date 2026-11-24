@@ -132,7 +132,7 @@ export default async function ProductPage({ params }) {
                     <div className="absolute left-[8%] top-32 h-[500px] w-px bg-[#071720]/5" />
                 </div>
 
-                <div className="relative mx-auto max-w-[1500px] px-5 pb-10 sm:px-8 md:px-12 lg:pb-24">
+                <div className="relative mx-auto max-w-[1500px] px-5 pb-10 sm:px-8 md:px-12 md:pb-12">
                     {/* Breadcrumb */}
                     <div className="mb-8 flex flex-wrap items-center gap-2 text-[10px] font-semibold tracking-[0.2em] text-[#071720]/70">
                         <Link
@@ -303,7 +303,7 @@ export default async function ProductPage({ params }) {
             </section>
 
             {product.dimensions?.length > 0 && (
-                <section className="border-y border-[#071720]/10 bg-white py-6 md:py-15">
+                <section className="border-y border-[#071720]/10 bg-white py-6 md:py-12">
                     <div className="mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
                         <div className="grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:gap-20">
                             {/* Heading */}
@@ -408,7 +408,7 @@ export default async function ProductPage({ params }) {
             )}
 
             {product.keyFeatures?.length > 0 && (
-                <section className="relative overflow-hidden bg-[#f5f3ee] py-6 md:py-16">
+                <section className="relative overflow-hidden bg-[#f5f3ee] py-6 md:py-12">
                     {/* Background architectural lines */}
                     <div className="pointer-events-none absolute inset-0 opacity-40">
                         <div className="absolute left-[10%] top-0 h-full w-px bg-[#071720]/10" />
@@ -478,7 +478,7 @@ export default async function ProductPage({ params }) {
             )}
 
             {(product.hardwareImg || product.rightImg) && (
-                <section className="bg-[#fff]  py-6 md:py-16">
+                <section className="bg-[#fff]  py-6 md:py-12">
                     <div className="mx-auto max-w-[1500px] px-5 sm:px-8 md:px-12">
                         <div className="mb-6 md:mb-8">
                             <span className="text-[12px] mb-8 md:mb-4 font-bold tracking-[0.35em] text-[#dddf00]">
@@ -555,7 +555,7 @@ export default async function ProductPage({ params }) {
                 </section>
             )}
 
-            <section className="relative overflow-hidden bg-[#f5f3ee] pt-10 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
+            <section className="relative overflow-hidden bg-[#f5f3ee] pt-10 sm:pt-12 pb-30 sm:pb-70">
                 <div className="pointer-events-none absolute inset-0">
 
                     <div className="absolute -right-32 -top-32 h-[450px] w-[450px] rounded-full border border-[#071720]/10" />

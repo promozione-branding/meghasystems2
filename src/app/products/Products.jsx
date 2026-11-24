@@ -154,7 +154,7 @@ export default function Products({ searchQuery = "" }) {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
         {/* Main Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-20 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
+        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16  sm:px-8 sm:pb-20 md:px-12 md:py-12">
           <div className="max-w-7xl flex flex-col items-center">
             {/* Small Heading */}
             <div className="about-hero-item mb-7 flex items-center gap-4">
@@ -301,7 +301,7 @@ function CategorySection({ category, categoryIndex }) {
   return (
     <section
       id={category.slug}
-      className={`product-category relative overflow-hidden py-6 sm:py-12 lg:py-15 ${isLight ? "bg-[#f5f3ed]" : "bg-[#fff]"
+      className={`product-category relative overflow-hidden py-6 sm:py-12 md:py-12 ${isLight ? "bg-[#f5f3ed]" : "bg-[#fff]"
         }`}
     >
       <div className="pointer-events-none absolute inset-0">
