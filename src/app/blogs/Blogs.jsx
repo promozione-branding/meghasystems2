@@ -86,7 +86,7 @@ export default function Blogs() {
     return (
         <main className="min-h-screen bg-[#FAFAF8] text-[#121212]">
             {/* HERO */}
-            <section className="relative overflow-hidden bg-[#121212] px-5 pb-10 pt-30 text-white sm:px-8 lg:pb-15 lg:pt-35">
+            <section className="relative overflow-hidden bg-[#121212] px-5 pb-10 pt-30 text-white sm:px-8 md:pb-12 md:pt-35">
                 <div
                     className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full opacity-20 blur-[110px]"
                     style={{ background: BLOG_GRADIENT }}
@@ -163,7 +163,7 @@ export default function Blogs() {
                             </p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 gap-x-7 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-x-7 gap-y-12 md:grid-cols-3 ">
                             {blogs.map((blog, index) => (
                                 <Link
                                     key={blog._id}
