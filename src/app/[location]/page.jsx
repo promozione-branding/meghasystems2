@@ -1,9 +1,10 @@
 
 import React from "react";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import ToiletPartitionsLocation from "@/components/Location/ToiletPartitionsLocation";
 import ToiletCubiclesLocation from "@/components/Location/ToiletCubiclesLocation";
+import partitionCities, { cubicleCities } from "@/components/Location/city";
 
 export default async function LocationPage({ params }) {
   const { location } = await params;
@@ -14,7 +15,12 @@ export default async function LocationPage({ params }) {
   if (location.startsWith(partitionPrefix)) {
     const city = location.replace(partitionPrefix, "");
 
-    if (!city) notFound();
+    const cityPath = `/${location}/`;
+    const isListedCity = partitionCities.some(
+      (partitionCity) => partitionCity.href === cityPath
+    );
+
+    if (!isListedCity) redirect("/");
 
     return <ToiletPartitionsLocation city={city} />;
   }
@@ -22,7 +28,12 @@ export default async function LocationPage({ params }) {
   if (location.startsWith(cubiclePrefix)) {
     const city = location.replace(cubiclePrefix, "");
 
-    if (!city) notFound();
+    const cityPath = `/${location}/`;
+    const isListedCity = cubicleCities.some(
+      (cubicleCity) => cubicleCity.href === cityPath
+    );
+
+    if (!isListedCity) redirect("/");
 
     return <ToiletCubiclesLocation city={city} />;
   }
