@@ -299,7 +299,7 @@ export default function WhyChooseUs({ city }) {
             As a trusted name among{" "}
 
             <a
-              href="/"
+             
               className="font-semibold text-[#071720] underline underline-offset-4 transition-colors hover:text-[#a9c000]"
             >
               Toilet Cubicle

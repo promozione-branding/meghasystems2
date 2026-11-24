@@ -150,7 +150,7 @@ export default function ToiletCubicleAbout({ city  }) {
                   leading-[1.9]">
                   At Cubiloo, our expertise in manufacturing{" "}
                   <a
-                    href="/"
+                    href="/products"
                     className="text-white font-semibold hover:text-[#E8F000]
                       transition-colors underline underline-offset-4"
                   >

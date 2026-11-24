@@ -294,7 +294,7 @@ export default function WhyChooseUs({ city = "Mumbai" }) {
               team of experts is ready to collaborate with you to create
               tailored{" "}
               <a
-                href="/"
+                
                 className="font-semibold text-[#071720] underline underline-offset-4 transition-colors hover:text-[#a9c000]"
               >
                 toilet partitions

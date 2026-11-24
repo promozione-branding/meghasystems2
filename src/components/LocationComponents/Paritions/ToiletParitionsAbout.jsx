@@ -214,11 +214,15 @@ export default function ToiletParitionsAbout({ city = "Mumbai" }) {
 
                 <p className="text-white/70 text-sm sm:text-base leading-[1.9]">
                   Elevate the visual appeal of your restroom spaces with our
-                  diverse range of design options. Whether you’re aiming for
+                  diverse range of<a
+                   href="/products"
+                    className="text-white font-semibold hover:text-[#E8F000]
+                    transition-colors underline underline-offset-4"
+                  > design options</a>. Whether you’re aiming for
                   a sleek, modern look or a classic and timeless aesthetic,
                   our{" "}
                   <a
-                    href="/"
+                   
                     className="text-white font-semibold hover:text-[#E8F000]
                     transition-colors underline underline-offset-4"
                   >
