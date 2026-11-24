@@ -426,7 +426,7 @@ export default function AboutPage() {
 
       <ProductShowcase />
 
-      <section className="py-6 lg:py-15 bg-white">
+      <section className="py-6 md:py-12 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="about-reveal flex flex-col lg:flex-row lg:items-end justify-between gap-4 md:gap-8 mb-6 md:mb-8">
             <div>
@@ -489,7 +489,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-6 lg:py-15 bg-white">
+      <section className="py-6 md:py-12 bg-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="about-reveal text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-4 mb-2">
