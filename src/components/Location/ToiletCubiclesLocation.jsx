@@ -8,6 +8,7 @@ import WhyChooseUs from '../LocationComponents/Cubicles/WhyChooseUs'
 import FormSection from '../LocationComponents/Cubicles/FormSection'
 import FAQSection from '../LocationComponents/Cubicles/FAQSection'
 import ProductShowcase from '../home/ProductShowcase'
+import ToiletCubicleSupplyNetwork from '../LocationComponents/Cubicles/ToiletCubicleSupplyNetwork'
 
 export default function ToiletCubiclesLocation({city}) {
   return (
@@ -20,6 +21,7 @@ export default function ToiletCubiclesLocation({city}) {
        <WhyChooseUs city={city}/>
        <ProductShowcase />
        <FormSection city={city}/>
+       <ToiletCubicleSupplyNetwork/>
        <FAQSection city={city}/>
 
     </>

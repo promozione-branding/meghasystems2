@@ -8,6 +8,7 @@ import WhyChooseUs from '../LocationComponents/Paritions/WhyChooseUs'
 import ProductShowcase from '../home/ProductShowcase'
 import FormSection from '../LocationComponents/Paritions/FormSection'
 import FAQSection from '../LocationComponents/Paritions/FAQSection'
+import ToiletPartitionSupplyNetwork from '../LocationComponents/Paritions/ToiletPartitionSupplyNetwork'
 
 export default function ToiletPartitionsLocation({city}) {
   return (
@@ -20,6 +21,7 @@ export default function ToiletPartitionsLocation({city}) {
     <WhyChooseUs city={city}/>
      <ProductShowcase />
      <FormSection city={city} />
+     <ToiletPartitionSupplyNetwork/>
      <FAQSection city={city} />
     </>
   )

@@ -16,6 +16,7 @@ import Partners from "@/components/home/Partners";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductsSection from "@/components/home/ProductsSection";
 import Projects from "@/components/home/Projects";
+import SupplyNetwork from "@/components/home/SupplyNetwork";
 import Testimonials from "@/components/home/Testimonials";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 
@@ -49,6 +50,7 @@ export default function Home() {
       <WhyChooseUs />
       <Projects />
       <CTASection />
+      <SupplyNetwork />
       <Testimonials />
       <FAQSection />
     </div>
