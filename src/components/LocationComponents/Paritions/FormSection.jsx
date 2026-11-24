@@ -290,7 +290,7 @@ export default function FormSection({ city  }) {
       id="contact"
       className="relative isolate overflow-hidden bg-[#f5f3ed] text-[#252329]"
     >
-      <div className="relative py-8 lg:py-12">
+      <div className="relative py-6 md:py-12">
         {/* DESKTOP BACKGROUND */}
         <div
           ref={bgRef}

@@ -225,7 +225,7 @@ export default function ToiletParitionIntro({ city }) {
                 className="absolute inset-0"
               >
                 <Image
-                  src="/Cubi Doorz.webp"
+                  src="/Luron (1).webp"
                   alt={`Toilet partitions manufacturer in ${cityName} - Cubiloo Cubicles`}
                   fill
                   priority
