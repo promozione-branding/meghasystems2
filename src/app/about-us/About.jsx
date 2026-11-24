@@ -235,7 +235,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-6 lg:py-24">
+      <section className="relative overflow-hidden bg-white py-6 md:py-12">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
           <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-20">
             {/* Left - Video */}
