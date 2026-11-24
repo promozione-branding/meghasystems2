@@ -299,7 +299,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="contact-form-section relative bg-[#f5f3ed] py-6 sm:py-20 lg:py-24">
+            <section className="contact-form-section relative bg-[#f5f3ed] py-6 sm:py-20 md:py-12">
                 <div className="mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="grid gap-7 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[420px_minmax(0,1fr)] xl:gap-20">
                         {/* Intro */}
@@ -724,7 +724,7 @@ export default function ContactPage() {
 
 
 
-            <section className="map-section bg-[#f5f3ed] pt-6 sm:pt-12 lg:pt-14 pb-30 sm:pb-70">
+            <section className="map-section bg-[#f5f3ed] pt-6 sm:pt-12 lg:pt-5 pb-30 sm:pb-70">
                 <div className="mx-auto max-w-[1450px] rounded-2xl px-5 sm:px-8 lg:px-12 xl:px-16">
                     <div className="map-reveal rounded-2xl overflow-hidden border border-[#071720]/10 bg-white">
                         {/* Map header */}
