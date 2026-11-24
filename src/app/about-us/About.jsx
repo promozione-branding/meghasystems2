@@ -541,7 +541,7 @@ export default function AboutPage() {
 
       <ParallaxCTA />
 
-      <section className="py-8 lg:py-15 bg-[#f7f6f2]">
+      <section className="py-8 md:py-12 bg-[#f7f6f2]">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 md:gap-24">
             <div className="about-reveal">
@@ -598,7 +598,7 @@ export default function AboutPage() {
 
       {/* <Hardware /> */}
 
-      <section className="py-6 lg:py-15 bg-[#f5f3ed] text-white">
+      <section className="py-6 md:py-12 bg-[#f5f3ed] text-white">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="about-reveal grid lg:grid-cols-[0.7fr_1.3fr] gap-10 lg:gap-24">
             <div>
