@@ -6,7 +6,7 @@ import { allProducts } from "@/data";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-const BASE_URL = "https://demo.com";
+const BASE_URL = "https://cubiloocubicles.com";
 
 const STATIC_PATHS = [
   "/",
