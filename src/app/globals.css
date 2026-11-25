@@ -139,8 +139,12 @@ h6 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
- 
+  background: radial-gradient(
+    ellipse at center,
+    rgba(247, 245, 239, 0.72) 0%,
+    rgba(247, 245, 239, 0.42) 60%,
+    transparent 100%
+  );
 }
 
 /* Eyebrow */
@@ -164,7 +168,7 @@ h6 {
 /* Main heading */
 .toilet-hero-content h1 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(75px, 8.5vw, 145px);
+  font-size: clamp(65px, 2.5vw, 145px);
   font-weight: 700;
   line-height: 0.95;
   letter-spacing: -5px;

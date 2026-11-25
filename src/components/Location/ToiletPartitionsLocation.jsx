@@ -10,11 +10,14 @@ import FormSection from '../LocationComponents/Paritions/FormSection'
 import FAQSection from '../LocationComponents/Paritions/FAQSection'
 import ToiletPartitionSupplyNetwork from '../LocationComponents/Paritions/ToiletPartitionSupplyNetwork'
 import Products from '../LocationComponents/Cubicles/Products'
+import ToiletCubicleHero from '../LocationComponents/Cubicles/ToiletCubicleHero'
+import ToiletParitionHero from '../LocationComponents/Paritions/ToiletParitionHero'
 
 export default function ToiletPartitionsLocation({city}) {
   return (
     <>
-    <Hero city={city}/>
+
+    <ToiletParitionHero/>
     <ToiletParitionIntro city={city}/>
     <Products />
      <Partners />

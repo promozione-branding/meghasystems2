@@ -16,7 +16,6 @@ export default function ToiletCubiclesLocation({city}) {
   return (
     <>
     <ToiletCubicleHero/>
-    <Hero city={city} />
     <ToiletCubicleIntro city={city} />
       <Products />
        <Partners />

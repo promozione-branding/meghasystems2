@@ -13,20 +13,36 @@ const cubicleImages = [
   { image: "/industry/hotel.webp", title: "Hotel Toilet Cubicles" },
   { image: "/industry/public.webp", title: "Public Toilet Cubicles" },
 
+
 ];
 
-export default function ToiletCubicleHero() {
+export default function ToiletParitionHero() {
   const [isMobile, setIsMobile] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 767px)");
 
-    const update = () => setIsMobile(media.matches);
+    const update = () => {
+      setIsMobile(media.matches);
+      setViewportWidth(window.innerWidth);
+    };
     update();
 
     media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
+    window.addEventListener("resize", update);
+
+    return () => {
+      media.removeEventListener("change", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
+
+  const tileWidth = isMobile ? 125 : 205;
+  const gap = isMobile ? 12 : 20;
+  const columns = isMobile
+    ? 3
+    : Math.max(10, Math.ceil(viewportWidth / ((tileWidth + gap) * 1.18)) + 2);
 
   return (
     <section className="toilet-hero">
@@ -35,10 +51,10 @@ export default function ToiletCubicleHero() {
       <div className="toilet-hero-wall">
         <DriftWall
           items={cubicleImages}
-          columns={isMobile ? 3 : 6}
-          tileWidth={isMobile ? 125 : 205}
+          columns={columns}
+          tileWidth={tileWidth}
           tileHeight={isMobile ? 100 : 145}
-          gap={isMobile ? 12 : 20}
+          gap={gap}
           tilt={isMobile ? 9 : 16}
           turn={isMobile ? -5 : -12}
           perspective={1200}
@@ -49,8 +65,8 @@ export default function ToiletCubicleHero() {
           parallax={isMobile ? 0 : 0.45}
           className="toilet-hero-drift-wall"
           lift={45}
-          fade={0.7}
-          dim={1}
+          fade={0.3}
+          dim={0.2}
           overlayColor="transparent"
           radius={16}
           roll={0}
@@ -70,7 +86,7 @@ export default function ToiletCubicleHero() {
 
         <h1>
           Toilet <br className="mobile-break" />
-          <span>Cubicle</span>
+          <span>Cubicles Manufacturers</span>
         </h1>
 
         <p className="toilet-hero-description">

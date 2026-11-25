@@ -1,7 +1,7 @@
 
 "use client";
 
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
@@ -59,7 +59,21 @@ const fadeUp = {
   },
 };
 
-export default function ToiletParitionIntro({ city }) {
+export default function  ToiletParitionIntro({ city }) {
+  useLayoutEffect(() => {
+    const [navigationEntry] = window.performance.getEntriesByType("navigation");
+
+    if (navigationEntry?.type !== "reload") return;
+
+    const previousScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+
+    return () => {
+      window.history.scrollRestoration = previousScrollRestoration;
+    };
+  }, []);
+
   const cityName = city
     .split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
