@@ -9,13 +9,14 @@ import ProductShowcase from '../home/ProductShowcase'
 import FormSection from '../LocationComponents/Paritions/FormSection'
 import FAQSection from '../LocationComponents/Paritions/FAQSection'
 import ToiletPartitionSupplyNetwork from '../LocationComponents/Paritions/ToiletPartitionSupplyNetwork'
+import Products from '../LocationComponents/Cubicles/Products'
 
 export default function ToiletPartitionsLocation({city}) {
   return (
     <>
     <Hero city={city}/>
     <ToiletParitionIntro city={city}/>
-    <Categories />
+    <Products />
      <Partners />
     <ToiletParitionsAbout city={city}/>
     <WhyChooseUs city={city}/>

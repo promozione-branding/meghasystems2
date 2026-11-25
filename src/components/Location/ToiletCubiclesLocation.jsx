@@ -9,13 +9,16 @@ import FormSection from '../LocationComponents/Cubicles/FormSection'
 import FAQSection from '../LocationComponents/Cubicles/FAQSection'
 import ProductShowcase from '../home/ProductShowcase'
 import ToiletCubicleSupplyNetwork from '../LocationComponents/Cubicles/ToiletCubicleSupplyNetwork'
+import Products from '../LocationComponents/Cubicles/Products'
+import ToiletCubicleHero from '../LocationComponents/Cubicles/ToiletCubicleHero'
 
 export default function ToiletCubiclesLocation({city}) {
   return (
     <>
+    <ToiletCubicleHero/>
     <Hero city={city} />
     <ToiletCubicleIntro city={city} />
-      <Categories />
+      <Products />
        <Partners />
        <ToiletCubicleAbout city={city}/>
        <WhyChooseUs city={city}/>

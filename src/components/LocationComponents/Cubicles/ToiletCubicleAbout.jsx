@@ -62,7 +62,7 @@ export default function ToiletCubicleAbout({ city  }) {
                 className="absolute inset-0"
               >
                 <Image
-                  src="/products/luron.webp"
+                  src="/Duro-Toilet-Cubicles.webp"
                   alt={`Toilet cubicle installation in ${cityName}`}
                   fill
                   priority={false}
