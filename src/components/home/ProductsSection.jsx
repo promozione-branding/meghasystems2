@@ -196,7 +196,7 @@ export default function ProductSection() {
 
                                         <img
                                             src={product.image}
-                                            alt={product.name}
+                                            alt={`${product.name} Toilet Cubicle`}
                                             fill
                                             priority
                                             className="object-cover transition-transform duration-700"

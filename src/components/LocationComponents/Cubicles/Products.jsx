@@ -120,7 +120,7 @@ export default function Products() {
                         <Image
                           unoptimized
                           src={product.image}
-                          alt={product.label}
+                          alt={`${product.label} Toilet Cubicle`}
                           fill
                           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                           className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"

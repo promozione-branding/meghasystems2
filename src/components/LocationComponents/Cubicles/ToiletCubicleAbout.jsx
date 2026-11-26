@@ -63,7 +63,7 @@ export default function ToiletCubicleAbout({ city  }) {
               >
                 <Image
                   src="/Duro-Toilet-Cubicles.webp"
-                  alt={`Toilet cubicle installation in ${cityName}`}
+                  alt={`Toilet cubicle  in ${cityName}`}
                   fill
                   priority={false}
                   sizes="(max-width: 1024px) 100vw, 45vw"

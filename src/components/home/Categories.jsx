@@ -163,7 +163,7 @@ export default function Categories() {
                       <Image
                       unoptimized
                         src={product.image}
-                        alt={`${product.name} Toilet Cubicle`}
+                        alt={`${product.label} Toilet Cubicle`}
                         fill
                         sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 25vw"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"

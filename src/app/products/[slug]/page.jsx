@@ -506,7 +506,7 @@ export default async function ProductPage({ params }) {
                                         <Image
                                         unoptimized
                                             src={product.hardwareImg}
-                                            alt={`${product.name} hardware`}
+                                            alt={`${product.name} Hardware`}
                                        width={100}
                                             height={100}
                                             
@@ -530,7 +530,7 @@ export default async function ProductPage({ params }) {
                                         <Image
                                         unoptimized
                                             src={product.rightImg}
-                                            alt={`${product.name} product detail`}
+                                            alt={`${product.name} Hardware detail`}
                                             width={100}
                                             height={100}
                                             

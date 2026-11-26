@@ -68,7 +68,7 @@ export default function ToiletParitionsAbout({ city = "Mumbai" }) {
               >
                 <Image
                   src="/new8.webp"
-                  alt={`Toilet partition installation in ${cityName}`}
+                  alt={`Toilet partition in ${cityName}`}
                   fill
                   priority={false}
                   sizes="(max-width: 1024px) 100vw, 45vw"

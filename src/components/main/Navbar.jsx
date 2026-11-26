@@ -248,7 +248,8 @@ export default function Navbar() {
                 onMouseEnter={() => setProductsOpen(true)}
                 onMouseLeave={() => setProductsOpen(false)}
               >
-                <button
+                <Link
+                href="/products"
                   type="button"
                   aria-expanded={productsOpen}
                   aria-haspopup="true"
@@ -275,7 +276,7 @@ export default function Navbar() {
                       }`}
                     style={{ background: GRADIENT }}
                   />
-                </button>
+                </Link>
 
                 <AnimatePresence>
                   {productsOpen && (
@@ -657,7 +658,7 @@ export default function Navbar() {
                                 onClick={closeMobile}
                                 className="flex items-center justify-between gap-3 rounded-lg px-3 py-3 text-sm text-white/65 transition-colors hover:bg-white/5 hover:text-[#dddf00]"
                               >
-                                {product.categoryName ||
+                                {
                                   product.label}
                                 <ArrowUpRight size={15} />
                               </Link>
