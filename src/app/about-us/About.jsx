@@ -195,7 +195,7 @@ export default function AboutPage() {
 
         {/* Main Content */}
         <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16 pt-16 sm:px-8 sm:pb-20 lg:px-12 lg:py-20">
-          <div className="max-w-7xl mt-3 md:mt-0 flex flex-col items-center">
+          <div className="max-w-7xl mt-10 md:mt-0 flex flex-col items-center">
             {/* Small Heading */}
             <div className="about-hero-item mb-7 flex items-center gap-4">
               <span className="h-px w-12 bg-[#071720]" />

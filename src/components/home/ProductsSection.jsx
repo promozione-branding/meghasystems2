@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -26,8 +27,6 @@ const PRODUCTS = [
         description:
             "Strong, durable and engineered for demanding commercial washrooms with Grade 316 stainless steel supports.",
     },
-
-    
     {
         name: "Kiddiez Pro",
         slug: "kiddiez-pro",
@@ -52,60 +51,74 @@ export default function ProductSection() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
+    // DESKTOP SCROLL ANIMATION ONLY
     useEffect(() => {
         const section = sectionRef.current;
         const progress = progressRef.current;
 
         if (!section || !progress) return;
 
-        const ctx = gsap.context(() => {
-            /*
-             * IMPORTANT:
-             *
-             * The product viewport itself stays centered.
-             * Only the product content changes.
-             *
-             * This prevents the cards from moving toward
-             * the top when the user scrolls.
-             */
+        const mm = gsap.matchMedia();
 
-            ScrollTrigger.create({
-                trigger: section,
-                start: "top top",
-                end: "bottom bottom",
-                scrub: true,
+        mm.add("(min-width: 1024px)", () => {
+            const ctx = gsap.context(() => {
+                ScrollTrigger.create({
+                    trigger: section,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: true,
 
-                onUpdate: (self) => {
-                    const index = Math.min(
-                        PRODUCTS.length - 1,
-                        Math.floor(
-                            self.progress * PRODUCTS.length
-                        )
-                    );
+                    onUpdate: (self) => {
+                        const index = Math.min(
+                            PRODUCTS.length - 1,
+                            Math.floor(
+                                self.progress * PRODUCTS.length
+                            )
+                        );
 
-                    setActiveIndex(index);
+                        setActiveIndex(index);
 
-                    gsap.set(progress, {
-                        width: `${self.progress * 100}%`,
-                    });
-                },
-            });
-        }, section);
+                        gsap.set(progress, {
+                            width: `${self.progress * 100}%`,
+                        });
+                    },
+                });
+            }, section);
 
-        return () => ctx.revert();
+            return () => ctx.revert();
+        });
+
+        return () => mm.revert();
     }, []);
 
     const product = PRODUCTS[activeIndex];
 
+    const previousProduct = () => {
+        setActiveIndex((prev) => Math.max(0, prev - 1));
+    };
+
+    const nextProduct = () => {
+        setActiveIndex((prev) =>
+            Math.min(PRODUCTS.length - 1, prev + 1)
+        );
+    };
+
     return (
         <section
             ref={sectionRef}
-            className="relative bg-[#f5f3ed] py-6 md:py-10"
-            style={{
-                height: `${PRODUCTS.length * 100}vh`,
-            }}
+            className="
+                relative
+                min-h-screen
+                h-auto
+                bg-[#f5f3ed]
+                py-0
+                md:py-10
+                lg:h-[400vh]
+                lg:py-10
+            "
         >
-            {/* Background architectural details */}
+            {/* BACKGROUND DETAILS */}
+
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div className="absolute -right-40 top-20 h-[500px] w-[500px] rotate-45 border border-white/[0.04]" />
 
@@ -114,61 +127,109 @@ export default function ProductSection() {
                 <div className="absolute left-1/2 top-0 h-full w-px bg-white/[0.025]" />
             </div>
 
-            {/* ================================================= */}
-            {/* STICKY VIEWPORT                                  */}
-            {/* ================================================= */}
+            {/* MAIN VIEWPORT */}
 
-            <div className="sticky top-0 flex h-screen w-full items-center overflow-hidden">
+            <div
+                className="
+                    relative
+                    flex
+                    min-h-screen
+                    h-auto
+                    w-full
+                    items-start
+                    overflow-visible
+                    py-6
+                    lg:sticky
+                    lg:top-0
+                    lg:h-screen
+                    lg:min-h-0
+                    lg:items-center
+                    lg:overflow-hidden
+                    lg:py-0
+                "
+            >
                 <div className="mx-auto w-full max-w-[1500px] px-5 sm:px-8 lg:px-12">
 
-                    {/* Header */}
-                    <div className="mb-5 lg:mb-8">
-                        <div className="flex items-center gap-3 mb-2">
-                            <span className="h-px w-10 bg-[#dddf00]" />
+                    {/* HEADER */}
 
+                    <div className="mb-8 lg:mb-8">
+
+                        <div className="mb-3 flex items-center gap-3">
+                            <span className="h-px w-10 bg-[#dddf00]" />
                         </div>
 
                         <div className="flex items-end justify-between gap-6">
-                            <div>
-                                <h2 className="max-w-[800px] mt-15 text-[28px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
-                                    Engineered for {" "}
+
+                            <div className="w-full">
+
+                                <h2
+                                    className="
+                                        mt-0
+                                        max-w-[800px]
+                                        text-[30px]
+                                        font-medium
+                                        leading-[1.05]
+                                        tracking-[-0.04em]
+                                        text-[#071720]
+                                        sm:text-[48px]
+                                        lg:text-[62px]
+                                    "
+                                >
+                                    Engineered for{" "}
 
                                     <span className="bg-[linear-gradient(90deg,#b8c900_0%,#a9c000_100%)] md:bg-[linear-gradient(90deg,#b8c900_0%,#dddf00_35%,#f0f542_65%,#a9c000_100%)] bg-clip-text text-transparent">
                                         every space.
                                     </span>
                                 </h2>
+
                                 <p className="mt-4 max-w-xl text-sm leading-6 text-[#071720]/90 sm:text-base">
                                     Explore our range of premium toilet
                                     cubicle and restroom partition systems.
                                 </p>
+
                             </div>
 
-                            {/* Counter */}
+                            {/* COUNTER */}
+
                             <div className="hidden shrink-0 text-right sm:block">
                                 <div className="text-4xl font-light text-[#071720]/90">
                                     {String(activeIndex + 1).padStart(2, "0")}
-                                    <span className="text-white/20">
+
+                                    <span className="text-black/20">
                                         {" "}
                                         / {String(PRODUCTS.length).padStart(2, "0")}
                                     </span>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
-                    {/* ================================================= */}
-                    {/* PRODUCT AREA                                       */}
-                    {/* ================================================= */}
+                    {/* PRODUCT AREA */}
 
-                    <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+                    <div
+                        className="
+                            grid
+                            grid-cols-1
+                            items-center
+                            gap-8
+                            lg:grid-cols-[0.9fr_1.1fr]
+                            lg:gap-16
+                        "
+                    >
+
+                        {/* PRODUCT IMAGE */}
+
                         <div className="relative mx-auto w-full max-w-[620px]">
 
-                            {/* Gold frame */}
+                            {/* GOLD FRAME */}
+
                             <div className="absolute -bottom-3 -left-3 h-[85%] w-[70%] border-b border-l border-[#dddf00]/70" />
 
                             <div className="absolute -right-3 -top-3 h-16 w-16 border-r border-t border-[#dddf00]/50" />
 
                             <AnimatePresence mode="wait">
+
                                 <motion.div
                                     key={product.slug}
                                     initial={{
@@ -192,39 +253,64 @@ export default function ProductSection() {
                                     }}
                                     className="relative"
                                 >
-                                    <div className="relative  overflow-hidden bg-[#06152f]">
+
+                                    <div
+                                        className="
+                                            relative
+                                            aspect-[4/3]
+                                            w-full
+                                            overflow-hidden
+                                            bg-[#06152f]
+                                            lg:aspect-[5/4]
+                                        "
+                                    >
 
                                         <img
                                             src={product.image}
                                             alt={`${product.name} Toilet Cubicle`}
-                                            fill
-                                            priority
-                                            className="object-cover transition-transform duration-700"
-                                            
+                                            className="
+                                                absolute
+                                                inset-0
+                                                h-full
+                                                w-full
+                                                object-cover
+                                                transition-transform
+                                                duration-700
+                                            "
                                         />
 
-                                        {/* Overlay */}
+                                        {/* OVERLAY */}
+
                                         <div className="absolute inset-0 bg-gradient-to-t from-[#071720]/70 via-transparent to-transparent" />
 
-                                        {/* Category */}
+                                        {/* CATEGORY */}
+
                                         <div className="absolute left-5 top-5 sm:left-7 sm:top-7">
                                             <span className="border border-white/20 bg-[#071720]/80 px-3 py-2 text-[9px] font-semibold tracking-[0.25em] text-white backdrop-blur-sm">
                                                 {product.category}
                                             </span>
                                         </div>
 
-                                        {/* Product number */}
+                                        {/* PRODUCT NUMBER */}
+
                                         <div className="absolute bottom-5 right-5 text-5xl font-light text-white/60 sm:bottom-7 sm:right-7 sm:text-7xl">
                                             {String(activeIndex + 1).padStart(2, "0")}
                                         </div>
+
                                     </div>
+
                                 </motion.div>
+
                             </AnimatePresence>
+
                         </div>
 
-                        <div className="relative">
+                        {/* PRODUCT DETAILS */}
+
+                        <div className="relative mt-2 lg:mt-0">
 
                             <AnimatePresence mode="wait">
+
                                 <motion.div
                                     key={product.slug}
                                     initial={{
@@ -244,48 +330,78 @@ export default function ProductSection() {
                                         ease: "easeOut",
                                     }}
                                 >
+
+                                    {/* CATEGORY */}
+
                                     <div className="mb-4 flex items-center gap-3">
                                         <span className="h-px w-8 bg-[#dddf00]" />
 
-                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#dddf00]">
+                                        <span className="text-[10px] font-semibold tracking-[0.3em] text-[#8b9200]">
                                             {product.category}
                                         </span>
                                     </div>
+
+                                    {/* PRODUCT NAME */}
 
                                     <h3 className="text-3xl font-semibold tracking-tight text-[#071720]/90 sm:text-4xl lg:text-5xl">
                                         {product.name}
                                     </h3>
 
+                                    {/* DESCRIPTION */}
+
                                     <p className="mt-5 max-w-xl text-sm leading-7 text-[#071720]/60 sm:text-base">
                                         {product.description}
                                     </p>
 
-                                    {/* Features */}
+                                    {/* FEATURES */}
+
                                     <div className="mt-7 grid max-w-xl grid-cols-2 gap-x-8 gap-y-4">
+
                                         {[
                                             "Premium Materials",
                                             "Modern Design",
                                             "Easy Maintenance",
                                             "Long-Term Performance",
                                         ].map((feature) => (
+
                                             <div
                                                 key={feature}
                                                 className="flex items-center gap-2"
                                             >
-                                                <span className="h-1.5 w-1.5 bg-[#dddf00]" />
+                                                <span className="h-1.5 w-1.5 shrink-0 bg-[#dddf00]" />
 
                                                 <span className="text-xs text-[#071720]/60">
                                                     {feature}
                                                 </span>
                                             </div>
+
                                         ))}
+
                                     </div>
 
                                     {/* CTA */}
+
                                     <div className="mt-8">
+
                                         <Link
                                             href={`/products/${product.slug}`}
-                                            className="group inline-flex items-center gap-4 bg-[#dddf00] px-6 py-3.5 text-xs font-bold tracking-[0.15em] text-[#071720] transition-all duration-300 hover:text-white hover:bg-[#071720]"
+                                            className="
+                                                group
+                                                inline-flex
+                                                items-center
+                                                gap-4
+                                                bg-[#dddf00]
+                                                px-6
+                                                py-3.5
+                                                text-xs
+                                                font-bold
+                                                tracking-[0.15em]
+                                                text-[#071720]
+                                                transition-all
+                                                duration-300
+                                                hover:bg-[#071720]
+                                                hover:text-white
+                                            "
                                         >
                                             EXPLORE PRODUCT
 
@@ -293,82 +409,132 @@ export default function ProductSection() {
                                                 size={16}
                                                 className="transition-transform duration-300 group-hover:translate-x-1"
                                             />
+
                                         </Link>
+
                                     </div>
+
                                 </motion.div>
+
                             </AnimatePresence>
 
-                            {/* Navigation */}
+                            {/* NAVIGATION */}
+
                             <div className="mt-8 flex items-center gap-3">
+
+                                {/* PREVIOUS */}
+
                                 <button
                                     type="button"
-                                    onClick={() =>
-                                        setActiveIndex(
-                                            Math.max(0, activeIndex - 1)
-                                        )
-                                    }
+                                    onClick={previousProduct}
                                     disabled={activeIndex === 0}
-                                    className="flex h-10 w-10 items-center justify-center transition-all border border-[#dddf00] text-[#dddf00] hover:text-white hover:bg-[#dddf00] disabled:cursor-not-allowed disabled:opacity-30"
+                                    className="
+                                        flex
+                                        h-10
+                                        w-10
+                                        items-center
+                                        justify-center
+                                        border
+                                        border-[#dddf00]
+                                        text-[#071720]
+                                        transition-all
+                                        hover:bg-[#dddf00]
+                                        disabled:cursor-not-allowed
+                                        disabled:opacity-30
+                                    "
                                     aria-label="Previous product"
                                 >
                                     <ChevronLeft size={18} />
                                 </button>
 
+                                {/* NEXT */}
+
                                 <button
                                     type="button"
-                                    onClick={() =>
-                                        setActiveIndex(
-                                            Math.min(
-                                                PRODUCTS.length - 1,
-                                                activeIndex + 1
-                                            )
-                                        )
-                                    }
-                                    disabled={
-                                        activeIndex === PRODUCTS.length - 1
-                                    }
-                                    className="flex h-10 w-10 items-center justify-center border border-[#dddf00] text-[#dddf00] transition-all hover:text-white hover:bg-[#dddf00] disabled:cursor-not-allowed disabled:opacity-30"
+                                    onClick={nextProduct}
+                                    disabled={activeIndex === PRODUCTS.length - 1}
+                                    className="
+                                        flex
+                                        h-10
+                                        w-10
+                                        items-center
+                                        justify-center
+                                        border
+                                        border-[#dddf00]
+                                        text-[#071720]
+                                        transition-all
+                                        hover:bg-[#dddf00]
+                                        disabled:cursor-not-allowed
+                                        disabled:opacity-30
+                                    "
                                     aria-label="Next product"
                                 >
                                     <ChevronRight size={18} />
                                 </button>
 
-                                {/* Dots */}
+                                {/* DOTS */}
+
                                 <div className="ml-3 flex items-center gap-2">
+
                                     {PRODUCTS.map((item, index) => (
+
                                         <button
                                             key={item.slug}
                                             type="button"
-                                            onClick={() =>
-                                                setActiveIndex(index)
-                                            }
-                                            className={`h-1 transition-all duration-300 ${index === activeIndex
-                                                ? "w-8 bg-[#dddf00]"
-                                                : "w-3 bg-black/20"
-                                                }`}
+                                            onClick={() => setActiveIndex(index)}
+                                            className={`
+                                                h-1
+                                                transition-all
+                                                duration-300
+                                                ${index === activeIndex
+                                                    ? "w-8 bg-[#dddf00]"
+                                                    : "w-3 bg-black/20"
+                                                }
+                                            `}
                                             aria-label={`Show ${item.name}`}
+                                            aria-current={index === activeIndex ? "true" : undefined}
                                         />
+
                                     ))}
+
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
 
-                    <div className="mt-10">
-                        <div className="h-px w-full bg-white/10">
+                    {/* BOTTOM PROGRESS */}
+
+                    <div className="mt-10 lg:mt-10">
+
+                        <div className="h-px w-full bg-black/10">
+
                             <div
                                 ref={progressRef}
                                 className="h-px w-0 bg-[#dddf00]"
                             />
+
                         </div>
 
-                        <div className="mt-3 flex justify-between text-[9px] font-semibold tracking-[0.2em] text-black/95">
-                            <span className="uppercase">Cubiloo Cubicles</span>
-                            <span>TOILET CUBICLE COLLECTION</span>
+                        <div className="mt-3 flex justify-between gap-3 text-[9px] font-semibold tracking-[0.2em] text-black/95">
+
+                            <span className="uppercase">
+                                Cubiloo Cubicles
+                            </span>
+
+                            <span>
+                                TOILET CUBICLE COLLECTION
+                            </span>
+
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
         </section>
     );
 }

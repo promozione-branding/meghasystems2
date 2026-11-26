@@ -154,7 +154,7 @@ export default function Products({ searchQuery = "" }) {
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png')", }} />
 
         {/* Main Content */}
-        <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-16  sm:px-8 sm:pb-20 md:px-12 md:py-12">
+        <div className="relative z-10 mt-10 md:mt-0 mx-auto w-full max-w-[1500px] px-5 pb-16  sm:px-8 sm:pb-20 md:px-12 md:py-12">
           <div className="max-w-7xl flex flex-col items-center">
             {/* Small Heading */}
             <div className="about-hero-item mb-7 flex items-center gap-4">

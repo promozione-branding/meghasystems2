@@ -50,7 +50,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/duro pro toilet cubicles.webp')", }} />
 
                 {/* Main Content */}
-                <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 pb-6 pt-10 sm:px-8 sm:pb-20 lg:px-12 lg:py-12">
+                <div className="relative mt-10 md:mt-0 z-10 mx-auto w-full max-w-[1500px] px-5 pb-6 pt-10 sm:px-8 sm:pb-20 lg:px-12 lg:py-12">
                     <div className="max-w-7xl flex flex-col items-center">
                         {/* Small Heading */}
                         <div className="about-hero-item mb-7 flex items-center gap-4">
@@ -161,7 +161,7 @@ export default function Projects() {
                         aria-labelledby="project-dialog-title"
                         className="relative z-10 grid w-full max-w-4xl overflow-hidden border border-white/15 bg-[#f5f3ed] shadow-2xl md:grid-cols-2"
                     >
-                        <div className="relative min-h-[440px] bg-[#e9e6df] sm:min-h-[520px]">
+                        <div className="relative min-h-[350px] bg-[#e9e6df] sm:min-h-[520px]">
                             <Image
                                 src={selectedProject.image}
                                 alt={`Project installation in ${selectedProject.location}`}
@@ -170,7 +170,7 @@ export default function Projects() {
                                 className="object-cover"
                             />
                         </div>
-                        <div className="relative flex flex-col justify-center p-6 sm:p-9 lg:p-12">
+                        <div className="relative flex flex-col justify-center p-3 sm:p-9 ">
                             <button
                                 ref={closeButtonRef}
                                 type="button"
@@ -186,7 +186,7 @@ export default function Projects() {
                             </p>
                             <h2
                                 id="project-dialog-title"
-                                className="pr-8 text-3xl leading-tight tracking-[-0.03em] text-[#252329] sm:text-4xl"
+                                className="pr-8 text-xl leading-tight tracking-[-0.03em] text-[#252329] sm:text-4xl"
                             >
                                 {selectedProject.location}
                             </h2>
