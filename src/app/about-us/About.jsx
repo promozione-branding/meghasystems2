@@ -395,7 +395,7 @@ export default function AboutPage() {
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src="/Maxi Pro.webp"
-                  alt="Cubiloo Cubicles premium toilet cubicle"
+                  alt="Cubiloo Cubicles Premium Toilet Cubicle"
                   fill
                   unoptimized
                   priority
@@ -629,7 +629,7 @@ export default function AboutPage() {
               <div className="mt-8 rounded-2xl">
                 <img
                   src="/Cielo.webp"
-                  alt="image"
+                  alt="Toilet Cubicle Process"
                   className="object-cover rounded-2xl"
                 />
               </div>

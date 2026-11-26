@@ -130,7 +130,7 @@ export default function ParallaxCTA() {
                   <Image
                   unoptimized
                     src={src}
-                    alt=""
+                    alt="Premium Toilet Cubicle"
                     fill
                     sizes="(max-width: 768px) 33vw, 34vw"
                     className="object-cover"

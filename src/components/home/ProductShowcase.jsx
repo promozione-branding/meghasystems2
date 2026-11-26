@@ -221,8 +221,8 @@ function ShowcaseCard({ product }) {
         {product.image ? (
           <Image
           unoptimized
-            src={product.image}
-            alt={product.name || "Cubiloo product"}
+            src={product.image} 
+            alt={product.name || "Premium Toilet Cubicle"}
             fill
             sizes="(max-width: 639px) 250px, (max-width: 1023px) 310px, 355px"
             className="object-cover transition-transform duration-700 group-hover:scale-105"

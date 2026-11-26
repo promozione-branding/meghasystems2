@@ -171,7 +171,7 @@ export default function FooterCTA() {
                                 <Image
                                 unoptimized
                                     src="/duro pro toilet cubicles.webp"
-                                    alt="Cubiloo premium toilet cubicles"
+                                    alt="Cubiloo Premium Toilet Cubicles"
                                     fill
                                     sizes="(max-width: 1024px) 70vw, 420px"
                                     className="object-cover"

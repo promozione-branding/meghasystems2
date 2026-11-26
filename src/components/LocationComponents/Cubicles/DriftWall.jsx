@@ -375,7 +375,7 @@ export default function DriftWall({
       <span className="drift-wall__inner">
         <img
           src={item.image}
-          alt={item.title ?? ""}
+          alt={item.title ?? "Premium Toilet Cubicle"}
           loading="lazy"
           decoding="async"
           draggable={false}

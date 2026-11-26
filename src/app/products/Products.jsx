@@ -512,7 +512,7 @@ function ProductCard({ product, index, categoryIndex }) {
         <Image
         unoptimized
           src={product.image}
-          alt={product.name}
+          alt={`${product.name} Toilet Cubicle`}
           fill
           sizes="
                         (max-width: 640px) 100vw,

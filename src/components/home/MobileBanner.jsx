@@ -12,22 +12,22 @@ const GRADIENT =
 
 const columns = [
     [
-        { image: "/Black Maxi.webp", title: "Black Maxi" },
-        { image: "/Cielo.webp", title: "Cielo Cubicles" },
-        { image: "/duro pro toilet cubicles.webp", title: "Duro Pro" },
-        { image: "/Kiddiez.webp", title: "Kiddiez" },
+        { image: "/Black Maxi.webp", title: "Black Maxi Toilet Cubicle" },
+        { image: "/Cielo.webp", title: "Cielo Cubicles Toilet Cubicle" },
+        { image: "/duro pro toilet cubicles.webp", title: "Duro Pro Toilet Cubicle" },
+        { image: "/Kiddiez.webp", title: "Kiddiez Toilet Cubicle" },
     ],
     [
-        { image: "/Maxi Pro.webp", title: "Maxi Pro" },
-        { image: "/Cubi Doorz.webp", title: "Cubi Doorz" },
-        { image: "/Premia.webp", title: "Premia" },
-        { image: "/Kiddiez Pro.webp", title: "Kiddiez Pro" },
+        { image: "/Maxi Pro.webp", title: "Maxi Pro Toilet Cubicle" },
+        { image: "/Cubi Doorz.webp", title: "Cubi Doorz Toilet Cubicle" },
+        { image: "/Premia.webp", title: "Premia Toilet Cubicle" },
+        { image: "/Kiddiez Pro.webp", title: "Kiddiez Pro Toilet Cubicle" },
     ],
     [
-        { image: "/Duro-Toilet-Cubicles.webp", title: "Duro Cubicles" },
-        { image: "/Luron.webp", title: "Luron" },
-        { image: "/Rove.webp", title: "Rove" },
-        { image: "/Kiddiez.webp", title: "Kiddiez" },
+        { image: "/Duro-Toilet-Cubicles.webp", title: "Duro Cubicles Toilet Cubicle" },
+        { image: "/Luron.webp", title: "Luron Toilet Cubicle" },
+        { image: "/Rove.webp", title: "Rove Toilet Cubicle" },
+        { image: "/Kiddiez.webp", title: "Kiddiez Toilet Cubicle" },
     ],
 ];
 
@@ -52,7 +52,7 @@ function MovingColumn({ images, index }) {
                                 <Image
                                 unoptimized
                                     src={item.image}
-                                    alt={copy === 0 ? item.title : ""}
+                                    alt={item.title}
                                     fill
                                     sizes="40vw"
                                     className="object-cover"

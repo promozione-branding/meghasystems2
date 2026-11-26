@@ -204,7 +204,7 @@ export default function Hardware() {
     <div className="relative w-full aspect-[4/3]">
       <Image
         src={product.image}
-        alt={product.name}
+       alt={`${product.name} Toilet Cubicle`}
         fill
         sizes="(max-width: 640px) 50vw, 25vw"
         className="object-cover  transition-transform duration-500 group-hover:scale-105"

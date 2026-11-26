@@ -48,7 +48,7 @@ const CERTIFICATES = [
         id: 6,
         title: "Quality Assurance",
         image: "/certificates/19.png",
-        alt: "Excellence Award",
+        alt: "Quality Assurance Award",
     },
 ];
 

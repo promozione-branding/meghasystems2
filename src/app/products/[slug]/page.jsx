@@ -280,7 +280,7 @@ export default async function ProductPage({ params }) {
                                 <Image
                                 unoptimized
                                     src={product.image}
-                                    alt={product.name}
+                                    alt={`${product.name} Toilet Cubicle`}
                                     fill
                                     priority
                                     sizes="(max-width: 768px) 100vw, 50vw"
