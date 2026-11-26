@@ -24,7 +24,7 @@ const INDUSTRIES = [
     project: {
       name: "Business Park",
       location: "Gurgaon",
-      image: "/WhatsApp Image 2026-09-14 at 5.10.25 PM.jpeg",
+      image: "/corporate.webp",
     },
   },
   {
@@ -38,7 +38,7 @@ const INDUSTRIES = [
     project: {
       name: "Indira Gandhi Stadium",
       location: "Delhi",
-      image: "/ChatGPT Image Sep 14, 2026, 05_54_13 PM.png",
+      image: "/stadium.webp",
     },
   },
   {
@@ -52,7 +52,7 @@ const INDUSTRIES = [
     project: {
       name: "Hotel NH8",
       location: "Jaipur, India",
-      image: "/ChatGPT Image Sep 14, 2026, 05_21_14 PM.png",
+      image: "/hotel.webp",
     },
   },
   {
@@ -66,7 +66,7 @@ const INDUSTRIES = [
     project: {
       name: "Pacific Mall",
       location: "Jasola, Delhi",
-      image: "/ChatGPT Image Sep 14, 2026, 05_23_25 PM.png",
+      image: "/mall.webp",
     },
   },
   {
@@ -80,7 +80,7 @@ const INDUSTRIES = [
     project: {
       name: "Yamaha Motors",
       location: "Delhi",
-      image: "/ChatGPT Image Sep 14, 2026, 05_29_02 PM.png",
+      image: "/factory.webp",
     },
   },
   {
@@ -94,7 +94,7 @@ const INDUSTRIES = [
     project: {
       name: "St. Xaviers School",
       location: "Noida",
-      image: "/ChatGPT Image Sep 14, 2026, 05_32_01 PM.png",
+      image: "/education2.webp",
     },
   },
   {
@@ -108,7 +108,7 @@ const INDUSTRIES = [
     project: {
       name: "Great Khali Dhaba",
       location: "Haryana",
-      image: "/ChatGPT Image Sep 14, 2026, 05_32_46 PM.png",
+      image: "/rest2.png",
     },
   },
   {
@@ -122,7 +122,7 @@ const INDUSTRIES = [
     project: {
       name: "Rajeev Gandhi Bhawan",
       location: "Delhi Airport",
-      image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
+      image: "/airport.webp",
     },
   },
 ];

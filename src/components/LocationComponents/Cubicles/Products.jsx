@@ -14,7 +14,7 @@ import { navabarProducts } from "@/data";
 gsap.registerPlugin(ScrollTrigger);
 
 // Replace with your actual WhatsApp number
-const WHATSAPP_NUMBER = "919797977832";
+const WHATSAPP_NUMBER = "917837830803";
 
 export default function Products() {
   const sectionRef = useRef(null);
