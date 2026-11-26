@@ -27,7 +27,7 @@ const projects = [
     title: "Modern Office Cubicles with Smart Storage",
     description:
       "Integrated storage and clean workstation designs that keep everyday office essentials organized.",
-    image: "/ChatGPT Image Sep 14, 2026, 05_52_14 PM.png",
+    image: "/corporate2.jpeg",
     href: "/projects",
     layout: "small",
     number: "02",
