@@ -519,31 +519,33 @@ export default function ContactPage() {
                                             PHONE NUMBER *
                                         </label>
 
-                                        <input
-                                            id="phone"
-                                            type="tel"
-                                            value={phone}
-                                            maxLength={10}
-                                            minLength={10}
-                                            onChange={(e) =>
-                                                setPhone(e.target.value)
-                                            }
-                                            placeholder="Enter your phone number"
-                                            className="
-                                                h-12
-                                                w-full
-                                                border
-                                                border-[#071720]/10
-                                                bg-[#f8f9fa]
-                                                px-4
-                                                text-[12px]
-                                                outline-none
-                                                transition-all
-                                                placeholder:text-[#071720]/60
-                                                focus:border-[#dddf00]
-                                                focus:bg-white
-                                            "
-                                        />
+                                      <input
+    id="phone"
+    type="tel"
+    inputMode="numeric"
+    pattern="[0-9]*"
+    value={phone}
+    maxLength={10}
+    minLength={10}
+    onChange={(e) =>
+        setPhone(e.target.value.replace(/\D/g, ""))
+    }
+    placeholder="Enter your phone number"
+    className="
+        h-12
+        w-full
+        border
+        border-[#071720]/10
+        bg-[#f8f9fa]
+        px-4
+        text-[12px]
+        outline-none
+        transition-all
+        placeholder:text-[#071720]/60
+        focus:border-[#dddf00]
+        focus:bg-white
+    "
+/>
                                     </div>
 
                                     {/* Product */}

@@ -179,7 +179,7 @@ export default function Projects() {
               </span>
             </div>
 
-            <h2 className="text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+            <h2 className=" text-[35px] font-medium leading-[1.05] tracking-[-0.07em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Workspaces Designed
               <br />
 

@@ -306,7 +306,7 @@ export default function FormSection() {
               </p>
             </div>
 
-            <h2 className="max-w-[700px] text-nowrap text-[38px] font-medium leading-[1.05] tracking-[-0.04em] text-[#071720] sm:text-[48px] lg:text-[62px]">
+            <h2 className="max-w-[700px]  text-[35px] font-medium leading-[1.05] tracking-[-0.07em] text-[#071720] sm:text-[48px] lg:text-[62px]">
               Premium
               <br />
 
@@ -424,17 +424,24 @@ export default function FormSection() {
                   className="w-full border-0 border-b border-[#DDD5CF] bg-transparent px-0 py-3 text-sm outline-none placeholder:text-[#77716D] focus:border-[#B95D35]"
                 />
 
-                <input
-                  name="phone"
-                  type="tel"
-                  autoComplete="tel"
-                  placeholder="Your Phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  aria-label="Your Phone"
-                  className="w-full border-0 border-b border-[#DDD5CF] bg-transparent px-0 py-3 text-sm outline-none placeholder:text-[#77716D] focus:border-[#B95D35]"
-                />
+               <input
+  name="phone"
+  type="tel"
+  maxLength={10}
+  minLength={10}
+  inputMode="numeric"
+  pattern="[0-9]*"
+  autoComplete="tel"
+  placeholder="Your Phone"
+  value={formData.phone}
+  onChange={(e) => {
+    const value = e.target.value.replace(/\D/g, "");
+    setFormData((prev) => ({ ...prev, phone: value }));
+  }}
+  required
+  aria-label="Your Phone"
+  className="w-full border-0 border-b border-[#DDD5CF] bg-transparent px-0 py-3 text-sm outline-none placeholder:text-[#77716D] focus:border-[#B95D35]"
+/>
               </div>
 
               <textarea
